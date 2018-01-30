@@ -1,0 +1,26 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("_MACH_BOOLEAN_H_" variable (:constant-flag t) nil [2508 2524])
+            ("mach/machine/boolean.h" include (:system-flag t) nil [2591 2624])
+            ("TRUE" variable (:constant-flag t) nil [2719 2723])
+            ("FALSE" variable (:constant-flag t) nil [2767 2772]))          
+      :file "boolean.h"
+      :pointmax 2825
+      :fsize 2824
+      :lastmodtime '(22714 3989 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("TRUE" . ((number "1" 2724 . 2725)))
+          ("FALSE" . ((number "0" 2773 . 2774)))
+          ("_MACH_BOOLEAN_H_")
+          )
+))
+  :file "!usr!include!mach!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

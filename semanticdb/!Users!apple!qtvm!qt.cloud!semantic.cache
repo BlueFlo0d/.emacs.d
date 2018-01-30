@@ -1,0 +1,89 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("flask" include nil nil [1 33])
+            ("flask" include nil nil [34 75])
+            ("flask" include nil nil [76 101])
+            ("pyqtvm" include nil nil [102 122])
+            ("logging" include nil nil [123 137])
+            ("logging" code nil nil [138 209])
+            ("app" variable nil nil [211 232])
+            ("app" variable nil nil [233 276])
+            ("app" variable nil nil [277 318])
+            ("vuecm_js" variable nil nil [319 367])
+            ("qtvmedit_js" variable nil nil [368 413])
+            ("" code nil nil [424 445])
+            ("br_doc_qtvmrt" function nil nil [446 525])
+            ("" code nil nil [535 551])
+            ("br_qtvmedit" function nil nil [552 620])
+            ("" code nil nil [630 635])
+            ("br_root" function nil nil [636 704])
+            ("" code nil nil [714 730])
+            ("br_qtvmcss" function nil nil [731 828])
+            ("" code nil nil [838 849])
+            ("br_mdcss" function nil nil [850 940])
+            ("" code nil nil [950 964])
+            ("br_qtvmhtml" function nil nil [965 1036])
+            ("" code nil nil [1094 1116])
+            ("br_vuecm" function nil nil [1117 1153])
+            ("" code nil nil [1163 1191])
+            ("api_vm" function nil nil [1192 1899])
+            ("if" code nil nil [1899 2012]))          
+      :file "server.py"
+      :pointmax 2012
+      :fsize 2011
+      :lastmodtime '(23130 60611 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("os" include nil nil [1 10])
+            ("uuid" include nil nil [11 22])
+            ("struct" include nil nil [23 36])
+            ("base64" include nil nil [37 50])
+            ("flask" include nil nil [51 76])
+            ("calc_on_vm" function (:arguments 
+              ( ("_str" variable nil (reparse-symbol function_parameters) [93 97])
+                ("shots" variable nil (reparse-symbol function_parameters) [98 103])
+                ("qubits" variable nil (reparse-symbol function_parameters) [104 110])
+                ("eyegod" variable nil (reparse-symbol function_parameters) [111 117])
+                ("eyeqt" variable nil (reparse-symbol function_parameters) [124 129])
+                ("remi" variable nil (reparse-symbol function_parameters) [136 140]))              ) nil [78 1515]))          
+      :file "pyqtvm.py"
+      :pointmax 1515
+      :fsize 1514
+      :lastmodtime '(23119 42482 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("ctypes" include nil nil [1 21])
+            ("qtvm" variable nil nil [22 61])
+            ("qt_instruction" type
+               (:superclasses ("Structure")
+                :members 
+                  ( ("_fields_" variable nil (reparse-symbol indented_block_body) [99 171]))                  
+                :type "class")
+                nil [62 172])
+            ("cchar" variable nil nil [172 234])
+            ("ins_arr" variable nil nil [235 270])
+            ("socket" include nil nil [271 284])
+            ("cli" variable nil nil [285 306])
+            ("cli" code nil nil [307 338])
+            ("qtvm" code nil nil [339 353])
+            ("calc_on_vm" function (:arguments 
+              ( ("str" variable nil (reparse-symbol function_parameters) [369 372]))              ) nil [354 802]))          
+      :file "legacy_pyqtvm.py"
+      :pointmax 802
+      :fsize 801
+      :lastmodtime '(23119 42452 0 0)
+      :unmatched-syntax '((NAME 612 . 615) (IF 622 . 624) (ELSE 630 . 634)))
+)
+  :file "!Users!apple!qtvm!qt.cloud!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

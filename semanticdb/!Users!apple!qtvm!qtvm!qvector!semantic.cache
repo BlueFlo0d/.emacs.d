@@ -1,0 +1,78 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("_GNU_SOURCE" variable (:constant-flag t) nil [9 20])
+            ("malloc/malloc.h" include (:system-flag t) nil [21 47])
+            ("unistd.h" include (:system-flag t) nil [48 67])
+            ("sys/mman.h" include (:system-flag t) nil [68 89])
+            ("qrealloc" function
+               (:arguments 
+                  ( ("data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [103 114])
+                    ("newsize" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [114 129]))                  
+                :type "int")
+                nil [90 141]))          
+      :file "qvector.c"
+      :pointmax 141
+      :fsize 27
+      :lastmodtime '(23140 16016 0 0)
+      :unmatched-syntax '((symbol 9 . 20))
+      :lexical-table 
+        '(("_GNU_SOURCE")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("stddef.h" include (:system-flag t) nil [1 20])
+            ("_qvector_node" type
+               (:members 
+                  ( ("NEXT" variable
+                       (:pointer 1
+                        :type ("_qvector_node" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [59 86])
+                    ("FIRST" variable
+                       (:pointer 1
+                        :type ("_qvector_node" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [95 123])
+                    ("DATA" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [132 143]))                  
+                :type "struct")
+                nil [21 159])
+            ("qvector_node" type
+               (:typedef ("_qvector_node" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [21 159])
+            ("_qvector" type
+               (:members 
+                  ( ("HEAD" variable (:type ("qvector_node" type (:type "class") nil nil)) (reparse-symbol classsubparts) [193 211])
+                    ("SIZE" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [220 232]))                  
+                :type "struct")
+                nil [160 243])
+            ("qvector" type
+               (:typedef ("_qvector" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [160 243]))          
+      :file "qvector.h"
+      :pointmax 244
+      :fsize 243
+      :lastmodtime '(23140 16226 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!apple!qtvm!qtvm!qvector!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

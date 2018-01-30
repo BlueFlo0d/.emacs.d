@@ -1,0 +1,23 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-automake-mode
+      :tags 
+        '( ("$(top_srcdir)/gtest.mk" include nil nil [793 824])
+            ("AM_CPPFLAGS" variable (:default-value ("$(GMIME_CFLAGS)" "$(GLIB_CFLAGS)" "-I${prefix}/include")) nil [825 888])
+            ("AM_CFLAGS" variable (:default-value ("-Wall" "-Wextra" "-Wno-unused-parameter" "-Wdeclaration-after-statement" "-pedantic")) nil [888 974])
+            ("noinst_PROGRAMS" variable (:default-value ("gmime-test")) nil [975 1002])
+            ("gmime_test_SOURCES" variable (:default-value ("gmime-test.c")) nil [1002 1034])
+            ("gmime_test_LDADD" variable (:default-value ("$(GMIME_LIBS)" "$(GLIB_LIBS)")) nil [1034 1078])
+            ("EXTRA_DIST" variable (:default-value ("mu-completion.zsh" "mu-sexp-convert" "mu.spec")) nil [1080 1146]))          
+      :file "Makefile.am"
+      :pointmax 1147
+      :fsize 1146
+      :lastmodtime '(21879 11627 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!apple!Downloads!mu-0.9.13!contrib!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

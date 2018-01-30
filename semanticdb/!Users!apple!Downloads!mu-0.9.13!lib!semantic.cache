@@ -1,0 +1,25 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-automake-mode
+      :tags 
+        '( ("$(top_srcdir)/gtest.mk" include nil nil [793 824])
+            ("SUBDIRS" variable (:default-value ("." "tests")) nil [921 938])
+            ("AM_CPPFLAGS" variable (:default-value ("$(XAPIAN_CXXFLAGS)" "$(GMIME_CFLAGS)" "$(GLIB_CFLAGS)" "$(GUILE_CFLAGS)")) nil [939 1017])
+            ("AM_CFLAGS" variable (:default-value ("-Wall" "-Wextra" "-Wno-unused-parameter" "-Wdeclaration-after-statement" "-pedantic" "-Wno-variadic-macros")) nil [1175 1286])
+            ("AM_CXXFLAGS" variable (:default-value ("-Wall" "-Wextra" "-Wno-unused-parameter")) nil [1286 1334])
+            ("noinst_LTLIBRARIES" variable (:default-value ("libmu.la")) nil [1335 1369])
+            ("libmu_la_SOURCES" variable (:default-value ("mu-bookmarks.c" "mu-bookmarks.h" "mu-contacts.c" "mu-contacts.h" "mu-container.c" "mu-container.h" "mu-date.c" "mu-date.h" "mu-flags.h" "mu-flags.c" "mu-index.c" "mu-index.h" "mu-log.c" "mu-log.h" "mu-maildir.c" "mu-maildir.h" "mu-msg-crypto.c" "mu-msg-doc.cc" "mu-msg-doc.h" "mu-msg-fields.c" "mu-msg-fields.h" "mu-msg-file.c" "mu-msg-file.h" "mu-msg-iter.cc" "mu-msg-iter.h" "mu-msg-part.c" "mu-msg-part.h" "mu-msg-prio.c" "mu-msg-prio.h" "mu-msg-priv.h" "mu-msg-sexp.c" "mu-msg.c" "mu-msg.h" "mu-msg.h" "mu-query.cc" "mu-query.h" "mu-runtime.c" "mu-runtime.h" "mu-script.c" "mu-script.h" "mu-store.cc" "mu-store.h" "mu-store-read.cc" "mu-store-write.cc" "mu-store-priv.hh" "mu-str.c" "mu-str.h" "mu-threader.c" "mu-threader.h" "mu-util.c" "mu-util.h")) nil [1370 2293])
+            ("libmu_la_LIBADD" variable (:default-value ("$(XAPIAN_LIBS)" "$(GMIME_LIBS)" "$(GLIB_LIBS)" "$(GUILE_LIBS)")) nil [2294 2387])
+            ("EXTRA_DIST" variable (:default-value ("mu-msg-crypto.c" "doxyfile.in")) nil [2388 2439]))          
+      :file "Makefile.am"
+      :pointmax 2439
+      :fsize 2438
+      :lastmodtime '(21879 11627 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!apple!Downloads!mu-0.9.13!lib!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

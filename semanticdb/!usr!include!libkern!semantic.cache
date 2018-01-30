@@ -1,0 +1,724 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("_OSATOMIC_H_" variable (:constant-flag t) nil [1002 1014])
+            ("sys/cdefs.h" include (:system-flag t) nil [1508 1530])
+            ("OSAtomicDeprecated.h" include nil nil [1532 1563])
+            ("OSSpinLockDeprecated.h" include nil nil [1564 1597])
+            ("OSAtomicQueue.h" include nil nil [1598 1624]))          
+      :file "OSAtomic.h"
+      :pointmax 1652
+      :fsize 1651
+      :lastmodtime '(22677 37495 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_OSATOMIC_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("_OSATOMIC_DEPRECATED_H_" variable (:constant-flag t) nil [1013 1036])
+            ("sys/cdefs.h" include (:system-flag t) nil [1526 1551])
+            ("stddef.h" include (:system-flag t) nil [1552 1574])
+            ("stdint.h" include (:system-flag t) nil [1575 1597])
+            ("stdbool.h" include (:system-flag t) nil [1598 1621])
+            ("Availability.h" include (:system-flag t) nil [1622 1650])
+            ("OSATOMIC_DEPRECATED" variable (:constant-flag t) nil [1688 1707])
+            ("OSATOMIC_BARRIER_DEPRECATED_MSG" variable (:constant-flag t) nil [1947 1978])
+            ("OSATOMIC_DEPRECATED_MSG" variable (:constant-flag t) nil [2038 2061])
+            ("OSATOMIC_BARRIER_DEPRECATED_REPLACE_WITH" variable (:constant-flag t) nil [2162 2202])
+            ("OSATOMIC_DEPRECATED_REPLACE_WITH" variable (:constant-flag t) nil [2559 2591])
+            ("OSMemoryBarrier" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [31056 31062]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [31031 31063])
+            ("OSAtomicTestAndClearBarrier" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "bool"
+                :arguments 
+                  ( ("__n" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [30733 30746])
+                    ("__theAddress" variable
+                       (:pointer 1
+                        :typemodifiers ("volatile")
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [30747 30776]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [30696 30777])
+            ("OSAtomicTestAndClear" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "bool"
+                :arguments 
+                  ( ("__n" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [29823 29836])
+                    ("__theAddress" variable
+                       (:pointer 1
+                        :typemodifiers ("volatile")
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [29837 29866]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [29793 29867])
+            ("OSAtomicTestAndSetBarrier" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "bool"
+                :arguments 
+                  ( ("__n" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [29031 29044])
+                    ("__theAddress" variable
+                       (:pointer 1
+                        :typemodifiers ("volatile")
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [29045 29074]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [28996 29075])
+            ("OSAtomicTestAndSet" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "bool"
+                :arguments 
+                  ( ("__n" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [28122 28135])
+                    ("__theAddress" variable
+                       (:pointer 1
+                        :typemodifiers ("volatile")
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [28136 28165]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [28094 28166])
+            ("OSAtomicCompareAndSwap64Barrier" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "bool"
+                :arguments 
+                  ( ("__oldValue" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [27155 27174])
+                    ("__newValue" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [27175 27194])
+                    ("__theValue" variable
+                       (:pointer 1
+                        :typemodifiers ("volatile")
+                        :type ("OSAtomic_int64_aligned64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [27197 27246]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [27114 27247])
+            ("OSAtomicCompareAndSwap64" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "bool"
+                :arguments 
+                  ( ("__oldValue" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [26388 26407])
+                    ("__newValue" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [26408 26427])
+                    ("__theValue" variable
+                       (:pointer 1
+                        :typemodifiers ("volatile")
+                        :type ("OSAtomic_int64_aligned64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26430 26479]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [26354 26480])
+            ("OSAtomicCompareAndSwapLongBarrier" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "bool"
+                :arguments 
+                  ( ("__oldValue" variable (:type "long") (reparse-symbol arg-sub-list) [25775 25791])
+                    ("__newValue" variable (:type "long") (reparse-symbol arg-sub-list) [25792 25808])
+                    ("__theValue" variable
+                       (:pointer 1
+                        :typemodifiers ("volatile")
+                        :type "long")
+                        (reparse-symbol arg-sub-list) [25809 25836]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [25735 25837])
+            ("OSAtomicCompareAndSwapLong" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "bool"
+                :arguments 
+                  ( ("__oldValue" variable (:type "long") (reparse-symbol arg-sub-list) [24887 24903])
+                    ("__newValue" variable (:type "long") (reparse-symbol arg-sub-list) [24904 24920])
+                    ("__theValue" variable
+                       (:pointer 1
+                        :typemodifiers ("volatile")
+                        :type "long")
+                        (reparse-symbol arg-sub-list) [24921 24948]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [24854 24949])
+            ("OSAtomicCompareAndSwapIntBarrier" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "bool"
+                :arguments 
+                  ( ("__oldValue" variable (:type "int") (reparse-symbol arg-sub-list) [24128 24143])
+                    ("__newValue" variable (:type "int") (reparse-symbol arg-sub-list) [24144 24159])
+                    ("__theValue" variable
+                       (:pointer 1
+                        :typemodifiers ("volatile")
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [24160 24186]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [24089 24187])
+            ("OSAtomicCompareAndSwapInt" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "bool"
+                :arguments 
+                  ( ("__oldValue" variable (:type "int") (reparse-symbol arg-sub-list) [23326 23341])
+                    ("__newValue" variable (:type "int") (reparse-symbol arg-sub-list) [23342 23357])
+                    ("__theValue" variable
+                       (:pointer 1
+                        :typemodifiers ("volatile")
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [23358 23384]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [23294 23385])
+            ("OSAtomicCompareAndSwapPtrBarrier" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "bool"
+                :arguments 
+                  ( ("__oldValue" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [22649 22666])
+                    ("__newValue" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [22667 22684])
+                    ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [22685 22700])
+                    ("" variable (:type ("__theValue" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [22702 22714]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [22610 22715])
+            ("OSAtomicCompareAndSwapPtr" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "bool"
+                :arguments 
+                  ( ("__oldValue" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [21905 21922])
+                    ("__newValue" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [21923 21940])
+                    ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [21941 21956])
+                    ("" variable (:type ("__theValue" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21958 21970]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [21873 21971])
+            ("OSAtomicCompareAndSwap32Barrier" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "bool"
+                :arguments 
+                  ( ("__oldValue" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21294 21313])
+                    ("__newValue" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21314 21333])
+                    ("__theValue" variable
+                       (:pointer 1
+                        :typemodifiers ("volatile")
+                        :type ("int32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [21334 21364]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [21253 21365])
+            ("OSAtomicCompareAndSwap32" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "bool"
+                :arguments 
+                  ( ("__oldValue" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [20550 20569])
+                    ("__newValue" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [20570 20589])
+                    ("__theValue" variable
+                       (:pointer 1
+                        :typemodifiers ("volatile")
+                        :type ("int32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20590 20620]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [20516 20621])
+            ("OSAtomicXor32OrigBarrier" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("int32_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("__theMask" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19771 19790])
+                    ("__theValue" variable
+                       (:pointer 1
+                        :typemodifiers ("volatile")
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19791 19822]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [19737 19823])
+            ("OSAtomicXor32Orig" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("int32_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("__theMask" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19061 19080])
+                    ("__theValue" variable
+                       (:pointer 1
+                        :typemodifiers ("volatile")
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19081 19112]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [19034 19113])
+            ("OSAtomicXor32Barrier" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("int32_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("__theMask" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18481 18500])
+                    ("__theValue" variable
+                       (:pointer 1
+                        :typemodifiers ("volatile")
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18501 18532]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [18451 18533])
+            ("OSAtomicXor32" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("int32_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("__theMask" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17841 17860])
+                    ("__theValue" variable
+                       (:pointer 1
+                        :typemodifiers ("volatile")
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17861 17892]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [17818 17893])
+            ("OSAtomicAnd32OrigBarrier" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("int32_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("__theMask" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17325 17344])
+                    ("__theValue" variable
+                       (:pointer 1
+                        :typemodifiers ("volatile")
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17345 17376]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [17291 17377])
+            ("OSAtomicAnd32Orig" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("int32_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("__theMask" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16615 16634])
+                    ("__theValue" variable
+                       (:pointer 1
+                        :typemodifiers ("volatile")
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16635 16666]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [16588 16667])
+            ("OSAtomicAnd32Barrier" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("int32_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("__theMask" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16035 16054])
+                    ("__theValue" variable
+                       (:pointer 1
+                        :typemodifiers ("volatile")
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16055 16086]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [16005 16087])
+            ("OSAtomicAnd32" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("int32_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("__theMask" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15395 15414])
+                    ("__theValue" variable
+                       (:pointer 1
+                        :typemodifiers ("volatile")
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15415 15446]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [15372 15447])
+            ("OSAtomicOr32OrigBarrier" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("int32_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("__theMask" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14879 14898])
+                    ("__theValue" variable
+                       (:pointer 1
+                        :typemodifiers ("volatile")
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14899 14930]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [14846 14931])
+            ("OSAtomicOr32Orig" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("int32_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("__theMask" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14173 14192])
+                    ("__theValue" variable
+                       (:pointer 1
+                        :typemodifiers ("volatile")
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14193 14224]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [14147 14225])
+            ("OSAtomicOr32Barrier" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("int32_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("__theMask" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13597 13616])
+                    ("__theValue" variable
+                       (:pointer 1
+                        :typemodifiers ("volatile")
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13617 13648]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [13568 13649])
+            ("OSAtomicOr32" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("int32_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("__theMask" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12962 12981])
+                    ("__theValue" variable
+                       (:pointer 1
+                        :typemodifiers ("volatile")
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12982 13013]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [12940 13014])
+            ("OSAtomicDecrement64Barrier" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("int64_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("__theValue" variable
+                       (:pointer 1
+                        :typemodifiers ("volatile")
+                        :type ("OSAtomic_int64_aligned64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11344 11393]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [11308 11394])
+            ("OSAtomicDecrement64" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("int64_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("__theValue" variable
+                       (:pointer 1
+                        :typemodifiers ("volatile")
+                        :type ("OSAtomic_int64_aligned64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10919 10968]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10890 10969])
+            ("OSAtomicIncrement64Barrier" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("int64_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("__theValue" variable
+                       (:pointer 1
+                        :typemodifiers ("volatile")
+                        :type ("OSAtomic_int64_aligned64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10643 10692]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10607 10693])
+            ("OSAtomicIncrement64" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("int64_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("__theValue" variable
+                       (:pointer 1
+                        :typemodifiers ("volatile")
+                        :type ("OSAtomic_int64_aligned64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10218 10267]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10189 10268])
+            ("OSAtomicAdd64Barrier" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("int64_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("__theAmount" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9815 9835])
+                    ("__theValue" variable
+                       (:pointer 1
+                        :typemodifiers ("volatile")
+                        :type ("OSAtomic_int64_aligned64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9838 9887]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [9785 9888])
+            ("OSAtomicAdd64" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("int64_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("__theAmount" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9181 9201])
+                    ("__theValue" variable
+                       (:pointer 1
+                        :typemodifiers ("volatile")
+                        :type ("OSAtomic_int64_aligned64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9204 9253]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [9158 9254])
+            ("OSAtomicDecrement32Barrier" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("int32_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("__theValue" variable
+                       (:pointer 1
+                        :typemodifiers ("volatile")
+                        :type ("int32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8148 8178]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8112 8179])
+            ("OSAtomicDecrement32" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("int32_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("__theValue" variable
+                       (:pointer 1
+                        :typemodifiers ("volatile")
+                        :type ("int32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7742 7772]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [7713 7773])
+            ("OSAtomicIncrement32Barrier" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("int32_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("__theValue" variable
+                       (:pointer 1
+                        :typemodifiers ("volatile")
+                        :type ("int32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7485 7515]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [7449 7516])
+            ("OSAtomicIncrement32" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("int32_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("__theValue" variable
+                       (:pointer 1
+                        :typemodifiers ("volatile")
+                        :type ("int32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7079 7109]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [7050 7110])
+            ("OSAtomicAdd32Barrier" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("int32_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("__theAmount" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6697 6717])
+                    ("__theValue" variable
+                       (:pointer 1
+                        :typemodifiers ("volatile")
+                        :type ("int32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6718 6748]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [6667 6749])
+            ("OSAtomicAdd32" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("int32_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("__theAmount" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6099 6119])
+                    ("__theValue" variable
+                       (:pointer 1
+                        :typemodifiers ("volatile")
+                        :type ("int32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6120 6150]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [6076 6151])
+            ("OSAtomic_int64_aligned64_t" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("int64_t" type (:type "class") nil nil))
+                (reparse-symbol extern-c-contents) [5525 5568]))          
+      :file "OSAtomicDeprecated.h"
+      :pointmax 43095
+      :fsize 43094
+      :lastmodtime '(22677 37495 0 0)
+      :unmatched-syntax '((semantic-list 31004 . 31030) (symbol 30980 . 31004) (semantic-list #("(watchos, deprecated=3.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_thread_fence" 30959 . 30978)))) 30918 . 30979) (symbol "__OS_AVAILABILITY_MSG" 30918 . 30979) (semantic-list #("(tvos, deprecated=10.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_thread_fence" 30959 . 30978)))) 30918 . 30979) (symbol "__OS_AVAILABILITY_MSG" 30918 . 30979) (semantic-list #("(ios, deprecated=10.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_thread_fence" 30959 . 30978)))) 30918 . 30979) (symbol "__OS_AVAILABILITY_MSG" 30918 . 30979) (semantic-list #("(macosx, deprecated=10.12, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_thread_fence" 30959 . 30978)))) 30918 . 30979) (symbol "__OS_AVAILABILITY_MSG" 30918 . 30979) (semantic-list 30669 . 30695) (symbol 30645 . 30669) (semantic-list #("(watchos, deprecated=3.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_and" 30627 . 30643)))) 30586 . 30644) (symbol "__OS_AVAILABILITY_MSG" 30586 . 30644) (semantic-list #("(tvos, deprecated=10.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_and" 30627 . 30643)))) 30586 . 30644) (symbol "__OS_AVAILABILITY_MSG" 30586 . 30644) (semantic-list #("(ios, deprecated=10.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_and" 30627 . 30643)))) 30586 . 30644) (symbol "__OS_AVAILABILITY_MSG" 30586 . 30644) (semantic-list #("(macosx, deprecated=10.12, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_and" 30627 . 30643)))) 30586 . 30644) (symbol "__OS_AVAILABILITY_MSG" 30586 . 30644) (semantic-list 29766 . 29792) (symbol 29742 . 29766) (semantic-list #("(watchos, deprecated=3.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_and" 29724 . 29740)))) 29691 . 29741) (symbol "__OS_AVAILABILITY_MSG" 29691 . 29741) (semantic-list #("(tvos, deprecated=10.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_and" 29724 . 29740)))) 29691 . 29741) (symbol "__OS_AVAILABILITY_MSG" 29691 . 29741) (semantic-list #("(ios, deprecated=10.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_and" 29724 . 29740)))) 29691 . 29741) (symbol "__OS_AVAILABILITY_MSG" 29691 . 29741) (semantic-list #("(macosx, deprecated=10.12, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_and" 29724 . 29740)))) 29691 . 29741) (symbol "__OS_AVAILABILITY_MSG" 29691 . 29741) (semantic-list 28969 . 28995) (symbol 28945 . 28969) (semantic-list #("(watchos, deprecated=3.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_or" 28928 . 28943)))) 28887 . 28944) (symbol "__OS_AVAILABILITY_MSG" 28887 . 28944) (semantic-list #("(tvos, deprecated=10.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_or" 28928 . 28943)))) 28887 . 28944) (symbol "__OS_AVAILABILITY_MSG" 28887 . 28944) (semantic-list #("(ios, deprecated=10.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_or" 28928 . 28943)))) 28887 . 28944) (symbol "__OS_AVAILABILITY_MSG" 28887 . 28944) (semantic-list #("(macosx, deprecated=10.12, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_or" 28928 . 28943)))) 28887 . 28944) (symbol "__OS_AVAILABILITY_MSG" 28887 . 28944) (semantic-list 28067 . 28093) (symbol 28043 . 28067) (semantic-list #("(watchos, deprecated=3.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_or" 28026 . 28041)))) 27993 . 28042) (symbol "__OS_AVAILABILITY_MSG" 27993 . 28042) (semantic-list #("(tvos, deprecated=10.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_or" 28026 . 28041)))) 27993 . 28042) (symbol "__OS_AVAILABILITY_MSG" 27993 . 28042) (semantic-list #("(ios, deprecated=10.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_or" 28026 . 28041)))) 27993 . 28042) (symbol "__OS_AVAILABILITY_MSG" 27993 . 28042) (semantic-list #("(macosx, deprecated=10.12, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_or" 28026 . 28041)))) 27993 . 28042) (symbol "__OS_AVAILABILITY_MSG" 27993 . 28042) (semantic-list 27087 . 27113) (symbol 27063 . 27087) (semantic-list #("(watchos, deprecated=3.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_compare_exchange_strong" 27031 . 27061)))) 26990 . 27062) (symbol "__OS_AVAILABILITY_MSG" 26990 . 27062) (semantic-list #("(tvos, deprecated=10.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_compare_exchange_strong" 27031 . 27061)))) 26990 . 27062) (symbol "__OS_AVAILABILITY_MSG" 26990 . 27062) (semantic-list #("(ios, deprecated=10.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_compare_exchange_strong" 27031 . 27061)))) 26990 . 27062) (symbol "__OS_AVAILABILITY_MSG" 26990 . 27062) (semantic-list #("(macosx, deprecated=10.12, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_compare_exchange_strong" 27031 . 27061)))) 26990 . 27062) (symbol "__OS_AVAILABILITY_MSG" 26990 . 27062) (semantic-list 26327 . 26353) (symbol 26303 . 26327) (semantic-list #("(watchos, deprecated=3.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_compare_exchange_strong" 26271 . 26301)))) 26238 . 26302) (symbol "__OS_AVAILABILITY_MSG" 26238 . 26302) (semantic-list #("(tvos, deprecated=10.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_compare_exchange_strong" 26271 . 26301)))) 26238 . 26302) (symbol "__OS_AVAILABILITY_MSG" 26238 . 26302) (semantic-list #("(ios, deprecated=10.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_compare_exchange_strong" 26271 . 26301)))) 26238 . 26302) (symbol "__OS_AVAILABILITY_MSG" 26238 . 26302) (semantic-list #("(macosx, deprecated=10.12, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_compare_exchange_strong" 26271 . 26301)))) 26238 . 26302) (symbol "__OS_AVAILABILITY_MSG" 26238 . 26302) (semantic-list 25708 . 25734) (symbol 25684 . 25708) (semantic-list #("(watchos, deprecated=3.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_compare_exchange_strong" 25652 . 25682)))) 25611 . 25683) (symbol "__OS_AVAILABILITY_MSG" 25611 . 25683) (semantic-list #("(tvos, deprecated=10.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_compare_exchange_strong" 25652 . 25682)))) 25611 . 25683) (symbol "__OS_AVAILABILITY_MSG" 25611 . 25683) (semantic-list #("(ios, deprecated=10.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_compare_exchange_strong" 25652 . 25682)))) 25611 . 25683) (symbol "__OS_AVAILABILITY_MSG" 25611 . 25683) (semantic-list #("(macosx, deprecated=10.12, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_compare_exchange_strong" 25652 . 25682)))) 25611 . 25683) (symbol "__OS_AVAILABILITY_MSG" 25611 . 25683) (semantic-list 24827 . 24853) (symbol 24803 . 24827) (semantic-list #("(watchos, deprecated=3.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_compare_exchange_strong" 24771 . 24801)))) 24738 . 24802) (symbol "__OS_AVAILABILITY_MSG" 24738 . 24802) (semantic-list #("(tvos, deprecated=10.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_compare_exchange_strong" 24771 . 24801)))) 24738 . 24802) (symbol "__OS_AVAILABILITY_MSG" 24738 . 24802) (semantic-list #("(ios, deprecated=10.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_compare_exchange_strong" 24771 . 24801)))) 24738 . 24802) (symbol "__OS_AVAILABILITY_MSG" 24738 . 24802) (semantic-list #("(macosx, deprecated=10.12, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_compare_exchange_strong" 24771 . 24801)))) 24738 . 24802) (symbol "__OS_AVAILABILITY_MSG" 24738 . 24802) (semantic-list 24062 . 24088) (symbol 24038 . 24062) (semantic-list #("(watchos, deprecated=3.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_compare_exchange_strong" 24006 . 24036)))) 23965 . 24037) (symbol "__OS_AVAILABILITY_MSG" 23965 . 24037) (semantic-list #("(tvos, deprecated=10.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_compare_exchange_strong" 24006 . 24036)))) 23965 . 24037) (symbol "__OS_AVAILABILITY_MSG" 23965 . 24037) (semantic-list #("(ios, deprecated=10.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_compare_exchange_strong" 24006 . 24036)))) 23965 . 24037) (symbol "__OS_AVAILABILITY_MSG" 23965 . 24037) (semantic-list #("(macosx, deprecated=10.12, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_compare_exchange_strong" 24006 . 24036)))) 23965 . 24037) (symbol "__OS_AVAILABILITY_MSG" 23965 . 24037) (semantic-list 23267 . 23293) (symbol 23243 . 23267) (semantic-list #("(watchos, deprecated=3.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_compare_exchange_strong" 23211 . 23241)))) 23178 . 23242) (symbol "__OS_AVAILABILITY_MSG" 23178 . 23242) (semantic-list #("(tvos, deprecated=10.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_compare_exchange_strong" 23211 . 23241)))) 23178 . 23242) (symbol "__OS_AVAILABILITY_MSG" 23178 . 23242) (semantic-list #("(ios, deprecated=10.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_compare_exchange_strong" 23211 . 23241)))) 23178 . 23242) (symbol "__OS_AVAILABILITY_MSG" 23178 . 23242) (semantic-list #("(macosx, deprecated=10.12, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_compare_exchange_strong" 23211 . 23241)))) 23178 . 23242) (symbol "__OS_AVAILABILITY_MSG" 23178 . 23242) (punctuation 22701 . 22702) (VOLATILE 22692 . 22700) (semantic-list 22583 . 22609) (symbol 22559 . 22583) (semantic-list #("(watchos, deprecated=3.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_compare_exchange_strong" 22527 . 22557)))) 22486 . 22558) (symbol "__OS_AVAILABILITY_MSG" 22486 . 22558) (semantic-list #("(tvos, deprecated=10.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_compare_exchange_strong" 22527 . 22557)))) 22486 . 22558) (symbol "__OS_AVAILABILITY_MSG" 22486 . 22558) (semantic-list #("(ios, deprecated=10.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_compare_exchange_strong" 22527 . 22557)))) 22486 . 22558) (symbol "__OS_AVAILABILITY_MSG" 22486 . 22558) (semantic-list #("(macosx, deprecated=10.12, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_compare_exchange_strong" 22527 . 22557)))) 22486 . 22558) (symbol "__OS_AVAILABILITY_MSG" 22486 . 22558) (punctuation 21957 . 21958) (VOLATILE 21948 . 21956) (semantic-list 21846 . 21872) (symbol 21822 . 21846) (semantic-list #("(watchos, deprecated=3.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_compare_exchange_strong" 21790 . 21820)))) 21757 . 21821) (symbol "__OS_AVAILABILITY_MSG" 21757 . 21821) (semantic-list #("(tvos, deprecated=10.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_compare_exchange_strong" 21790 . 21820)))) 21757 . 21821) (symbol "__OS_AVAILABILITY_MSG" 21757 . 21821) (semantic-list #("(ios, deprecated=10.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_compare_exchange_strong" 21790 . 21820)))) 21757 . 21821) (symbol "__OS_AVAILABILITY_MSG" 21757 . 21821) (semantic-list #("(macosx, deprecated=10.12, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_compare_exchange_strong" 21790 . 21820)))) 21757 . 21821) (symbol "__OS_AVAILABILITY_MSG" 21757 . 21821) (semantic-list 21226 . 21252) (symbol 21202 . 21226) (semantic-list #("(watchos, deprecated=3.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_compare_exchange_strong" 21170 . 21200)))) 21129 . 21201) (symbol "__OS_AVAILABILITY_MSG" 21129 . 21201) (semantic-list #("(tvos, deprecated=10.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_compare_exchange_strong" 21170 . 21200)))) 21129 . 21201) (symbol "__OS_AVAILABILITY_MSG" 21129 . 21201) (semantic-list #("(ios, deprecated=10.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_compare_exchange_strong" 21170 . 21200)))) 21129 . 21201) (symbol "__OS_AVAILABILITY_MSG" 21129 . 21201) (semantic-list #("(macosx, deprecated=10.12, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_compare_exchange_strong" 21170 . 21200)))) 21129 . 21201) (symbol "__OS_AVAILABILITY_MSG" 21129 . 21201) (semantic-list 20489 . 20515) (symbol 20465 . 20489) (semantic-list #("(watchos, deprecated=3.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_compare_exchange_strong" 20433 . 20463)))) 20400 . 20464) (symbol "__OS_AVAILABILITY_MSG" 20400 . 20464) (semantic-list #("(tvos, deprecated=10.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_compare_exchange_strong" 20433 . 20463)))) 20400 . 20464) (symbol "__OS_AVAILABILITY_MSG" 20400 . 20464) (semantic-list #("(ios, deprecated=10.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_compare_exchange_strong" 20433 . 20463)))) 20400 . 20464) (symbol "__OS_AVAILABILITY_MSG" 20400 . 20464) (semantic-list #("(macosx, deprecated=10.12, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_compare_exchange_strong" 20433 . 20463)))) 20400 . 20464) (symbol "__OS_AVAILABILITY_MSG" 20400 . 20464) (semantic-list 19710 . 19736) (symbol 19686 . 19710) (semantic-list #("(watchos, deprecated=3.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_xor" 19668 . 19684)))) 19627 . 19685) (symbol "__OS_AVAILABILITY_MSG" 19627 . 19685) (semantic-list #("(tvos, deprecated=10.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_xor" 19668 . 19684)))) 19627 . 19685) (symbol "__OS_AVAILABILITY_MSG" 19627 . 19685) (semantic-list #("(ios, deprecated=10.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_xor" 19668 . 19684)))) 19627 . 19685) (symbol "__OS_AVAILABILITY_MSG" 19627 . 19685) (semantic-list #("(macosx, deprecated=10.12, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_xor" 19668 . 19684)))) 19627 . 19685) (symbol "__OS_AVAILABILITY_MSG" 19627 . 19685) (semantic-list 19007 . 19033) (symbol 18983 . 19007) (semantic-list #("(watchos, deprecated=3.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_xor" 18965 . 18981)))) 18932 . 18982) (symbol "__OS_AVAILABILITY_MSG" 18932 . 18982) (semantic-list #("(tvos, deprecated=10.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_xor" 18965 . 18981)))) 18932 . 18982) (symbol "__OS_AVAILABILITY_MSG" 18932 . 18982) (semantic-list #("(ios, deprecated=10.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_xor" 18965 . 18981)))) 18932 . 18982) (symbol "__OS_AVAILABILITY_MSG" 18932 . 18982) (semantic-list #("(macosx, deprecated=10.12, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_xor" 18965 . 18981)))) 18932 . 18982) (symbol "__OS_AVAILABILITY_MSG" 18932 . 18982) (semantic-list 18424 . 18450) (symbol 18400 . 18424) (semantic-list #("(watchos, deprecated=3.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_xor" 18382 . 18398)))) 18341 . 18399) (symbol "__OS_AVAILABILITY_MSG" 18341 . 18399) (semantic-list #("(tvos, deprecated=10.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_xor" 18382 . 18398)))) 18341 . 18399) (symbol "__OS_AVAILABILITY_MSG" 18341 . 18399) (semantic-list #("(ios, deprecated=10.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_xor" 18382 . 18398)))) 18341 . 18399) (symbol "__OS_AVAILABILITY_MSG" 18341 . 18399) (semantic-list #("(macosx, deprecated=10.12, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_xor" 18382 . 18398)))) 18341 . 18399) (symbol "__OS_AVAILABILITY_MSG" 18341 . 18399) (semantic-list 17791 . 17817) (symbol 17767 . 17791) (semantic-list #("(watchos, deprecated=3.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_xor" 17749 . 17765)))) 17716 . 17766) (symbol "__OS_AVAILABILITY_MSG" 17716 . 17766) (semantic-list #("(tvos, deprecated=10.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_xor" 17749 . 17765)))) 17716 . 17766) (symbol "__OS_AVAILABILITY_MSG" 17716 . 17766) (semantic-list #("(ios, deprecated=10.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_xor" 17749 . 17765)))) 17716 . 17766) (symbol "__OS_AVAILABILITY_MSG" 17716 . 17766) (semantic-list #("(macosx, deprecated=10.12, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_xor" 17749 . 17765)))) 17716 . 17766) (symbol "__OS_AVAILABILITY_MSG" 17716 . 17766) (semantic-list 17264 . 17290) (symbol 17240 . 17264) (semantic-list #("(watchos, deprecated=3.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_and" 17222 . 17238)))) 17181 . 17239) (symbol "__OS_AVAILABILITY_MSG" 17181 . 17239) (semantic-list #("(tvos, deprecated=10.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_and" 17222 . 17238)))) 17181 . 17239) (symbol "__OS_AVAILABILITY_MSG" 17181 . 17239) (semantic-list #("(ios, deprecated=10.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_and" 17222 . 17238)))) 17181 . 17239) (symbol "__OS_AVAILABILITY_MSG" 17181 . 17239) (semantic-list #("(macosx, deprecated=10.12, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_and" 17222 . 17238)))) 17181 . 17239) (symbol "__OS_AVAILABILITY_MSG" 17181 . 17239) (semantic-list 16561 . 16587) (symbol 16537 . 16561) (semantic-list #("(watchos, deprecated=3.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_and" 16519 . 16535)))) 16486 . 16536) (symbol "__OS_AVAILABILITY_MSG" 16486 . 16536) (semantic-list #("(tvos, deprecated=10.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_and" 16519 . 16535)))) 16486 . 16536) (symbol "__OS_AVAILABILITY_MSG" 16486 . 16536) (semantic-list #("(ios, deprecated=10.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_and" 16519 . 16535)))) 16486 . 16536) (symbol "__OS_AVAILABILITY_MSG" 16486 . 16536) (semantic-list #("(macosx, deprecated=10.12, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_and" 16519 . 16535)))) 16486 . 16536) (symbol "__OS_AVAILABILITY_MSG" 16486 . 16536) (semantic-list 15978 . 16004) (symbol 15954 . 15978) (semantic-list #("(watchos, deprecated=3.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_and" 15936 . 15952)))) 15895 . 15953) (symbol "__OS_AVAILABILITY_MSG" 15895 . 15953) (semantic-list #("(tvos, deprecated=10.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_and" 15936 . 15952)))) 15895 . 15953) (symbol "__OS_AVAILABILITY_MSG" 15895 . 15953) (semantic-list #("(ios, deprecated=10.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_and" 15936 . 15952)))) 15895 . 15953) (symbol "__OS_AVAILABILITY_MSG" 15895 . 15953) (semantic-list #("(macosx, deprecated=10.12, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_and" 15936 . 15952)))) 15895 . 15953) (symbol "__OS_AVAILABILITY_MSG" 15895 . 15953) (semantic-list 15345 . 15371) (symbol 15321 . 15345) (semantic-list #("(watchos, deprecated=3.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_and" 15303 . 15319)))) 15270 . 15320) (symbol "__OS_AVAILABILITY_MSG" 15270 . 15320) (semantic-list #("(tvos, deprecated=10.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_and" 15303 . 15319)))) 15270 . 15320) (symbol "__OS_AVAILABILITY_MSG" 15270 . 15320) (semantic-list #("(ios, deprecated=10.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_and" 15303 . 15319)))) 15270 . 15320) (symbol "__OS_AVAILABILITY_MSG" 15270 . 15320) (semantic-list #("(macosx, deprecated=10.12, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_and" 15303 . 15319)))) 15270 . 15320) (symbol "__OS_AVAILABILITY_MSG" 15270 . 15320) (semantic-list 14819 . 14845) (symbol 14795 . 14819) (semantic-list #("(watchos, deprecated=3.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_or" 14778 . 14793)))) 14737 . 14794) (symbol "__OS_AVAILABILITY_MSG" 14737 . 14794) (semantic-list #("(tvos, deprecated=10.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_or" 14778 . 14793)))) 14737 . 14794) (symbol "__OS_AVAILABILITY_MSG" 14737 . 14794) (semantic-list #("(ios, deprecated=10.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_or" 14778 . 14793)))) 14737 . 14794) (symbol "__OS_AVAILABILITY_MSG" 14737 . 14794) (semantic-list #("(macosx, deprecated=10.12, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_or" 14778 . 14793)))) 14737 . 14794) (symbol "__OS_AVAILABILITY_MSG" 14737 . 14794) (semantic-list 14120 . 14146) (symbol 14096 . 14120) (semantic-list #("(watchos, deprecated=3.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_or" 14079 . 14094)))) 14046 . 14095) (symbol "__OS_AVAILABILITY_MSG" 14046 . 14095) (semantic-list #("(tvos, deprecated=10.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_or" 14079 . 14094)))) 14046 . 14095) (symbol "__OS_AVAILABILITY_MSG" 14046 . 14095) (semantic-list #("(ios, deprecated=10.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_or" 14079 . 14094)))) 14046 . 14095) (symbol "__OS_AVAILABILITY_MSG" 14046 . 14095) (semantic-list #("(macosx, deprecated=10.12, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_or" 14079 . 14094)))) 14046 . 14095) (symbol "__OS_AVAILABILITY_MSG" 14046 . 14095) (semantic-list 13541 . 13567) (symbol 13517 . 13541) (semantic-list #("(watchos, deprecated=3.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_or" 13500 . 13515)))) 13459 . 13516) (symbol "__OS_AVAILABILITY_MSG" 13459 . 13516) (semantic-list #("(tvos, deprecated=10.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_or" 13500 . 13515)))) 13459 . 13516) (symbol "__OS_AVAILABILITY_MSG" 13459 . 13516) (semantic-list #("(ios, deprecated=10.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_or" 13500 . 13515)))) 13459 . 13516) (symbol "__OS_AVAILABILITY_MSG" 13459 . 13516) (semantic-list #("(macosx, deprecated=10.12, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_or" 13500 . 13515)))) 13459 . 13516) (symbol "__OS_AVAILABILITY_MSG" 13459 . 13516) (semantic-list 12913 . 12939) (symbol 12889 . 12913) (semantic-list #("(watchos, deprecated=3.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_or" 12872 . 12887)))) 12839 . 12888) (symbol "__OS_AVAILABILITY_MSG" 12839 . 12888) (semantic-list #("(tvos, deprecated=10.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_or" 12872 . 12887)))) 12839 . 12888) (symbol "__OS_AVAILABILITY_MSG" 12839 . 12888) (semantic-list #("(ios, deprecated=10.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_or" 12872 . 12887)))) 12839 . 12888) (symbol "__OS_AVAILABILITY_MSG" 12839 . 12888) (semantic-list #("(macosx, deprecated=10.12, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_or" 12872 . 12887)))) 12839 . 12888) (symbol "__OS_AVAILABILITY_MSG" 12839 . 12888) (semantic-list 11280 . 11307) (symbol 11256 . 11280) (semantic-list #("(watchos, deprecated=3.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_sub" 11238 . 11254)))) 11197 . 11255) (symbol "__OS_AVAILABILITY_MSG" 11197 . 11255) (semantic-list #("(tvos, deprecated=10.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_sub" 11238 . 11254)))) 11197 . 11255) (symbol "__OS_AVAILABILITY_MSG" 11197 . 11255) (semantic-list #("(ios, deprecated=10.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_sub" 11238 . 11254)))) 11197 . 11255) (symbol "__OS_AVAILABILITY_MSG" 11197 . 11255) (semantic-list #("(macosx, deprecated=10.12, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_sub" 11238 . 11254)))) 11197 . 11255) (symbol "__OS_AVAILABILITY_MSG" 11197 . 11255) (semantic-list 10862 . 10889) (symbol 10838 . 10862) (semantic-list #("(watchos, deprecated=3.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_sub" 10820 . 10836)))) 10787 . 10837) (symbol "__OS_AVAILABILITY_MSG" 10787 . 10837) (semantic-list #("(tvos, deprecated=10.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_sub" 10820 . 10836)))) 10787 . 10837) (symbol "__OS_AVAILABILITY_MSG" 10787 . 10837) (semantic-list #("(ios, deprecated=10.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_sub" 10820 . 10836)))) 10787 . 10837) (symbol "__OS_AVAILABILITY_MSG" 10787 . 10837) (semantic-list #("(macosx, deprecated=10.12, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_sub" 10820 . 10836)))) 10787 . 10837) (symbol "__OS_AVAILABILITY_MSG" 10787 . 10837) (semantic-list 10579 . 10606) (symbol 10555 . 10579) (semantic-list #("(watchos, deprecated=3.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_add" 10537 . 10553)))) 10496 . 10554) (symbol "__OS_AVAILABILITY_MSG" 10496 . 10554) (semantic-list #("(tvos, deprecated=10.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_add" 10537 . 10553)))) 10496 . 10554) (symbol "__OS_AVAILABILITY_MSG" 10496 . 10554) (semantic-list #("(ios, deprecated=10.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_add" 10537 . 10553)))) 10496 . 10554) (symbol "__OS_AVAILABILITY_MSG" 10496 . 10554) (semantic-list #("(macosx, deprecated=10.12, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_add" 10537 . 10553)))) 10496 . 10554) (symbol "__OS_AVAILABILITY_MSG" 10496 . 10554) (semantic-list 10161 . 10188) (symbol 10137 . 10161) (semantic-list #("(watchos, deprecated=3.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_add" 10119 . 10135)))) 10086 . 10136) (symbol "__OS_AVAILABILITY_MSG" 10086 . 10136) (semantic-list #("(tvos, deprecated=10.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_add" 10119 . 10135)))) 10086 . 10136) (symbol "__OS_AVAILABILITY_MSG" 10086 . 10136) (semantic-list #("(ios, deprecated=10.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_add" 10119 . 10135)))) 10086 . 10136) (symbol "__OS_AVAILABILITY_MSG" 10086 . 10136) (semantic-list #("(macosx, deprecated=10.12, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_add" 10119 . 10135)))) 10086 . 10136) (symbol "__OS_AVAILABILITY_MSG" 10086 . 10136) (semantic-list 9758 . 9784) (symbol 9734 . 9758) (semantic-list #("(watchos, deprecated=3.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_add" 9716 . 9732)))) 9675 . 9733) (symbol "__OS_AVAILABILITY_MSG" 9675 . 9733) (semantic-list #("(tvos, deprecated=10.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_add" 9716 . 9732)))) 9675 . 9733) (symbol "__OS_AVAILABILITY_MSG" 9675 . 9733) (semantic-list #("(ios, deprecated=10.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_add" 9716 . 9732)))) 9675 . 9733) (symbol "__OS_AVAILABILITY_MSG" 9675 . 9733) (semantic-list #("(macosx, deprecated=10.12, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_add" 9716 . 9732)))) 9675 . 9733) (symbol "__OS_AVAILABILITY_MSG" 9675 . 9733) (semantic-list 9131 . 9157) (symbol 9107 . 9131) (semantic-list #("(watchos, deprecated=3.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_add" 9089 . 9105)))) 9056 . 9106) (symbol "__OS_AVAILABILITY_MSG" 9056 . 9106) (semantic-list #("(tvos, deprecated=10.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_add" 9089 . 9105)))) 9056 . 9106) (symbol "__OS_AVAILABILITY_MSG" 9056 . 9106) (semantic-list #("(ios, deprecated=10.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_add" 9089 . 9105)))) 9056 . 9106) (symbol "__OS_AVAILABILITY_MSG" 9056 . 9106) (semantic-list #("(macosx, deprecated=10.12, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_add" 9089 . 9105)))) 9056 . 9106) (symbol "__OS_AVAILABILITY_MSG" 9056 . 9106) (semantic-list 8084 . 8111) (symbol 8060 . 8084) (semantic-list #("(watchos, deprecated=3.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_sub" 8042 . 8058)))) 8001 . 8059) (symbol "__OS_AVAILABILITY_MSG" 8001 . 8059) (semantic-list #("(tvos, deprecated=10.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_sub" 8042 . 8058)))) 8001 . 8059) (symbol "__OS_AVAILABILITY_MSG" 8001 . 8059) (semantic-list #("(ios, deprecated=10.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_sub" 8042 . 8058)))) 8001 . 8059) (symbol "__OS_AVAILABILITY_MSG" 8001 . 8059) (semantic-list #("(macosx, deprecated=10.12, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_sub" 8042 . 8058)))) 8001 . 8059) (symbol "__OS_AVAILABILITY_MSG" 8001 . 8059) (semantic-list 7685 . 7712) (symbol 7661 . 7685) (semantic-list #("(watchos, deprecated=3.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_sub" 7643 . 7659)))) 7610 . 7660) (symbol "__OS_AVAILABILITY_MSG" 7610 . 7660) (semantic-list #("(tvos, deprecated=10.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_sub" 7643 . 7659)))) 7610 . 7660) (symbol "__OS_AVAILABILITY_MSG" 7610 . 7660) (semantic-list #("(ios, deprecated=10.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_sub" 7643 . 7659)))) 7610 . 7660) (symbol "__OS_AVAILABILITY_MSG" 7610 . 7660) (semantic-list #("(macosx, deprecated=10.12, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_sub" 7643 . 7659)))) 7610 . 7660) (symbol "__OS_AVAILABILITY_MSG" 7610 . 7660) (semantic-list 7421 . 7448) (symbol 7397 . 7421) (semantic-list #("(watchos, deprecated=3.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_add" 7379 . 7395)))) 7338 . 7396) (symbol "__OS_AVAILABILITY_MSG" 7338 . 7396) (semantic-list #("(tvos, deprecated=10.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_add" 7379 . 7395)))) 7338 . 7396) (symbol "__OS_AVAILABILITY_MSG" 7338 . 7396) (semantic-list #("(ios, deprecated=10.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_add" 7379 . 7395)))) 7338 . 7396) (symbol "__OS_AVAILABILITY_MSG" 7338 . 7396) (semantic-list #("(macosx, deprecated=10.12, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_add" 7379 . 7395)))) 7338 . 7396) (symbol "__OS_AVAILABILITY_MSG" 7338 . 7396) (semantic-list 7022 . 7049) (symbol 6998 . 7022) (semantic-list #("(watchos, deprecated=3.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_add" 6980 . 6996)))) 6947 . 6997) (symbol "__OS_AVAILABILITY_MSG" 6947 . 6997) (semantic-list #("(tvos, deprecated=10.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_add" 6980 . 6996)))) 6947 . 6997) (symbol "__OS_AVAILABILITY_MSG" 6947 . 6997) (semantic-list #("(ios, deprecated=10.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_add" 6980 . 6996)))) 6947 . 6997) (symbol "__OS_AVAILABILITY_MSG" 6947 . 6997) (semantic-list #("(macosx, deprecated=10.12, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_add" 6980 . 6996)))) 6947 . 6997) (symbol "__OS_AVAILABILITY_MSG" 6947 . 6997) (semantic-list 6640 . 6666) (symbol 6616 . 6640) (semantic-list #("(watchos, deprecated=3.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_add" 6598 . 6614)))) 6557 . 6615) (symbol "__OS_AVAILABILITY_MSG" 6557 . 6615) (semantic-list #("(tvos, deprecated=10.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_add" 6598 . 6614)))) 6557 . 6615) (symbol "__OS_AVAILABILITY_MSG" 6557 . 6615) (semantic-list #("(ios, deprecated=10.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_add" 6598 . 6614)))) 6557 . 6615) (symbol "__OS_AVAILABILITY_MSG" 6557 . 6615) (semantic-list #("(macosx, deprecated=10.12, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_add" 6598 . 6614)))) 6557 . 6615) (symbol "__OS_AVAILABILITY_MSG" 6557 . 6615) (semantic-list 6049 . 6075) (symbol 6025 . 6049) (semantic-list #("(watchos, deprecated=3.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_add" 6007 . 6023)))) 5974 . 6024) (symbol "__OS_AVAILABILITY_MSG" 5974 . 6024) (semantic-list #("(tvos, deprecated=10.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_add" 6007 . 6023)))) 5974 . 6024) (symbol "__OS_AVAILABILITY_MSG" 5974 . 6024) (semantic-list #("(ios, deprecated=10.0, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_add" 6007 . 6023)))) 5974 . 6024) (symbol "__OS_AVAILABILITY_MSG" 5974 . 6024) (semantic-list #("(macosx, deprecated=10.12, OSATOMIC_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "atomic_fetch_add" 6007 . 6023)))) 5974 . 6024) (symbol "__OS_AVAILABILITY_MSG" 5974 . 6024))
+      :lexical-table 
+        '(("OSATOMIC_DEPRECATED" . ((number "1" 1708 . 1709)))
+          ("OSATOMIC_BARRIER_DEPRECATED_REPLACE_WITH" (spp-arg-list ("_r") 2202 . 2206) . 
+              ((symbol "__OS_AVAILABILITY_MSG" 2210 . 2231) (semantic-list "(macosx, deprecated=10.12, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 2231 . 2294) (symbol "__OS_AVAILABILITY_MSG" 2298 . 2319) (semantic-list "(ios, deprecated=10.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 2319 . 2378) (symbol "__OS_AVAILABILITY_MSG" 2382 . 2403) (semantic-list "(tvos, deprecated=10.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 2403 . 2463) (symbol "__OS_AVAILABILITY_MSG" 2467 . 2488) (semantic-list "(watchos, deprecated=3.0, OSATOMIC_BARRIER_DEPRECATED_MSG(_r))" 2488 . 2550)))
+          ("OSATOMIC_DEPRECATED_MSG" (spp-arg-list ("_r") 2061 . 2065) . 
+              ((string "\"Use std::\"" 2070 . 2081) (punctuation "#" 2082 . 2083) (symbol "_r" 2083 . 2085) (string "\"_explicit(std::memory_order_relaxed) from <atomic> instead\"" 2086 . 2146)))
+          ("OSATOMIC_DEPRECATED_REPLACE_WITH" (spp-arg-list ("_r") 2591 . 2595) . 
+              ((symbol "__OS_AVAILABILITY_MSG" 2599 . 2620) (semantic-list "(macosx, deprecated=10.12, OSATOMIC_DEPRECATED_MSG(_r))" 2620 . 2675) (symbol "__OS_AVAILABILITY_MSG" 2679 . 2700) (semantic-list "(ios, deprecated=10.0, OSATOMIC_DEPRECATED_MSG(_r))" 2700 . 2751) (symbol "__OS_AVAILABILITY_MSG" 2755 . 2776) (semantic-list "(tvos, deprecated=10.0, OSATOMIC_DEPRECATED_MSG(_r))" 2776 . 2828) (symbol "__OS_AVAILABILITY_MSG" 2832 . 2853) (semantic-list "(watchos, deprecated=3.0, OSATOMIC_DEPRECATED_MSG(_r))" 2853 . 2907)))
+          ("_OSATOMIC_DEPRECATED_H_")
+          ("OSATOMIC_BARRIER_DEPRECATED_MSG" (spp-arg-list ("_r") 1978 . 1982) . 
+              ((string "\"Use std::\"" 1987 . 1998) (punctuation "#" 1999 . 2000) (symbol "_r" 2000 . 2002) (string "\"() from <atomic> instead\"" 2003 . 2029)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("_OSSPINLOCK_DEPRECATED_H_" variable (:constant-flag t) nil [1015 1040])
+            ("OSSPINLOCK_DEPRECATED" variable (:constant-flag t) nil [1817 1838])
+            ("OSSPINLOCK_DEPRECATED_MSG" variable (:constant-flag t) nil [1849 1874])
+            ("OSSPINLOCK_DEPRECATED_REPLACE_WITH" variable (:constant-flag t) nil [1928 1962])
+            ("sys/cdefs.h" include (:system-flag t) nil [2475 2500])
+            ("stddef.h" include (:system-flag t) nil [2501 2523])
+            ("stdint.h" include (:system-flag t) nil [2524 2546])
+            ("stdbool.h" include (:system-flag t) nil [2547 2570])
+            ("Availability.h" include (:system-flag t) nil [2571 2599])
+            ("OSSpinLockUnlock" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("__lock" variable
+                       (:pointer 1
+                        :typemodifiers ("volatile")
+                        :type ("OSSpinLock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3871 3900]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3845 3901])
+            ("OSSpinLockLock" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("__lock" variable
+                       (:pointer 1
+                        :typemodifiers ("volatile")
+                        :type ("OSSpinLock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3667 3696]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3643 3697])
+            ("OSSpinLockTry" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "bool"
+                :arguments 
+                  ( ("__lock" variable
+                       (:pointer 1
+                        :typemodifiers ("volatile")
+                        :type ("OSSpinLock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3352 3381]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3329 3382])
+            ("__OS_AVAILABILITY_MSG" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable (:type ("watchos" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) nil)
+                    ("" variable (:type ("deprecated" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) nil)
+                    ("" variable (:type ("os_unfair_lock" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) nil))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2967 3018])
+            ("OS_SPINLOCK_INIT" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [2769 2785]))          
+      :file "OSSpinLockDeprecated.h"
+      :pointmax 6633
+      :fsize 6632
+      :lastmodtime '(22677 37495 0 0)
+      :unmatched-syntax '((semantic-list 3818 . 3844) (symbol 3794 . 3818) (semantic-list #("(watchos, deprecated=3.0, OSSPINLOCK_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "os_unfair_lock_unlock" 3771 . 3792)))) 3736 . 3793) (symbol "__OS_AVAILABILITY_MSG" 3736 . 3793) (semantic-list #("(tvos, deprecated=10.0, OSSPINLOCK_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "os_unfair_lock_unlock" 3771 . 3792)))) 3736 . 3793) (symbol "__OS_AVAILABILITY_MSG" 3736 . 3793) (semantic-list #("(ios, deprecated=10.0, OSSPINLOCK_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "os_unfair_lock_unlock" 3771 . 3792)))) 3736 . 3793) (symbol "__OS_AVAILABILITY_MSG" 3736 . 3793) (semantic-list #("(macosx, deprecated=10.12, OSSPINLOCK_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "os_unfair_lock_unlock" 3771 . 3792)))) 3736 . 3793) (symbol "__OS_AVAILABILITY_MSG" 3736 . 3793) (semantic-list 3616 . 3642) (symbol 3592 . 3616) (semantic-list #("(watchos, deprecated=3.0, OSSPINLOCK_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "os_unfair_lock_lock" 3571 . 3590)))) 3536 . 3591) (symbol "__OS_AVAILABILITY_MSG" 3536 . 3591) (semantic-list #("(tvos, deprecated=10.0, OSSPINLOCK_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "os_unfair_lock_lock" 3571 . 3590)))) 3536 . 3591) (symbol "__OS_AVAILABILITY_MSG" 3536 . 3591) (semantic-list #("(ios, deprecated=10.0, OSSPINLOCK_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "os_unfair_lock_lock" 3571 . 3590)))) 3536 . 3591) (symbol "__OS_AVAILABILITY_MSG" 3536 . 3591) (semantic-list #("(macosx, deprecated=10.12, OSSPINLOCK_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "os_unfair_lock_lock" 3571 . 3590)))) 3536 . 3591) (symbol "__OS_AVAILABILITY_MSG" 3536 . 3591) (semantic-list 3302 . 3328) (symbol 3278 . 3302) (semantic-list #("(watchos, deprecated=3.0, OSSPINLOCK_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "os_unfair_lock_trylock" 3254 . 3276)))) 3219 . 3277) (symbol "__OS_AVAILABILITY_MSG" 3219 . 3277) (semantic-list #("(tvos, deprecated=10.0, OSSPINLOCK_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "os_unfair_lock_trylock" 3254 . 3276)))) 3219 . 3277) (symbol "__OS_AVAILABILITY_MSG" 3219 . 3277) (semantic-list #("(ios, deprecated=10.0, OSSPINLOCK_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "os_unfair_lock_trylock" 3254 . 3276)))) 3219 . 3277) (symbol "__OS_AVAILABILITY_MSG" 3219 . 3277) (semantic-list #("(macosx, deprecated=10.12, OSSPINLOCK_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "os_unfair_lock_trylock" 3254 . 3276)))) 3219 . 3277) (symbol "__OS_AVAILABILITY_MSG" 3219 . 3277) (semantic-list #("(tvos, deprecated=10.0, OSSPINLOCK_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "os_unfair_lock" 3002 . 3016)))) 2967 . 3017) (symbol "__OS_AVAILABILITY_MSG" 2967 . 3017) (semantic-list #("(ios, deprecated=10.0, OSSPINLOCK_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "os_unfair_lock" 3002 . 3016)))) 2967 . 3017) (symbol "__OS_AVAILABILITY_MSG" 2967 . 3017) (semantic-list #("(macosx, deprecated=10.12, OSSPINLOCK_DEPRECATED_MSG(_r))" 0 1 (macros (("_r" symbol "os_unfair_lock" 3002 . 3016)))) 2967 . 3017) (symbol "__OS_AVAILABILITY_MSG" 2967 . 3017) (symbol 2956 . 2966) (symbol 2948 . 2955) (TYPEDEF 2940 . 2947))
+      :lexical-table 
+        '(("OSSPINLOCK_DEPRECATED_REPLACE_WITH" (spp-arg-list ("_r") 1962 . 1966) . 
+              ((symbol "__OS_AVAILABILITY_MSG" 1970 . 1991) (semantic-list "(macosx, deprecated=10.12, OSSPINLOCK_DEPRECATED_MSG(_r))" 1991 . 2048) (symbol "__OS_AVAILABILITY_MSG" 2052 . 2073) (semantic-list "(ios, deprecated=10.0, OSSPINLOCK_DEPRECATED_MSG(_r))" 2073 . 2126) (symbol "__OS_AVAILABILITY_MSG" 2130 . 2151) (semantic-list "(tvos, deprecated=10.0, OSSPINLOCK_DEPRECATED_MSG(_r))" 2151 . 2205) (symbol "__OS_AVAILABILITY_MSG" 2209 . 2230) (semantic-list "(watchos, deprecated=3.0, OSSPINLOCK_DEPRECATED_MSG(_r))" 2230 . 2286)))
+          ("OS_SPINLOCK_INIT" . ((number "0" 2789 . 2790)))
+          ("OSSPINLOCK_DEPRECATED_MSG" (spp-arg-list ("_r") 1874 . 1878) . 
+              ((string "\"Use \"" 1879 . 1885) (punctuation "#" 1886 . 1887) (symbol "_r" 1887 . 1889) (string "\"() from <os/lock.h> instead\"" 1890 . 1919)))
+          ("OSSPINLOCK_DEPRECATED" . ((number "1" 1839 . 1840)))
+          ("_OSSPINLOCK_DEPRECATED_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("_OSATOMICQUEUE_H_" variable (:constant-flag t) nil [1007 1024])
+            ("stddef.h" include (:system-flag t) nil [1026 1048])
+            ("sys/cdefs.h" include (:system-flag t) nil [1049 1074])
+            ("stdint.h" include (:system-flag t) nil [1075 1097])
+            ("stdbool.h" include (:system-flag t) nil [1098 1121])
+            ("Availability.h" include (:system-flag t) nil [1123 1151])
+            ("OSAtomicFifoDequeue" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("__list" variable
+                       (:pointer 1
+                        :type ("OSFifoQueueHead" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6538 6562])
+                    ("__offset" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6563 6579]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [6511 6580])
+            ("OSAtomicFifoEnqueue" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("__list" variable
+                       (:pointer 1
+                        :type ("OSFifoQueueHead" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5560 5584])
+                    ("__new" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5585 5597])
+                    ("__offset" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5598 5614]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [5533 5615])
+            ("OS_ATOMIC_FIFO_QUEUE_INIT" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [4651 4676])
+            ("OSFifoQueueHead" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("" type
+                     (:members 
+                        ( ("opaque1" variable
+                             (:pointer 1
+                              :type "void")
+                              (reparse-symbol classsubparts) [4372 4386])
+                          ("opaque2" variable
+                             (:pointer 1
+                              :type "void")
+                              (reparse-symbol classsubparts) [4388 4402])
+                          ("opaque3" variable (:type "int") (reparse-symbol classsubparts) [4404 4417]))                        
+                      :type "struct")
+                      nil nil))
+                (reparse-symbol extern-c-contents) [4345 4467])
+            ("OSAtomicDequeue" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("__list" variable
+                       (:pointer 1
+                        :type ("OSQueueHead" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3910 3930])
+                    ("__offset" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3931 3947]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3887 3948])
+            ("OSAtomicEnqueue" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("__list" variable
+                       (:pointer 1
+                        :type ("OSQueueHead" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2654 2674])
+                    ("__new" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2675 2687])
+                    ("__offset" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2688 2704]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2631 2705])
+            ("OS_ATOMIC_QUEUE_INIT" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [1761 1781])
+            ("OSQueueHead" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("" type
+                     (:members 
+                        ( ("opaque1" variable
+                             (:pointer 1
+                              :type "void")
+                              (reparse-symbol classsubparts) [1525 1539])
+                          ("opaque2" variable (:type "long") (reparse-symbol classsubparts) [1541 1555]))                        
+                      :type "struct")
+                      nil nil))
+                (reparse-symbol extern-c-contents) [1498 1601]))          
+      :file "OSAtomicQueue.h"
+      :pointmax 6663
+      :fsize 6662
+      :lastmodtime '(22677 37495 0 0)
+      :unmatched-syntax '((semantic-list 6485 . 6510) (symbol 6461 . 6485) (semantic-list 5507 . 5532) (symbol 5483 . 5507) (semantic-list 3860 . 3886) (symbol 3836 . 3860) (semantic-list 2604 . 2630) (symbol 2580 . 2604))
+      :lexical-table 
+        '(("_OSATOMICQUEUE_H_")
+          ("OS_ATOMIC_QUEUE_INIT" . ((semantic-list "{ NULL, 0 }" 1782 . 1793)))
+          ("OS_ATOMIC_FIFO_QUEUE_INIT" . ((semantic-list "{ NULL, NULL, 0 }" 4679 . 4696)))
+          )
+))
+  :file "!usr!include!libkern!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

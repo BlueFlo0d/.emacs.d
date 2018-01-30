@@ -1,0 +1,349 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("scipy" include nil nil [20 39])
+            ("numpy" include nil nil [40 59])
+            ("scipy" include nil nil [60 87])
+            ("matplotlib.pyplot" include nil nil [88 119])
+            ("numba" include nil nil [120 141])
+            ("int_kernel" function
+               (:decorators 
+                  ( ("jit" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("k" variable nil (reparse-symbol function_parameters) [162 163])
+                    ("e" variable nil (reparse-symbol function_parameters) [164 165]))                  )
+                nil [142 242])
+            ("int_kernel" function
+               (:decorators 
+                  ( ("jit" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("k" variable nil (reparse-symbol function_parameters) [262 263])
+                    ("e" variable nil (reparse-symbol function_parameters) [264 265]))                  )
+                nil [242 340])
+            ("epsilon" variable nil nil [340 356])
+            ("L_kernel" function (:arguments 
+              ( ("k" variable nil (reparse-symbol function_parameters) [370 371])
+                ("e" variable nil (reparse-symbol function_parameters) [372 373]))              ) nil [357 463])
+            ("L_kernel" function (:arguments 
+              ( ("k" variable nil (reparse-symbol function_parameters) [476 477])
+                ("e" variable nil (reparse-symbol function_parameters) [478 479]))              ) nil [463 553])
+            ("c_int" function (:arguments 
+              ( ("func" variable nil (reparse-symbol function_parameters) [563 567])
+                ("x1" variable nil (reparse-symbol function_parameters) [568 570])
+                ("x2" variable nil (reparse-symbol function_parameters) [571 573])
+                ("arg" variable nil (reparse-symbol function_parameters) [574 577]))              ) nil [553 797])
+            ("epsilon" variable nil nil [797 814])
+            ("L" function (:arguments 
+              ( ("e" variable nil (reparse-symbol function_parameters) [821 822]))              ) nil [815 921])
+            ("x_vals" variable nil nil [922 954])
+            ("y_vals" variable nil nil [955 964])
+            ("'''
+for x in x_vals:
+    l=L(x)
+    print x,\" \",l
+    y_vals.append(l)
+np.save(\"yv.npy\",y_vals)
+'''" code nil nil [965 1064])
+            ("I" function (:arguments 
+              ( ("e" variable nil (reparse-symbol function_parameters) [1071 1072]))              ) nil [1065 1122])
+            ("see" function nil nil [1122 1255])
+            ("code" include nil nil [1255 1266])
+            ("code" code nil nil [1267 1296]))          
+      :file "phase_transition.py"
+      :pointmax 1297
+      :fsize 1296
+      :lastmodtime '(23061 17564 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("scipy" include nil nil [20 39])
+            ("numpy" include nil nil [40 59])
+            ("matplotlib.pyplot" include nil nil [60 91])
+            ("'''
+yv = np.load(\"yvn.npy\")
+for i in range(0,len(yv)):
+    if (abs(yv[i])>0.5):
+        yv[i]=float(\"nan\")
+
+np.save(\"yv.npy\",yv)
+
+xv = arange(-0.05,0.05,0.0005)
+plt.plot(xv,yv)
+plt.show()
+'''" code nil nil [93 284])
+            ("Idvn" variable nil nil [285 313])
+            ("tv" variable nil nil [314 340])
+            ("dataneg" variable nil nil [341 351])
+            ("datapos" variable nil nil [352 362])
+            ("for" code nil nil [363 500])
+            ("np" code nil nil [500 537])
+            ("np" code nil nil [538 574]))          
+      :file "util.py"
+      :pointmax 575
+      :fsize 1890
+      :lastmodtime '(23053 21721 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("scipy.optimize" include nil nil [20 47])
+            ("scipy" include nil nil [48 67])
+            ("numpy" include nil nil [68 87])
+            ("yv" code nil nil [88 110])
+            ("xv" variable nil nil [111 139])
+            ("xvp" variable nil nil [140 146])
+            ("yvp" variable nil nil [147 153])
+            ("for" code nil nil [154 311])
+            ("res" function (:arguments 
+              ( ("p" variable nil (reparse-symbol function_parameters) [319 320]))              ) nil [311 366])
+            ("plsq" variable nil nil [366 395])
+            ("print" code nil nil [396 421])
+            ("scipy" include nil nil [422 445])
+            ("print" code nil nil [446 485]))          
+      :file "scaling.py"
+      :pointmax 486
+      :fsize 485
+      :lastmodtime '(23050 28253 0 0)
+      :unmatched-syntax '(($EOI 486 . 486) ($EOI 484 . 484) ($EOI 483 . 483)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("scipy" include nil nil [1 20])
+            ("numpy" include nil nil [21 40])
+            ("matplotlib.pyplot" include nil nil [41 72])
+            ("numpy" include nil nil [73 91]))          
+      :file "dependency.py"
+      :pointmax 92
+      :fsize 91
+      :lastmodtime '(23050 55341 0 0)
+      :unmatched-syntax '((IMPORT 73 . 79) ($EOI 91 . 91) (IMPORT 73 . 79) ($EOI 92 . 92) (IMPORT 73 . 79) ($EOI 90 . 90) (IMPORT 73 . 79) ($EOI 89 . 89) (IMPORT 73 . 79) ($EOI 88 . 88) (IMPORT 73 . 79) (NAME 86 . 87) ($EOI 87 . 87) (IMPORT 73 . 79) ($EOI 86 . 86) (IMPORT 73 . 79) ($EOI 83 . 83) (IMPORT 73 . 79) ($EOI 82 . 82) (IMPORT 73 . 79) ($EOI 81 . 81) (IMPORT 73 . 79) ($EOI 80 . 80) (NAME 73 . 76) ($EOI 76 . 76) (NAME 73 . 75) ($EOI 75 . 75) (NAME 73 . 74) ($EOI 74 . 74) (IMPORT 41 . 47) ($EOI 72 . 72) (IMPORT 41 . 47) ($EOI 71 . 71) (IMPORT 41 . 47) ($EOI 70 . 70) (IMPORT 41 . 47) ($EOI 69 . 69) (IMPORT 41 . 47) ($EOI 68 . 68) (IMPORT 41 . 47) (NAME 66 . 67) ($EOI 67 . 67) (IMPORT 41 . 47) ($EOI 66 . 66) (IMPORT 41 . 47) ($EOI 62 . 62) (IMPORT 41 . 47) ($EOI 61 . 61) (IMPORT 41 . 47) ($EOI 60 . 60) (IMPORT 41 . 47) ($EOI 59 . 59) (IMPORT 41 . 47) ($EOI 51 . 51) (IMPORT 41 . 47) ($EOI 50 . 50) (IMPORT 41 . 47) ($EOI 49 . 49) (IMPORT 41 . 47) ($EOI 48 . 48) (NAME 41 . 44) ($EOI 44 . 44) (NAME 41 . 43) ($EOI 43 . 43) (NAME 41 . 42) ($EOI 42 . 42) (FROM 21 . 25) ($EOI 40 . 40) (FROM 21 . 25) ($EOI 39 . 39) (FROM 21 . 25) (NAME 32 . 35) ($EOI 35 . 35) (FROM 21 . 25) (NAME 32 . 34) ($EOI 34 . 34) (FROM 21 . 25) (NAME 32 . 33) ($EOI 33 . 33) (FROM 21 . 25) ($EOI 32 . 32) (FROM 21 . 25) ($EOI 29 . 29) (FROM 21 . 25) ($EOI 28 . 28) (FROM 21 . 25) ($EOI 27 . 27) (FROM 21 . 25) ($EOI 26 . 26) (FROM 21 . 25) ($EOI 25 . 25) (NAME 21 . 24) ($EOI 24 . 24) (NAME 21 . 23) ($EOI 23 . 23) (NAME 21 . 22) ($EOI 22 . 22) ($EOI 20 . 20) ($EOI 19 . 19) ($EOI 18 . 18) (NAME 12 . 15) ($EOI 15 . 15) (NAME 12 . 14) ($EOI 14 . 14) (NAME 12 . 13) ($EOI 13 . 13) ($EOI 12 . 12) ($EOI 9 . 9) ($EOI 8 . 8) ($EOI 7 . 7) ($EOI 6 . 6) ($EOI 5 . 5) ($EOI 4 . 4) ($EOI 3 . 3) ($EOI 2 . 2) ($EOI 3 . 3) ($EOI 2 . 2)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("dependency" include nil nil [1 25])
+            ("scipy.integrate" include nil nil [26 56])
+            ("numba" include nil nil [57 78])
+            ("u_v_expr" function
+               (:decorators 
+                  ( ("jit" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("kappa" variable nil (reparse-symbol function_parameters) [97 102])
+                    ("k" variable nil (reparse-symbol function_parameters) [103 104]))                  )
+                nil [79 176])
+            ("N_Delta_xi_expr" function
+               (:decorators 
+                  ( ("jit" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("kappa" variable nil (reparse-symbol function_parameters) [201 206])
+                    ("k" variable nil (reparse-symbol function_parameters) [207 208]))                  )
+                nil [176 332])
+            ("rho_z_y_p_N_expr" function
+               (:decorators 
+                  ( ("jit" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("kappa" variable nil (reparse-symbol function_parameters) [358 363])
+                    ("k" variable nil (reparse-symbol function_parameters) [364 365]))                  )
+                nil [332 474])
+            ("G2" function
+               (:decorators 
+                  ( ("jit" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("kappa0" variable nil (reparse-symbol function_parameters) [486 492])
+                    ("kappa" variable nil (reparse-symbol function_parameters) [493 498])
+                    ("k" variable nil (reparse-symbol function_parameters) [499 500])
+                    ("t" variable nil (reparse-symbol function_parameters) [501 502]))                  )
+                nil [474 811])
+            ("lnG2" function (:arguments 
+              ( ("k" variable nil (reparse-symbol function_parameters) [820 821])
+                ("p" variable nil (reparse-symbol function_parameters) [822 823]))              ) nil [811 884])
+            ("I" function (:arguments 
+              ( ("kappa0" variable nil (reparse-symbol function_parameters) [890 896])
+                ("kappa" variable nil (reparse-symbol function_parameters) [897 902])
+                ("t" variable nil (reparse-symbol function_parameters) [903 904]))              ) nil [884 960])
+            ("epsilon" variable nil nil [960 973])
+            ("lnG2_d1" function (:arguments 
+              ( ("k" variable nil (reparse-symbol function_parameters) [986 987])
+                ("p" variable nil (reparse-symbol function_parameters) [988 989]))              ) nil [974 1106])
+            ("lnG2_d2" function (:arguments 
+              ( ("k" variable nil (reparse-symbol function_parameters) [1118 1119])
+                ("p" variable nil (reparse-symbol function_parameters) [1120 1121]))              ) nil [1106 1262])
+            ("I_d1" function (:arguments 
+              ( ("kappa0" variable nil (reparse-symbol function_parameters) [1271 1277])
+                ("kappa" variable nil (reparse-symbol function_parameters) [1278 1283])
+                ("t" variable nil (reparse-symbol function_parameters) [1284 1285]))              ) nil [1262 1344])
+            ("L" variable nil nil [1344 1349])
+            ("I_d1" function
+               (:decorators 
+                  ( ("jit" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("kappa0" variable nil (reparse-symbol function_parameters) [1365 1371])
+                    ("kappa" variable nil (reparse-symbol function_parameters) [1372 1377])
+                    ("t" variable nil (reparse-symbol function_parameters) [1378 1379]))                  )
+                nil [1351 1504])
+            ("I_d2" function (:arguments 
+              ( ("kappa0" variable nil (reparse-symbol function_parameters) [1514 1520])
+                ("kappa" variable nil (reparse-symbol function_parameters) [1521 1526])
+                ("t" variable nil (reparse-symbol function_parameters) [1527 1528]))              ) nil [1505 1587])
+            ("tc" function (:arguments 
+              ( ("kappa0" variable nil (reparse-symbol function_parameters) [1594 1600])
+                ("kappa" variable nil (reparse-symbol function_parameters) [1601 1606]))              ) nil [1587 1848])
+            ("'''
+ki=1.5
+kfv=arange(2,5,0.05)
+data=[]
+for kf in kfv:
+    data.append([kf,tc(ki,kf)])
+np.savetxt('phased1.5t',data)
+'''" code nil nil [1849 1969])
+            ("'''
+@jit
+def N_Delta_xi_expr(kappa,k):
+    fr=kappa**2+kappa+1
+    N=(1+kappa**2+kappa*(1+cos(k)))/fr
+    Delta=-(1+kappa)*(cos(k)+kappa*cos(2*k))/fr
+    xi=(1+kappa)*(sin(k)+kappa*sin(2*k))/fr
+    return N,Delta,xi
+'''" code nil nil [1970 2189])
+            ("'''
+@jit
+def N_Delta_xi_expr(kappa,k):
+    N=1
+    Delta=-(cos(k)+kappa*cos(2*k))/(1+kappa)
+    xi=(sin(k)+kappa*sin(2*k))/(1+kappa)
+    return N,Delta,xi
+'''" code nil nil [2190 2348])
+            ("scipy.optimize" include nil nil [2349 2382])
+            ("x0" variable nil nil [2383 2390])
+            ("tc" function (:arguments 
+              ( ("kappa0" variable nil (reparse-symbol function_parameters) [2398 2404])
+                ("kappa" variable nil (reparse-symbol function_parameters) [2405 2410]))              ) nil [2391 2546])
+            ("see" function (:arguments 
+              ( ("Is" variable nil (reparse-symbol function_parameters) [2555 2557])
+                ("kappai" variable nil (reparse-symbol function_parameters) [2558 2564])
+                ("kappaf" variable nil (reparse-symbol function_parameters) [2565 2571])
+                ("tv" variable nil (reparse-symbol function_parameters) [2572 2574])
+                ("str" variable nil (reparse-symbol function_parameters) [2575 2578]))              ) nil [2547 2773])
+            ("see_kappa" function (:arguments 
+              ( ("func" variable nil (reparse-symbol function_parameters) [2787 2791])
+                ("kappai" variable nil (reparse-symbol function_parameters) [2792 2798])
+                ("fv" variable nil (reparse-symbol function_parameters) [2799 2801])
+                ("str" variable nil (reparse-symbol function_parameters) [2802 2805]))              ) nil [2773 2993])
+            ("see_kappaf" function (:arguments 
+              ( ("func" variable nil (reparse-symbol function_parameters) [3008 3012])
+                ("iv" variable nil (reparse-symbol function_parameters) [3013 3015])
+                ("kappaf" variable nil (reparse-symbol function_parameters) [3016 3022])
+                ("str" variable nil (reparse-symbol function_parameters) [3023 3026]))              ) nil [2993 3753])
+            ("'''
+def tc(kappa0,kappa):
+    N=(1+kappa**2)/(kappa**2+kappa+1)
+    return log(2*(kappa0**2-kappa**2)/(1-kappa**2)/(1+kappa0**2))/N
+'''" code nil nil [3753 3888])
+            ("toy_G2" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [3900 3901])
+                ("y" variable nil (reparse-symbol function_parameters) [3902 3903]))              ) nil [3889 3939])
+            ("toy_I" function (:arguments 
+              ( ("y" variable nil (reparse-symbol function_parameters) [3949 3950]))              ) nil [3939 3989])
+            ("toy_Id1" function (:arguments 
+              ( ("y" variable nil (reparse-symbol function_parameters) [4001 4002]))              ) nil [3989 4121])
+            ("toy_see" function (:arguments 
+              ( ("f" variable nil (reparse-symbol function_parameters) [4133 4134]))              ) nil [4121 4251])
+            ("code" include nil nil [4251 4262])
+            ("code" code nil nil [4263 4292]))          
+      :file "general_case.py"
+      :pointmax 4293
+      :fsize 4292
+      :lastmodtime '(23066 21303 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("dependency" include nil nil [1 25])
+            ("scipy.integrate" include nil nil [26 56])
+            ("numba" include nil nil [57 78])
+            ("delta" variable nil nil [79 92])
+            ("u_v_expr" function (:arguments 
+              ( ("kappa" variable nil (reparse-symbol function_parameters) [111 116])
+                ("k" variable nil (reparse-symbol function_parameters) [117 118]))              ) nil [98 224])
+            ("N_Delta_xi_expr" function (:arguments 
+              ( ("kappa" variable nil (reparse-symbol function_parameters) [249 254])
+                ("k" variable nil (reparse-symbol function_parameters) [255 256]))              ) nil [229 380])
+            ("rho_z_y_p_N_expr" function (:arguments 
+              ( ("kappa" variable nil (reparse-symbol function_parameters) [406 411])
+                ("k" variable nil (reparse-symbol function_parameters) [412 413]))              ) nil [385 554])
+            ("G2" function (:arguments 
+              ( ("kappa0" variable nil (reparse-symbol function_parameters) [566 572])
+                ("kappa" variable nil (reparse-symbol function_parameters) [573 578])
+                ("k" variable nil (reparse-symbol function_parameters) [579 580])
+                ("t" variable nil (reparse-symbol function_parameters) [581 582]))              ) nil [559 953])
+            ("lnG2" function (:arguments 
+              ( ("ky" variable nil (reparse-symbol function_parameters) [962 964])
+                ("kx" variable nil (reparse-symbol function_parameters) [965 967])
+                ("kappa0" variable nil (reparse-symbol function_parameters) [968 974])
+                ("kappa" variable nil (reparse-symbol function_parameters) [975 980])
+                ("t" variable nil (reparse-symbol function_parameters) [981 982]))              ) nil [953 1028])
+            ("I" function (:arguments 
+              ( ("kappa0" variable nil (reparse-symbol function_parameters) [1034 1040])
+                ("kappa" variable nil (reparse-symbol function_parameters) [1041 1046])
+                ("t" variable nil (reparse-symbol function_parameters) [1047 1048]))              ) nil [1028 1132])
+            ("epsilon" variable nil nil [1132 1145])
+            ("lnG2_d1" function (:arguments 
+              ( ("ky" variable nil (reparse-symbol function_parameters) [1158 1160])
+                ("kx" variable nil (reparse-symbol function_parameters) [1161 1163])
+                ("kappa0" variable nil (reparse-symbol function_parameters) [1164 1170])
+                ("kappa" variable nil (reparse-symbol function_parameters) [1171 1176])
+                ("t" variable nil (reparse-symbol function_parameters) [1177 1178]))              ) nil [1146 1288])
+            ("lnG2_d2" function (:arguments 
+              ( ("ky" variable nil (reparse-symbol function_parameters) [1300 1302])
+                ("kx" variable nil (reparse-symbol function_parameters) [1303 1305])
+                ("p" variable nil (reparse-symbol function_parameters) [1306 1307]))              ) nil [1288 1462])
+            ("I_d1" function (:arguments 
+              ( ("kappa0" variable nil (reparse-symbol function_parameters) [1471 1477])
+                ("kappa" variable nil (reparse-symbol function_parameters) [1478 1483])
+                ("t" variable nil (reparse-symbol function_parameters) [1484 1485]))              ) nil [1462 1572])
+            ("I_d2" function (:arguments 
+              ( ("kappa0" variable nil (reparse-symbol function_parameters) [1581 1587])
+                ("kappa" variable nil (reparse-symbol function_parameters) [1588 1593])
+                ("t" variable nil (reparse-symbol function_parameters) [1594 1595]))              ) nil [1572 1682])
+            ("tc" function (:arguments 
+              ( ("kappa0" variable nil (reparse-symbol function_parameters) [1689 1695])
+                ("kappa" variable nil (reparse-symbol function_parameters) [1696 1701]))              ) nil [1682 1943])
+            ("'''
+ki=1.5
+kfv=arange(2,5,0.05)
+data=[]
+for kf in kfv:
+    data.append([kf,tc(ki,kf)])
+np.savetxt('phased1.5t',data)
+'''" code nil nil [1944 2064])
+            ("'''
+tv=arange(0,5,0.01)
+Iv=[]
+
+for t in tv:
+    I1=0
+    try:
+        I1=I(0.0,3.0,t)[0]
+    except:
+        Iv.append(float('nan'))
+    else:
+        Iv.append(I1)
+'''" code nil nil [2065 2233])
+            ("code" include nil nil [2234 2245])
+            ("code" code nil nil [2246 2275]))          
+      :file "case1_2D.py"
+      :pointmax 2276
+      :fsize 2275
+      :lastmodtime '(23054 55505 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!apple!PhysicsResearch!Loschimdt echo!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

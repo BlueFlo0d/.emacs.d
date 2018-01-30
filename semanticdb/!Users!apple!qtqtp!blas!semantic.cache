@@ -1,0 +1,660 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags nil
+      :file "__init__.py"
+      :pointmax 80
+      :fsize 79
+      :lastmodtime '(23071 49050 0 0)
+      :unmatched-syntax '((IMPORT 71 . 77) (MULT 78 . 79) (FROM 58 . 62) (PERIOD 63 . 64) (IMPORT 49 . 55) (MULT 56 . 57) (FROM 39 . 43) (PERIOD 44 . 45) (IMPORT 30 . 36) (MULT 37 . 38) (FROM 20 . 24) (PERIOD 25 . 26) (IMPORT 11 . 17) (MULT 18 . 19) (PERIOD 6 . 7) (IMPORT 71 . 77) (MULT 78 . 79) (PERIOD 63 . 64) (IMPORT 49 . 55) (MULT 56 . 57) (FROM 39 . 43) (PERIOD 44 . 45) (IMPORT 30 . 36) (MULT 37 . 38) (FROM 20 . 24) (PERIOD 25 . 26) (IMPORT 11 . 17) (MULT 18 . 19) (PERIOD 6 . 7) (IMPORT 49 . 55) (MULT 56 . 57) (PERIOD 44 . 45) (IMPORT 30 . 36) (MULT 37 . 38) (FROM 20 . 24) (PERIOD 25 . 26) (IMPORT 11 . 17) (MULT 18 . 19) (PERIOD 6 . 7) (IMPORT 30 . 36) (MULT 37 . 38) (PERIOD 25 . 26) (IMPORT 11 . 17) (MULT 18 . 19) (PERIOD 6 . 7) (IMPORT 11 . 17) (MULT 18 . 19) (PERIOD 6 . 7)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("config" include nil nil [20 40])
+            ("mat" include nil nil [41 51])
+            ("operator" include nil nil [52 76])
+            ("Vec" type
+               (:superclasses ("np.ndarray")
+                :members 
+                  ( ("__new__" function (:arguments 
+                      ( ("cls" variable nil (reparse-symbol function_parameters) [116 119])
+                        ("arg1" variable nil (reparse-symbol function_parameters) [120 124])
+                        ("args" variable nil (reparse-symbol function_parameters) [125 130])
+                        ("kwargs" variable nil (reparse-symbol function_parameters) [131 139]))                      ) (reparse-symbol indented_block_body) [104 443])
+                    ("get_dim" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [459 463]))                          )
+                        (reparse-symbol indented_block_body) [447 554])
+                    ("set_dim" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [570 574])
+                            ("dim" variable nil (reparse-symbol function_parameters) [575 578]))                          )
+                        (reparse-symbol indented_block_body) [558 1088])
+                    ("dim" variable nil (reparse-symbol indented_block_body) [1092 1123])
+                    ("get_type" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1142 1146]))                          )
+                        (reparse-symbol indented_block_body) [1129 1241])
+                    ("set_type" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1258 1262])
+                            ("type" variable nil (reparse-symbol function_parameters) [1263 1267]))                          )
+                        (reparse-symbol indented_block_body) [1245 1550])
+                    ("type" variable nil (reparse-symbol indented_block_body) [1554 1588])
+                    ("get_uni" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1605 1609]))                          )
+                        (reparse-symbol indented_block_body) [1593 1700])
+                    ("set_uni" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1716 1720])
+                            ("uni" variable nil (reparse-symbol function_parameters) [1721 1724]))                          )
+                        (reparse-symbol indented_block_body) [1704 1824])
+                    ("uni" variable nil (reparse-symbol indented_block_body) [1828 1859])
+                    ("dag" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1872 1876]))                          )
+                        (reparse-symbol indented_block_body) [1864 1938])
+                    ("__mul__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1976 1980])
+                            ("other" variable nil (reparse-symbol function_parameters) [1981 1986]))                          )
+                        (reparse-symbol indented_block_body) [1964 2657])
+                    ("__rmul__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2674 2678])
+                            ("other" variable nil (reparse-symbol function_parameters) [2679 2684]))                          )
+                        (reparse-symbol indented_block_body) [2661 2858])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2874 2878]))                          )
+                        (reparse-symbol indented_block_body) [2862 3028])
+                    ("__repr__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3045 3049]))                          )
+                        (reparse-symbol indented_block_body) [3032 3109])
+                    ("norm2" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3123 3127]))                          )
+                        (reparse-symbol indented_block_body) [3113 3311])
+                    ("expect" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3326 3330])
+                            ("mat" variable nil (reparse-symbol function_parameters) [3331 3334]))                          )
+                        (reparse-symbol indented_block_body) [3315 3591])
+                    ("unit" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3604 3608]))                          )
+                        (reparse-symbol indented_block_body) [3595 3691])
+                    ("shallow_array" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("arg1" variable nil (reparse-symbol function_parameters) [3731 3735])
+                            ("type" variable nil (reparse-symbol function_parameters) [3736 3740])
+                            ("dim" variable nil (reparse-symbol function_parameters) [3747 3750])
+                            ("uni" variable nil (reparse-symbol function_parameters) [3756 3759]))                          
+                        :decorators 
+                          ( ("staticmethod" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [3695 4133]))                  
+                :type "class")
+                nil [77 4133]))          
+      :file "vec.py"
+      :pointmax 4133
+      :fsize 4132
+      :lastmodtime '(23073 26814 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("operator" include nil nil [20 44])
+            ("Mat" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [116 131])
+                            ("self" variable nil (reparse-symbol indented_block_body) [140 155])
+                            ("if" code nil (reparse-symbol indented_block_body) [164 334])
+                            ("if" code nil (reparse-symbol indented_block_body) [342 462]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [81 85])
+                            ("data" variable nil (reparse-symbol function_parameters) [86 90])
+                            ("dims" variable nil (reparse-symbol function_parameters) [96 100]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [68 462])
+                    ("get_data" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [479 483]))                          )
+                        (reparse-symbol indented_block_body) [466 512])
+                    ("set_data" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [529 533])
+                            ("data" variable nil (reparse-symbol function_parameters) [534 538]))                          )
+                        (reparse-symbol indented_block_body) [516 565])
+                    ("get_dims" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [582 586]))                          )
+                        (reparse-symbol indented_block_body) [569 615])
+                    ("set_dims" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [632 636])
+                            ("dims" variable nil (reparse-symbol function_parameters) [637 641]))                          )
+                        (reparse-symbol indented_block_body) [619 668])
+                    ("data" variable nil (reparse-symbol indented_block_body) [672 706])
+                    ("dims" variable nil (reparse-symbol indented_block_body) [711 745])
+                    ("__add__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [762 766])
+                            ("other" variable nil (reparse-symbol function_parameters) [767 772]))                          )
+                        (reparse-symbol indented_block_body) [750 816])
+                    ("__radd__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [833 837])
+                            ("other" variable nil (reparse-symbol function_parameters) [838 843]))                          )
+                        (reparse-symbol indented_block_body) [820 872])
+                    ("__sub__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [888 892])
+                            ("other" variable nil (reparse-symbol function_parameters) [893 898]))                          )
+                        (reparse-symbol indented_block_body) [876 930])
+                    ("__rsub__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [947 951])
+                            ("other" variable nil (reparse-symbol function_parameters) [952 957]))                          )
+                        (reparse-symbol indented_block_body) [934 989])
+                    ("__mul__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1005 1009])
+                            ("other" variable nil (reparse-symbol function_parameters) [1010 1015]))                          )
+                        (reparse-symbol indented_block_body) [993 1054])
+                    ("__rmul__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1071 1075])
+                            ("other" variable nil (reparse-symbol function_parameters) [1076 1081]))                          )
+                        (reparse-symbol indented_block_body) [1058 1120])
+                    ("get_ndarray" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1140 1144]))                          )
+                        (reparse-symbol indented_block_body) [1124 1172])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1188 1192]))                          )
+                        (reparse-symbol indented_block_body) [1176 1230]))                  
+                :type "class")
+                nil [45 1230]))          
+      :file "mat.py~"
+      :pointmax 1230
+      :fsize 757
+      :lastmodtime '(23067 61680 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("scipy.sparse" include nil nil [1 27])
+            ("operator" include nil nil [28 52])
+            ("scipy.sparse.linalg" include nil nil [94 127])
+            ("scipy.linalg" include nil nil [128 154])
+            ("numba" include nil nil [155 176])
+            ("Mat" type
+               (:superclasses ("csr_matrix")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("'''
+        if isinstance(arg1,tuple):
+            super(Mat,self).__init__(arg1,*args,**kwargs)
+        else:
+            super(Mat,self).__init__(arg1,dtype=complex,*args,**kwargs)
+        '''" code nil (reparse-symbol indented_block_body) [282 476])
+                            ("super" code nil (reparse-symbol indented_block_body) [485 530])
+                            ("if" code nil (reparse-symbol indented_block_body) [539 659])
+                            ("None" code nil (reparse-symbol indented_block_body) [769 773]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [218 222])
+                            ("arg1" variable nil (reparse-symbol function_parameters) [223 227])
+                            ("dim" variable nil (reparse-symbol function_parameters) [228 231])
+                            ("hermit" variable nil (reparse-symbol function_parameters) [237 243])
+                            ("attr" variable nil (reparse-symbol function_parameters) [249 253])
+                            ("args" variable nil (reparse-symbol function_parameters) [259 264])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [265 273]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [205 776])
+                    ("get_dim" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [792 796]))                          )
+                        (reparse-symbol indented_block_body) [780 824])
+                    ("set_dim" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [840 844])
+                            ("dim" variable nil (reparse-symbol function_parameters) [845 848]))                          )
+                        (reparse-symbol indented_block_body) [828 1312])
+                    ("dim" variable nil (reparse-symbol indented_block_body) [1316 1347])
+                    ("get_attr" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1366 1370]))                          )
+                        (reparse-symbol indented_block_body) [1353 1409])
+                    ("set_attr" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1426 1430])
+                            ("attr" variable nil (reparse-symbol function_parameters) [1431 1435]))                          )
+                        (reparse-symbol indented_block_body) [1413 1472])
+                    ("attr" variable nil (reparse-symbol indented_block_body) [1476 1510])
+                    ("dag" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1524 1528]))                          )
+                        (reparse-symbol indented_block_body) [1516 1656])
+                    ("__mul__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1694 1698])
+                            ("other" variable nil (reparse-symbol function_parameters) [1699 1704]))                          )
+                        (reparse-symbol indented_block_body) [1682 2678])
+                    ("__rmul__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2695 2699])
+                            ("other" variable nil (reparse-symbol function_parameters) [2700 2705]))                          )
+                        (reparse-symbol indented_block_body) [2682 3309])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3572 3576]))                          )
+                        (reparse-symbol indented_block_body) [3560 3783])
+                    ("__repr__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3800 3804]))                          )
+                        (reparse-symbol indented_block_body) [3787 3868])
+                    ("expm" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3881 3885]))                          )
+                        (reparse-symbol indented_block_body) [3872 3946])
+                    ("toarray" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3962 3966]))                          )
+                        (reparse-symbol indented_block_body) [3950 4149])
+                    ("trace" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4163 4167]))                          )
+                        (reparse-symbol indented_block_body) [4153 4207])
+                    ("eigvals" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4223 4227]))                          )
+                        (reparse-symbol indented_block_body) [4211 4322])
+                    ("sqrtm" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4445 4449]))                          )
+                        (reparse-symbol indented_block_body) [4435 4513])
+                    ("transpose" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4531 4535]))                          )
+                        (reparse-symbol indented_block_body) [4517 4623])
+                    ("reshape" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4639 4643])
+                            ("args" variable nil (reparse-symbol function_parameters) [4644 4649]))                          )
+                        (reparse-symbol indented_block_body) [4627 4700])
+                    ("expect" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4715 4719])
+                            ("opt" variable nil (reparse-symbol function_parameters) [4720 4723]))                          )
+                        (reparse-symbol indented_block_body) [4704 4760]))                  
+                :type "class")
+                nil [178 4760]))          
+      :file "mat.py"
+      :pointmax 4760
+      :fsize 4759
+      :lastmodtime '(23074 45740 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("operator" include nil nil [20 44])
+            ("Mat" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [116 131])
+                            ("self" variable nil (reparse-symbol indented_block_body) [140 155])
+                            ("if" code nil (reparse-symbol indented_block_body) [164 334])
+                            ("if" code nil (reparse-symbol indented_block_body) [342 462])
+                            ("self" variable nil (reparse-symbol indented_block_body) [470 509]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [81 85])
+                            ("data" variable nil (reparse-symbol function_parameters) [86 90])
+                            ("dims" variable nil (reparse-symbol function_parameters) [96 100]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [68 510])
+                    ("get_data" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [527 531]))                          )
+                        (reparse-symbol indented_block_body) [514 560])
+                    ("set_data" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [577 581])
+                            ("data" variable nil (reparse-symbol function_parameters) [582 586]))                          )
+                        (reparse-symbol indented_block_body) [564 613])
+                    ("get_dims" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [630 634]))                          )
+                        (reparse-symbol indented_block_body) [617 663])
+                    ("set_dims" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [680 684])
+                            ("dims" variable nil (reparse-symbol function_parameters) [685 689]))                          )
+                        (reparse-symbol indented_block_body) [667 716])
+                    ("data" variable nil (reparse-symbol indented_block_body) [720 754])
+                    ("dims" variable nil (reparse-symbol indented_block_body) [759 793])
+                    ("__add__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [810 814])
+                            ("other" variable nil (reparse-symbol function_parameters) [815 820]))                          )
+                        (reparse-symbol indented_block_body) [798 864])
+                    ("__radd__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [881 885])
+                            ("other" variable nil (reparse-symbol function_parameters) [886 891]))                          )
+                        (reparse-symbol indented_block_body) [868 920])
+                    ("__sub__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [936 940])
+                            ("other" variable nil (reparse-symbol function_parameters) [941 946]))                          )
+                        (reparse-symbol indented_block_body) [924 978])
+                    ("__rsub__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [995 999])
+                            ("other" variable nil (reparse-symbol function_parameters) [1000 1005]))                          )
+                        (reparse-symbol indented_block_body) [982 1037])
+                    ("__mul__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1053 1057])
+                            ("other" variable nil (reparse-symbol function_parameters) [1058 1063]))                          )
+                        (reparse-symbol indented_block_body) [1041 1115])
+                    ("__rmul__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1132 1136])
+                            ("other" variable nil (reparse-symbol function_parameters) [1137 1142]))                          )
+                        (reparse-symbol indented_block_body) [1119 1194])
+                    ("get_ndarray" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1214 1218]))                          )
+                        (reparse-symbol indented_block_body) [1198 1246])
+                    ("ndarray" variable nil (reparse-symbol indented_block_body) [1250 1281])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1298 1302]))                          )
+                        (reparse-symbol indented_block_body) [1286 1336])
+                    ("__repr__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1353 1357]))                          )
+                        (reparse-symbol indented_block_body) [1340 1391]))                  
+                :type "class")
+                nil [45 1391]))          
+      :file "legacy_mat.py"
+      :pointmax 1391
+      :fsize 1390
+      :lastmodtime '(23067 60384 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("mat" include nil nil [1 18])
+            ("vec" include nil nil [19 36])
+            ("v" variable nil nil [114 128])
+            ("print" code nil nil [129 136])
+            ("print" code nil nil [137 148]))          
+      :file "test.py"
+      :pointmax 149
+      :fsize 148
+      :lastmodtime '(23068 4807 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("ConfigParser" include nil nil [1 20])
+            ("cf" variable nil nil [21 51])
+            ("os" include nil nil [52 61])
+            ("cf" code nil nil [62 104])
+            ("'''
+def _(str):
+    return str.format(
+'''" code nil nil [105 147]))          
+      :file "config.py"
+      :pointmax 148
+      :fsize 686
+      :lastmodtime '(23071 49210 0 0)
+      :unmatched-syntax '((STRING_LITERAL 105 . 147) ($EOI 147 . 147) (STRING_LITERAL 105 . 147) ($EOI 147 . 147) ($EOI 12 . 12) ($EOI 6 . 6) ($EOI 5 . 5) ($EOI 4 . 4) ($EOI 3 . 3) ($EOI 2 . 2)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("scipy.sparse" include nil nil [39 64])
+            ("scipy.sparse.linalg" include nil nil [65 98])
+            ("sigmax" variable nil nil [100 125])
+            ("sigmay" variable nil nil [126 154])
+            ("sigmaz" variable nil nil [155 181])
+            ("sigmap" variable nil nil [182 220])
+            ("sigmam" variable nil nil [221 259])
+            ("uket" variable nil nil [260 275])
+            ("dket" variable nil nil [276 291])
+            ("basis" function (:arguments 
+              ( ("dim" variable nil (reparse-symbol function_parameters) [303 306])
+                ("state" variable nil (reparse-symbol function_parameters) [307 312]))              ) nil [293 406])
+            ("coherent" function (:arguments 
+              ( ("dim" variable nil (reparse-symbol function_parameters) [419 422])
+                ("z" variable nil (reparse-symbol function_parameters) [423 424])
+                ("offset" variable nil (reparse-symbol function_parameters) [425 431]))              ) nil [406 704])
+            ("destroy" function (:arguments 
+              ( ("dim" variable nil (reparse-symbol function_parameters) [717 720])
+                ("offset" variable nil (reparse-symbol function_parameters) [721 727]))              ) nil [705 868])
+            ("create" function (:arguments 
+              ( ("dim" variable nil (reparse-symbol function_parameters) [879 882])
+                ("offset" variable nil (reparse-symbol function_parameters) [883 889]))              ) nil [868 931])
+            ("jmat" function (:arguments 
+              ( ("j" variable nil (reparse-symbol function_parameters) [940 941]))              ) nil [931 1023])
+            ("jz" function (:arguments 
+              ( ("j" variable nil (reparse-symbol function_parameters) [1030 1031]))              ) nil [1023 1159])
+            ("jplus" function (:arguments 
+              ( ("j" variable nil (reparse-symbol function_parameters) [1169 1170]))              ) nil [1159 1361])
+            ("N" function (:arguments 
+              ( ("dim" variable nil (reparse-symbol function_parameters) [1367 1370])
+                ("offset" variable nil (reparse-symbol function_parameters) [1371 1377]))              ) nil [1361 1486])
+            ("identity" function (:arguments 
+              ( ("dim" variable nil (reparse-symbol function_parameters) [1499 1502]))              ) nil [1486 1550])
+            ("ket2dm" function (:arguments 
+              ( ("ket" variable nil (reparse-symbol function_parameters) [1561 1564]))              ) nil [1550 1592])
+            ("fockdm" function (:arguments 
+              ( ("dim" variable nil (reparse-symbol function_parameters) [1603 1606])
+                ("state" variable nil (reparse-symbol function_parameters) [1607 1612]))              ) nil [1592 1651])
+            ("squeeze" function (:arguments 
+              ( ("dim" variable nil (reparse-symbol function_parameters) [1663 1666])
+                ("z" variable nil (reparse-symbol function_parameters) [1667 1668])
+                ("offset" variable nil (reparse-symbol function_parameters) [1669 1675]))              ) nil [1651 1770])
+            ("displace" function (:arguments 
+              ( ("dim" variable nil (reparse-symbol function_parameters) [1783 1786])
+                ("z" variable nil (reparse-symbol function_parameters) [1787 1788])
+                ("offset" variable nil (reparse-symbol function_parameters) [1789 1795]))              ) nil [1770 1876])
+            ("thermal_dm" function (:arguments 
+              ( ("dim" variable nil (reparse-symbol function_parameters) [1891 1894])
+                ("n" variable nil (reparse-symbol function_parameters) [1895 1896]))              ) nil [1876 2010])
+            ("coherent_dm" function (:arguments 
+              ( ("dim" variable nil (reparse-symbol function_parameters) [2026 2029])
+                ("n" variable nil (reparse-symbol function_parameters) [2030 2031])
+                ("offset" variable nil (reparse-symbol function_parameters) [2032 2038]))              ) nil [2010 2085])
+            ("tracedist" function (:arguments 
+              ( ("A" variable nil (reparse-symbol function_parameters) [2100 2101])
+                ("B" variable nil (reparse-symbol function_parameters) [2102 2103]))              ) nil [2086 2316])
+            ("fidelity" function (:arguments 
+              ( ("A" variable nil (reparse-symbol function_parameters) [2329 2330])
+                ("B" variable nil (reparse-symbol function_parameters) [2331 2332]))              ) nil [2316 2427]))          
+      :file "ope.py"
+      :pointmax 2427
+      :fsize 2426
+      :lastmodtime '(23074 33066 0 0)
+      :unmatched-syntax nil)
+
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("mat" include nil nil [1 18])
+            ("vec" include nil nil [19 36])
+            ("ope" include nil nil [37 54])
+            ("operator" include nil nil [55 79])
+            ("scipy.sparse" include nil nil [80 105])
+            ("scipy.sparse.linalg" include nil nil [106 139])
+            ("numba" include nil nil [140 161])
+            ("tensor" function (:arguments 
+              ( ("args" variable nil (reparse-symbol function_parameters) [173 178]))              ) nil [162 453])
+            ("mat2vec" function (:arguments 
+              ( ("mat" variable nil (reparse-symbol function_parameters) [466 469]))              ) nil [454 576])
+            ("vec2mat" function (:arguments 
+              ( ("vec" variable nil (reparse-symbol function_parameters) [588 591])
+                ("dim" variable nil (reparse-symbol function_parameters) [592 595]))              ) nil [576 772])
+            ("spre" function (:arguments 
+              ( ("mat" variable nil (reparse-symbol function_parameters) [781 784]))              ) nil [772 833])
+            ("spost" function (:arguments 
+              ( ("mat" variable nil (reparse-symbol function_parameters) [843 846]))              ) nil [833 897])
+            ("sprepost" function (:arguments 
+              ( ("A" variable nil (reparse-symbol function_parameters) [910 911])
+                ("B" variable nil (reparse-symbol function_parameters) [912 913]))              ) nil [897 941])
+            ("sliouvillian" function (:arguments 
+              ( ("mat" variable nil (reparse-symbol function_parameters) [958 961]))              ) nil [941 1108])
+            ("scommute" function (:arguments 
+              ( ("mat" variable nil (reparse-symbol function_parameters) [1121 1124]))              ) nil [1108 1159])
+            ("sevolution" function (:arguments 
+              ( ("mat" variable nil (reparse-symbol function_parameters) [1174 1177]))              ) nil [1159 1218])
+            ("ptrace" function
+               (:decorators 
+                  ( ("jit" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("mat" variable nil (reparse-symbol function_parameters) [1234 1237])
+                    ("axis" variable nil (reparse-symbol function_parameters) [1238 1242]))                  )
+                nil [1218 1931])
+            ("index" function
+               (:decorators 
+                  ( ("jit" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("num" variable nil (reparse-symbol function_parameters) [1990 1993])
+                    ("pdimlist" variable nil (reparse-symbol function_parameters) [1994 2002]))                  )
+                nil [1975 2149])
+            ("num" function
+               (:decorators 
+                  ( ("jit" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("indexlist" variable nil (reparse-symbol function_parameters) [2162 2171])
+                    ("pdimlist" variable nil (reparse-symbol function_parameters) [2172 2180]))                  )
+                nil [2149 2221])
+            ("_pdim" function
+               (:decorators 
+                  ( ("jit" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("dimlist" variable nil (reparse-symbol function_parameters) [2236 2243]))                  )
+                nil [2221 2315]))          
+      :file "tensor.py"
+      :pointmax 2315
+      :fsize 2314
+      :lastmodtime '(23071 55273 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("scipy.sparse" include nil nil [20 45])
+            ("qutip.sparse" include nil nil [46 81])
+            ("numba" include nil nil [82 103])
+            ("optrace" function
+               (:documentation "
+    Private function calculating the partial trace.
+    "
+                :arguments 
+                  ( ("rho" variable nil (reparse-symbol function_parameters) [121 124])
+                    ("sel" variable nil (reparse-symbol function_parameters) [126 129]))                  )
+                nil [109 1631])
+            ("_list2ind" function
+               (:documentation "!
+    Private function returning indicies
+    "
+                :arguments 
+                  ( ("ilist" variable nil (reparse-symbol function_parameters) [1651 1656])
+                    ("dim" variable nil (reparse-symbol function_parameters) [1658 1661]))                  )
+                nil [1637 1985])
+            ("_select" function
+               (:documentation "
+    Private function finding selected components
+    "
+                :arguments 
+                  ( ("sel" variable nil (reparse-symbol function_parameters) [2003 2006])
+                    ("dim" variable nil (reparse-symbol function_parameters) [2008 2011]))                  )
+                nil [1991 2483]))          
+      :file "ptrace.py"
+      :pointmax 2483
+      :fsize 2482
+      :lastmodtime '(23071 44562 0 0)
+      :unmatched-syntax nil)
+
+)
+  :file "!Users!apple!qtqtp!blas!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

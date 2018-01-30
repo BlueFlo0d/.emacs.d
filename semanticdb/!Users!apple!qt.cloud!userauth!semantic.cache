@@ -1,0 +1,81 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("sqlalchemy" include nil nil [1 37])
+            ("sqlalchemy.orm" include nil nil [38 93])
+            ("sqlalchemy.ext.declarative" include nil nil [94 149])
+            ("engine" variable nil nil [151 248])
+            ("db_session" variable nil nil [249 420])
+            ("Base" variable nil nil [421 446])
+            ("Base" variable nil nil [447 487])
+            ("init_db" function nil nil [489 760]))          
+      :file "database.py"
+      :pointmax 764
+      :fsize 781
+      :lastmodtime '(23141 17944 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("database" include nil nil [1 26])
+            ("flask_security" include nil nil [27 74])
+            ("sqlalchemy" include nil nil [75 111])
+            ("sqlalchemy.orm" include nil nil [112 160])
+            ("sqlalchemy" include nil nil [161 263])
+            ("RolesUsers" type
+               (:superclasses ("Base")
+                :members 
+                  ( ("__tablename__" variable nil (reparse-symbol indented_block_body) [379 408])
+                    ("id" variable nil (reparse-symbol indented_block_body) [413 453])
+                    ("user_id" variable nil (reparse-symbol indented_block_body) [458 519])
+                    ("role_id" variable nil (reparse-symbol indented_block_body) [524 585]))                  
+                :type "class")
+                nil [351 586])
+            ("Role" type
+               (:superclasses ("Base" "RoleMixin")
+                :members 
+                  ( ("__tablename__" variable nil (reparse-symbol indented_block_body) [620 642])
+                    ("id" variable nil (reparse-symbol indented_block_body) [647 687])
+                    ("name" variable nil (reparse-symbol indented_block_body) [692 730])
+                    ("description" variable nil (reparse-symbol indented_block_body) [735 768]))                  
+                :type "class")
+                nil [587 769])
+            ("User" type
+               (:superclasses ("Base" "UserMixin")
+                :members 
+                  ( ("__tablename__" variable nil (reparse-symbol indented_block_body) [803 825])
+                    ("id" variable nil (reparse-symbol indented_block_body) [830 868])
+                    ("email" variable nil (reparse-symbol indented_block_body) [873 913])
+                    ("username" variable nil (reparse-symbol indented_block_body) [918 948])
+                    ("password" variable nil (reparse-symbol indented_block_body) [953 983])
+                    ("last_login_at" variable nil (reparse-symbol indented_block_body) [988 1022])
+                    ("current_login_at" variable nil (reparse-symbol indented_block_body) [1027 1064])
+                    ("last_login_ip" variable nil (reparse-symbol indented_block_body) [1069 1104])
+                    ("current_login_ip" variable nil (reparse-symbol indented_block_body) [1109 1147])
+                    ("login_count" variable nil (reparse-symbol indented_block_body) [1152 1181])
+                    ("active" variable nil (reparse-symbol indented_block_body) [1186 1212])
+                    ("confirmed_at" variable nil (reparse-symbol indented_block_body) [1217 1250])
+                    ("roles" variable nil (reparse-symbol indented_block_body) [1255 1375]))                  
+                :type "class")
+                nil [770 1376]))          
+      :file "models.py"
+      :pointmax 1376
+      :fsize 1412
+      :lastmodtime '(23141 17944 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags nil
+      :file "__init__.py"
+      :pointmax 1
+      :fsize 0
+      :lastmodtime '(23139 50375 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!apple!qt.cloud!userauth!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

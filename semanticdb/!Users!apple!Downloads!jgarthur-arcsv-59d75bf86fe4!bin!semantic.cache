@@ -1,0 +1,27 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("argparse" include nil nil [24 39])
+            ("sys" include nil nil [40 50])
+            ("arcsv.arcsv_call_options" include nil nil [53 102])
+            ("arcsv._version" include nil nil [103 141])
+            ("main" function nil nil [144 680])
+            ("prepare_argparser" function nil nil [682 889])
+            ("add_call_parser" function (:arguments 
+              ( ("subparsers" variable nil (reparse-symbol function_parameters) [911 921]))              ) nil [891 4044])
+            ("add_validate_parser" function (:arguments 
+              ( ("subparsers" variable nil (reparse-symbol function_parameters) [4070 4080]))              ) nil [4046 4257])
+            ("if" code nil nil [4259 4297]))          
+      :file "arcsv"
+      :pointmax 4297
+      :fsize 4296
+      :lastmodtime '(22867 49448 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!apple!Downloads!jgarthur-arcsv-59d75bf86fe4!bin!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

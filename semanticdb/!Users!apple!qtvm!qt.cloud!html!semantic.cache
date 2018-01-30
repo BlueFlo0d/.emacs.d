@@ -1,0 +1,25 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode js-mode
+      :tags 
+        '( ("grid_width" variable (:default-value "40") nil [135 153])
+            ("nrange" function (:arguments 
+              ( ("end" variable nil (reparse-symbol FormalParameterList) [172 175])
+                ("start" variable nil (reparse-symbol FormalParameterList) [176 181]))              ) nil [156 280])
+            ("makegrid" function (:arguments 
+              ( ("i" variable nil (reparse-symbol FormalParameterList) [301 302])
+                ("p" variable nil (reparse-symbol FormalParameterList) [303 304]))              ) nil [283 424])
+            ("nlist" variable (:default-value "\"0123456789\"") nil [428 451])
+            ("aChart" variable nil nil [15059 15070]))          
+      :file "qtvmedit.js"
+      :pointmax 15997
+      :fsize 16036
+      :lastmodtime '(23130 60559 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!apple!qtvm!qt.cloud!html!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

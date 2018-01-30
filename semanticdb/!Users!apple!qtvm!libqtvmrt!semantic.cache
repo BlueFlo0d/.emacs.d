@@ -1,0 +1,166 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("../qtvm/include/qt_instruction.h" include nil nil [1 44])
+            ("../qtvm/include/qtvm.h" include nil nil [45 78])
+            ("QT_ID" variable (:constant-flag t) nil [87 92])
+            ("../qtvm/include/qt_instruction_meta.h" include nil nil [100 148])
+            ("../qtvm/include/qt_instruction_alias.h" include nil nil [149 198])
+            ("include/qtvmrt.hpp" include nil nil [199 228])
+            ("map" include (:system-flag t) nil [229 243])
+            ("DH" variable (:constant-flag t) nil [252 254])
+            ("ICACHE_SIZE" variable (:constant-flag t) nil [274 285])
+            ("_vm_and_cache" type
+               (:members 
+                  ( ("storage" variable (:type ("sector" type (:type "class") nil nil)) (reparse-symbol classsubparts) [330 344])
+                    ("ins_cache" variable
+                       (:pointer 1
+                        :type ("qt_instruction" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [353 379])
+                    ("ins_position" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol classsubparts) [388 406]))                  
+                :type "struct")
+                nil [291 422])
+            ("vm_and_cache" type
+               (:typedef ("_vm_and_cache" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [291 422])
+            ("vm_dic" variable (:type ("std::map" type
+                 (:template-specifier 
+                    ( ("int" type nil nil nil)
+                      ("vm_and_cache" type nil nil nil))                    
+                  :type "class")
+                  nil nil)) nil [423 457])
+            ("qtvmrt" type
+               (:members 
+                  ( ("init" function
+                       (:arguments 
+                          ( ("bits" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [494 504])
+                            ("handle" variable (:type "int") (reparse-symbol arg-sub-list) [504 507]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [485 1293])
+                    ("eval" function
+                       (:arguments 
+                          ( ("handle" variable (:type "int") (reparse-symbol arg-sub-list) [1312 1315]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1302 1576])
+                    ("h" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("addr" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1592 1602])
+                            ("handle" variable (:type "int") (reparse-symbol arg-sub-list) [1602 1605]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1585 1606])
+                    ("x" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("addr" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1622 1632])
+                            ("handle" variable (:type "int") (reparse-symbol arg-sub-list) [1632 1635]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1615 1636])
+                    ("y" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("addr" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1652 1662])
+                            ("handle" variable (:type "int") (reparse-symbol arg-sub-list) [1662 1665]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1645 1666])
+                    ("z" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("addr" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1682 1692])
+                            ("handle" variable (:type "int") (reparse-symbol arg-sub-list) [1692 1695]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1675 1696])
+                    ("s" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("addr" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1712 1722])
+                            ("handle" variable (:type "int") (reparse-symbol arg-sub-list) [1722 1725]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1705 1726])
+                    ("sd" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("addr" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1743 1753])
+                            ("handle" variable (:type "int") (reparse-symbol arg-sub-list) [1753 1756]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1735 1757])
+                    ("rx" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("addr" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1774 1784])
+                            ("handle" variable (:type "int") (reparse-symbol arg-sub-list) [1784 1787]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1766 1788])
+                    ("ry" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("addr" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1805 1815])
+                            ("handle" variable (:type "int") (reparse-symbol arg-sub-list) [1815 1818]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1797 1819])
+                    ("rz" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("addr" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1836 1846])
+                            ("handle" variable (:type "int") (reparse-symbol arg-sub-list) [1846 1849]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1828 1850])
+                    ("cx" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("target" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1867 1879])
+                            ("control" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1879 1892])
+                            ("handle" variable (:type "int") (reparse-symbol arg-sub-list) [1892 1895]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1859 1896])
+                    ("su2" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("addr" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1914 1924])
+                            ("" variable (:type ("qtvm_float" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1924 1937])
+                            ("" variable (:type ("mat" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1938 1942])
+                            ("handle" variable (:type "int") (reparse-symbol arg-sub-list) [1942 1945]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1905 1946])
+                    ("csu2" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("target" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1965 1977])
+                            ("" variable (:type ("qtvm_float" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1977 1990])
+                            ("" variable (:type ("mat" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1991 1995])
+                            ("" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1995 2002])
+                            ("" variable (:type ("controls" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2003 2012])
+                            ("num_of_controls" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2012 2033])
+                            ("handle" variable (:type "int") (reparse-symbol arg-sub-list) [2033 2036]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1955 2037])
+                    ("measure" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("addr" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2058 2068])
+                            ("handle" variable (:type "int") (reparse-symbol arg-sub-list) [2068 2071]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [2046 2072]))                  
+                :type "namespace")
+                nil [459 2074]))          
+      :file "qtvmrt.cpp"
+      :pointmax 2075
+      :fsize 2074
+      :lastmodtime '(23128 17506 0 0)
+      :unmatched-syntax '((semantic-list 2000 . 2002) (semantic-list 1988 . 1990) (semantic-list 1935 . 1937) (symbol 1590 . 1591) (VOID 1585 . 1589))
+      :lexical-table 
+        '(("QT_ID" . ((symbol "sector" 93 . 99)))
+          ("DH" . ((INT "int" 255 . 258) (symbol "handle" 259 . 265)))
+          ("ICACHE_SIZE" . ((number "1024" 286 . 290)))
+          )
+))
+  :file "!Users!apple!qtvm!libqtvmrt!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

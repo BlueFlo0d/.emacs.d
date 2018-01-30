@@ -1,0 +1,10 @@
+2017-05-27  Tino Calancha  <tino.calancha@gmail.com>
+
+	Add command to update cache size for the marked files
+
+	* dired-du.el (dired-du-update-dir-info): New command.
+
+2017-05-26  Tino Calancha  <tino.calancha@gmail.com>
+
+	Add library dired-du
+

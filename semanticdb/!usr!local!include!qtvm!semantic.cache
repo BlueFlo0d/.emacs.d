@@ -1,0 +1,478 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("sector_h" variable (:constant-flag t) nil [151 159])
+            ("qtvm_float" type
+               (:typedef ("float")
+                :type "typedef")
+                nil [160 185])
+            ("uint" type
+               (:typedef ("unsigned int")
+                :type "typedef")
+                nil [186 212])
+            ("_sector" type
+               (:members 
+                  ( ("Re" variable
+                       (:pointer 1
+                        :type ("qtvm_float" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [241 256])
+                    ("Im" variable
+                       (:pointer 1
+                        :type ("qtvm_float" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [261 276])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [281 293])
+                    ("length" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol classsubparts) [298 310]))                  
+                :type "struct")
+                nil [213 320])
+            ("sector" type
+               (:typedef ("_sector" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [213 320]))          
+      :file "sector.h"
+      :pointmax 344
+      :fsize 346
+      :lastmodtime '(23119 42482 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("sector_h")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("qtvm/sector.h" include (:system-flag t) nil [1 25])
+            ("QTVMRT_DH" variable (:constant-flag t) nil [34 43])
+            ("qtvmrt" type
+               (:members 
+                  ( ("init" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("bits" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [94 104])
+                            ("handle" variable
+                               (:default-value "QTVMRT_DH"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [104 113]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [85 115])
+                    ("h" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("addr" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [131 141])
+                            ("handle" variable
+                               (:default-value "QTVMRT_DH"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [141 150]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [124 152])
+                    ("x" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("addr" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [168 178])
+                            ("handle" variable
+                               (:default-value "QTVMRT_DH"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [178 187]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [161 189])
+                    ("y" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("addr" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [205 215])
+                            ("handle" variable
+                               (:default-value "QTVMRT_DH"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [215 224]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [198 226])
+                    ("z" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("addr" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [242 252])
+                            ("handle" variable
+                               (:default-value "QTVMRT_DH"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [252 261]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [235 263])
+                    ("s" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("addr" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [279 289])
+                            ("handle" variable
+                               (:default-value "QTVMRT_DH"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [289 298]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [272 300])
+                    ("sd" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("addr" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [317 327])
+                            ("handle" variable
+                               (:default-value "QTVMRT_DH"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [327 336]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [309 338])
+                    ("rx" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("addr" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [355 365])
+                            ("theta" variable (:type ("qtvm_float" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [365 382])
+                            ("handle" variable
+                               (:default-value "QTVMRT_DH"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [382 391]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [347 393])
+                    ("ry" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("addr" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [410 420])
+                            ("theta" variable (:type ("qtvm_float" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [420 437])
+                            ("handle" variable
+                               (:default-value "QTVMRT_DH"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [437 446]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [402 448])
+                    ("rz" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("addr" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [465 475])
+                            ("theta" variable (:type ("qtvm_float" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [475 492])
+                            ("handle" variable
+                               (:default-value "QTVMRT_DH"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [492 501]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [457 503])
+                    ("print" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("handle" variable
+                               (:default-value "QTVMRT_DH"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [523 532]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [512 534])
+                    ("cx" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("target" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [551 563])
+                            ("control" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [563 576])
+                            ("handle" variable
+                               (:default-value "QTVMRT_DH"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [576 585]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [543 587])
+                    ("su2" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("addr" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [605 615])
+                            ("mat" variable
+                               (:pointer 1
+                                :type ("qtvm_float" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [615 631])
+                            ("handle" variable
+                               (:default-value "QTVMRT_DH"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [631 640]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [596 642])
+                    ("csu2" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("target" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [661 673])
+                            ("mat" variable
+                               (:pointer 1
+                                :type ("qtvm_float" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [673 689])
+                            ("controls" variable
+                               (:pointer 1
+                                :type ("uint" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [689 704])
+                            ("num_of_controls" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [704 725])
+                            ("handle" variable
+                               (:default-value "QTVMRT_DH"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [725 734]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [651 736])
+                    ("measure" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("addr" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [757 767])
+                            ("handle" variable
+                               (:default-value "QTVMRT_DH"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [767 776]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [745 778]))                  
+                :type "namespace")
+                nil [59 780]))          
+      :file "qtvmrt.hpp"
+      :pointmax 781
+      :fsize 777
+      :lastmodtime '(23131 9045 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("QTVMRT_DH" . 
+              ((INT "int" 44 . 47) (symbol "handle" 48 . 54) (punctuation "=" 55 . 56) (number "1" 57 . 58)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("secalg_h" variable (:constant-flag t) nil [150 158])
+            ("stdio.h" include (:system-flag t) nil [160 178])
+            ("limits.h" include (:system-flag t) nil [179 198])
+            ("qt_instruction.h" include nil nil [199 226])
+            ("sector.h" include nil nil [227 246])
+            ("QT_ID" variable (:constant-flag t) nil [256 261])
+            ("qt_instruction_proto.h" include nil nil [269 302])
+            ("qt_instruction_meta.h" include nil nil [303 335])
+            ("print_sector" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("asec" variable (:type ("sector" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [479 491]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [461 492])
+            ("qt_instruction_undef.h" include nil nil [502 535]))          
+      :file "secalg.h"
+      :pointmax 558
+      :fsize 520
+      :lastmodtime '(23128 46373 0 0)
+      :unmatched-syntax '((symbol 435 . 452))
+      :lexical-table 
+        '(("QT_ID" . ((symbol "sector" 262 . 268)))
+          ("secalg_h")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("qt_instruction_h" variable (:constant-flag t) nil [166 182])
+            ("UINT2DOUBLE" variable (:constant-flag t) nil [191 202])
+            ("DOUBLE_ARG_PTR" variable (:constant-flag t) nil [236 250])
+            ("stdio.h" include (:system-flag t) nil [278 296])
+            ("sector.h" include nil nil [297 316])
+            ("QTVM_EXEC_SUCCESS" variable (:constant-flag t) nil [326 343])
+            ("QTVM_EXEC_NETERROR" variable (:constant-flag t) nil [356 374])
+            ("QTVM_EXEC_BAD_ADDRESS" variable (:constant-flag t) nil [387 408])
+            ("QTVM_EXEC_INVALID_INS" variable (:constant-flag t) nil [421 442])
+            ("QTVM_EXEC_BAD_CADDRESS" variable (:constant-flag t) nil [455 477])
+            ("QTVM_INS_NOP" variable (:constant-flag t) nil [491 503])
+            ("QTVM_INS_NOT" variable (:constant-flag t) nil [516 528])
+            ("QTVM_INS_RX" variable (:constant-flag t) nil [541 552])
+            ("QTVM_INS_RY" variable (:constant-flag t) nil [565 576])
+            ("QTVM_INS_RZ" variable (:constant-flag t) nil [589 600])
+            ("QTVM_INS_H" variable (:constant-flag t) nil [613 623])
+            ("QTVM_INS_CNOT" variable (:constant-flag t) nil [636 649])
+            ("QTVM_INS_NUMMUL" variable (:constant-flag t) nil [690 705])
+            ("QTVM_INS_Y" variable (:constant-flag t) nil [718 728])
+            ("QTVM_INS_Z" variable (:constant-flag t) nil [741 751])
+            ("QTVM_INS_S" variable (:constant-flag t) nil [764 774])
+            ("QTVM_INS_SD" variable (:constant-flag t) nil [787 798])
+            ("QTVM_INS_ARBSU2" variable (:constant-flag t) nil [811 826])
+            ("QTVM_INS_CONARBSU2" variable (:constant-flag t) nil [839 857])
+            ("QTVM_INS_MEAS" variable (:constant-flag t) nil [871 884])
+            ("QTVM_INS_FETCH" variable (:constant-flag t) nil [905 919])
+            ("QTVM_INS_TERM" variable (:constant-flag t) nil [939 952])
+            ("QTVM_INS_INIT" variable (:constant-flag t) nil [972 985])
+            ("QTVM_INS_JMP" variable (:constant-flag t) nil [1005 1017])
+            ("QTVM_INS_JIF" variable (:constant-flag t) nil [1037 1049])
+            ("QTVM_INS_JNIF" variable (:constant-flag t) nil [1069 1082])
+            ("QTVM_INS_SET" variable (:constant-flag t) nil [1102 1114])
+            ("QTVM_INS_MOV" variable (:constant-flag t) nil [1154 1166])
+            ("QTVM_INS_ADD" variable (:constant-flag t) nil [1186 1198])
+            ("QTVM_INS_INV" variable (:constant-flag t) nil [1218 1230])
+            ("QTVM_INS_RSHIFT" variable (:constant-flag t) nil [1250 1265])
+            ("QTVM_INS_LSHIFT" variable (:constant-flag t) nil [1285 1300])
+            ("QTVM_INS_GOD_MEAS" variable (:constant-flag t) nil [1327 1344])
+            ("QTVM_INS_DEBUG_PRINT" variable (:constant-flag t) nil [1364 1384])
+            ("_qtinstruction" type
+               (:members 
+                  ( ("op" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1431 1439])
+                    ("addr" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1444 1454])
+                    ("arg0" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1459 1469])
+                    ("arg1" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1474 1484]))                  
+                :type "struct")
+                nil [1396 1502])
+            ("qt_instruction" type
+               (:typedef ("_qtinstruction" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [1396 1502])
+            ("reg_file" variable
+               (:dereference 1
+                :typemodifiers ("extern")
+                :type ("size_t" type (:type "class") nil nil))
+                nil [1503 1528])
+            ("meas_reg" variable (:constant-flag t) nil [1537 1545])
+            ("REGFILE_SIZE" variable (:constant-flag t) nil [1568 1580])
+            ("qt_exec_ins_ptr" function
+               (:prototype-flag t
+                :function-pointer t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("asec" variable (:type ("sector" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1639 1651])
+                    ("ins" variable (:type ("qt_instruction" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1651 1670]))                  
+                :type "int")
+                nil [1610 1671])
+            ("qtvm_execf" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("asec" variable (:type ("sector" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1856 1868])
+                    ("ins" variable
+                       (:pointer 1
+                        :type ("qt_instruction" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1868 1888])
+                    ("length" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1888 1902])
+                    ("out_f" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1902 1914])
+                    ("shots" variable (:type "int") (reparse-symbol arg-sub-list) [1914 1924]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1841 1925])
+            ("qtvm_execn" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("asec" variable (:type ("sector" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1775 1787])
+                    ("ins" variable
+                       (:pointer 1
+                        :type ("qt_instruction" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1787 1807])
+                    ("length" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1807 1821])
+                    ("client_socket" variable (:type "int") (reparse-symbol arg-sub-list) [1821 1839]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1760 1840])
+            ("qt_exec_ins" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("asec" variable (:type ("sector" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1727 1739])
+                    ("ins" variable (:type ("qt_instruction" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1739 1758]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1711 1759]))          
+      :file "qt_instruction.h"
+      :pointmax 1981
+      :fsize 1983
+      :lastmodtime '(23134 57646 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("QTVM_INS_CNOT" . ((number "0x6" 650 . 653)))
+          ("QTVM_INS_Y" . ((number "0x8" 729 . 732)))
+          ("QTVM_INS_RSHIFT" . ((number "0x1000000A" 1266 . 1276)))
+          ("REGFILE_SIZE" . ((number "64" 1581 . 1583)))
+          ("QTVM_INS_NOT" . ((number "0x1" 529 . 532)))
+          ("QTVM_INS_Z" . ((number "0x9" 752 . 755)))
+          ("QTVM_INS_FETCH" . ((number "0x10000000" 920 . 930)))
+          ("QTVM_INS_INIT" . ((number "0x10000002" 986 . 996)))
+          ("QTVM_INS_JNIF" . ((number "0x10000005" 1083 . 1093)))
+          ("meas_reg" . ((semantic-list "(reg_file[0])" 1546 . 1559)))
+          ("QTVM_INS_RX" . ((number "0x2" 553 . 556)))
+          ("qt_instruction_h")
+          ("QTVM_INS_RY" . ((number "0x3" 577 . 580)))
+          ("QTVM_INS_MEAS" . ((number "0x20000001" 885 . 895)))
+          ("QTVM_INS_TERM" . ((number "0x10000001" 953 . 963)))
+          ("QTVM_INS_SET" . ((number "0x10000006" 1115 . 1125)))
+          ("QTVM_EXEC_NETERROR" . ((number "0x1" 375 . 378)))
+          ("QTVM_INS_RZ" . ((number "0x4" 601 . 604)))
+          ("QTVM_INS_ARBSU2" . ((number "0xC" 827 . 830)))
+          ("QTVM_INS_ADD" . ((number "0x10000008" 1199 . 1209)))
+          ("QTVM_EXEC_SUCCESS" . ((number "0x0" 344 . 347)))
+          ("QTVM_INS_S" . ((number "0xA" 775 . 778)))
+          ("QTVM_INS_JMP" . ((number "0x10000003" 1018 . 1028)))
+          ("QTVM_INS_MOV" . ((number "0x10000007" 1167 . 1177)))
+          ("QTVM_INS_INV" . ((number "0x10000009" 1231 . 1241)))
+          ("QTVM_INS_DEBUG_PRINT" . ((number "0x40000002" 1385 . 1395)))
+          ("QTVM_EXEC_BAD_CADDRESS" . ((number "0x8" 478 . 481)))
+          ("QTVM_INS_H" . ((number "0x5" 624 . 627)))
+          ("QTVM_INS_NUMMUL" . ((number "0x7" 706 . 709)))
+          ("QTVM_INS_NOP" . ((number "0x0" 504 . 507)))
+          ("QTVM_INS_GOD_MEAS" . ((number "0x40000001" 1345 . 1355)))
+          ("UINT2DOUBLE" (spp-arg-list ("x") 202 . 205) . ((punctuation "*" 206 . 207) (semantic-list "((qtvm_float *)&(x))" 207 . 227)))
+          ("QTVM_EXEC_BAD_ADDRESS" . ((number "0x2" 409 . 412)))
+          ("QTVM_INS_SD" . ((number "0xB" 799 . 802)))
+          ("QTVM_INS_CONARBSU2" . ((number "0xD" 858 . 861)))
+          ("QTVM_INS_JIF" . ((number "0x10000004" 1050 . 1060)))
+          ("QTVM_INS_LSHIFT" . ((number "0x1000000B" 1301 . 1311)))
+          ("DOUBLE_ARG_PTR" (spp-arg-list ("x") 250 . 253) . 
+              ((semantic-list "(qtvm_float *)" 254 . 268) (punctuation "&" 268 . 269) (semantic-list "(x.arg0)" 269 . 277)))
+          ("QTVM_EXEC_INVALID_INS" . ((number "0x4" 443 . 446)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("__INTEPRETE_PROTO_FUNC" variable (:constant-flag t) nil [175 197])
+            ("_INTEPRETE_PROTO_FUNC" variable (:constant-flag t) nil [245 266])
+            ("INTEPRETE_PROTO_FUNC" variable (:constant-flag t) nil [333 353])
+            ("INSTRUCTION_PROTO" variable (:constant-flag t) nil [419 436]))          
+      :file "qt_instruction_proto.h"
+      :pointmax 482
+      :fsize 531
+      :lastmodtime '(23133 57233 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_INTEPRETE_PROTO_FUNC" (spp-arg-list ("ret" "name" "arg" "ID") 266 . 283) . ((symbol "__INTEPRETE_PROTO_FUNC" 284 . 306) (semantic-list "(ret,name,arg,ID)" 306 . 323)))
+          ("INTEPRETE_PROTO_FUNC" (spp-arg-list ("ret" "name" "arg") 353 . 367) . ((symbol "_INTEPRETE_PROTO_FUNC" 368 . 389) (semantic-list "(ret,name,arg,QT_ID)" 389 . 409)))
+          ("INSTRUCTION_PROTO" . ((symbol "INSTRUCTION_LIST" 437 . 453) (semantic-list "(INTEPRETE_PROTO_FUNC,QT_ID)" 453 . 481)))
+          ("__INTEPRETE_PROTO_FUNC" (spp-arg-list ("ret" "name" "arg" "ID") 197 . 214) . 
+              ((symbol "ret" 215 . 218) (spp-symbol-merge ((spp-symbol-merge ((symbol "ID" 219 . 221) (symbol "_" 223 . 224)) 219 . 224) (symbol "name" 226 . 230)) 219 . 230) (symbol "arg" 231 . 234) (punctuation ";" 234 . 235)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("INSTRUCTION_LIST" variable (:constant-flag t) nil [145 161]))          
+      :file "qt_instruction_meta.h"
+      :pointmax 871
+      :fsize 938
+      :lastmodtime '(23133 57254 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("INSTRUCTION_LIST" (spp-arg-list ("_" "type") 161 . 169) . 
+              ((symbol "_" 172 . 173) (semantic-list "(type,alloc,(uint))" 173 . 192) (symbol "_" 194 . 195) (semantic-list "(type,cpy,(type))" 195 . 212) (symbol "_" 214 . 215) (semantic-list "(void,destroy,(type))" 215 . 236) (symbol "_" 238 . 239) (semantic-list "(int,load,(type,const char*))" 239 . 268) (symbol "_" 270 . 271) (semantic-list "(int,save,(type,const char*))" 271 . 300) (symbol "_" 302 . 303) (semantic-list "(void,qtset2zero,(type))" 303 . 327) (symbol "_" 329 . 330) (semantic-list "(void,qtnot,(type,uint))" 330 . 354) (symbol "_" 356 . 357) (semantic-list "(void,qty,(type,uint))" 357 . 379) (symbol "_" 381 . 382) (semantic-list "(void,qtz,(type,uint))" 382 . 404) (symbol "_" 406 . 407) (semantic-list "(void,qts,(type,uint))" 407 . 429) (symbol "_" 431 . 432) (semantic-list "(void,qtsd,(type,uint))" 432 . 455) (symbol "_" 457 . 458) (semantic-list "(void,qtry,(type,uint,qtvm_float))" 458 . 492) (symbol "_" 494 . 495) (semantic-list "(void,qtrx,(type,uint,qtvm_float))" 495 . 529) (symbol "_" 531 . 532) (semantic-list "(void,qtrz,(type,uint,qtvm_float))" 532 . 566) (symbol "_" 568 . 569) (semantic-list "(void,qth,(type,uint))" 569 . 591) (symbol "_" 593 . 594) (semantic-list "(void,qtcnot,(type,uint,uint))" 594 . 624) (symbol "_" 626 . 627) (semantic-list "(void,qtnummul,(type,qtvm_float,qtvm_float))" 627 . 671) (symbol "_" 673 . 674) (semantic-list "(void,qtarbsu2,(type,uint))" 674 . 701) (symbol "_" 703 . 704) (semantic-list "(void,qtconarbsu2,(type,uint,uint))" 704 . 739) (symbol "_" 741 . 742) (semantic-list "(qtvm_float,qtnorm,(type))" 742 . 768) (symbol "_" 770 . 771) (semantic-list "(qtvm_float,qtpnorm,(type,uint))" 771 . 803) (symbol "_" 805 . 806) (semantic-list "(qtvm_float,qtrpnorm,(type,uint))" 806 . 839) (symbol "_" 841 . 842) (semantic-list "(int,qtmeasure,(type,uint))" 842 . 869)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags nil
+      :file "qt_instruction_undef.h"
+      :pointmax 556
+      :fsize 558
+      :lastmodtime '(23121 59828 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("qt_instruction.h" include nil nil [1 28])
+            ("qt_dasmfe" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("qt_instruction" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [43 58])
+                    ("" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [58 65]))                  
+                :type "int")
+                nil [29 66]))          
+      :file "qt_dasm.h"
+      :pointmax 67
+      :fsize 66
+      :lastmodtime '(23137 64376 0 0)
+      :unmatched-syntax nil))
+  :file "!usr!local!include!qtvm!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

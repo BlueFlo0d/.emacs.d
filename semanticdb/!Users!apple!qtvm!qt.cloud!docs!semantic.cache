@@ -1,0 +1,67 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode mhtml-mode
+      :tags 
+        '( ("qtvmrt" section nil nil [146 180])
+            ("Installation" section (:members 
+              ( ("Installation" section nil nil [188 284])
+                ("Reference" section (:members 
+                  ( ("qtvmrt::init()" section (:members 
+                      ( ("SYNOPSIS" section nil nil [351 516])
+                        ("DESCRIPTION" section nil nil [516 780])
+                        ("RETURN VALUE" section nil nil [780 925]))                      ) nil [315 925])
+                    ("qtvmrt::h()" section (:members 
+                      ( ("SYNOPSIS" section nil nil [958 1113])
+                        ("DESCRIPTION" section nil nil [1113 1197]))                      ) nil [925 1197])
+                    ("qtvmrt::x()" section (:members 
+                      ( ("SYNOPSIS" section nil nil [1230 1386])
+                        ("DESCRIPTION" section nil nil [1386 1470]))                      ) nil [1197 1470])
+                    ("qtvmrt::y()" section (:members 
+                      ( ("SYNOPSIS" section nil nil [1504 1660])
+                        ("DESCRIPTION" section nil nil [1660 1744]))                      ) nil [1470 1744])
+                    ("qtvmrt::z()" section (:members 
+                      ( ("SYNOPSIS" section nil nil [1778 1934])
+                        ("DESCRIPTION" section nil nil [1934 2018]))                      ) nil [1744 2018])
+                    ("qtvmrt::s()" section (:members 
+                      ( ("SYNOPSIS" section nil nil [2052 2208])
+                        ("DESCRIPTION" section nil nil [2208 2322]))                      ) nil [2018 2322])
+                    ("qtvmrt::sd()" section (:members 
+                      ( ("SYNOPSIS" section nil nil [2357 2514])
+                        ("DESCRIPTION" section nil nil [2514 2629]))                      ) nil [2322 2629])
+                    ("qtvmrt::rx()" section (:members 
+                      ( ("SYNOPSIS" section nil nil [2664 2838])
+                        ("DESCRIPTION" section nil nil [2838 2946]))                      ) nil [2629 2946])
+                    ("qtvmrt::ry()" section (:members 
+                      ( ("SYNOPSIS" section nil nil [2981 3155])
+                        ("DESCRIPTION" section nil nil [3155 3263]))                      ) nil [2946 3263])
+                    ("qtvmrt::rz()" section (:members 
+                      ( ("SYNOPSIS" section nil nil [3298 3472])
+                        ("DESCRIPTION" section nil nil [3472 3580]))                      ) nil [3263 3580])
+                    ("qtvmrt::print()" section (:members 
+                      ( ("SYNOPSIS" section nil nil [3618 3768])
+                        ("DESCRIPTION" section nil nil [3768 3881]))                      ) nil [3580 3881])
+                    ("qtvmrt::cx()" section (:members 
+                      ( ("SYNOPSIS" section nil nil [3916 4088])
+                        ("DESCRIPTION" section nil nil [4088 4180]))                      ) nil [3881 4180])
+                    ("qtvmrt::su2()" section (:members 
+                      ( ("SYNOPSIS" section nil nil [4216 4390])
+                        ("DESCRIPTION" section nil nil [4390 4485])
+                        ("ARGUMENTS" section (:members 
+                          ( ("qtvmrt::csu2()" anchor nil nil [4699 4702]))                          ) nil [4485 5043]))                      ) nil [4180 5043])
+                    ("qtvmrt::csu2()" section (:members 
+                      ( ("SYNOPSIS" section nil nil [5080 5295])
+                        ("DESCRIPTION" section nil nil [5295 5401])
+                        ("ARGUMENTS" section (:members 
+                          ( ("size_t *controls" anchor nil nil [5615 5618]))                          ) nil [5401 6177]))                      ) nil [5043 6177]))                  ) nil [284 6177]))              ) nil [180 6177]))          
+      :file "qtvmrt.html"
+      :pointmax 6177
+      :fsize 6176
+      :lastmodtime '(23132 15229 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!apple!qtvm!qt.cloud!docs!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

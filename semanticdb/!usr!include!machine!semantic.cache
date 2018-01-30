@@ -1,0 +1,105 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("_BSD_MACHINE__TYPES_H_" variable (:constant-flag t) nil [1369 1391])
+            ("i386/_types.h" include nil nil [1439 1463]))          
+      :file "_types.h"
+      :pointmax 1548
+      :fsize 1547
+      :lastmodtime '(22714 3983 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_BSD_MACHINE__TYPES_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("i386/limits.h" include (:system-flag t) nil [268 292]))          
+      :file "limits.h"
+      :pointmax 340
+      :fsize 339
+      :lastmodtime '(22714 3983 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("_BSD_MACHINE_TYPES_H_" variable (:constant-flag t) nil [1434 1455])
+            ("i386/types.h" include nil nil [1503 1526]))          
+      :file "types.h"
+      :pointmax 1610
+      :fsize 1609
+      :lastmodtime '(22714 3983 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_BSD_MACHINE_TYPES_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("_BSD_MACHINE_ENDIAN_H_" variable (:constant-flag t) nil [1435 1457])
+            ("i386/endian.h" include nil nil [1505 1529]))          
+      :file "endian.h"
+      :pointmax 1614
+      :fsize 1613
+      :lastmodtime '(22714 3982 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_BSD_MACHINE_ENDIAN_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("_BSD_MACHINE_SIGNAL_H_" variable (:constant-flag t) nil [1369 1391])
+            ("i386/signal.h" include nil nil [1439 1463]))          
+      :file "signal.h"
+      :pointmax 1548
+      :fsize 1547
+      :lastmodtime '(22714 3983 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_BSD_MACHINE_SIGNAL_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("i386/_mcontext.h" include nil nil [1377 1404]))          
+      :file "_mcontext.h"
+      :pointmax 1452
+      :fsize 1451
+      :lastmodtime '(22714 3984 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("_BSD_MACHINE_PARAM_H_" variable (:constant-flag t) nil [1434 1455])
+            ("i386/param.h" include nil nil [1503 1526]))          
+      :file "param.h"
+      :pointmax 1610
+      :fsize 1609
+      :lastmodtime '(22714 3983 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_BSD_MACHINE_PARAM_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("i386/_param.h" include nil nil [1377 1401]))          
+      :file "_param.h"
+      :pointmax 1449
+      :fsize 1448
+      :lastmodtime '(22714 3984 0 0)
+      :unmatched-syntax nil))
+  :file "!usr!include!machine!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

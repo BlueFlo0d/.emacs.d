@@ -1,0 +1,18 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-automake-mode
+      :tags 
+        '( ("$(top_srcdir)/gtest.mk" include nil nil [793 824])
+            ("dist_man_MANS" variable (:default-value ("mu-add.1" "mu-bookmarks.5" "mu-cfind.1" "mu-easy.1" "mu-extract.1" "mu-find.1" "mu-help.1" "mu-index.1" "mu-mkdir.1" "mu-remove.1" "mu-server.1" "mu-script.1" "mu-verify.1" "mu-view.1" "mu.1" "mug.1")) nil [825 1064]))          
+      :file "Makefile.am"
+      :pointmax 1064
+      :fsize 1063
+      :lastmodtime '(21469 63860 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!apple!Downloads!mu-0.9.13!man!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

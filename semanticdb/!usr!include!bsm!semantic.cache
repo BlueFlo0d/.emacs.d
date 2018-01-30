@@ -1,0 +1,550 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("_BSM_AUDIT_H" variable (:constant-flag t) nil [1665 1677])
+            ("sys/param.h" include (:system-flag t) nil [1679 1701])
+            ("sys/types.h" include (:system-flag t) nil [1702 1724])
+            ("AUDIT_RECORD_MAGIC" variable (:constant-flag t) nil [1734 1752])
+            ("MAX_AUDIT_RECORDS" variable (:constant-flag t) nil [1772 1789])
+            ("MAXAUDITDATA" variable (:constant-flag t) nil [1801 1813])
+            ("MAX_AUDIT_RECORD_SIZE" variable (:constant-flag t) nil [1836 1857])
+            ("MIN_AUDIT_FILE_SIZE" variable (:constant-flag t) nil [1879 1898])
+            ("AUDIT_HARD_LIMIT_FREE_BLOCKS" variable (:constant-flag t) nil [2202 2230])
+            ("AUDIT_TRIGGER_MIN" variable (:constant-flag t) nil [2283 2300])
+            ("AUDIT_TRIGGER_LOW_SPACE" variable (:constant-flag t) nil [2312 2335])
+            ("AUDIT_TRIGGER_ROTATE_KERNEL" variable (:constant-flag t) nil [2374 2401])
+            ("AUDIT_TRIGGER_READ_FILE" variable (:constant-flag t) nil [2442 2465])
+            ("AUDIT_TRIGGER_CLOSE_AND_DIE" variable (:constant-flag t) nil [2504 2531])
+            ("AUDIT_TRIGGER_NO_SPACE" variable (:constant-flag t) nil [2565 2587])
+            ("AUDIT_TRIGGER_ROTATE_USER" variable (:constant-flag t) nil [2627 2652])
+            ("AUDIT_TRIGGER_INITIALIZE" variable (:constant-flag t) nil [2691 2715])
+            ("AUDIT_TRIGGER_EXPIRE_TRAILS" variable (:constant-flag t) nil [2759 2786])
+            ("AUDIT_TRIGGER_MAX" variable (:constant-flag t) nil [2830 2847])
+            ("AUDITDEV_FILENAME" variable (:constant-flag t) nil [2909 2926])
+            ("AUDIT_TRIGGER_FILE" variable (:constant-flag t) nil [2943 2961])
+            ("AU_DEFAUDITID" variable (:constant-flag t) nil [3031 3044])
+            ("AU_DEFAUDITSID" variable (:constant-flag t) nil [3065 3079])
+            ("AU_ASSIGN_ASID" variable (:constant-flag t) nil [3091 3105])
+            ("AT_IPC_MSG" variable (:constant-flag t) nil [3139 3149])
+            ("AT_IPC_SEM" variable (:constant-flag t) nil [3192 3202])
+            ("AT_IPC_SHM" variable (:constant-flag t) nil [3247 3257])
+            ("AUC_UNSET" variable (:constant-flag t) nil [3332 3341])
+            ("AUC_AUDITING" variable (:constant-flag t) nil [3353 3365])
+            ("AUC_NOAUDIT" variable (:constant-flag t) nil [3377 3388])
+            ("AUC_DISABLED" variable (:constant-flag t) nil [3400 3412])
+            ("A_OLDGETPOLICY" variable (:constant-flag t) nil [3457 3471])
+            ("A_OLDSETPOLICY" variable (:constant-flag t) nil [3482 3496])
+            ("A_GETKMASK" variable (:constant-flag t) nil [3507 3517])
+            ("A_SETKMASK" variable (:constant-flag t) nil [3528 3538])
+            ("A_OLDGETQCTRL" variable (:constant-flag t) nil [3549 3562])
+            ("A_OLDSETQCTRL" variable (:constant-flag t) nil [3573 3586])
+            ("A_GETCWD" variable (:constant-flag t) nil [3597 3605])
+            ("A_GETCAR" variable (:constant-flag t) nil [3616 3624])
+            ("A_GETSTAT" variable (:constant-flag t) nil [3635 3644])
+            ("A_SETSTAT" variable (:constant-flag t) nil [3656 3665])
+            ("A_SETUMASK" variable (:constant-flag t) nil [3677 3687])
+            ("A_SETSMASK" variable (:constant-flag t) nil [3699 3709])
+            ("A_OLDGETCOND" variable (:constant-flag t) nil [3721 3733])
+            ("A_OLDSETCOND" variable (:constant-flag t) nil [3745 3757])
+            ("A_GETCLASS" variable (:constant-flag t) nil [3769 3779])
+            ("A_SETCLASS" variable (:constant-flag t) nil [3791 3801])
+            ("A_GETPINFO" variable (:constant-flag t) nil [3813 3823])
+            ("A_SETPMASK" variable (:constant-flag t) nil [3835 3845])
+            ("A_SETFSIZE" variable (:constant-flag t) nil [3857 3867])
+            ("A_GETFSIZE" variable (:constant-flag t) nil [3879 3889])
+            ("A_GETPINFO_ADDR" variable (:constant-flag t) nil [3901 3916])
+            ("A_GETKAUDIT" variable (:constant-flag t) nil [3928 3939])
+            ("A_SETKAUDIT" variable (:constant-flag t) nil [3951 3962])
+            ("A_SENDTRIGGER" variable (:constant-flag t) nil [3974 3987])
+            ("A_GETSINFO_ADDR" variable (:constant-flag t) nil [3999 4014])
+            ("A_GETPOLICY" variable (:constant-flag t) nil [4026 4037])
+            ("A_SETPOLICY" variable (:constant-flag t) nil [4049 4060])
+            ("A_GETQCTRL" variable (:constant-flag t) nil [4072 4082])
+            ("A_SETQCTRL" variable (:constant-flag t) nil [4094 4104])
+            ("A_GETCOND" variable (:constant-flag t) nil [4116 4125])
+            ("A_SETCOND" variable (:constant-flag t) nil [4137 4146])
+            ("A_GETSFLAGS" variable (:constant-flag t) nil [4158 4169])
+            ("A_SETSFLAGS" variable (:constant-flag t) nil [4181 4192])
+            ("AUDIT_CNT" variable (:constant-flag t) nil [4238 4247])
+            ("AUDIT_AHLT" variable (:constant-flag t) nil [4263 4273])
+            ("AUDIT_ARGV" variable (:constant-flag t) nil [4289 4299])
+            ("AUDIT_ARGE" variable (:constant-flag t) nil [4315 4325])
+            ("AUDIT_SEQ" variable (:constant-flag t) nil [4341 4350])
+            ("AUDIT_WINDATA" variable (:constant-flag t) nil [4366 4379])
+            ("AUDIT_USER" variable (:constant-flag t) nil [4395 4405])
+            ("AUDIT_GROUP" variable (:constant-flag t) nil [4421 4432])
+            ("AUDIT_TRAIL" variable (:constant-flag t) nil [4448 4459])
+            ("AUDIT_PATH" variable (:constant-flag t) nil [4475 4485])
+            ("AUDIT_SCNT" variable (:constant-flag t) nil [4501 4511])
+            ("AUDIT_PUBLIC" variable (:constant-flag t) nil [4527 4539])
+            ("AUDIT_ZONENAME" variable (:constant-flag t) nil [4555 4569])
+            ("AUDIT_PERZONE" variable (:constant-flag t) nil [4585 4598])
+            ("AQ_HIWATER" variable (:constant-flag t) nil [4665 4675])
+            ("AQ_MAXHIGH" variable (:constant-flag t) nil [4688 4698])
+            ("AQ_LOWATER" variable (:constant-flag t) nil [4713 4723])
+            ("AQ_BUFSZ" variable (:constant-flag t) nil [4735 4743])
+            ("AQ_MAXBUFSZ" variable (:constant-flag t) nil [4765 4776])
+            ("AU_FS_MINFREE" variable (:constant-flag t) nil [4858 4871])
+            ("AU_IPv4" variable (:constant-flag t) nil [5025 5032])
+            ("AU_IPv6" variable (:constant-flag t) nil [5044 5051])
+            ("__OSX_AVAILABLE_BUT_DEPRECATED" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable (:type ("__MAC_10_0" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9156 9167])
+                    ("" variable (:type ("__MAC_10_8" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9168 9179])
+                    ("" variable (:type ("__IPHONE_2_0" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9186 9199])
+                    ("" variable (:type ("__IPHONE_6_0" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9200 9213]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [9125 9214])
+            ("__OSX_AVAILABLE_BUT_DEPRECATED" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable (:type ("__MAC_10_0" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9025 9036])
+                    ("" variable (:type ("__MAC_10_8" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9037 9048])
+                    ("" variable (:type ("__IPHONE_2_0" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9055 9068])
+                    ("" variable (:type ("__IPHONE_6_0" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9069 9082]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8994 9083])
+            ("Availability.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [8789 8814])
+            ("setaudit_addr" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("auditinfo_addr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [8728 8758])
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [8759 8763]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8710 8764])
+            ("getaudit_addr" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("auditinfo_addr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [8679 8703])
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [8704 8708]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8661 8709])
+            ("setauid" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("au_id_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8643 8659]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8631 8660])
+            ("getauid" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("au_id_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8619 8629]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8607 8630])
+            ("auditctl" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [8592 8605]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8579 8606])
+            ("auditon" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [8560 8564])
+                    ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [8565 8572])
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [8573 8577]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8548 8578])
+            ("audit" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [8528 8541])
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [8542 8546]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8518 8547])
+            ("au_evclass_map_t" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("au_evclass_map" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                (reparse-symbol extern-c-contents) [8397 8444])
+            ("au_evclass_map" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("ec_number" variable (:type ("au_event_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8350 8371])
+                    ("ec_class" variable (:type ("au_class_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8373 8393]))                  )
+                (reparse-symbol extern-c-contents) [8325 8396])
+            ("au_fstat_t" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("audit_fstat" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                (reparse-symbol extern-c-contents) [8245 8283])
+            ("audit_fstat" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("af_filesz" variable (:type ("u_int64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8199 8219])
+                    ("af_currsz" variable (:type ("u_int64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8221 8241]))                  )
+                (reparse-symbol extern-c-contents) [8177 8244])
+            ("au_stat_t" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("audit_stat" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                (reparse-symbol extern-c-contents) [8088 8124])
+            ("audit_stat" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("as_version" variable (:type "unsigned int") (reparse-symbol classsubparts) [7803 7827])
+                    ("as_numevent" variable (:type "unsigned int") (reparse-symbol classsubparts) [7829 7854])
+                    ("as_generated" variable (:type "int") (reparse-symbol classsubparts) [7856 7874])
+                    ("as_nonattrib" variable (:type "int") (reparse-symbol classsubparts) [7876 7894])
+                    ("as_kernel" variable (:type "int") (reparse-symbol classsubparts) [7896 7911])
+                    ("as_audit" variable (:type "int") (reparse-symbol classsubparts) [7913 7927])
+                    ("as_auditctl" variable (:type "int") (reparse-symbol classsubparts) [7929 7946])
+                    ("as_enqueue" variable (:type "int") (reparse-symbol classsubparts) [7948 7964])
+                    ("as_written" variable (:type "int") (reparse-symbol classsubparts) [7966 7982])
+                    ("as_wblocked" variable (:type "int") (reparse-symbol classsubparts) [7984 8001])
+                    ("as_rblocked" variable (:type "int") (reparse-symbol classsubparts) [8003 8020])
+                    ("as_dropped" variable (:type "int") (reparse-symbol classsubparts) [8022 8038])
+                    ("as_totalsize" variable (:type "int") (reparse-symbol classsubparts) [8040 8058])
+                    ("as_memused" variable (:type "unsigned int") (reparse-symbol classsubparts) [8060 8084]))                  )
+                (reparse-symbol extern-c-contents) [7782 8087])
+            ("au_qctrl_t" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("au_qctrl" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                (reparse-symbol extern-c-contents) [7699 7734])
+            ("au_qctrl" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("aq_hiwater" variable (:type "int") (reparse-symbol classsubparts) [7332 7347])
+                    ("aq_lowater" variable (:type "int") (reparse-symbol classsubparts) [7435 7450])
+                    ("aq_bufsz" variable (:type "int") (reparse-symbol classsubparts) [7530 7543])
+                    ("aq_delay" variable (:type "int") (reparse-symbol classsubparts) [7590 7603])
+                    ("aq_minfree" variable (:type "int") (reparse-symbol classsubparts) [7635 7650]))                  )
+                (reparse-symbol extern-c-contents) [7313 7698])
+            ("token_t" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("au_token" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                (reparse-symbol extern-c-contents) [7017 7049])
+            ("au_session_t" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("au_session" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                (reparse-symbol extern-c-contents) [6910 6955])
+            ("au_session" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("as_aia_p" variable
+                       (:pointer 1
+                        :type ("auditinfo_addr_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6800 6827])
+                    ("as_mask" variable (:type ("au_mask_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6859 6879]))                  )
+                (reparse-symbol extern-c-contents) [6779 6909])
+            ("auditpinfo_addr_t" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("auditpinfo_addr" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                (reparse-symbol extern-c-contents) [6728 6777])
+            ("auditpinfo_addr" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("ap_pid" variable (:type ("pid_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6463 6477])
+                    ("ap_auid" variable (:type ("au_id_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6508 6525])
+                    ("ap_mask" variable (:type ("au_mask_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6548 6566])
+                    ("ap_termid" variable (:type ("au_tid_addr_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6587 6611])
+                    ("ap_asid" variable (:type ("au_asid_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6632 6650])
+                    ("ap_flags" variable (:type ("au_asflgs_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6676 6697]))                  )
+                (reparse-symbol extern-c-contents) [6437 6727])
+            ("auditpinfo_t" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("auditpinfo" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                (reparse-symbol extern-c-contents) [6396 6435])
+            ("auditpinfo" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("ap_pid" variable (:type ("pid_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6186 6200])
+                    ("ap_auid" variable (:type ("au_id_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6231 6248])
+                    ("ap_mask" variable (:type ("au_mask_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6271 6289])
+                    ("ap_termid" variable (:type ("au_tid_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6310 6329])
+                    ("ap_asid" variable (:type ("au_asid_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6350 6368]))                  )
+                (reparse-symbol extern-c-contents) [6165 6395])
+            ("auditinfo_addr_t" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("auditinfo_addr" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                (reparse-symbol extern-c-contents) [6116 6163])
+            ("auditinfo_addr" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("ai_auid" variable (:type ("au_id_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5896 5913])
+                    ("ai_mask" variable (:type ("au_mask_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5936 5954])
+                    ("ai_termid" variable (:type ("au_tid_addr_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5975 5999])
+                    ("ai_asid" variable (:type ("au_asid_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6020 6038])
+                    ("ai_flags" variable (:type ("au_asflgs_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6064 6085]))                  )
+                (reparse-symbol extern-c-contents) [5871 6115])
+            ("auditinfo_t" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("auditinfo" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                (reparse-symbol extern-c-contents) [5832 5869])
+            ("auditinfo" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("ai_auid" variable (:type ("au_id_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5667 5684])
+                    ("ai_mask" variable (:type ("au_mask_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5707 5725])
+                    ("ai_termid" variable (:type ("au_tid_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5746 5765])
+                    ("ai_asid" variable (:type ("au_asid_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5786 5804]))                  )
+                (reparse-symbol extern-c-contents) [5647 5831])
+            ("au_mask_t" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("au_mask" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                (reparse-symbol extern-c-contents) [5612 5645])
+            ("au_mask" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("am_success" variable (:type "unsigned int") (reparse-symbol classsubparts) [5504 5531])
+                    ("am_failure" variable (:type "unsigned int") (reparse-symbol classsubparts) [5557 5584]))                  )
+                (reparse-symbol extern-c-contents) [5486 5611])
+            ("au_tid_addr_t" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("au_tid_addr" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                (reparse-symbol extern-c-contents) [5443 5484])
+            ("au_tid_addr" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("at_port" variable (:type ("dev_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5381 5396])
+                    ("at_type" variable (:type ("u_int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5398 5416])
+                    ("at_addr" variable
+                       (:dereference 1
+                        :type ("u_int32_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5418 5439]))                  )
+                (reparse-symbol extern-c-contents) [5359 5442])
+            ("au_tid_t" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("au_tid" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                (reparse-symbol extern-c-contents) [5326 5357])
+            ("au_tid" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("port" variable (:type ("dev_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5290 5302])
+                    ("machine" variable (:type ("u_int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5304 5322]))                  )
+                (reparse-symbol extern-c-contents) [5273 5325])
+            ("au_asflgs_t" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("u_int64_t" type (:type "class") nil nil))
+                (reparse-symbol extern-c-contents) [5211 5271])
+            ("au_class_t" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("u_int32_t" type (:type "class") nil nil))
+                (reparse-symbol extern-c-contents) [5181 5210])
+            ("au_emod_t" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("u_int16_t" type (:type "class") nil nil))
+                (reparse-symbol extern-c-contents) [5152 5180])
+            ("au_event_t" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("u_int16_t" type (:type "class") nil nil))
+                (reparse-symbol extern-c-contents) [5122 5151])
+            ("au_asid_t" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("pid_t" type (:type "class") nil nil))
+                (reparse-symbol extern-c-contents) [5096 5121])
+            ("au_id_t" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("uid_t" type (:type "class") nil nil))
+                (reparse-symbol extern-c-contents) [5072 5095]))          
+      :file "audit.h"
+      :pointmax 9662
+      :fsize 9661
+      :lastmodtime '(22714 3981 0 0)
+      :unmatched-syntax '((semantic-list 9096 . 9122) (symbol 9088 . 9096) (INT 9084 . 9087) (semantic-list 8971 . 8991) (symbol 8963 . 8971) (INT 8959 . 8962))
+      :lexical-table 
+        '(("AUDIT_TRIGGER_LOW_SPACE" . ((number "1" 2337 . 2338)))
+          ("AUDIT_TRIGGER_EXPIRE_TRAILS" . ((number "8" 2787 . 2788)))
+          ("AUC_UNSET" . ((number "0" 3343 . 3344)))
+          ("A_OLDGETCOND" . ((number "20" 3734 . 3736)))
+          ("A_SETKAUDIT" . ((number "30" 3963 . 3965)))
+          ("AUDIT_ARGV" . ((number "0x0004" 4300 . 4306)))
+          ("AUDIT_PERZONE" . ((number "0x2000" 4599 . 4605)))
+          ("AQ_LOWATER" . ((number "10" 4724 . 4726)))
+          ("AQ_MAXBUFSZ" . ((number "1048576" 4777 . 4784)))
+          ("AU_IPv4" . ((number "4" 5034 . 5035)))
+          ("AUDIT_TRIGGER_READ_FILE" . ((number "3" 2467 . 2468)))
+          ("AUDIT_TRIGGER_MAX" . ((number "8" 2849 . 2850)))
+          ("A_GETSFLAGS" . ((number "39" 4170 . 4172)))
+          ("AUDIT_AHLT" . ((number "0x0002" 4274 . 4280)))
+          ("AUDIT_WINDATA" . ((number "0x0020" 4380 . 4386)))
+          ("AUDIT_TRAIL" . ((number "0x0100" 4460 . 4466)))
+          ("AUDIT_TRIGGER_MIN" . ((number "1" 2302 . 2303)))
+          ("AT_IPC_SEM" . ((semantic-list "((u_char)2)" 3203 . 3214)))
+          ("AUC_DISABLED" . ((punctuation "-" 3414 . 3415) (number "1" 3415 . 3416)))
+          ("A_GETPOLICY" . ((number "33" 4038 . 4040)))
+          ("A_SETQCTRL" . ((number "36" 4105 . 4107)))
+          ("AU_IPv6" . ((number "16" 5053 . 5055)))
+          ("AU_DEFAUDITSID" . ((number "0" 3081 . 3082)))
+          ("A_SETCLASS" . ((number "23" 3802 . 3804)))
+          ("AQ_MAXHIGH" . ((number "10000" 4699 . 4704)))
+          ("AUDIT_HARD_LIMIT_FREE_BLOCKS" . ((number "4" 2231 . 2232)))
+          ("AUDIT_TRIGGER_ROTATE_USER" . ((number "6" 2653 . 2654)))
+          ("AU_DEFAUDITID" . ((semantic-list "(uid_t)" 3045 . 3052) (semantic-list "(-1)" 3052 . 3056)))
+          ("A_OLDSETQCTRL" . ((number "7" 3587 . 3588)))
+          ("A_GETPINFO_ADDR" . ((number "28" 3917 . 3919)))
+          ("AUDIT_PATH" . ((number "0x0200" 4486 . 4492)))
+          ("AQ_BUFSZ" . ((symbol "MAXAUDITDATA" 4744 . 4756)))
+          ("_BSM_AUDIT_H")
+          ("AUDIT_TRIGGER_FILE" . ((semantic-list "(\"/dev/\" AUDITDEV_FILENAME)" 2962 . 2989)))
+          ("A_SETSMASK" . ((number "15" 3710 . 3712)))
+          ("A_GETQCTRL" . ((number "35" 4083 . 4085)))
+          ("A_SETSFLAGS" . ((number "40" 4193 . 4195)))
+          ("AU_FS_MINFREE" . ((number "20" 4872 . 4874)))
+          ("MAXAUDITDATA" . ((semantic-list "(0x8000 - 1)" 1815 . 1827)))
+          ("MIN_AUDIT_FILE_SIZE" . ((semantic-list "(512 * 1024)" 1899 . 1911)))
+          ("AUDIT_TRIGGER_CLOSE_AND_DIE" . ((number "4" 2532 . 2533)))
+          ("AUC_AUDITING" . ((number "1" 3367 . 3368)))
+          ("AUC_NOAUDIT" . ((number "2" 3390 . 3391)))
+          ("A_SETSTAT" . ((number "13" 3666 . 3668)))
+          ("A_GETCLASS" . ((number "22" 3780 . 3782)))
+          ("A_SETPOLICY" . ((number "34" 4061 . 4063)))
+          ("AUDIT_USER" . ((number "0x0040" 4406 . 4412)))
+          ("AUDIT_SCNT" . ((number "0x0400" 4512 . 4518)))
+          ("A_SETKMASK" . ((number "5" 3539 . 3540)))
+          ("A_OLDGETQCTRL" . ((number "6" 3563 . 3564)))
+          ("A_GETCWD" . ((number "8" 3606 . 3607)))
+          ("A_GETCAR" . ((number "9" 3625 . 3626)))
+          ("A_GETSTAT" . ((number "12" 3645 . 3647)))
+          ("A_SETFSIZE" . ((number "26" 3868 . 3870)))
+          ("A_GETSINFO_ADDR" . ((number "32" 4015 . 4017)))
+          ("A_SETCOND" . ((number "38" 4147 . 4149)))
+          ("AUDIT_ZONENAME" . ((number "0x1000" 4570 . 4576)))
+          ("AQ_HIWATER" . ((number "100" 4676 . 4679)))
+          ("A_OLDGETPOLICY" . ((number "2" 3472 . 3473)))
+          ("A_GETCOND" . ((number "37" 4126 . 4128)))
+          ("MAX_AUDIT_RECORD_SIZE" . ((symbol "MAXAUDITDATA" 1858 . 1870)))
+          ("A_SETPMASK" . ((number "25" 3846 . 3848)))
+          ("A_GETKAUDIT" . ((number "29" 3940 . 3942)))
+          ("AUDIT_ARGE" . ((number "0x0008" 4326 . 4332)))
+          ("AUDIT_SEQ" . ((number "0x0010" 4351 . 4357)))
+          ("AUDIT_RECORD_MAGIC" . ((number "0x828a0f1b" 1753 . 1763)))
+          ("AT_IPC_MSG" . ((semantic-list "((u_char)1)" 3150 . 3161)))
+          ("A_GETKMASK" . ((number "4" 3518 . 3519)))
+          ("A_GETFSIZE" . ((number "27" 3890 . 3892)))
+          ("AUDIT_PUBLIC" . ((number "0x0800" 4540 . 4546)))
+          ("MAX_AUDIT_RECORDS" . ((number "20" 1790 . 1792)))
+          ("AUDIT_TRIGGER_ROTATE_KERNEL" . ((number "2" 2402 . 2403)))
+          ("AUDIT_TRIGGER_INITIALIZE" . ((number "7" 2716 . 2717)))
+          ("AT_IPC_SHM" . ((semantic-list "((u_char)3)" 3258 . 3269)))
+          ("A_SETUMASK" . ((number "14" 3688 . 3690)))
+          ("A_SENDTRIGGER" . ((number "31" 3988 . 3990)))
+          ("AUDIT_GROUP" . ((number "0x0080" 4433 . 4439)))
+          ("AUDIT_TRIGGER_NO_SPACE" . ((number "5" 2589 . 2590)))
+          ("AUDITDEV_FILENAME" . ((string "\"audit\"" 2927 . 2934)))
+          ("AU_ASSIGN_ASID" . ((punctuation "-" 3106 . 3107) (number "1" 3107 . 3108)))
+          ("A_OLDSETPOLICY" . ((number "3" 3497 . 3498)))
+          ("A_OLDSETCOND" . ((number "21" 3758 . 3760)))
+          ("A_GETPINFO" . ((number "24" 3824 . 3826)))
+          ("AUDIT_CNT" . ((number "0x0001" 4248 . 4254)))
+          )
+))
+  :file "!usr!include!bsm!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

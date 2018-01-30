@@ -1,0 +1,1337 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("collections" include nil nil [1 58])
+            ("sklearn.neighbors.kde" include nil nil [59 106])
+            ("gc" include nil nil [107 116])
+            ("itertools" include nil nil [117 133])
+            ("numpy" include nil nil [134 152])
+            ("os" include nil nil [153 162])
+            ("pysam" include nil nil [163 175])
+            ("random" include nil nil [176 196])
+            ("resource" include nil nil [197 212])
+            ("sys" include nil nil [213 223])
+            ("pp" include nil nil [224 233])
+            ("if" code nil nil [234 287])
+            ("matplotlib" include nil nil [289 306])
+            ("matplotlib" code nil nil [307 328])
+            ("matplotlib.pyplot" include nil nil [380 411])
+            ("matplotlib.backends.backend_pdf" include nil nil [412 464])
+            ("arcsv.conditional_mappable_model" include nil nil [467 538])
+            ("arcsv.helper" include nil nil [539 722])
+            ("arcsv.invertedreads" include nil nil [723 801])
+            ("arcsv.pecluster" include nil nil [802 853])
+            ("arcsv.read_viz" include nil nil [854 933])
+            ("" code nil nil [961 1076])
+            ("arcsv.splitreads" include nil nil [1077 1160])
+            ("numba" include nil nil [1161 1182])
+            ("extract_approximate_library_stats" function (:arguments 
+              ( ("opts" variable nil (reparse-symbol function_parameters) [1223 1227])
+                ("bam" variable nil (reparse-symbol function_parameters) [1229 1232])
+                ("rough_insert_median" variable nil (reparse-symbol function_parameters) [1234 1253]))              ) nil [1185 4911])
+            ("parse_bam" function (:arguments 
+              ( ("opts" variable nil (reparse-symbol function_parameters) [5060 5064])
+                ("reference_files" variable nil (reparse-symbol function_parameters) [5066 5081])
+                ("bamfiles" variable nil (reparse-symbol function_parameters) [5083 5091])
+                ("do_bp" variable nil (reparse-symbol function_parameters) [5093 5098])
+                ("do_junction_align" variable nil (reparse-symbol function_parameters) [5100 5117]))              ) nil [5046 27205])
+            ("process_coverage" function (:arguments 
+              ( ("aln" variable nil (reparse-symbol function_parameters) [27228 27231])
+                ("coverage" variable nil (reparse-symbol function_parameters) [27233 27241]))              ) nil [27207 27319])
+            ("process_inverted" function (:arguments 
+              ( ("pair" variable nil (reparse-symbol function_parameters) [27342 27346])
+                ("inverted_pairs" variable nil (reparse-symbol function_parameters) [27348 27362])
+                ("bam" variable nil (reparse-symbol function_parameters) [27364 27367]))              ) nil [27321 27550])
+            ("process_hanging" function (:arguments 
+              ( ("anchor_aln" variable nil (reparse-symbol function_parameters) [27572 27582])
+                ("hanging_plus" variable nil (reparse-symbol function_parameters) [27584 27596])
+                ("hanging_minus" variable nil (reparse-symbol function_parameters) [27598 27611]))              ) nil [27552 27823])
+            ("process_splits" function (:arguments 
+              ( ("aln" variable nil (reparse-symbol function_parameters) [27844 27847])
+                ("splits" variable nil (reparse-symbol function_parameters) [27849 27855])
+                ("bam" variable nil (reparse-symbol function_parameters) [27857 27860])
+                ("min_mapq" variable nil (reparse-symbol function_parameters) [27862 27870])
+                ("mate" variable nil (reparse-symbol function_parameters) [27872 27876]))              ) nil [27825 28023])
+            ("process_insert_len" function (:arguments 
+              ( ("pair" variable nil (reparse-symbol function_parameters) [28233 28237])
+                ("len_array" variable nil (reparse-symbol function_parameters) [28239 28248])
+                ("min_mapq" variable nil (reparse-symbol function_parameters) [28250 28258])
+                ("read_len" variable nil (reparse-symbol function_parameters) [28260 28268])
+                ("truncate" variable nil (reparse-symbol function_parameters) [28293 28301])
+                ("maximum_insert_size" variable nil (reparse-symbol function_parameters) [28308 28327])
+                ("lib_is_rf" variable nil (reparse-symbol function_parameters) [28359 28368])
+                ("lib_insert_is_inner" variable nil (reparse-symbol function_parameters) [28376 28395]))              ) nil [28210 29399])
+            ("process_insert_viz" function (:arguments 
+              ( ("pair" variable nil (reparse-symbol function_parameters) [29424 29428])
+                ("insert_plus" variable nil (reparse-symbol function_parameters) [29430 29441])
+                ("insert_minus" variable nil (reparse-symbol function_parameters) [29443 29455])
+                ("library_info" variable nil (reparse-symbol function_parameters) [29457 29469]))              ) nil [29401 30451])
+            ("handle_unpaired_read" function (:arguments 
+              ( ("opts" variable nil (reparse-symbol function_parameters) [30478 30482])
+                ("aln" variable nil (reparse-symbol function_parameters) [30484 30487])
+                ("coverage" variable nil (reparse-symbol function_parameters) [30489 30497])
+                ("hanging_unmapped_plus" variable nil (reparse-symbol function_parameters) [30524 30545])
+                ("hanging_unmapped_minus" variable nil (reparse-symbol function_parameters) [30547 30569])
+                ("hanging_same_chrom_plus" variable nil (reparse-symbol function_parameters) [30596 30619])
+                ("hanging_same_chrom_minus" variable nil (reparse-symbol function_parameters) [30621 30645])
+                ("hanging_other_chrom_plus" variable nil (reparse-symbol function_parameters) [30672 30696])
+                ("hanging_other_chrom_minus" variable nil (reparse-symbol function_parameters) [30698 30723])
+                ("softclips" variable nil (reparse-symbol function_parameters) [30750 30759])
+                ("splits" variable nil (reparse-symbol function_parameters) [30761 30767])
+                ("bam" variable nil (reparse-symbol function_parameters) [30769 30772])
+                ("mapstats" variable nil (reparse-symbol function_parameters) [30774 30782]))              ) nil [30453 32226])
+            ("process_read_len" function (:arguments 
+              ( ("pair" variable nil (reparse-symbol function_parameters) [32327 32331])
+                ("len_short_array" variable nil (reparse-symbol function_parameters) [32333 32348])
+                ("len_long_array" variable nil (reparse-symbol function_parameters) [32350 32364]))              ) nil [32306 32488])
+            ("BamGroup" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [32355 32414]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [32572 32576])
+                            ("bamfiles" variable nil (reparse-symbol function_parameters) [32578 32586]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [32559 32657])
+                    ("fetch_unsorted" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [32681 32685])
+                            ("o1" variable nil (reparse-symbol function_parameters) [32687 32690])
+                            ("o2" variable nil (reparse-symbol function_parameters) [32692 32696]))                          )
+                        (reparse-symbol indented_block_body) [32662 32786])
+                    ("fetch_sorted" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [32808 32812])
+                            ("o1" variable nil (reparse-symbol function_parameters) [32814 32817])
+                            ("o2" variable nil (reparse-symbol function_parameters) [32819 32823]))                          )
+                        (reparse-symbol indented_block_body) [32791 32880])
+                    ("getrname" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [32956 32960])
+                            ("o1" variable nil (reparse-symbol function_parameters) [32962 32965])
+                            ("o2" variable nil (reparse-symbol function_parameters) [32967 32971]))                          )
+                        (reparse-symbol indented_block_body) [32943 33025])
+                    ("gettid" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [33041 33045])
+                            ("o1" variable nil (reparse-symbol function_parameters) [33047 33050])
+                            ("o2" variable nil (reparse-symbol function_parameters) [33052 33056]))                          )
+                        (reparse-symbol indented_block_body) [33030 33108])
+                    ("references" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [33142 33146]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [33113 33191])
+                    ("nreferences" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [33226 33230]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [33196 33276])
+                    ("lengths" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [33307 33311]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [33281 33353]))                  
+                :type "class")
+                nil [32539 33353])
+            ("pmf_kernel_smooth" function (:arguments 
+              ( ("a" variable nil (reparse-symbol function_parameters) [33381 33382])
+                ("xmin" variable nil (reparse-symbol function_parameters) [33384 33388])
+                ("xmax" variable nil (reparse-symbol function_parameters) [33390 33394])
+                ("max_kde_samples" variable nil (reparse-symbol function_parameters) [33396 33411]))              ) nil [33359 34054])
+            ("has_unmapped_records" function (:arguments 
+              ( ("bam" variable nil (reparse-symbol function_parameters) [34085 34088])
+                ("pairs_to_check" variable nil (reparse-symbol function_parameters) [34090 34104]))              ) nil [34060 34789])
+            ("bam_read_len" function (:arguments 
+              ( ("bam" variable nil (reparse-symbol function_parameters) [34812 34815])
+                ("reads_to_check" variable nil (reparse-symbol function_parameters) [34817 34831]))              ) nil [34795 35118])
+            ("get_rough_insert_median" function (:arguments 
+              ( ("opts" variable nil (reparse-symbol function_parameters) [35152 35156])
+                ("bam" variable nil (reparse-symbol function_parameters) [35158 35161])
+                ("pairs_to_check" variable nil (reparse-symbol function_parameters) [35163 35177]))              ) nil [35124 35994])
+            ("plot_insert_dist" function (:arguments 
+              ( ("opts" variable nil (reparse-symbol function_parameters) [36021 36025])
+                ("insert_len_dists" variable nil (reparse-symbol function_parameters) [36027 36043])
+                ("outdir" variable nil (reparse-symbol function_parameters) [36045 36051]))              ) nil [36000 36368]))          
+      :file "bamparser_streaming.py"
+      :pointmax 36368
+      :fsize 36367
+      :lastmodtime '(23132 37811 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("arcsv.constants" include nil nil [21 50])
+            ("arcsv.helper" include nil nil [51 88])
+            ("compute_consensus_sequence" function (:arguments 
+              ( ("seqs" variable nil (reparse-symbol function_parameters) [159 163])
+                ("quals" variable nil (reparse-symbol function_parameters) [165 170])
+                ("offsets" variable nil (reparse-symbol function_parameters) [172 179]))              ) nil [128 885])
+            ("get_closeby_pairs" function (:arguments 
+              ( ("a" variable nil (reparse-symbol function_parameters) [1005 1006])
+                ("b" variable nil (reparse-symbol function_parameters) [1008 1009])
+                ("max_dist" variable nil (reparse-symbol function_parameters) [1011 1019]))              ) nil [983 1686])
+            ("junction_mergefun" function (:arguments 
+              ( ("locs" variable nil (reparse-symbol function_parameters) [1710 1714])
+                ("junctions" variable nil (reparse-symbol function_parameters) [1716 1725]))              ) nil [1688 3201])
+            ("junction_mergefun_test" function nil nil [3203 3724])
+            ("bp_mergefun" function (:arguments 
+              ( ("locs" variable nil (reparse-symbol function_parameters) [3742 3746])
+                ("bps" variable nil (reparse-symbol function_parameters) [3748 3751]))              ) nil [3726 3926])
+            ("bp_mergefun_precedence" function (:arguments 
+              ( ("locs" variable nil (reparse-symbol function_parameters) [3955 3959])
+                ("bps" variable nil (reparse-symbol function_parameters) [3961 3964])
+                ("max_distance" variable nil (reparse-symbol function_parameters) [3966 3978]))              ) nil [3928 5602])
+            ("bp_mergefun_precedence_test" function nil nil [5604 9478])
+            ("junction_start" function (:arguments 
+              ( ("junction" variable nil (reparse-symbol function_parameters) [9545 9553]))              ) nil [9526 9720])
+            ("junction_end" function (:arguments 
+              ( ("junction" variable nil (reparse-symbol function_parameters) [9739 9747]))              ) nil [9722 9915])
+            ("merge_breakpoints" function (:arguments 
+              ( ("opts" variable nil (reparse-symbol function_parameters) [9984 9988])
+                ("junctions_out" variable nil (reparse-symbol function_parameters) [9990 10003])
+                ("splits" variable nil (reparse-symbol function_parameters) [10005 10011])
+                ("disc_bp" variable nil (reparse-symbol function_parameters) [10013 10020]))              ) nil [9962 17350])
+            ("Breakpoint" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [17493 17517])
+                            ("self" variable nil (reparse-symbol indented_block_body) [17526 17562])
+                            ("self" variable nil (reparse-symbol indented_block_body) [17571 17609])
+                            ("self" variable nil (reparse-symbol indented_block_body) [17618 17638])
+                            ("self" variable nil (reparse-symbol indented_block_body) [17647 17659])
+                            ("self" variable nil (reparse-symbol indented_block_body) [17668 17684]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17387 17391])
+                            ("interval" variable nil (reparse-symbol function_parameters) [17393 17401])
+                            ("supp_clip_left" variable nil (reparse-symbol function_parameters) [17403 17417])
+                            ("supp_clip_right" variable nil (reparse-symbol function_parameters) [17421 17436])
+                            ("splits" variable nil (reparse-symbol function_parameters) [17457 17463])
+                            ("pe" variable nil (reparse-symbol function_parameters) [17468 17470])
+                            ("libs" variable nil (reparse-symbol function_parameters) [17475 17479]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [17374 17685])
+                    ("supp_pe" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17716 17720]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [17690 17751])
+                    ("supp_split" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17785 17789]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [17756 17824])
+                    ("supp_clip" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17857 17861]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [17829 17922])
+                    ("__add__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17939 17943])
+                            ("other" variable nil (reparse-symbol function_parameters) [17945 17950]))                          )
+                        (reparse-symbol indented_block_body) [17927 18591])
+                    ("__radd__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18609 18613])
+                            ("other" variable nil (reparse-symbol function_parameters) [18615 18620]))                          )
+                        (reparse-symbol indented_block_body) [18596 18820])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18837 18841]))                          )
+                        (reparse-symbol indented_block_body) [18825 19085])
+                    ("__repr__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [19103 19107]))                          )
+                        (reparse-symbol indented_block_body) [19090 19135])
+                    ("precedence" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [19209 19213]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [19180 19539]))                  
+                :type "class")
+                nil [17352 19539])
+            ("valid_insertion_inversion_microhomology" function (:arguments 
+              ( ("junction1" variable nil (reparse-symbol function_parameters) [19825 19834])
+                ("junction2" variable nil (reparse-symbol function_parameters) [19836 19845]))              ) nil [19781 20276])
+            ("test_compute_consensus_sequence" function nil nil [20278 20508])
+            ("test_get_closeby_pairs" function nil nil [20510 20800]))          
+      :file "breakpoint_merge.py"
+      :pointmax 20800
+      :fsize 20799
+      :lastmodtime '(22867 49448 0 0)
+      :unmatched-syntax '((NAME 19985 . 19990) (IF 20003 . 20005) (ELSE 20033 . 20037) (NAME 19920 . 19924) (IF 19937 . 19939) (ELSE 19966 . 19970) (NAME 15353 . 15363) (IF 15390 . 15392) (ELSE 15414 . 15418) (NAME 15271 . 15280) (IF 15307 . 15309) (ELSE 15330 . 15334) (NAME 13619 . 13624) (IF 13637 . 13639) (ELSE 13658 . 13662) (NAME 13542 . 13546) (IF 13559 . 13561) (ELSE 13588 . 13592) (NAME 592 . 595) (IF 616 . 618) (ELSE 631 . 635)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("pysam" include nil nil [20 32])
+            ("math" include nil nil [33 71])
+            ("arcsv.constants" include nil nil [73 102])
+            ("not_primary" function (:arguments 
+              ( ("aln" variable nil (reparse-symbol function_parameters) [150 153]))              ) nil [134 208])
+            ("fully_aligned" function (:arguments 
+              ( ("aln" variable nil (reparse-symbol function_parameters) [228 231]))              ) nil [210 292])
+            ("valid_hanging_pair" function (:arguments 
+              ( ("pair" variable nil (reparse-symbol function_parameters) [317 321])
+                ("max_dist" variable nil (reparse-symbol function_parameters) [323 331]))              ) nil [294 590])
+            ("valid_hanging_anchor" function (:arguments 
+              ( ("aln" variable nil (reparse-symbol function_parameters) [617 620])
+                ("max_dist" variable nil (reparse-symbol function_parameters) [622 630]))              ) nil [592 882])
+            ("is_read_through" function (:arguments 
+              ( ("pair" variable nil (reparse-symbol function_parameters) [904 908])
+                ("read_through_slop" variable nil (reparse-symbol function_parameters) [910 927]))              ) nil [884 1705])
+            ("get_ucsc_name" function (:arguments 
+              ( ("chrom" variable nil (reparse-symbol function_parameters) [1725 1730]))              ) nil [1707 1821])
+            ("get_chrom_size" function (:arguments 
+              ( ("chrom_name" variable nil (reparse-symbol function_parameters) [1842 1852])
+                ("refname" variable nil (reparse-symbol function_parameters) [1854 1861]))              ) nil [1823 2019])
+            ("get_chrom_size_from_bam" function (:arguments 
+              ( ("chrom_name" variable nil (reparse-symbol function_parameters) [2049 2059])
+                ("bam" variable nil (reparse-symbol function_parameters) [2061 2064]))              ) nil [2021 2187])
+            ("SoftClip" type
+               (:members 
+                  ( ("qname" variable nil (reparse-symbol indented_block_body) [2209 2219])
+                    ("loc" variable nil (reparse-symbol indented_block_body) [2224 2231])
+                    ("strand" variable nil (reparse-symbol indented_block_body) [2236 2248])
+                    ("mapq" variable nil (reparse-symbol indented_block_body) [2253 2261])
+                    ("num_clipped" variable nil (reparse-symbol indented_block_body) [2266 2281])
+                    ("is_right" variable nil (reparse-symbol indented_block_body) [2286 2301])
+                    ("med_clipped_qual" variable nil (reparse-symbol indented_block_body) [2306 2326])
+                    ("min_clipped_qual" variable nil (reparse-symbol indented_block_body) [2331 2351])
+                    ("any_ambiguous_clipped" variable nil (reparse-symbol indented_block_body) [2356 2385])
+                    ("med_mapped_qual" variable nil (reparse-symbol indented_block_body) [2390 2409])
+                    ("is_double_clip" variable nil (reparse-symbol indented_block_body) [2414 2436])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2454 2458]))                          )
+                        (reparse-symbol indented_block_body) [2442 3350]))                  
+                :type "class")
+                nil [2189 3350])
+            ("print_softclips" function (:arguments 
+              ( ("sc_list" variable nil (reparse-symbol function_parameters) [3410 3417])
+                ("filename" variable nil (reparse-symbol function_parameters) [3419 3427]))              ) nil [3390 3664])
+            ("Junction" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [3804 3818])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3827 3843])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3852 3882])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3891 3909])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3918 3936])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3945 3967])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3976 3992])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4001 4017])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4026 4044]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3699 3703])
+                            ("seq" variable nil (reparse-symbol function_parameters) [3705 3708])
+                            ("qual" variable nil (reparse-symbol function_parameters) [3710 3714])
+                            ("orientation" variable nil (reparse-symbol function_parameters) [3716 3727])
+                            ("bploc" variable nil (reparse-symbol function_parameters) [3729 3734])
+                            ("nclip" variable nil (reparse-symbol function_parameters) [3736 3741])
+                            ("nunique" variable nil (reparse-symbol function_parameters) [3743 3750])
+                            ("ndup" variable nil (reparse-symbol function_parameters) [3752 3756])
+                            ("mapq" variable nil (reparse-symbol function_parameters) [3758 3762])
+                            ("nsupp" variable nil (reparse-symbol function_parameters) [3764 3769]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [3686 4023])
+                    ("start" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4038 4042]))                          )
+                        (reparse-symbol indented_block_body) [4028 4200])
+                    ("end" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4213 4217]))                          )
+                        (reparse-symbol indented_block_body) [4205 4376]))                  
+                :type "class")
+                nil [3666 4376])
+            ("GenomeInterval" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [4546 4564])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4573 4591])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4600 4614])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4623 4651])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4660 4700])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4709 4729]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4417 4421])
+                            ("chrom" variable nil (reparse-symbol function_parameters) [4423 4428])
+                            ("start" variable nil (reparse-symbol function_parameters) [4430 4435])
+                            ("end" variable nil (reparse-symbol function_parameters) [4437 4440])
+                            ("is_de_novo" variable nil (reparse-symbol function_parameters) [4442 4452])
+                            ("is_translocation" variable nil (reparse-symbol function_parameters) [4460 4476])
+                            ("is_gap" variable nil (reparse-symbol function_parameters) [4501 4507]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [4404 4708])
+                    ("__len__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4725 4729]))                          )
+                        (reparse-symbol indented_block_body) [4713 4769])
+                    ("intersects" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4863 4867])
+                            ("interval" variable nil (reparse-symbol function_parameters) [4869 4877]))                          )
+                        (reparse-symbol indented_block_body) [4848 4954])
+                    ("is_insertion" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4976 4980]))                          )
+                        (reparse-symbol indented_block_body) [4959 5039])
+                    ("__repr__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5057 5061]))                          )
+                        (reparse-symbol indented_block_body) [5044 5107]))                  
+                :type "class")
+                nil [4378 5107])
+            ("merge_nearby" function (:arguments 
+              ( ("objects" variable nil (reparse-symbol function_parameters) [7049 7056])
+                ("mergefun" variable nil (reparse-symbol function_parameters) [7058 7066])
+                ("type" variable nil (reparse-symbol function_parameters) [7068 7072])
+                ("max_distance" variable nil (reparse-symbol function_parameters) [7084 7096]))              ) nil [7032 7965])
+            ("reverse_complement" function (:arguments 
+              ( ("seq" variable nil (reparse-symbol function_parameters) [8611 8614]))              ) nil [8588 9094])
+            ("robust_sd" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [9110 9111]))              ) nil [9096 9176])
+            ("fetch_seq" function (:arguments 
+              ( ("ref" variable nil (reparse-symbol function_parameters) [9192 9195])
+                ("ctg" variable nil (reparse-symbol function_parameters) [9197 9200])
+                ("start" variable nil (reparse-symbol function_parameters) [9202 9207])
+                ("end" variable nil (reparse-symbol function_parameters) [9209 9212])
+                ("truncate" variable nil (reparse-symbol function_parameters) [9214 9222])
+                ("pad_N" variable nil (reparse-symbol function_parameters) [9230 9235])
+                ("is_reverse" variable nil (reparse-symbol function_parameters) [9243 9253]))              ) nil [9178 10139])
+            ("time_to_str" function (:arguments 
+              ( ("seconds" variable nil (reparse-symbol function_parameters) [10157 10164]))              ) nil [10141 10497])
+            ("normcdf" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [10511 10512])
+                ("mu" variable nil (reparse-symbol function_parameters) [10514 10516])
+                ("sigma" variable nil (reparse-symbol function_parameters) [10520 10525]))              ) nil [10499 10587])
+            ("normpdf" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [10601 10602])
+                ("mu" variable nil (reparse-symbol function_parameters) [10604 10606])
+                ("sigma" variable nil (reparse-symbol function_parameters) [10610 10615]))              ) nil [10589 10693])
+            ("block_distance" function (:arguments 
+              ( ("path" variable nil (reparse-symbol function_parameters) [10783 10787])
+                ("blocks" variable nil (reparse-symbol function_parameters) [10789 10795])
+                ("i" variable nil (reparse-symbol function_parameters) [10797 10798])
+                ("j" variable nil (reparse-symbol function_parameters) [10800 10801])
+                ("use_gaps" variable nil (reparse-symbol function_parameters) [10803 10811]))              ) nil [10764 11483])
+            ("block_gap" function (:arguments 
+              ( ("blocks" variable nil (reparse-symbol function_parameters) [11561 11567])
+                ("i" variable nil (reparse-symbol function_parameters) [11569 11570]))              ) nil [11547 12038])
+            ("get_block_distances_between_nodes" function (:arguments 
+              ( ("path" variable nil (reparse-symbol function_parameters) [12166 12170])
+                ("blocks" variable nil (reparse-symbol function_parameters) [12172 12178])
+                ("v1" variable nil (reparse-symbol function_parameters) [12180 12182])
+                ("v2" variable nil (reparse-symbol function_parameters) [12184 12186])
+                ("adj1" variable nil (reparse-symbol function_parameters) [12188 12192])
+                ("adj2" variable nil (reparse-symbol function_parameters) [12194 12198]))              ) nil [12128 13194])
+            ("is_adj_satisfied" function (:arguments 
+              ( ("a" variable nil (reparse-symbol function_parameters) [13288 13289])
+                ("path" variable nil (reparse-symbol function_parameters) [13291 13295])
+                ("i" variable nil (reparse-symbol function_parameters) [13297 13298]))              ) nil [13267 13556])
+            ("path_to_block_path" function (:arguments 
+              ( ("path" variable nil (reparse-symbol function_parameters) [13581 13585]))              ) nil [13558 13839])
+            ("path_to_rearrangement" function (:arguments 
+              ( ("path" variable nil (reparse-symbol function_parameters) [13867 13871]))              ) nil [13841 14080])
+            ("rearrangement_to_letters" function (:arguments 
+              ( ("rearrangement" variable nil (reparse-symbol function_parameters) [14111 14124])
+                ("start" variable nil (reparse-symbol function_parameters) [14126 14131])
+                ("blocks" variable nil (reparse-symbol function_parameters) [14135 14141]))              ) nil [14082 14831])
+            ("is_path_ref" function (:arguments 
+              ( ("path" variable nil (reparse-symbol function_parameters) [14849 14853])
+                ("blocks" variable nil (reparse-symbol function_parameters) [14855 14861]))              ) nil [14833 15023])
+            ("flip_parity" function (:arguments 
+              ( ("i" variable nil (reparse-symbol function_parameters) [15041 15042]))              ) nil [15025 15087])
+            ("test_merge_nearby" function nil nil [15089 15545])
+            ("test_block_gap" function nil nil [15630 15986])
+            ("test_block_distance" function nil nil [15988 18143]))          
+      :file "helper.py"
+      :pointmax 18143
+      :fsize 18142
+      :lastmodtime '(23132 37889 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("igraph" include nil nil [1 14])
+            ("itertools" include nil nil [15 31])
+            ("functools" include nil nil [32 48])
+            ("numpy" include nil nil [49 67])
+            ("os" include nil nil [68 77])
+            ("pyinter" include nil nil [78 92])
+            ("operator" include nil nil [93 124])
+            ("math" include nil nil [125 146])
+            ("arcsv.breakpoint_merge" include nil nil [148 193])
+            ("arcsv.helper" include nil nil [194 239])
+            ("arcsv.sv_parse_reads" include nil nil [240 289])
+            ("arcsv.unif_ci" include nil nil [290 326])
+            ("DiscordantPair" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [417 435])
+                            ("self" variable nil (reparse-symbol indented_block_body) [444 460])
+                            ("self" variable nil (reparse-symbol indented_block_body) [469 485])
+                            ("self" variable nil (reparse-symbol indented_block_body) [494 514])
+                            ("self" variable nil (reparse-symbol indented_block_body) [523 541]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [368 372])
+                            ("chrom" variable nil (reparse-symbol function_parameters) [374 379])
+                            ("pos1" variable nil (reparse-symbol function_parameters) [381 385])
+                            ("pos2" variable nil (reparse-symbol function_parameters) [387 391])
+                            ("insert" variable nil (reparse-symbol function_parameters) [393 399])
+                            ("qname" variable nil (reparse-symbol function_parameters) [401 406]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [355 542])
+                    ("__repr__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [560 564]))                          )
+                        (reparse-symbol indented_block_body) [547 635])
+                    ("__hash__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [653 657]))                          )
+                        (reparse-symbol indented_block_body) [640 741])
+                    ("__lt__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [757 761])
+                            ("other" variable nil (reparse-symbol function_parameters) [763 768]))                          )
+                        (reparse-symbol indented_block_body) [746 836])
+                    ("__gt__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [852 856])
+                            ("other" variable nil (reparse-symbol function_parameters) [858 863]))                          )
+                        (reparse-symbol indented_block_body) [841 931]))                  
+                :type "class")
+                nil [329 931])
+            ("process_discordant_pair" function (:arguments 
+              ( ("aln1" variable nil (reparse-symbol function_parameters) [961 965])
+                ("aln2" variable nil (reparse-symbol function_parameters) [967 971])
+                ("chrom" variable nil (reparse-symbol function_parameters) [973 978])
+                ("discordant_pairs" variable nil (reparse-symbol function_parameters) [980 996])
+                ("min_mapq" variable nil (reparse-symbol function_parameters) [998 1006])
+                ("ilen" variable nil (reparse-symbol function_parameters) [1008 1012])
+                ("min_insert" variable nil (reparse-symbol function_parameters) [1042 1052])
+                ("max_insert" variable nil (reparse-symbol function_parameters) [1054 1064])
+                ("is_rf" variable nil (reparse-symbol function_parameters) [1066 1071]))              ) nil [933 2907])
+            ("apply_discordant_clustering" function (:arguments 
+              ( ("opts" variable nil (reparse-symbol function_parameters) [3108 3112])
+                ("discordant_pairs_list" variable nil (reparse-symbol function_parameters) [3114 3135])
+                ("insert_mu" variable nil (reparse-symbol function_parameters) [3169 3178])
+                ("insert_sigma" variable nil (reparse-symbol function_parameters) [3180 3192])
+                ("insert_min" variable nil (reparse-symbol function_parameters) [3226 3236])
+                ("insert_max" variable nil (reparse-symbol function_parameters) [3238 3248])
+                ("gap_file" variable nil (reparse-symbol function_parameters) [3250 3258])
+                ("lr_cond" variable nil (reparse-symbol function_parameters) [3292 3299])
+                ("bp_confidence_level" variable nil (reparse-symbol function_parameters) [3307 3326]))              ) nil [3076 5890])
+            ("is_del_compatible" function (:arguments 
+              ( ("opts" variable nil (reparse-symbol function_parameters) [5914 5918])
+                ("pair1" variable nil (reparse-symbol function_parameters) [5920 5925])
+                ("pair2" variable nil (reparse-symbol function_parameters) [5927 5932])
+                ("max_distance" variable nil (reparse-symbol function_parameters) [5934 5946])
+                ("insert_mu" variable nil (reparse-symbol function_parameters) [5970 5979])
+                ("insert_sigma" variable nil (reparse-symbol function_parameters) [5986 5998])
+                ("adjust" variable nil (reparse-symbol function_parameters) [6005 6011]))              ) nil [5892 6214])
+            ("is_ins_compatible" function (:arguments 
+              ( ("opts" variable nil (reparse-symbol function_parameters) [6238 6242])
+                ("pair1" variable nil (reparse-symbol function_parameters) [6244 6249])
+                ("pair2" variable nil (reparse-symbol function_parameters) [6251 6256])
+                ("max_distance" variable nil (reparse-symbol function_parameters) [6258 6270])
+                ("insert_mu" variable nil (reparse-symbol function_parameters) [6272 6281])
+                ("insert_sigma" variable nil (reparse-symbol function_parameters) [6283 6295])
+                ("adjust" variable nil (reparse-symbol function_parameters) [6297 6303]))              ) nil [6216 7202])
+            ("is_dup_compatible" function (:arguments 
+              ( ("opts" variable nil (reparse-symbol function_parameters) [7226 7230])
+                ("pair1" variable nil (reparse-symbol function_parameters) [7232 7237])
+                ("pair2" variable nil (reparse-symbol function_parameters) [7239 7244])
+                ("max_distance" variable nil (reparse-symbol function_parameters) [7246 7258])
+                ("insert_mu" variable nil (reparse-symbol function_parameters) [7282 7291])
+                ("insert_sigma" variable nil (reparse-symbol function_parameters) [7293 7305])
+                ("adjust" variable nil (reparse-symbol function_parameters) [7307 7313]))              ) nil [7204 7497])
+            ("is_inv_compatible" function (:arguments 
+              ( ("opts" variable nil (reparse-symbol function_parameters) [7521 7525])
+                ("pair1" variable nil (reparse-symbol function_parameters) [7527 7532])
+                ("pair2" variable nil (reparse-symbol function_parameters) [7534 7539])
+                ("max_distance" variable nil (reparse-symbol function_parameters) [7541 7553])
+                ("insert_mu" variable nil (reparse-symbol function_parameters) [7555 7564])
+                ("insert_sigma" variable nil (reparse-symbol function_parameters) [7566 7578])
+                ("adjust" variable nil (reparse-symbol function_parameters) [7580 7586]))              ) nil [7499 7770])
+            ("is_ins_cluster_compatible" function (:arguments 
+              ( ("opts" variable nil (reparse-symbol function_parameters) [7802 7806])
+                ("cluster" variable nil (reparse-symbol function_parameters) [7808 7815]))              ) nil [7772 8004])
+            ("compatibility_fun" variable nil nil [8006 8242])
+            ("cluster_pairs" function (:arguments 
+              ( ("opts" variable nil (reparse-symbol function_parameters) [8263 8267])
+                ("pairs" variable nil (reparse-symbol function_parameters) [8269 8274])
+                ("dtype" variable nil (reparse-symbol function_parameters) [8276 8281])
+                ("insert_mu" variable nil (reparse-symbol function_parameters) [8283 8292])
+                ("insert_sigma" variable nil (reparse-symbol function_parameters) [8294 8306]))              ) nil [8245 11460])
+            ("cluster_handle_component" function (:arguments 
+              ( ("component" variable nil (reparse-symbol function_parameters) [11527 11536])
+                ("is_compatible" variable nil (reparse-symbol function_parameters) [11538 11551])
+                ("max_cluster_size" variable nil (reparse-symbol function_parameters) [11553 11569]))              ) nil [11498 12397])
+            ("cluster_discordant_nodes" function (:arguments 
+              ( ("graph" variable nil (reparse-symbol function_parameters) [12428 12433])
+                ("min_clique_size" variable nil (reparse-symbol function_parameters) [12435 12450]))              ) nil [12399 12968])
+            ("shuffle_discordant_pairs" function (:arguments 
+              ( ("discordant_pairs" variable nil (reparse-symbol function_parameters) [13138 13154])
+                ("chrom_len_no_gaps" variable nil (reparse-symbol function_parameters) [13156 13173]))              ) nil [13109 13813])
+            ("lr_del" function (:arguments 
+              ( ("cluster" variable nil (reparse-symbol function_parameters) [13990 13997])
+                ("insert_mu" variable nil (reparse-symbol function_parameters) [13999 14008])
+                ("insert_sigma" variable nil (reparse-symbol function_parameters) [14010 14022])
+                ("cutoff" variable nil (reparse-symbol function_parameters) [14024 14030])
+                ("conditioning" variable nil (reparse-symbol function_parameters) [14032 14044]))              ) nil [13979 14742])
+            ("lr_ins" function (:arguments 
+              ( ("cluster" variable nil (reparse-symbol function_parameters) [14755 14762])
+                ("insert_mu" variable nil (reparse-symbol function_parameters) [14764 14773])
+                ("insert_sigma" variable nil (reparse-symbol function_parameters) [14775 14787])
+                ("cutoff" variable nil (reparse-symbol function_parameters) [14789 14795])
+                ("conditioning" variable nil (reparse-symbol function_parameters) [14797 14809]))              ) nil [14744 15660])
+            ("lr_inv" function (:arguments 
+              ( ("cluster" variable nil (reparse-symbol function_parameters) [15701 15708])
+                ("insert_mu" variable nil (reparse-symbol function_parameters) [15710 15719])
+                ("insert_sigma" variable nil (reparse-symbol function_parameters) [15721 15733])
+                ("cutoff" variable nil (reparse-symbol function_parameters) [15735 15741])
+                ("conditioning" variable nil (reparse-symbol function_parameters) [15748 15760]))              ) nil [15690 15792])
+            ("lr_dup" function (:arguments 
+              ( ("cluster" variable nil (reparse-symbol function_parameters) [15833 15840])
+                ("insert_mu" variable nil (reparse-symbol function_parameters) [15842 15851])
+                ("insert_sigma" variable nil (reparse-symbol function_parameters) [15853 15865])
+                ("cutoff" variable nil (reparse-symbol function_parameters) [15867 15873])
+                ("conditioning" variable nil (reparse-symbol function_parameters) [15880 15892]))              ) nil [15822 15924])
+            ("lr_fun" variable nil nil [15926 16012])
+            ("compute_null_dist" function (:arguments 
+              ( ("opts" variable nil (reparse-symbol function_parameters) [16116 16120])
+                ("discordant_pairs" variable nil (reparse-symbol function_parameters) [16122 16138])
+                ("dtype" variable nil (reparse-symbol function_parameters) [16140 16145])
+                ("insert_mu" variable nil (reparse-symbol function_parameters) [16169 16178])
+                ("insert_sigma" variable nil (reparse-symbol function_parameters) [16180 16192])
+                ("gap_file" variable nil (reparse-symbol function_parameters) [16216 16224])
+                ("lib_idx" variable nil (reparse-symbol function_parameters) [16226 16233])
+                ("lr_cond" variable nil (reparse-symbol function_parameters) [16235 16242]))              ) nil [16094 17595])
+            ("filter_discordant_clusters" function (:arguments 
+              ( ("clusters" variable nil (reparse-symbol function_parameters) [17628 17636])
+                ("cutoff" variable nil (reparse-symbol function_parameters) [17638 17644])
+                ("dtype" variable nil (reparse-symbol function_parameters) [17646 17651])
+                ("insert_mu" variable nil (reparse-symbol function_parameters) [17653 17662])
+                ("insert_sigma" variable nil (reparse-symbol function_parameters) [17664 17676])
+                ("insert_cutoff" variable nil (reparse-symbol function_parameters) [17709 17722])
+                ("lr_cond" variable nil (reparse-symbol function_parameters) [17724 17731]))              ) nil [17597 18093])
+            ("fdr_discordant_clusters" function (:arguments 
+              ( ("clusters" variable nil (reparse-symbol function_parameters) [18123 18131])
+                ("null_dist" variable nil (reparse-symbol function_parameters) [18133 18142])
+                ("dtype" variable nil (reparse-symbol function_parameters) [18144 18149])
+                ("insert_mu" variable nil (reparse-symbol function_parameters) [18179 18188])
+                ("insert_sigma" variable nil (reparse-symbol function_parameters) [18190 18202])
+                ("insert_cutoff" variable nil (reparse-symbol function_parameters) [18204 18217])
+                ("lr_cond" variable nil (reparse-symbol function_parameters) [18247 18254])
+                ("target_fdr" variable nil (reparse-symbol function_parameters) [18256 18266]))              ) nil [18095 19408])
+            ("write_clustering_results" function (:arguments 
+              ( ("filename" variable nil (reparse-symbol function_parameters) [19439 19447])
+                ("lr_pairs" variable nil (reparse-symbol function_parameters) [19449 19457])
+                ("first_reject" variable nil (reparse-symbol function_parameters) [19459 19471]))              ) nil [19410 20147])
+            ("write_del_reads" function (:arguments 
+              ( ("filename" variable nil (reparse-symbol function_parameters) [20169 20177])
+                ("pairs" variable nil (reparse-symbol function_parameters) [20179 20184]))              ) nil [20149 20300])
+            ("cluster_to_bp" function (:arguments 
+              ( ("cluster" variable nil (reparse-symbol function_parameters) [20320 20327])
+                ("confidence" variable nil (reparse-symbol function_parameters) [20329 20339])
+                ("dtype" variable nil (reparse-symbol function_parameters) [20341 20346])
+                ("libname" variable nil (reparse-symbol function_parameters) [20348 20355]))              ) nil [20302 20648])
+            ("cluster_to_ci" function (:arguments 
+              ( ("cluster" variable nil (reparse-symbol function_parameters) [20668 20675])
+                ("confidence" variable nil (reparse-symbol function_parameters) [20677 20687])
+                ("dtype" variable nil (reparse-symbol function_parameters) [20689 20694]))              ) nil [20650 21152]))          
+      :file "pecluster.py"
+      :pointmax 21152
+      :fsize 21151
+      :lastmodtime '(22867 49448 0 0)
+      :unmatched-syntax '((NAME 19819 . 19826) (IF 19834 . 19836) (ELSE 19855 . 19859) (NAME 4679 . 4692) (IF 4709 . 4711) (ELSE 4727 . 4731) (NAME 3653 . 3666) (IF 3683 . 3685) (ELSE 3701 . 3705) (NAME 2362 . 2367) (IF 2377 . 2379) (ELSE 2406 . 2410) (NAME 1619 . 1624) (IF 1632 . 1634) (ELSE 1650 . 1654) (NAME 1558 . 1564) (IF 1572 . 1574) (ELSE 1601 . 1605)))
+    (semanticdb-table "semanticdb-table"
+      :file "sv_inference.py"
+      :fsize 55722
+      :lastmodtime '(22867 49448 0 0))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("igraph" include nil nil [1 14])
+            ("pyinter" include nil nil [15 29])
+            ("pysam" include nil nil [30 42])
+            ("numpy" include nil nil [43 61])
+            ("collections" include nil nil [62 93])
+            ("math" include nil nil [94 116])
+            ("arcsv.breakpoint_merge" include nil nil [118 163])
+            ("arcsv.constants" include nil nil [164 193])
+            ("arcsv.helper" include nil nil [194 292])
+            ("GenomeGraph" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [351 367])
+                            ("self" variable nil (reparse-symbol indented_block_body) [376 429]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [330 334])
+                            ("size" variable nil (reparse-symbol function_parameters) [336 340]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [317 430])
+                    ("out_vertex" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [450 454])
+                            ("i" variable nil (reparse-symbol function_parameters) [456 457]))                          )
+                        (reparse-symbol indented_block_body) [435 483])
+                    ("in_vertex" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [502 506])
+                            ("i" variable nil (reparse-symbol function_parameters) [508 509]))                          )
+                        (reparse-symbol indented_block_body) [488 531])
+                    ("add_pair" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [549 553])
+                            ("r1" variable nil (reparse-symbol function_parameters) [555 557])
+                            ("offset1" variable nil (reparse-symbol function_parameters) [559 566])
+                            ("r2" variable nil (reparse-symbol function_parameters) [568 570])
+                            ("offset2" variable nil (reparse-symbol function_parameters) [572 579])
+                            ("lib_idx" variable nil (reparse-symbol function_parameters) [581 588])
+                            ("blocks" variable nil (reparse-symbol function_parameters) [607 613])
+                            ("insert_range" variable nil (reparse-symbol function_parameters) [615 627])
+                            ("cached_dist" variable nil (reparse-symbol function_parameters) [629 640])
+                            ("pmapped" variable nil (reparse-symbol function_parameters) [642 649]))                          )
+                        (reparse-symbol indented_block_body) [536 5217])
+                    ("add_hanging_pair" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5243 5247])
+                            ("r" variable nil (reparse-symbol function_parameters) [5249 5250])
+                            ("offset" variable nil (reparse-symbol function_parameters) [5252 5258])
+                            ("read_len" variable nil (reparse-symbol function_parameters) [5260 5268])
+                            ("pmappable" variable nil (reparse-symbol function_parameters) [5270 5279])
+                            ("hanging_type" variable nil (reparse-symbol function_parameters) [5281 5293])
+                            ("lib_idx" variable nil (reparse-symbol function_parameters) [5295 5302])
+                            ("distant_loc" variable nil (reparse-symbol function_parameters) [5304 5315]))                          )
+                        (reparse-symbol indented_block_body) [5222 6253])
+                    ("get_edge" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6341 6345])
+                            ("v1" variable nil (reparse-symbol function_parameters) [6347 6349])
+                            ("v2" variable nil (reparse-symbol function_parameters) [6351 6353]))                          )
+                        (reparse-symbol indented_block_body) [6328 7115])
+                    ("add_support" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7136 7140])
+                            ("v1" variable nil (reparse-symbol function_parameters) [7142 7144])
+                            ("v2" variable nil (reparse-symbol function_parameters) [7146 7148])
+                            ("amt" variable nil (reparse-symbol function_parameters) [7150 7153]))                          )
+                        (reparse-symbol indented_block_body) [7120 7228])
+                    ("add_ref_path_support" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7258 7262])
+                            ("min_support" variable nil (reparse-symbol function_parameters) [7264 7275]))                          )
+                        (reparse-symbol indented_block_body) [7233 7482])
+                    ("supported_neighbors" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7511 7515])
+                            ("v" variable nil (reparse-symbol function_parameters) [7517 7518])
+                            ("min_support" variable nil (reparse-symbol function_parameters) [7520 7531]))                          )
+                        (reparse-symbol indented_block_body) [7487 7963])
+                    ("print_summary" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7986 7990]))                          )
+                        (reparse-symbol indented_block_body) [7968 8960]))                  
+                :type "class")
+                nil [294 8960])
+            ("is_block_edge" function (:arguments 
+              ( ("e" variable nil (reparse-symbol function_parameters) [8979 8980]))              ) nil [8961 9067])
+            ("is_insertion_edge" function (:arguments 
+              ( ("e" variable nil (reparse-symbol function_parameters) [9090 9091])
+                ("blocks" variable nil (reparse-symbol function_parameters) [9093 9099]))              ) nil [9068 9241])
+            ("get_edge_color" function (:arguments 
+              ( ("e" variable nil (reparse-symbol function_parameters) [9261 9262])
+                ("blocks" variable nil (reparse-symbol function_parameters) [9264 9270])
+                ("min_edge_support" variable nil (reparse-symbol function_parameters) [9272 9288]))              ) nil [9242 9838])
+            ("block_seq_to_path" function (:arguments 
+              ( ("seq" variable nil (reparse-symbol function_parameters) [9861 9864]))              ) nil [9839 10171])
+            ("parse_reads_with_blocks" function (:arguments 
+              ( ("opts" variable nil (reparse-symbol function_parameters) [10200 10204])
+                ("reference_files" variable nil (reparse-symbol function_parameters) [10206 10221])
+                ("bamgroups" variable nil (reparse-symbol function_parameters) [10223 10232])
+                ("breakpoints" variable nil (reparse-symbol function_parameters) [10262 10273])
+                ("insert_ranges" variable nil (reparse-symbol function_parameters) [10275 10288])
+                ("map_models" variable nil (reparse-symbol function_parameters) [10290 10300]))              ) nil [10172 14246])
+            ("create_blocks" function (:arguments 
+              ( ("breakpoints" variable nil (reparse-symbol function_parameters) [14266 14277])
+                ("gaps" variable nil (reparse-symbol function_parameters) [14279 14283])
+                ("chrom_name" variable nil (reparse-symbol function_parameters) [14285 14295])
+                ("start" variable nil (reparse-symbol function_parameters) [14297 14302])
+                ("end" variable nil (reparse-symbol function_parameters) [14304 14307])
+                ("verbosity" variable nil (reparse-symbol function_parameters) [14309 14318]))              ) nil [14248 16939])
+            ("block_parser_handle_hanging" function (:arguments 
+              ( ("opts" variable nil (reparse-symbol function_parameters) [16972 16976])
+                ("aln" variable nil (reparse-symbol function_parameters) [16978 16981])
+                ("bam" variable nil (reparse-symbol function_parameters) [16983 16986])
+                ("g" variable nil (reparse-symbol function_parameters) [16988 16989])
+                ("blocks" variable nil (reparse-symbol function_parameters) [16991 16997])
+                ("insert_ranges" variable nil (reparse-symbol function_parameters) [16999 17012])
+                ("cached_dist" variable nil (reparse-symbol function_parameters) [17046 17057])
+                ("map_models" variable nil (reparse-symbol function_parameters) [17059 17069])
+                ("block_idx" variable nil (reparse-symbol function_parameters) [17071 17080]))              ) nil [16940 17719])
+            ("block_parser_handle_pair" function (:arguments 
+              ( ("opts" variable nil (reparse-symbol function_parameters) [17749 17753])
+                ("aln1" variable nil (reparse-symbol function_parameters) [17755 17759])
+                ("aln2" variable nil (reparse-symbol function_parameters) [17761 17765])
+                ("bam" variable nil (reparse-symbol function_parameters) [17767 17770])
+                ("g" variable nil (reparse-symbol function_parameters) [17772 17773])
+                ("blocks" variable nil (reparse-symbol function_parameters) [17775 17781])
+                ("insert_ranges" variable nil (reparse-symbol function_parameters) [17812 17825])
+                ("cached_dist" variable nil (reparse-symbol function_parameters) [17827 17838])
+                ("map_models" variable nil (reparse-symbol function_parameters) [17840 17850])
+                ("block_idx1" variable nil (reparse-symbol function_parameters) [17881 17891])
+                ("block_idx2" variable nil (reparse-symbol function_parameters) [17900 17910])
+                ("qmean1" variable nil (reparse-symbol function_parameters) [17948 17954])
+                ("qmean2" variable nil (reparse-symbol function_parameters) [17963 17969]))              ) nil [17720 21738])
+            ("get_blocked_alignment" function (:arguments 
+              ( ("opts" variable nil (reparse-symbol function_parameters) [21829 21833])
+                ("aln" variable nil (reparse-symbol function_parameters) [21835 21838])
+                ("blocks" variable nil (reparse-symbol function_parameters) [21840 21846])
+                ("block_idx" variable nil (reparse-symbol function_parameters) [21848 21857])
+                ("bam" variable nil (reparse-symbol function_parameters) [21859 21862])
+                ("is_rf" variable nil (reparse-symbol function_parameters) [21864 21869])
+                ("true_rlen" variable nil (reparse-symbol function_parameters) [21879 21888])
+                ("max_splits" variable nil (reparse-symbol function_parameters) [21894 21904]))              ) nil [21803 29743])
+            ("get_overlapping_blocks" function (:arguments 
+              ( ("blocks" variable nil (reparse-symbol function_parameters) [29808 29814])
+                ("aln_blocks" variable nil (reparse-symbol function_parameters) [29816 29826])
+                ("aln_gaps" variable nil (reparse-symbol function_parameters) [29828 29836])
+                ("block_idx" variable nil (reparse-symbol function_parameters) [29838 29847])
+                ("aln_is_reverse" variable nil (reparse-symbol function_parameters) [29849 29863])
+                ("find_offset" variable nil (reparse-symbol function_parameters) [29865 29876])
+                ("true_read_length" variable nil (reparse-symbol function_parameters) [29912 29928])
+                ("aln_read_length" variable nil (reparse-symbol function_parameters) [29937 29952]))              ) nil [29781 31964])
+            ("find_block_idx" function (:arguments 
+              ( ("position" variable nil (reparse-symbol function_parameters) [32041 32049])
+                ("blocks" variable nil (reparse-symbol function_parameters) [32051 32057]))              ) nil [32022 32271])
+            ("get_blocks_gaps" function (:arguments 
+              ( ("aln" variable nil (reparse-symbol function_parameters) [32292 32295]))              ) nil [32272 33082])
+            ("load_genome_gaps" function (:arguments 
+              ( ("gapsfile" variable nil (reparse-symbol function_parameters) [33104 33112])
+                ("chrom_name" variable nil (reparse-symbol function_parameters) [33114 33124]))              ) nil [33083 33450])
+            ("test_intersects" function nil nil [33451 33692])
+            ("test_get_blocked_alignment" function nil nil [33694 34931])
+            ("test_get_overlapping_blocks" function nil nil [34932 36587])
+            ("test_get_blocks_gaps" function nil nil [36588 37206]))          
+      :file "sv_parse_reads.py"
+      :pointmax 37206
+      :fsize 37205
+      :lastmodtime '(22867 49448 0 0)
+      :unmatched-syntax '((NAME 29366 . 29372) (IF 29388 . 29390) (ELSE 29416 . 29420) (NAME 27483 . 27485) (IF 27513 . 27515) (ELSE 27527 . 27531) (NAME 27443 . 27444) (IF 27450 . 27452) (ELSE 27464 . 27468) (NAME 24430 . 24446) (IF 24459 . 24461) (ELSE 24478 . 24482) (NAME 24337 . 24352) (IF 24365 . 24367) (ELSE 24383 . 24387) (NAME 23552 . 23556) (IF 23575 . 23577) (ELSE 23597 . 23601) (NAME 19862 . 19868) (IF 19901 . 19903) (ELSE 19919 . 19923) (NAME 19789 . 19795) (IF 19828 . 19830) (ELSE 19846 . 19850) (NAME 10058 . 10065) (IF 10080 . 10082) (ELSE 10102 . 10106) (NAME 9932 . 9939) (IF 9953 . 9955) (ELSE 9974 . 9978) (NAME 8379 . 8387) (IF 8395 . 8397) (ELSE 8403 . 8407) (NAME 8284 . 8292) (IF 8300 . 8302) (ELSE 8308 . 8312) (NAME 5333 . 5334) (IF 5342 . 5344) (ELSE 5361 . 5365)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("os" include nil nil [1 10])
+            ("pysam" include nil nil [11 23])
+            ("pickle" include nil nil [24 37])
+            ("numpy" include nil nil [38 56])
+            ("matplotlib" include nil nil [57 74])
+            ("matplotlib" code nil nil [75 96])
+            ("matplotlib.pyplot" include nil nil [148 179])
+            ("matplotlib.cm" include nil nil [180 206])
+            ("collections" include nil nil [207 251])
+            ("sklearn" include nil nil [252 284])
+            ("sklearn.metrics" include nil nil [285 321])
+            ("patsy" include nil nil [322 381])
+            ("arcsv.constants" include nil nil [383 412])
+            ("PAIR_CLASSES" variable nil nil [456 524])
+            ("PAIR_CLASS_DICT" variable nil nil [525 597])
+            ("process_aggregate_mapstats" function (:arguments 
+              ( ("pair" variable nil (reparse-symbol function_parameters) [699 703])
+                ("mapstats" variable nil (reparse-symbol function_parameters) [705 713])
+                ("min_mapq" variable nil (reparse-symbol function_parameters) [715 723])
+                ("max_distance" variable nil (reparse-symbol function_parameters) [725 737]))              ) nil [668 2324])
+            ("add_dummy_obs_mapstats" function (:arguments 
+              ( ("mapstats" variable nil (reparse-symbol function_parameters) [2400 2408]))              ) nil [2373 2877])
+            ("model_from_mapstats" function (:arguments 
+              ( ("mapstats" variable nil (reparse-symbol function_parameters) [3014 3022]))              ) nil [2990 3331])
+            ("process_mappable_stats" function (:arguments 
+              ( ("aln1" variable nil (reparse-symbol function_parameters) [3359 3363])
+                ("aln2" variable nil (reparse-symbol function_parameters) [3365 3369])
+                ("mappable_stats" variable nil (reparse-symbol function_parameters) [3371 3385])
+                ("min_mapq" variable nil (reparse-symbol function_parameters) [3387 3395])
+                ("use_rlen" variable nil (reparse-symbol function_parameters) [3397 3405]))              ) nil [3332 5220])
+            ("create_aggregate_mappable_model" function (:arguments 
+              ( ("bam_name" variable nil (reparse-symbol function_parameters) [5315 5323])
+                ("meta" variable nil (reparse-symbol function_parameters) [5325 5329])
+                ("outdir" variable nil (reparse-symbol function_parameters) [5331 5337])
+                ("min_mapq" variable nil (reparse-symbol function_parameters) [5339 5347])
+                ("sampling_rate" variable nil (reparse-symbol function_parameters) [5385 5398]))              ) nil [5279 8011])
+            ("create_mappable_model" function (:arguments 
+              ( ("bam_name" variable nil (reparse-symbol function_parameters) [8038 8046])
+                ("meta" variable nil (reparse-symbol function_parameters) [8048 8052])
+                ("outdir" variable nil (reparse-symbol function_parameters) [8054 8060])
+                ("min_mapq" variable nil (reparse-symbol function_parameters) [8062 8070])
+                ("sampling_rate" variable nil (reparse-symbol function_parameters) [8098 8111]))              ) nil [8012 12699])
+            ("add_dummy_obs" function (:arguments 
+              ( ("mappable_stats" variable nil (reparse-symbol function_parameters) [12718 12732])
+                ("use_rlen" variable nil (reparse-symbol function_parameters) [12734 12742]))              ) nil [12700 13879])
+            ("fit_mappable_model" function (:arguments 
+              ( ("mappable_stats" variable nil (reparse-symbol function_parameters) [13903 13917])
+                ("use_rlen" variable nil (reparse-symbol function_parameters) [13919 13927])
+                ("max_obs" variable nil (reparse-symbol function_parameters) [13929 13936]))              ) nil [13880 14847])
+            ("predict_prob" function (:arguments 
+              ( ("model" variable nil (reparse-symbol function_parameters) [14865 14870])
+                ("X" variable nil (reparse-symbol function_parameters) [14872 14873]))              ) nil [14848 15014])
+            ("predict_grid" function (:arguments 
+              ( ("model" variable nil (reparse-symbol function_parameters) [15032 15037])
+                ("builder" variable nil (reparse-symbol function_parameters) [15039 15046])
+                ("mappable_stats" variable nil (reparse-symbol function_parameters) [15048 15062])
+                ("use_rlen" variable nil (reparse-symbol function_parameters) [15064 15072])
+                ("qmean_res" variable nil (reparse-symbol function_parameters) [15074 15083])
+                ("rlen_res" variable nil (reparse-symbol function_parameters) [15089 15097]))              ) nil [15015 17165])
+            ("save_model" function (:arguments 
+              ( ("filename" variable nil (reparse-symbol function_parameters) [17181 17189])
+                ("fitted_prob" variable nil (reparse-symbol function_parameters) [17191 17202])
+                ("qgrid" variable nil (reparse-symbol function_parameters) [17204 17209])
+                ("rgrid" variable nil (reparse-symbol function_parameters) [17211 17216]))              ) nil [17166 17383])
+            ("load_aggregate_model" function (:arguments 
+              ( ("model_dir" variable nil (reparse-symbol function_parameters) [17409 17418])
+                ("bam_name" variable nil (reparse-symbol function_parameters) [17420 17428])
+                ("lib_stats" variable nil (reparse-symbol function_parameters) [17430 17439]))              ) nil [17384 18024])
+            ("load_model" function (:arguments 
+              ( ("model_dir" variable nil (reparse-symbol function_parameters) [18040 18049])
+                ("bam_name" variable nil (reparse-symbol function_parameters) [18051 18059])
+                ("lib_stats" variable nil (reparse-symbol function_parameters) [18061 18070]))              ) nil [18025 19732])
+            ("round_to_grid" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [19751 19752])
+                ("xmin" variable nil (reparse-symbol function_parameters) [19754 19758])
+                ("xmax" variable nil (reparse-symbol function_parameters) [19760 19764])
+                ("x_res" variable nil (reparse-symbol function_parameters) [19766 19771]))              ) nil [19733 19835])
+            ("plot_fit" function (:arguments 
+              ( ("model" variable nil (reparse-symbol function_parameters) [19849 19854])
+                ("filename" variable nil (reparse-symbol function_parameters) [19856 19864])
+                ("qrange" variable nil (reparse-symbol function_parameters) [19866 19872])
+                ("builder" variable nil (reparse-symbol function_parameters) [19874 19881])
+                ("rlen1" variable nil (reparse-symbol function_parameters) [19883 19888])
+                ("rlen2" variable nil (reparse-symbol function_parameters) [19897 19902])
+                ("mappable_stats" variable nil (reparse-symbol function_parameters) [19911 19925])
+                ("max_scatter_points" variable nil (reparse-symbol function_parameters) [19934 19952])
+                ("rlen_tol" variable nil (reparse-symbol function_parameters) [19961 19969]))              ) nil [19836 22870])
+            ("do_plot_fits" function (:arguments 
+              ( ("prefix" variable nil (reparse-symbol function_parameters) [22888 22894])
+                ("model" variable nil (reparse-symbol function_parameters) [22896 22901])
+                ("qr" variable nil (reparse-symbol function_parameters) [22903 22905])
+                ("builder" variable nil (reparse-symbol function_parameters) [22907 22914])
+                ("use_rlen" variable nil (reparse-symbol function_parameters) [22916 22924])
+                ("mappable_stats" variable nil (reparse-symbol function_parameters) [22926 22940]))              ) nil [22871 23545]))          
+      :file "conditional_mappable_model.py"
+      :pointmax 23545
+      :fsize 23544
+      :lastmodtime '(22867 49448 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("os" include nil nil [1 10])
+            ("arcsv.helper" include nil nil [12 50])
+            ("get_inverted_pair" function (:arguments 
+              ( ("pair" variable nil (reparse-symbol function_parameters) [75 79])
+                ("bam" variable nil (reparse-symbol function_parameters) [81 84]))              ) nil [53 486])
+            ("inverted_pair_to_bed12" function (:arguments 
+              ( ("ipair" variable nil (reparse-symbol function_parameters) [515 520]))              ) nil [488 1850])
+            ("write_inverted_pairs_bed" function (:arguments 
+              ( ("ipairs" variable nil (reparse-symbol function_parameters) [1881 1887])
+                ("fileprefix" variable nil (reparse-symbol function_parameters) [1889 1899]))              ) nil [1852 2036])
+            ("write_inverted_pairs_bigbed" function (:arguments 
+              ( ("ipairs" variable nil (reparse-symbol function_parameters) [2070 2076])
+                ("fileprefix" variable nil (reparse-symbol function_parameters) [2078 2088]))              ) nil [2038 2433]))          
+      :file "invertedreads.py"
+      :pointmax 2433
+      :fsize 2432
+      :lastmodtime '(22867 49448 0 0)
+      :unmatched-syntax '((NAME 642 . 648) (IF 655 . 657) (ELSE 669 . 673)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("os" include nil nil [1 10])
+            ("numpy" include nil nil [11 29])
+            ("math" include nil nil [30 58])
+            ("SparseSignalTrack" type
+               (:superclasses ("object")
+                :members 
+                  ( ("valid_types" variable nil (reparse-symbol indented_block_body) [132 162])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [227 255])
+                            ("if" code nil (reparse-symbol indented_block_body) [264 397])
+                            ("self" variable nil (reparse-symbol indented_block_body) [405 435])
+                            ("self" variable nil (reparse-symbol indented_block_body) [444 460]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [181 185])
+                            ("chrom_name" variable nil (reparse-symbol function_parameters) [187 197])
+                            ("signal_type" variable nil (reparse-symbol function_parameters) [199 210]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [168 461])
+                    ("__len__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [478 482]))                          )
+                        (reparse-symbol indented_block_body) [466 530])
+                    ("__add__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [547 551])
+                            ("other" variable nil (reparse-symbol function_parameters) [553 558]))                          )
+                        (reparse-symbol indented_block_body) [535 943])
+                    ("__radd__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [961 965])
+                            ("other" variable nil (reparse-symbol function_parameters) [967 972]))                          )
+                        (reparse-symbol indented_block_body) [948 1168])
+                    ("add" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1181 1185])
+                            ("location" variable nil (reparse-symbol function_parameters) [1187 1195])
+                            ("value" variable nil (reparse-symbol function_parameters) [1197 1202]))                          )
+                        (reparse-symbol indented_block_body) [1173 1438])
+                    ("add_all" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1455 1459])
+                            ("locations" variable nil (reparse-symbol function_parameters) [1461 1470]))                          )
+                        (reparse-symbol indented_block_body) [1443 1551])
+                    ("windowed_signal" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1576 1580])
+                            ("location" variable nil (reparse-symbol function_parameters) [1582 1590])
+                            ("window" variable nil (reparse-symbol function_parameters) [1592 1598]))                          )
+                        (reparse-symbol indented_block_body) [1556 2134])
+                    ("write_bed" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2153 2157])
+                            ("fileprefix" variable nil (reparse-symbol function_parameters) [2159 2169])
+                            ("type" variable nil (reparse-symbol function_parameters) [2171 2175])
+                            ("every" variable nil (reparse-symbol function_parameters) [2187 2192])
+                            ("window" variable nil (reparse-symbol function_parameters) [2198 2204])
+                            ("mu" variable nil (reparse-symbol function_parameters) [2228 2230])
+                            ("sigma" variable nil (reparse-symbol function_parameters) [2239 2244]))                          )
+                        (reparse-symbol indented_block_body) [2139 3821])
+                    ("write_bigwig" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3843 3847])
+                            ("fileprefix" variable nil (reparse-symbol function_parameters) [3849 3859])
+                            ("type" variable nil (reparse-symbol function_parameters) [3861 3865])
+                            ("every" variable nil (reparse-symbol function_parameters) [3877 3882])
+                            ("window" variable nil (reparse-symbol function_parameters) [3888 3894])
+                            ("mu" variable nil (reparse-symbol function_parameters) [3921 3923])
+                            ("sigma" variable nil (reparse-symbol function_parameters) [3932 3937]))                          )
+                        (reparse-symbol indented_block_body) [3826 4157]))                  
+                :type "class")
+                nil [95 4157])
+            ("SignalTrack" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [4252 4280])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4289 4307])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4316 4330])
+                            ("self" code nil (reparse-symbol indented_block_body) [4339 4361])
+                            ("self" code nil (reparse-symbol indented_block_body) [4370 4401]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4213 4217])
+                            ("chrom_name" variable nil (reparse-symbol function_parameters) [4219 4229])
+                            ("start" variable nil (reparse-symbol function_parameters) [4231 4236])
+                            ("end" variable nil (reparse-symbol function_parameters) [4238 4241]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [4200 4402])
+                    ("__len__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4419 4423]))                          )
+                        (reparse-symbol indented_block_body) [4407 4450])
+                    ("append" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4680 4684])
+                            ("location" variable nil (reparse-symbol function_parameters) [4686 4694])
+                            ("value" variable nil (reparse-symbol function_parameters) [4696 4701]))                          )
+                        (reparse-symbol indented_block_body) [4669 4880])
+                    ("get_index" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4947 4951])
+                            ("location" variable nil (reparse-symbol function_parameters) [4953 4961]))                          )
+                        (reparse-symbol indented_block_body) [4933 5087])
+                    ("get_location" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5157 5161])
+                            ("idx" variable nil (reparse-symbol function_parameters) [5163 5166]))                          )
+                        (reparse-symbol indented_block_body) [5140 5269])
+                    ("windowed_signal" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5294 5298])
+                            ("idx" variable nil (reparse-symbol function_parameters) [5300 5303])
+                            ("window" variable nil (reparse-symbol function_parameters) [5305 5311]))                          )
+                        (reparse-symbol indented_block_body) [5274 5784])
+                    ("write_file" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5906 5910])
+                            ("filename" variable nil (reparse-symbol function_parameters) [5912 5920])
+                            ("type" variable nil (reparse-symbol function_parameters) [5922 5926])
+                            ("every" variable nil (reparse-symbol function_parameters) [5957 5962])
+                            ("window" variable nil (reparse-symbol function_parameters) [5968 5974])
+                            ("mu" variable nil (reparse-symbol function_parameters) [5980 5982])
+                            ("sigma" variable nil (reparse-symbol function_parameters) [5991 5996]))                          )
+                        (reparse-symbol indented_block_body) [5891 6831]))                  
+                :type "class")
+                nil [4169 6831])
+            ("zscore" function (:arguments 
+              ( ("L" variable nil (reparse-symbol function_parameters) [6843 6844])
+                ("mu" variable nil (reparse-symbol function_parameters) [6846 6848])
+                ("sigma" variable nil (reparse-symbol function_parameters) [6850 6855]))              ) nil [6832 6922])
+            ("write_trackdb" function (:arguments 
+              ( ("file" variable nil (reparse-symbol function_parameters) [6941 6945])
+                ("libname" variable nil (reparse-symbol function_parameters) [6947 6954])
+                ("trackname" variable nil (reparse-symbol function_parameters) [6956 6965])
+                ("extension" variable nil (reparse-symbol function_parameters) [6967 6976])
+                ("tracktype" variable nil (reparse-symbol function_parameters) [6978 6987])
+                ("itemRgb" variable nil (reparse-symbol function_parameters) [7007 7014])
+                ("heightPixels" variable nil (reparse-symbol function_parameters) [7024 7036])
+                ("color" variable nil (reparse-symbol function_parameters) [7045 7050])
+                ("visibility" variable nil (reparse-symbol function_parameters) [7077 7087])
+                ("viewMin" variable nil (reparse-symbol function_parameters) [7096 7103])
+                ("viewMax" variable nil (reparse-symbol function_parameters) [7112 7119]))              ) nil [6923 8014])
+            ("write_array_bed" function (:arguments 
+              ( ("arr" variable nil (reparse-symbol function_parameters) [8035 8038])
+                ("chrom_name" variable nil (reparse-symbol function_parameters) [8040 8050])
+                ("fileprefix" variable nil (reparse-symbol function_parameters) [8052 8062])
+                ("start" variable nil (reparse-symbol function_parameters) [8064 8069])
+                ("end" variable nil (reparse-symbol function_parameters) [8078 8081]))              ) nil [8015 8543])
+            ("write_array_bigwig" function (:arguments 
+              ( ("arr" variable nil (reparse-symbol function_parameters) [8567 8570])
+                ("chrom_name" variable nil (reparse-symbol function_parameters) [8572 8582])
+                ("fileprefix" variable nil (reparse-symbol function_parameters) [8584 8594])
+                ("start" variable nil (reparse-symbol function_parameters) [8596 8601])
+                ("end" variable nil (reparse-symbol function_parameters) [8610 8613])
+                ("delete_bed" variable nil (reparse-symbol function_parameters) [8622 8632]))              ) nil [8544 8913])
+            ("testsignal" function nil nil [8914 9160])
+            ("testsparsesignal" function nil nil [9161 9457]))          
+      :file "read_viz.py"
+      :pointmax 9458
+      :fsize 9457
+      :lastmodtime '(22867 49448 0 0)
+      :unmatched-syntax '((NAME 741 . 742) (IF 747 . 749) (ELSE 781 . 785)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("os" include nil nil [1 10])
+            ("pysam" include nil nil [11 23])
+            ("re" include nil nil [24 33])
+            ("arcsv.constants" include nil nil [35 150])
+            ("arcsv.helper" include nil nil [151 189])
+            ("valid_split" function (:arguments 
+              ( ("aln" variable nil (reparse-symbol function_parameters) [208 211])
+                ("bam" variable nil (reparse-symbol function_parameters) [213 216])
+                ("min_mapq" variable nil (reparse-symbol function_parameters) [218 226])
+                ("max_splits" variable nil (reparse-symbol function_parameters) [228 238]))              ) nil [192 750])
+            ("SupportingSplit" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1054 1068])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1077 1103])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1112 1126])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1135 1161])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1170 1184])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1193 1221])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1230 1246])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1255 1291]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [906 910])
+                            ("aln" variable nil (reparse-symbol function_parameters) [912 915])
+                            ("bp1_chrom" variable nil (reparse-symbol function_parameters) [934 943])
+                            ("bp1" variable nil (reparse-symbol function_parameters) [945 948])
+                            ("bp2_chrom" variable nil (reparse-symbol function_parameters) [950 959])
+                            ("bp2" variable nil (reparse-symbol function_parameters) [961 964])
+                            ("split_type" variable nil (reparse-symbol function_parameters) [983 993])
+                            ("mate" variable nil (reparse-symbol function_parameters) [995 999])
+                            ("mate_has_split" variable nil (reparse-symbol function_parameters) [1023 1037]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [893 1292])
+                    ("__repr__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1310 1314]))                          )
+                        (reparse-symbol indented_block_body) [1297 1465])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1482 1486]))                          )
+                        (reparse-symbol indented_block_body) [1470 1637])
+                    ("__hash__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1655 1659]))                          )
+                        (reparse-symbol indented_block_body) [1642 1816])
+                    ("seq" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1843 1847]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [1821 1878])
+                    ("mate_seq" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1910 1914]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [1883 1946]))                  
+                :type "class")
+                nil [866 1946])
+            ("parse_splits" function (:arguments 
+              ( ("aln" variable nil (reparse-symbol function_parameters) [2268 2271])
+                ("bam" variable nil (reparse-symbol function_parameters) [2273 2276])
+                ("min_mapq" variable nil (reparse-symbol function_parameters) [2278 2286])
+                ("mate" variable nil (reparse-symbol function_parameters) [2288 2292])
+                ("max_splits" variable nil (reparse-symbol function_parameters) [2294 2304]))              ) nil [2251 7329])
+            ("parse_cigar" function (:arguments 
+              ( ("aln" variable nil (reparse-symbol function_parameters) [7443 7446]))              ) nil [7427 7583])
+            ("get_query_coords" function (:arguments 
+              ( ("aln" variable nil (reparse-symbol function_parameters) [7606 7609]))              ) nil [7585 8698])
+            ("min_not_none" function (:arguments 
+              ( ("a" variable nil (reparse-symbol function_parameters) [8717 8718]))              ) nil [8700 8834])
+            ("max_not_none" function (:arguments 
+              ( ("a" variable nil (reparse-symbol function_parameters) [8853 8854]))              ) nil [8836 8970])
+            ("splits_are_mirrored" function (:arguments 
+              ( ("s1" variable nil (reparse-symbol function_parameters) [8996 8998])
+                ("s2" variable nil (reparse-symbol function_parameters) [9000 9002]))              ) nil [8972 9513])
+            ("split_to_bed12" function (:arguments 
+              ( ("split" variable nil (reparse-symbol function_parameters) [9578 9583]))              ) nil [9559 11351])
+            ("write_splits_bed" function (:arguments 
+              ( ("splits" variable nil (reparse-symbol function_parameters) [11374 11380])
+                ("fileprefix" variable nil (reparse-symbol function_parameters) [11382 11392])
+                ("write_track_header" variable nil (reparse-symbol function_parameters) [11394 11412]))              ) nil [11353 11657])
+            ("write_splits_bigbed" function (:arguments 
+              ( ("splits" variable nil (reparse-symbol function_parameters) [11683 11689])
+                ("fileprefix" variable nil (reparse-symbol function_parameters) [11691 11701]))              ) nil [11659 12065]))          
+      :file "splitreads.py"
+      :pointmax 12065
+      :fsize 12064
+      :lastmodtime '(22867 49448 0 0)
+      :unmatched-syntax '((RETURN 8923 . 8929) (IF 8933 . 8935) (ELSE 8951 . 8955) (RETURN 8787 . 8793) (IF 8797 . 8799) (ELSE 8815 . 8819) (NAME 2632 . 2636) (IF 2655 . 2657) (ELSE 2677 . 2681)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("ALTERED_QNAME_MAX_LEN" variable nil nil [19 46])
+            ("MAX_MAPQ" variable nil nil [47 60])
+            ("SPLIT_FIRST_PLUS" variable nil nil [62 84])
+            ("SPLIT_SECOND_PLUS" variable nil nil [85 108])
+            ("SPLIT_OVERLAP" variable nil nil [109 128])
+            ("SPLIT_LEFT_FIRST" variable nil nil [129 151])
+            ("SPLIT_TYPES" variable nil nil [152 571])
+            ("LEFT" variable nil nil [604 612])
+            ("RIGHT" variable nil nil [613 622])
+            ("SEQ" variable nil nil [623 630])
+            ("QUAL" variable nil nil [631 639])
+            ("REFSEQ" variable nil nil [640 650])
+            ("ORIENT" variable nil nil [651 661])
+            ("BPLOC" variable nil nil [662 671])
+            ("NCLIP" variable nil nil [672 681])
+            ("NUNIQ" variable nil nil [682 691])
+            ("NDUP" variable nil nil [692 700])
+            ("MAPQ" variable nil nil [701 709])
+            ("NSUPP" variable nil nil [710 719])
+            ("LIBS" variable nil nil [720 729]))          
+      :file "constants.py"
+      :pointmax 730
+      :fsize 729
+      :lastmodtime '(22867 49448 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 30])
+            ("uniform_ci" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [47 48])
+                ("confidence" variable nil (reparse-symbol function_parameters) [50 60])
+                ("slop" variable nil (reparse-symbol function_parameters) [62 66]))              ) nil [32 320])
+            ("get_q" function (:arguments 
+              ( ("n" variable nil (reparse-symbol function_parameters) [331 332])
+                ("confidence" variable nil (reparse-symbol function_parameters) [334 344]))              ) nil [321 497])
+            ("pearson_quantiles" variable nil nil [678 7973]))          
+      :file "unif_ci.py"
+      :pointmax 7974
+      :fsize 7973
+      :lastmodtime '(22867 49448 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!apple!Downloads!jgarthur-arcsv-59d75bf86fe4!arcsv!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

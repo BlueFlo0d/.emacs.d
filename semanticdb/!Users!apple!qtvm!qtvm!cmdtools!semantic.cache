@@ -1,0 +1,95 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [123 141])
+            ("stdlib.h" include (:system-flag t) nil [142 161])
+            ("math.h" include (:system-flag t) nil [162 179])
+            ("unistd.h" include (:system-flag t) nil [180 199])
+            ("string.h" include (:system-flag t) nil [200 219])
+            ("pagealg.h" include nil nil [220 240])
+            ("time.h" include nil nil [241 258])
+            ("qt_instruction.h" include nil nil [259 286])
+            ("qt_repl_client.h" include nil nil [287 314])
+            ("qtvm.h" include nil nil [315 332])
+            ("qt_asm.h" include nil nil [333 352])
+            ("QT_ID" variable (:constant-flag t) nil [362 367])
+            ("qt_instruction_meta.h" include nil nil [378 410])
+            ("qt_instruction_alias.h" include nil nil [411 444])
+            ("regex.h" include (:system-flag t) nil [445 463])
+            ("SECTOR_LENGTH" variable (:constant-flag t) nil [472 485])
+            ("printhelp" function (:type "void") nil [489 1056])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [1067 1076])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1077 1097]))                  
+                :type "int")
+                nil [1058 4068]))          
+      :file "qtvmc.c"
+      :pointmax 4069
+      :fsize 4071
+      :lastmodtime '(23145 21974 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("QT_ID" . ((symbol "sector" 367 . 373)))
+          ("SECTOR_LENGTH" . ((number "16" 482 . 484)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("qtvmrt.hpp" include nil nil [20 41])
+            ("secalg.h" include nil nil [42 61])
+            ("qtree.h" include nil nil [62 80])
+            ("qtree_debug.h" include nil nil [81 105])
+            ("qtvmrt" using (:type ("qtvmrt" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [106 129])
+            ("qmain" function (:type "void") nil [130 310])
+            ("main" function (:type "int") nil [311 463]))          
+      :file "test.cpp"
+      :pointmax 464
+      :fsize 463
+      :lastmodtime '(23140 22632 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("stdlib.h" include (:system-flag t) nil [20 39])
+            ("qt_dasm.h" include nil nil [40 60])
+            ("map" include (:system-flag t) nil [61 75])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [76 96])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [106 115])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [115 135]))                  
+                :type "int")
+                nil [97 1885]))          
+      :file "qtdasm.cpp"
+      :pointmax 1886
+      :fsize 1885
+      :lastmodtime '(23139 21707 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!apple!qtvm!qtvm!cmdtools!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

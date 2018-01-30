@@ -1,0 +1,140 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode mhtml-mode
+      :tags 
+        '( ("The QtSYS Project" section (:members 
+              ( ("What is QtSYS?" section nil nil [163 464])
+                ("Why QtSYS?" section nil nil [464 1448])
+                ("Components" section nil nil [1448 2007]))              ) nil [52 2007])
+            ("Current composition of QtSYS" section (:members 
+              ( ("Quantum 32 instruction set" section nil nil [2057 2966])
+                ("QtASM assembly language" section nil nil [2966 3512])
+                ("OpenQASM to QtASM compiler" section nil nil [3512 3845])
+                ("QtVM quantum virtual machine" section (:members 
+                  ( ("Overview" section nil nil [3895 4177])
+                    ("QtVM Level 1" section nil nil [4177 4633])
+                    ("QtVM Level 2" section nil nil [4633 4921])
+                    ("QtVM Level 3" section nil nil [4921 5187]))                  ) nil [3845 5187])
+                ("QtQtP quantum toolkit" section nil nil [5187 6039]))              ) nil [2007 6039])
+            ("Distribution" section nil nil [6039 6630]))          
+      :file "index.html"
+      :pointmax 6630
+      :fsize 6630
+      :lastmodtime '(23136 30766 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode mhtml-mode
+      :tags 
+        '( ("QtVM .cloud" section nil nil [33 265])
+            ("Vue.use(window.VueCodemirror);" section nil nil [265 352])
+            ("Vue.use(window.VueCodemirror);" section nil nil [352 448])
+            ("Vue.use(window.VueCodemirror);" section nil nil [448 519])
+            ("Vue.use(window.VueCodemirror);" section nil nil [519 784])
+            ("Vue.use(window.VueCodemirror);" section nil nil [784 876])
+            ("Vue.use(window.VueCodemirror);" section nil nil [876 952])
+            ("Vue.use(window.VueCodemirror);" section nil nil [952 1017])
+            ("Vue.use(window.VueCodemirror);" section nil nil [1017 1106])
+            ("Vue.use(window.VueCodemirror);" section nil nil [1106 1181])
+            ("Vue.use(window.VueCodemirror);" section nil nil [1181 1383])
+            ("Qt .cloud" section (:members 
+              ( ("Home" anchor nil nil [2005 2008])
+                ("QtVM" anchor nil nil [2089 2092])
+                ("Documentation<b class=\"caret\">" anchor nil nil [2227 2230])
+                ("QtVM C Runtime Library" anchor nil nil [2374 2377])
+                ("UI design: Q. T. Hong;&nbsp;&nbsp;
+        Front end: Q. T. Hong;&nbsp;&nbsp;
+        Back end: Q. T. Hong;&nbsp;&nbsp;
+        Author of QtVM: Q. T. Hong;&nbsp;&nbsp;
+        Instruction set: Q. T. Hong;&nbsp;&nbsp;
+        Author of QtASM assembler: Q. T. Hong;<br/>
+        Contact: q@iphy.ac.cn;&nbsp;&nbsp;
+        Q. T. Hong © 2017 All rights reserved." section nil nil [2665 3124]))              ) nil [1383 3124]))          
+      :file "index_tmp.html"
+      :pointmax 3124
+      :fsize 3124
+      :lastmodtime '(23130 60755 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode mhtml-mode
+      :tags 
+        '( ("Installation" section nil nil [52 148])
+            ("Reference" section (:members 
+              ( ("qtvmrt::init()" section (:members 
+                  ( ("SYNOPSIS" section nil nil [215 380])
+                    ("DESCRIPTION" section nil nil [380 644])
+                    ("RETURN VALUE" section nil nil [644 789]))                  ) nil [179 789])
+                ("qtvmrt::h()" section (:members 
+                  ( ("SYNOPSIS" section nil nil [822 977])
+                    ("DESCRIPTION" section nil nil [977 1061]))                  ) nil [789 1061])
+                ("qtvmrt::x()" section (:members 
+                  ( ("SYNOPSIS" section nil nil [1094 1250])
+                    ("DESCRIPTION" section nil nil [1250 1334]))                  ) nil [1061 1334])
+                ("qtvmrt::y()" section (:members 
+                  ( ("SYNOPSIS" section nil nil [1368 1524])
+                    ("DESCRIPTION" section nil nil [1524 1608]))                  ) nil [1334 1608])
+                ("qtvmrt::z()" section (:members 
+                  ( ("SYNOPSIS" section nil nil [1642 1798])
+                    ("DESCRIPTION" section nil nil [1798 1882]))                  ) nil [1608 1882])
+                ("qtvmrt::s()" section (:members 
+                  ( ("SYNOPSIS" section nil nil [1916 2072])
+                    ("DESCRIPTION" section nil nil [2072 2186]))                  ) nil [1882 2186])
+                ("qtvmrt::sd()" section (:members 
+                  ( ("SYNOPSIS" section nil nil [2221 2378])
+                    ("DESCRIPTION" section nil nil [2378 2493]))                  ) nil [2186 2493])
+                ("qtvmrt::rx()" section (:members 
+                  ( ("SYNOPSIS" section nil nil [2528 2702])
+                    ("DESCRIPTION" section nil nil [2702 2810]))                  ) nil [2493 2810])
+                ("qtvmrt::ry()" section (:members 
+                  ( ("SYNOPSIS" section nil nil [2845 3019])
+                    ("DESCRIPTION" section nil nil [3019 3127]))                  ) nil [2810 3127])
+                ("qtvmrt::rz()" section (:members 
+                  ( ("SYNOPSIS" section nil nil [3162 3336])
+                    ("DESCRIPTION" section nil nil [3336 3444]))                  ) nil [3127 3444])
+                ("qtvmrt::print()" section (:members 
+                  ( ("SYNOPSIS" section nil nil [3482 3632])
+                    ("DESCRIPTION" section nil nil [3632 3745]))                  ) nil [3444 3745])
+                ("qtvmrt::cx()" section (:members 
+                  ( ("SYNOPSIS" section nil nil [3780 3952])
+                    ("DESCRIPTION" section nil nil [3952 4044]))                  ) nil [3745 4044])
+                ("qtvmrt::su2()" section (:members 
+                  ( ("SYNOPSIS" section nil nil [4080 4254])
+                    ("DESCRIPTION" section nil nil [4254 4349])
+                    ("ARGUMENTS" section (:members 
+                      ( ("qtvmrt::csu2()" anchor nil nil [4563 4566]))                      ) nil [4349 4907]))                  ) nil [4044 4907])
+                ("qtvmrt::csu2()" section (:members 
+                  ( ("SYNOPSIS" section nil nil [4944 5159])
+                    ("DESCRIPTION" section nil nil [5159 5265])
+                    ("ARGUMENTS" section (:members 
+                      ( ("size_t *controls" anchor nil nil [5479 5482]))                      ) nil [5265 6035]))                  ) nil [4907 6035]))              ) nil [148 6035]))          
+      :file "docs_qtvmrt.html"
+      :pointmax 6035
+      :fsize 6034
+      :lastmodtime '(23132 15253 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode mhtml-mode
+      :tags 
+        '( ("QtVM" section (:members 
+              ( ("Powered by Fan Group.<br/>The Institute of Physics, Chinese Academy of Sciences" section (:members 
+                  ( ("Web interface of a universal quantum virtual machine with Quantum32 instruction set." section (:members 
+                      ( ("Diagram Editor" anchor nil nil [3242 3245])
+                        ("QtASM Editor" anchor nil nil [3356 3359])
+                        ("Cheat settings" anchor nil nil [3435 3438]))                      ) nil [412 15908]))                  ) nil [220 15908])
+                ("God does not play dice with the universe." section (:members 
+                  ( ("Execution Result" section nil nil [18546 20073])
+                    ("Invalid input" section nil nil [20073 20824])
+                    ("Code submitted" section nil nil [20824 21876])
+                    ("Execution Failed" section nil nil [21876 22376]))                  ) nil [15908 22376]))              ) nil [157 22376])
+            ("" section nil nil [22376 22451]))          
+      :file "qtvm.html"
+      :pointmax 22451
+      :fsize 22451
+      :lastmodtime '(23130 60509 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!apple!qtvm!qt.cloud!templates!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

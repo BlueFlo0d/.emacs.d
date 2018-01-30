@@ -1,0 +1,483 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("blas" include nil nil [1 19])
+            ("solution" include nil nil [20 42])
+            ("timewrapper" include nil nil [43 68])
+            ("scipy.integrate" include nil nil [69 99])
+            ("mc" include nil nil [100 116])
+            ("_v" variable nil nil [117 186])
+            ("sesolve" function (:arguments 
+              ( ("H" variable nil (reparse-symbol function_parameters) [199 200])
+                ("psi0" variable nil (reparse-symbol function_parameters) [201 205])
+                ("t_eval" variable nil (reparse-symbol function_parameters) [206 212])
+                ("args" variable nil (reparse-symbol function_parameters) [213 217]))              ) nil [187 681])
+            ("mesolve" function (:arguments 
+              ( ("H" variable nil (reparse-symbol function_parameters) [693 694])
+                ("rho0" variable nil (reparse-symbol function_parameters) [695 699])
+                ("t_eval" variable nil (reparse-symbol function_parameters) [700 706])
+                ("collapse" variable nil (reparse-symbol function_parameters) [707 715])
+                ("super" variable nil (reparse-symbol function_parameters) [721 726])
+                ("args" variable nil (reparse-symbol function_parameters) [732 736]))              ) nil [681 1110]))          
+      :file "solver.py"
+      :pointmax 1110
+      :fsize 1109
+      :lastmodtime '(23075 31346 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("blas" include nil nil [1 19])
+            ("timewrapper" include nil nil [20 45])
+            ("compiler.ast" include nil nil [46 78])
+            ("solution" include nil nil [79 101])
+            ("random" include nil nil [102 121])
+            ("operator" include nil nil [122 146])
+            ("eseries" include nil nil [147 168])
+            ("parallel" include nil nil [169 191])
+            ("requirement" variable nil nil [192 263])
+            ("mcsolve" function (:arguments 
+              ( ("H" variable nil (reparse-symbol function_parameters) [276 277])
+                ("psi0" variable nil (reparse-symbol function_parameters) [278 282])
+                ("t_eval" variable nil (reparse-symbol function_parameters) [283 289])
+                ("collapse" variable nil (reparse-symbol function_parameters) [290 298])
+                ("args" variable nil (reparse-symbol function_parameters) [299 303])
+                ("ntraj" variable nil (reparse-symbol function_parameters) [309 314])
+                ("expect_ops" variable nil (reparse-symbol function_parameters) [319 329]))              ) nil [264 1233])
+            ("const_mcsolve" function (:arguments 
+              ( ("H" variable nil (reparse-symbol function_parameters) [1252 1253])
+                ("psi0" variable nil (reparse-symbol function_parameters) [1254 1258])
+                ("t_eval" variable nil (reparse-symbol function_parameters) [1259 1265])
+                ("collapse" variable nil (reparse-symbol function_parameters) [1266 1274])
+                ("args" variable nil (reparse-symbol function_parameters) [1275 1279])
+                ("ntraj" variable nil (reparse-symbol function_parameters) [1285 1290])
+                ("expect_ops" variable nil (reparse-symbol function_parameters) [1295 1305]))              ) nil [1234 2051])
+            ("_const_worker" function (:arguments 
+              ( ("evo" variable nil (reparse-symbol function_parameters) [2070 2073])
+                ("collapse_d" variable nil (reparse-symbol function_parameters) [2074 2084])
+                ("collapse" variable nil (reparse-symbol function_parameters) [2085 2093])
+                ("seed" variable nil (reparse-symbol function_parameters) [2094 2098])
+                ("ntraj" variable nil (reparse-symbol function_parameters) [2099 2104])
+                ("t_eval" variable nil (reparse-symbol function_parameters) [2105 2111])
+                ("psi0" variable nil (reparse-symbol function_parameters) [2112 2116])
+                ("expect_ops" variable nil (reparse-symbol function_parameters) [2117 2127]))              ) nil [2052 3287])
+            ("_worker" function (:arguments 
+              ( ("func" variable nil (reparse-symbol function_parameters) [3300 3304])
+                ("collapse_d" variable nil (reparse-symbol function_parameters) [3305 3315])
+                ("collapse_f" variable nil (reparse-symbol function_parameters) [3316 3326])
+                ("seed" variable nil (reparse-symbol function_parameters) [3327 3331])
+                ("ntraj" variable nil (reparse-symbol function_parameters) [3332 3337])
+                ("t_eval" variable nil (reparse-symbol function_parameters) [3338 3344])
+                ("psi0" variable nil (reparse-symbol function_parameters) [3345 3349])
+                ("expect_ops" variable nil (reparse-symbol function_parameters) [3350 3360]))              ) nil [3288 4698])
+            ("_zvode_worker" function (:arguments 
+              ( ("func" variable nil (reparse-symbol function_parameters) [4718 4722])
+                ("collapse_d" variable nil (reparse-symbol function_parameters) [4723 4733])
+                ("collapse_f" variable nil (reparse-symbol function_parameters) [4734 4744])
+                ("seed" variable nil (reparse-symbol function_parameters) [4745 4749])
+                ("ntraj" variable nil (reparse-symbol function_parameters) [4750 4755])
+                ("t_eval" variable nil (reparse-symbol function_parameters) [4756 4762])
+                ("psi0" variable nil (reparse-symbol function_parameters) [4763 4767])
+                ("expect_ops" variable nil (reparse-symbol function_parameters) [4768 4778]))              ) nil [4700 6150]))          
+      :file "mc.py"
+      :pointmax 6150
+      :fsize 6149
+      :lastmodtime '(23075 38374 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("blas" include nil nil [1 19])
+            ("operator" include nil nil [20 44])
+            ("inspect" include nil nil [45 59])
+            ("cython" include nil nil [60 73])
+            ("weave" include nil nil [74 86])
+            ("time_wrapper" function (:arguments 
+              ( ("H" variable nil (reparse-symbol function_parameters) [104 105])
+                ("namespace" variable nil (reparse-symbol function_parameters) [106 115])
+                ("str" variable nil (reparse-symbol function_parameters) [119 122])
+                ("counter" variable nil (reparse-symbol function_parameters) [126 133])
+                ("args" variable nil (reparse-symbol function_parameters) [136 140])
+                ("tosuper" variable nil (reparse-symbol function_parameters) [146 153]))              ) nil [87 2084])
+            ("generate_function" function (:arguments 
+              ( ("namespace" variable nil (reparse-symbol function_parameters) [2106 2115])
+                ("str" variable nil (reparse-symbol function_parameters) [2116 2119])
+                ("counter" variable nil (reparse-symbol function_parameters) [2120 2127])
+                ("factor" variable nil (reparse-symbol function_parameters) [2128 2134]))              ) nil [2084 2287]))          
+      :file "timewrapper.py"
+      :pointmax 2287
+      :fsize 2286
+      :lastmodtime '(23075 34421 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("blas" include nil nil [1 19])
+            ("compiler.ast" include nil nil [20 52])
+            ("operator" include nil nil [53 77])
+            ("matplotlib.pyplot" include nil nil [78 109])
+            ("show_expect" function (:arguments 
+              ( ("s" variable nil (reparse-symbol function_parameters) [126 127])
+                ("args" variable nil (reparse-symbol function_parameters) [128 133])
+                ("kwargs" variable nil (reparse-symbol function_parameters) [134 142]))              ) nil [110 541])
+            ("Solution" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("raise" code nil (reparse-symbol indented_block_body) [611 638]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [582 586])
+                            ("t_eval" variable nil (reparse-symbol function_parameters) [587 593])
+                            ("states" variable nil (reparse-symbol function_parameters) [594 600]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [569 639])
+                    ("get_dm" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [654 658]))                          )
+                        (reparse-symbol indented_block_body) [643 697])
+                    ("dm" variable nil (reparse-symbol indented_block_body) [701 722])
+                    ("expect" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [738 742])
+                            ("opt" variable nil (reparse-symbol function_parameters) [743 746]))                          )
+                        (reparse-symbol indented_block_body) [727 785])
+                    ("show" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [798 802])
+                            ("args" variable nil (reparse-symbol function_parameters) [803 808])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [809 817]))                          )
+                        (reparse-symbol indented_block_body) [789 861]))                  
+                :type "class")
+                nil [541 861])
+            ("ketSolution" type
+               (:superclasses ("Solution")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [937 952])
+                            ("self" variable nil (reparse-symbol indented_block_body) [961 978]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [908 912])
+                            ("t_eval" variable nil (reparse-symbol function_parameters) [913 919])
+                            ("states" variable nil (reparse-symbol function_parameters) [920 926]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [895 979])
+                    ("expect" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [994 998])
+                            ("opt" variable nil (reparse-symbol function_parameters) [999 1002]))                          )
+                        (reparse-symbol indented_block_body) [983 1054])
+                    ("get_dm" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1069 1073]))                          )
+                        (reparse-symbol indented_block_body) [1058 1125]))                  
+                :type "class")
+                nil [862 1125])
+            ("dmSolution" type
+               (:superclasses ("Solution")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1200 1215])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1224 1263]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1171 1175])
+                            ("t_eval" variable nil (reparse-symbol function_parameters) [1176 1182])
+                            ("states" variable nil (reparse-symbol function_parameters) [1183 1189]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1158 1264])
+                    ("expect" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1279 1283])
+                            ("opt" variable nil (reparse-symbol function_parameters) [1284 1287]))                          )
+                        (reparse-symbol indented_block_body) [1268 1339])
+                    ("get_dm" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1354 1358]))                          )
+                        (reparse-symbol indented_block_body) [1343 1385]))                  
+                :type "class")
+                nil [1126 1385])
+            ("mcSolution" type
+               (:superclasses ("Solution")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1460 1475])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1484 1501]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1431 1435])
+                            ("t_eval" variable nil (reparse-symbol function_parameters) [1436 1442])
+                            ("states" variable nil (reparse-symbol function_parameters) [1443 1449]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1418 1502])
+                    ("expect" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1517 1521])
+                            ("opt" variable nil (reparse-symbol function_parameters) [1522 1525]))                          )
+                        (reparse-symbol indented_block_body) [1506 1619])
+                    ("get_dm" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1634 1638]))                          )
+                        (reparse-symbol indented_block_body) [1623 1801]))                  
+                :type "class")
+                nil [1386 1801])
+            ("expectSolution" type
+               (:superclasses ("Solution")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1879 1894])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1903 1920]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1850 1854])
+                            ("t_eval" variable nil (reparse-symbol function_parameters) [1855 1861])
+                            ("states" variable nil (reparse-symbol function_parameters) [1862 1868]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1837 1921])
+                    ("expect" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1936 1940])
+                            ("opt_num" variable nil (reparse-symbol function_parameters) [1941 1948]))                          )
+                        (reparse-symbol indented_block_body) [1925 1984])
+                    ("get_dm" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1999 2003]))                          )
+                        (reparse-symbol indented_block_body) [1988 2097]))                  
+                :type "class")
+                nil [1801 2097]))          
+      :file "solution.py"
+      :pointmax 2097
+      :fsize 2096
+      :lastmodtime '(23074 33739 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("pp" include nil nil [1 10])
+            ("pserver" variable nil nil [11 33])
+            ("print" code nil nil [34 57]))          
+      :file "parallel.py"
+      :pointmax 58
+      :fsize 57
+      :lastmodtime '(23075 38433 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("blas" include nil nil [1 19])
+            ("solution" include nil nil [20 42])
+            ("scipy.linalg" include nil nil [43 68])
+            ("eEvolution" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self, self" code nil (reparse-symbol indented_block_body) [144 175])
+                            ("self" variable nil (reparse-symbol indented_block_body) [184 192])
+                            ("self" variable nil (reparse-symbol indented_block_body) [201 216])
+                            ("self" variable nil (reparse-symbol indented_block_body) [225 242])
+                            ("self" variable nil (reparse-symbol indented_block_body) [251 275])
+                            ("if" code nil (reparse-symbol indented_block_body) [284 338]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [112 116])
+                            ("opt" variable nil (reparse-symbol function_parameters) [117 120])
+                            ("psi" variable nil (reparse-symbol function_parameters) [121 124])
+                            ("t" variable nil (reparse-symbol function_parameters) [130 131]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [99 338])
+                    ("set_state" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [356 360])
+                            ("psi" variable nil (reparse-symbol function_parameters) [361 364])
+                            ("t" variable nil (reparse-symbol function_parameters) [365 366]))                          )
+                        (reparse-symbol indented_block_body) [342 496])
+                    ("state" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [510 514])
+                            ("t" variable nil (reparse-symbol function_parameters) [515 516]))                          )
+                        (reparse-symbol indented_block_body) [500 600]))                  
+                :type "class")
+                nil [69 600])
+            ("essolve" function (:arguments 
+              ( ("H" variable nil (reparse-symbol function_parameters) [612 613])
+                ("psi0" variable nil (reparse-symbol function_parameters) [614 618])
+                ("t_eval" variable nil (reparse-symbol function_parameters) [619 625])
+                ("args" variable nil (reparse-symbol function_parameters) [626 630]))              ) nil [600 801]))          
+      :file "eseries.py"
+      :pointmax 801
+      :fsize 800
+      :lastmodtime '(23075 17989 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("correlation" include nil nil [1 26])
+            ("steady" include nil nil [27 47])
+            ("propagator" include nil nil [48 72])
+            ("timeit" include nil nil [73 104])
+            ("profile" include nil nil [105 119])
+            ("pi" variable nil nil [120 128])
+            ("N1" variable nil nil [129 135])
+            ("psi0" variable nil nil [136 172])
+            ("tv" variable nil nil [173 201])
+            ("a" variable nil nil [202 236])
+            ("sm" variable nil nil [237 272])
+            ("H" code nil nil [273 340])
+            ("c" code nil nil [341 357])
+            ("'''
+Iv=np.empty((10,len(tv)))
+from scipy.integrate import *
+
+solver = ode(lambda t,y:-1.0j*(H*y))
+solver.set_integrator('zvode')
+
+#solver._integrator.reset(len(psi0),True)
+
+solver.set_initial_value(psi0,0)
+Iv=[]
+
+
+tv=tv[1:]
+Iv=[]
+for t in tv:
+    Iv.append(Vec.shallow_array(solver.integrate(t),uni=False).expect(a.dag()*a))
+plt.plot(tv,Iv)
+plt.show()
+'''" code nil nil [359 714])
+            ("test" function nil nil [786 859])
+            ("print" code nil nil [859 882])
+            ("'''
+psi0=basis(2,0)
+H=2*pi*0.1*sigmax
+tv=np.linspace(0.0, 10.0, 100)
+r=mesolve(H, psi0, tv, [np.sqrt(0.05) * sigmax])
+r.show(sigmaz,sigmay)
+'''" code nil nil [1200 1343])
+            ("'''
+from steady import *
+a=destroy(20)
+H=a.dag()*a
+c=[np.sqrt(0.1)*a,np.sqrt(0.1)*2*a.dag()]
+print steadystate(H,c).expect(H)
+'''" code nil nil [1344 1473]))          
+      :file "test.py"
+      :pointmax 1474
+      :fsize 1473
+      :lastmodtime '(23075 41588 0 0)
+      :unmatched-syntax '(($EOI 1474 . 1474)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("solver" include nil nil [1 21])
+            ("scipy.fftpack" include nil nil [22 42])
+            ("corr" function (:arguments 
+              ( ("H" variable nil (reparse-symbol function_parameters) [52 53])
+                ("rho0" variable nil (reparse-symbol function_parameters) [54 58])
+                ("a_op" variable nil (reparse-symbol function_parameters) [59 63])
+                ("b_op" variable nil (reparse-symbol function_parameters) [64 68])
+                ("c_op" variable nil (reparse-symbol function_parameters) [69 73])
+                ("t_eval" variable nil (reparse-symbol function_parameters) [78 84])
+                ("tau_eval" variable nil (reparse-symbol function_parameters) [91 99])
+                ("collapse" variable nil (reparse-symbol function_parameters) [106 114])
+                ("super" variable nil (reparse-symbol function_parameters) [120 125])
+                ("args" variable nil (reparse-symbol function_parameters) [131 135])
+                ("solver" variable nil (reparse-symbol function_parameters) [141 147]))              ) nil [43 722])
+            ("spectrum_fft" function (:arguments 
+              ( ("t_eval" variable nil (reparse-symbol function_parameters) [739 745])
+                ("y" variable nil (reparse-symbol function_parameters) [746 747]))              ) nil [722 1105]))          
+      :file "correlation.py"
+      :pointmax 1105
+      :fsize 1104
+      :lastmodtime '(23071 49004 0 0)
+      :unmatched-syntax '((RETURN 498 . 504) (IF 621 . 623) (ELSE 632 . 636) (NAME 384 . 389) (IF 429 . 431) (ELSE 440 . 444)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("blas" include nil nil [1 19])
+            ("timewrapper" include nil nil [20 45])
+            ("add_norm" function (:arguments 
+              ( ("mat" variable nil (reparse-symbol function_parameters) [59 62])
+                ("weight" variable nil (reparse-symbol function_parameters) [63 69]))              ) nil [46 232])
+            ("steadystate" function (:arguments 
+              ( ("H" variable nil (reparse-symbol function_parameters) [248 249])
+                ("collapse" variable nil (reparse-symbol function_parameters) [250 258]))              ) nil [232 496]))          
+      :file "steady.py"
+      :pointmax 496
+      :fsize 495
+      :lastmodtime '(23071 49492 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("solver" include nil nil [1 21])
+            ("timewrapper" include nil nil [22 47])
+            ("parallel" include nil nil [48 70])
+            ("scipy.linalg" include nil nil [71 96])
+            ("requirement" variable nil nil [97 158])
+            ("propagator" function (:arguments 
+              ( ("H" variable nil (reparse-symbol function_parameters) [174 175])
+                ("tv" variable nil (reparse-symbol function_parameters) [176 178])
+                ("solver" variable nil (reparse-symbol function_parameters) [179 185])
+                ("const" variable nil (reparse-symbol function_parameters) [191 196])
+                ("args" variable nil (reparse-symbol function_parameters) [203 207]))              ) nil [159 974])
+            ("_worker" function (:arguments 
+              ( ("H" variable nil (reparse-symbol function_parameters) [986 987])
+                ("dim" variable nil (reparse-symbol function_parameters) [988 991])
+                ("tv" variable nil (reparse-symbol function_parameters) [992 994])
+                ("asolver" variable nil (reparse-symbol function_parameters) [995 1002])
+                ("rng" variable nil (reparse-symbol function_parameters) [1003 1006])
+                ("args" variable nil (reparse-symbol function_parameters) [1007 1011]))              ) nil [974 1216])
+            ("floquet_modes" function (:arguments 
+              ( ("H" variable nil (reparse-symbol function_parameters) [1234 1235])
+                ("T" variable nil (reparse-symbol function_parameters) [1236 1237])
+                ("solver" variable nil (reparse-symbol function_parameters) [1238 1244])
+                ("const" variable nil (reparse-symbol function_parameters) [1250 1255])
+                ("args" variable nil (reparse-symbol function_parameters) [1262 1266]))              ) nil [1216 1448]))          
+      :file "propagator.py"
+      :pointmax 1448
+      :fsize 1447
+      :lastmodtime '(23075 26039 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("blas" include nil nil [1 19])
+            ("operator" include nil nil [20 44])
+            ("inspect" include nil nil [45 59])
+            ("time_wrapper" function (:arguments 
+              ( ("H" variable nil (reparse-symbol function_parameters) [77 78])
+                ("args" variable nil (reparse-symbol function_parameters) [79 83])
+                ("tosuper" variable nil (reparse-symbol function_parameters) [89 96]))              ) nil [60 676]))          
+      :file "legacy_timewrapper.py"
+      :pointmax 676
+      :fsize 675
+      :lastmodtime '(23072 1950 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!apple!pydev!qtqtp!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,492 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("_BSD_I386__TYPES_H_" variable (:constant-flag t) nil [1376 1395])
+            ("__int8_t" type
+               (:typedef ("signed char")
+                :type "typedef")
+                nil [1560 1592])
+            ("__uint8_t" type
+               (:typedef ("unsigned char")
+                :type "typedef")
+                nil [1663 1696])
+            ("__int16_t" type
+               (:typedef ("short")
+                :type "typedef")
+                nil [1697 1723])
+            ("__uint16_t" type
+               (:typedef ("unsigned short")
+                :type "typedef")
+                nil [1724 1759])
+            ("__int32_t" type
+               (:typedef ("int")
+                :type "typedef")
+                nil [1760 1784])
+            ("__uint32_t" type
+               (:typedef ("unsigned int")
+                :type "typedef")
+                nil [1785 1818])
+            ("__int64_t" type
+               (:typedef ("long long")
+                :type "typedef")
+                nil [1819 1848])
+            ("__uint64_t" type
+               (:typedef ("unsigned long long")
+                :type "typedef")
+                nil [1849 1887])
+            ("__darwin_intptr_t" type
+               (:typedef ("long")
+                :type "typedef")
+                nil [1889 1922])
+            ("__darwin_natural_t" type
+               (:typedef ("unsigned int")
+                :type "typedef")
+                nil [1923 1964])
+            ("__darwin_ct_rune_t" type
+               (:typedef ("int")
+                :type "typedef")
+                nil [2967 3000])
+            ("__mbstate_t" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("__mbstate8" variable
+                             (:dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [3195 3217])
+                          ("_mbstateL" variable (:type "long long") (reparse-symbol classsubparts) [3219 3239]))                        
+                      :type "union")
+                      nil nil)
+                :type "typedef")
+                nil [3178 3276])
+            ("__darwin_mbstate_t" type
+               (:typedef ("__mbstate_t" type (:type "class") nil nil)
+                :type "typedef")
+                nil [3278 3318])
+            ("__darwin_ptrdiff_t" type
+               (:typedef ("long")
+                :type "typedef")
+                nil [3453 3487])
+            ("__darwin_size_t" type
+               (:typedef ("unsigned long")
+                :type "typedef")
+                nil [3675 3714])
+            ("__darwin_va_list" type
+               (:typedef ("__builtin_va_list" type (:type "class") nil nil)
+                :type "typedef")
+                nil [3757 3800])
+            ("__darwin_wchar_t" type
+               (:typedef ("int")
+                :type "typedef")
+                nil [3906 3947])
+            ("__darwin_rune_t" type
+               (:typedef ("__darwin_wchar_t" type (:type "class") nil nil)
+                :type "typedef")
+                nil [4035 4076])
+            ("__darwin_wint_t" type
+               (:typedef ("int")
+                :type "typedef")
+                nil [4118 4157])
+            ("__darwin_clock_t" type
+               (:typedef ("unsigned long")
+                :type "typedef")
+                nil [4242 4282])
+            ("__darwin_socklen_t" type
+               (:typedef ("__uint32_t" type (:type "class") nil nil)
+                :type "typedef")
+                nil [4297 4336])
+            ("__darwin_ssize_t" type
+               (:typedef ("long")
+                :type "typedef")
+                nil [4359 4391])
+            ("__darwin_time_t" type
+               (:typedef ("long")
+                :type "typedef")
+                nil [4418 4449]))          
+      :file "_types.h"
+      :pointmax 4497
+      :fsize 4496
+      :lastmodtime '(22714 3977 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_BSD_I386__TYPES_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("_I386_LIMITS_H_" variable (:constant-flag t) nil [1906 1921])
+            ("sys/cdefs.h" include (:system-flag t) nil [1923 1945])
+            ("i386/_limits.h" include (:system-flag t) nil [1946 1971])
+            ("CHAR_BIT" variable (:constant-flag t) nil [1981 1989])
+            ("MB_LEN_MAX" variable (:constant-flag t) nil [2032 2042])
+            ("CLK_TCK" variable (:constant-flag t) nil [2166 2173])
+            ("SCHAR_MAX" variable (:constant-flag t) nil [2909 2918])
+            ("SCHAR_MIN" variable (:constant-flag t) nil [2966 2975])
+            ("UCHAR_MAX" variable (:constant-flag t) nil [3027 3036])
+            ("CHAR_MAX" variable (:constant-flag t) nil [3087 3095])
+            ("CHAR_MIN" variable (:constant-flag t) nil [3136 3144])
+            ("USHRT_MAX" variable (:constant-flag t) nil [3189 3198])
+            ("SHRT_MAX" variable (:constant-flag t) nil [3252 3260])
+            ("SHRT_MIN" variable (:constant-flag t) nil [3304 3312])
+            ("UINT_MAX" variable (:constant-flag t) nil [3359 3367])
+            ("INT_MAX" variable (:constant-flag t) nil [3423 3430])
+            ("INT_MIN" variable (:constant-flag t) nil [3478 3485])
+            ("ULONG_MAX" variable (:constant-flag t) nil [3555 3564])
+            ("LONG_MAX" variable (:constant-flag t) nil [3618 3626])
+            ("LONG_MIN" variable (:constant-flag t) nil [3677 3685])
+            ("ULLONG_MAX" variable (:constant-flag t) nil [3948 3958])
+            ("LLONG_MAX" variable (:constant-flag t) nil [4018 4027])
+            ("LLONG_MIN" variable (:constant-flag t) nil [4084 4093])
+            ("LONG_BIT" variable (:constant-flag t) nil [4199 4207])
+            ("SSIZE_MAX" variable (:constant-flag t) nil [4283 4292])
+            ("WORD_BIT" variable (:constant-flag t) nil [4340 4348])
+            ("SIZE_T_MAX" variable (:constant-flag t) nil [4449 4459])
+            ("UQUAD_MAX" variable (:constant-flag t) nil [4508 4517])
+            ("QUAD_MAX" variable (:constant-flag t) nil [4537 4545])
+            ("QUAD_MIN" variable (:constant-flag t) nil [4564 4572]))          
+      :file "limits.h"
+      :pointmax 4711
+      :fsize 4710
+      :lastmodtime '(22714 3977 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("UINT_MAX" . ((number "0xffffffff" 3368 . 3378)))
+          ("LLONG_MAX" . ((symbol "0x7fffffffffffffffLL" 4028 . 4048)))
+          ("USHRT_MAX" . ((number "65535" 3199 . 3204)))
+          ("LLONG_MIN" . ((semantic-list "(-0x7fffffffffffffffLL-1)" 4094 . 4119)))
+          ("UCHAR_MAX" . ((number "255" 3037 . 3040)))
+          ("UQUAD_MAX" . ((symbol "ULLONG_MAX" 4518 . 4528)))
+          ("CHAR_BIT" . ((number "8" 1990 . 1991)))
+          ("SHRT_MAX" . ((number "32767" 3261 . 3266)))
+          ("ULONG_MAX" . ((symbol "0xffffffffffffffffUL" 3565 . 3585)))
+          ("CHAR_MAX" . ((number "127" 3096 . 3099)))
+          ("SHRT_MIN" . ((semantic-list "(-32768)" 3313 . 3321)))
+          ("LONG_BIT" . ((number "64" 4208 . 4210)))
+          ("QUAD_MAX" . ((symbol "LLONG_MAX" 4546 . 4555)))
+          ("CHAR_MIN" . ((semantic-list "(-128)" 3145 . 3151)))
+          ("INT_MAX" . ((number "2147483647" 3432 . 3442)))
+          ("LONG_MAX" . ((number "0x7fffffffffffffffL" 3627 . 3646)))
+          ("QUAD_MIN" . ((symbol "LLONG_MIN" 4573 . 4582)))
+          ("_I386_LIMITS_H_")
+          ("INT_MIN" . ((semantic-list "(-2147483647-1)" 3487 . 3502)))
+          ("LONG_MIN" . ((semantic-list "(-0x7fffffffffffffffL-1)" 3686 . 3710)))
+          ("MB_LEN_MAX" . ((number "6" 2043 . 2044)))
+          ("ULLONG_MAX" . ((symbol "0xffffffffffffffffULL" 3959 . 3980)))
+          ("SIZE_T_MAX" . ((symbol "ULONG_MAX" 4460 . 4469)))
+          ("CLK_TCK" . ((symbol "__DARWIN_CLK_TCK" 2175 . 2191)))
+          ("SCHAR_MAX" . ((number "127" 2919 . 2922)))
+          ("SCHAR_MIN" . ((semantic-list "(-128)" 2976 . 2982)))
+          ("SSIZE_MAX" . ((symbol "LONG_MAX" 4293 . 4301)))
+          ("WORD_BIT" . ((number "32" 4349 . 4351)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("_I386__LIMITS_H_" variable (:constant-flag t) nil [968 984])
+            ("__DARWIN_CLK_TCK" variable (:constant-flag t) nil [994 1010]))          
+      :file "_limits.h"
+      :pointmax 1070
+      :fsize 1069
+      :lastmodtime '(22714 3977 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_I386__LIMITS_H_")
+          ("__DARWIN_CLK_TCK" . ((number "100" 1012 . 1015)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("_MACHTYPES_H_" variable (:constant-flag t) nil [3298 3311])
+            ("i386/_types.h" include (:system-flag t) nil [3335 3359])
+            ("sys/cdefs.h" include (:system-flag t) nil [3360 3382])
+            ("sys/_types/_int8_t.h" include (:system-flag t) nil [3488 3519])
+            ("sys/_types/_int16_t.h" include (:system-flag t) nil [3520 3552])
+            ("sys/_types/_int32_t.h" include (:system-flag t) nil [3553 3585])
+            ("sys/_types/_int64_t.h" include (:system-flag t) nil [3586 3618])
+            ("sys/_types/_u_int8_t.h" include (:system-flag t) nil [3620 3653])
+            ("sys/_types/_u_int16_t.h" include (:system-flag t) nil [3654 3688])
+            ("sys/_types/_u_int32_t.h" include (:system-flag t) nil [3689 3723])
+            ("sys/_types/_u_int64_t.h" include (:system-flag t) nil [3724 3758])
+            ("register_t" type
+               (:typedef ("int64_t" type (:type "class") nil nil)
+                :type "typedef")
+                nil [3773 3802])
+            ("sys/_types/_intptr_t.h" include (:system-flag t) nil [3847 3880])
+            ("sys/_types/_uintptr_t.h" include (:system-flag t) nil [3881 3915])
+            ("user_addr_t" type
+               (:typedef ("u_int64_t" type (:type "class") nil nil)
+                :type "typedef")
+                nil [4072 4103])
+            ("user_size_t" type
+               (:typedef ("u_int64_t" type (:type "class") nil nil)
+                :type "typedef")
+                nil [4105 4136])
+            ("user_ssize_t" type
+               (:typedef ("int64_t" type (:type "class") nil nil)
+                :type "typedef")
+                nil [4138 4169])
+            ("user_long_t" type
+               (:typedef ("int64_t" type (:type "class") nil nil)
+                :type "typedef")
+                nil [4170 4200])
+            ("user_ulong_t" type
+               (:typedef ("u_int64_t" type (:type "class") nil nil)
+                :type "typedef")
+                nil [4201 4233])
+            ("user_time_t" type
+               (:typedef ("int64_t" type (:type "class") nil nil)
+                :type "typedef")
+                nil [4234 4264])
+            ("user_off_t" type
+               (:typedef ("int64_t" type (:type "class") nil nil)
+                :type "typedef")
+                nil [4265 4294])
+            ("USER_ADDR_NULL" variable (:constant-flag t) nil [4303 4317])
+            ("CAST_USER_ADDR_T" variable (:constant-flag t) nil [4344 4360])
+            ("syscall_arg_t" type
+               (:typedef ("u_int64_t" type (:type "class") nil nil)
+                :type "typedef")
+                nil [4558 4591]))          
+      :file "types.h"
+      :pointmax 4647
+      :fsize 4646
+      :lastmodtime '(22714 3977 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("CAST_USER_ADDR_T" (spp-arg-list ("a_ptr") 4360 . 4367) . ((semantic-list "((user_addr_t)((uintptr_t)(a_ptr)))" 4370 . 4405)))
+          ("_MACHTYPES_H_")
+          ("USER_ADDR_NULL" . ((semantic-list "((user_addr_t) 0)" 4318 . 4335)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("_I386__ENDIAN_H_" variable (:constant-flag t) nil [3319 3335])
+            ("sys/cdefs.h" include (:system-flag t) nil [3337 3359])
+            ("_QUAD_HIGHWORD" variable (:constant-flag t) nil [3526 3540])
+            ("_QUAD_LOWWORD" variable (:constant-flag t) nil [3551 3564])
+            ("__DARWIN_LITTLE_ENDIAN" variable (:constant-flag t) nil [3674 3696])
+            ("__DARWIN_BIG_ENDIAN" variable (:constant-flag t) nil [3737 3756])
+            ("__DARWIN_PDP_ENDIAN" variable (:constant-flag t) nil [3803 3822])
+            ("__DARWIN_BYTE_ORDER" variable (:constant-flag t) nil [3880 3899])
+            ("LITTLE_ENDIAN" variable (:constant-flag t) nil [4013 4026])
+            ("BIG_ENDIAN" variable (:constant-flag t) nil [4058 4068])
+            ("PDP_ENDIAN" variable (:constant-flag t) nil [4097 4107])
+            ("BYTE_ORDER" variable (:constant-flag t) nil [4137 4147])
+            ("sys/_endian.h" include (:system-flag t) nil [4169 4193]))          
+      :file "endian.h"
+      :pointmax 4315
+      :fsize 4314
+      :lastmodtime '(22714 3977 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("BYTE_ORDER" . ((symbol "__DARWIN_BYTE_ORDER" 4148 . 4167)))
+          ("__DARWIN_LITTLE_ENDIAN" . ((number "1234" 3697 . 3701)))
+          ("_QUAD_LOWWORD" . ((number "0" 3565 . 3566)))
+          ("__DARWIN_PDP_ENDIAN" . ((number "3412" 3823 . 3827)))
+          ("_QUAD_HIGHWORD" . ((number "1" 3541 . 3542)))
+          ("__DARWIN_BIG_ENDIAN" . ((number "4321" 3757 . 3761)))
+          ("PDP_ENDIAN" . ((symbol "__DARWIN_PDP_ENDIAN" 4108 . 4127)))
+          ("LITTLE_ENDIAN" . ((symbol "__DARWIN_LITTLE_ENDIAN" 4027 . 4049)))
+          ("__DARWIN_BYTE_ORDER" . ((symbol "__DARWIN_LITTLE_ENDIAN" 3900 . 3922)))
+          ("_I386__ENDIAN_H_")
+          ("BIG_ENDIAN" . ((symbol "__DARWIN_BIG_ENDIAN" 4069 . 4088)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("_I386_SIGNAL_H_" variable (:constant-flag t) nil [1425 1440])
+            ("sys/cdefs.h" include (:system-flag t) nil [1444 1466])
+            ("sig_atomic_t" type
+               (:typedef ("int")
+                :type "typedef")
+                nil [1489 1514]))          
+      :file "signal.h"
+      :pointmax 1576
+      :fsize 1575
+      :lastmodtime '(22714 3977 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_I386_SIGNAL_H_" . ((number "1" 1441 . 1442)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("__I386_MCONTEXT_H_" variable (:constant-flag t) nil [1366 1384])
+            ("sys/appleapiopts.h" include (:system-flag t) nil [1386 1415])
+            ("mach/i386/_structs.h" include (:system-flag t) nil [1416 1447])
+            ("_STRUCT_MCONTEXT32" variable (:constant-flag t) nil [1504 1522])
+            ("__darwin_mcontext32" type
+               (:members 
+                  ( ("__es" variable (:type ("_STRUCT_X86_EXCEPTION_STATE32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1572 1607])
+                    ("__ss" variable (:type ("_STRUCT_X86_THREAD_STATE32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1609 1641])
+                    ("__fs" variable (:type ("_STRUCT_X86_FLOAT_STATE32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1643 1674]))                  
+                :type "struct")
+                nil [1550 1677])
+            ("_STRUCT_MCONTEXT_AVX32" variable (:constant-flag t) nil [1687 1709])
+            ("__darwin_mcontext_avx32" type
+               (:members 
+                  ( ("__es" variable (:type ("_STRUCT_X86_EXCEPTION_STATE32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1767 1802])
+                    ("__ss" variable (:type ("_STRUCT_X86_THREAD_STATE32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1804 1836])
+                    ("__fs" variable (:type ("_STRUCT_X86_AVX_STATE32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1838 1868]))                  
+                :type "struct")
+                nil [1741 1871])
+            ("_STRUCT_MCONTEXT64" variable (:constant-flag t) nil [2366 2384])
+            ("__darwin_mcontext64" type
+               (:members 
+                  ( ("__es" variable (:type ("_STRUCT_X86_EXCEPTION_STATE64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2434 2469])
+                    ("__ss" variable (:type ("_STRUCT_X86_THREAD_STATE64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2471 2503])
+                    ("__fs" variable (:type ("_STRUCT_X86_FLOAT_STATE64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2505 2536]))                  
+                :type "struct")
+                nil [2412 2539])
+            ("_STRUCT_MCONTEXT_AVX64" variable (:constant-flag t) nil [2549 2571])
+            ("__darwin_mcontext_avx64" type
+               (:members 
+                  ( ("__es" variable (:type ("_STRUCT_X86_EXCEPTION_STATE64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2629 2664])
+                    ("__ss" variable (:type ("_STRUCT_X86_THREAD_STATE64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2666 2698])
+                    ("__fs" variable (:type ("_STRUCT_X86_AVX_STATE64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2700 2730]))                  
+                :type "struct")
+                nil [2603 2733])
+            ("_MCONTEXT_T" variable (:constant-flag t) nil [3202 3213])
+            ("mcontext_t" type
+               (:typedef ("__darwin_mcontext64" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :pointer 1
+                :type "typedef")
+                nil [3236 3275])
+            ("_STRUCT_MCONTEXT" variable (:constant-flag t) nil [3284 3300]))          
+      :file "_mcontext.h"
+      :pointmax 3475
+      :fsize 3474
+      :lastmodtime '(22714 3977 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_STRUCT_MCONTEXT64" . ((STRUCT "struct" 2385 . 2391) (symbol "__darwin_mcontext64" 2392 . 2411)))
+          ("__I386_MCONTEXT_H_")
+          ("_STRUCT_MCONTEXT" . ((symbol "_STRUCT_MCONTEXT64" 3301 . 3319)))
+          ("_STRUCT_MCONTEXT32" . ((STRUCT "struct" 1523 . 1529) (symbol "__darwin_mcontext32" 1530 . 1549)))
+          ("_STRUCT_MCONTEXT_AVX64" . ((STRUCT "struct" 2572 . 2578) (symbol "__darwin_mcontext_avx64" 2579 . 2602)))
+          ("_MCONTEXT_T")
+          ("_STRUCT_MCONTEXT_AVX32" . ((STRUCT "struct" 1710 . 1716) (symbol "__darwin_mcontext_avx32" 1717 . 1740)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("_I386_PARAM_H_" variable (:constant-flag t) nil [3593 3607])
+            ("i386/_param.h" include (:system-flag t) nil [3609 3633])
+            ("ALIGNBYTES" variable (:constant-flag t) nil [3835 3845])
+            ("ALIGN" variable (:constant-flag t) nil [3874 3879])
+            ("NBPG" variable (:constant-flag t) nil [3910 3914])
+            ("PGOFSET" variable (:constant-flag t) nil [3947 3954])
+            ("PGSHIFT" variable (:constant-flag t) nil [4001 4008])
+            ("DEV_BSIZE" variable (:constant-flag t) nil [4040 4049])
+            ("DEV_BSHIFT" variable (:constant-flag t) nil [4062 4072])
+            ("BLKDEV_IOSIZE" variable (:constant-flag t) nil [4106 4119])
+            ("MAXPHYS" variable (:constant-flag t) nil [4133 4140])
+            ("CLSIZE" variable (:constant-flag t) nil [4196 4202])
+            ("CLSIZELOG2" variable (:constant-flag t) nil [4214 4224])
+            ("MSIZESHIFT" variable (:constant-flag t) nil [4541 4551])
+            ("MSIZE" variable (:constant-flag t) nil [4574 4579])
+            ("MCLSHIFT" variable (:constant-flag t) nil [4629 4637])
+            ("MCLBYTES" variable (:constant-flag t) nil [4662 4670])
+            ("MBIGCLSHIFT" variable (:constant-flag t) nil [4726 4737])
+            ("MBIGCLBYTES" variable (:constant-flag t) nil [4762 4773])
+            ("M16KCLSHIFT" variable (:constant-flag t) nil [4829 4840])
+            ("M16KCLBYTES" variable (:constant-flag t) nil [4866 4877])
+            ("MCLOFSET" variable (:constant-flag t) nil [4936 4944])
+            ("NMBCLUSTERS" variable (:constant-flag t) nil [4988 4999])
+            ("ctos" variable (:constant-flag t) nil [5177 5181])
+            ("stoc" variable (:constant-flag t) nil [5197 5201])
+            ("ctod" variable (:constant-flag t) nil [5264 5268])
+            ("dtoc" variable (:constant-flag t) nil [5308 5312])
+            ("dtob" variable (:constant-flag t) nil [5352 5356])
+            ("ctob" variable (:constant-flag t) nil [5409 5413])
+            ("btoc" variable (:constant-flag t) nil [5463 5467])
+            ("btodb" variable (:constant-flag t) nil [5534 5539])
+            ("dbtob" variable (:constant-flag t) nil [5623 5628])
+            ("bdbtofsb" variable (:constant-flag t) nil [6114 6122])
+            ("STATUS_WORD" variable (:constant-flag t) nil [6234 6245])
+            ("USERMODE" variable (:constant-flag t) nil [6287 6295])
+            ("BASEPRI" variable (:constant-flag t) nil [6325 6332])
+            ("DELAY" variable (:constant-flag t) nil [6494 6499]))          
+      :file "param.h"
+      :pointmax 6618
+      :fsize 6617
+      :lastmodtime '(22714 3977 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("MCLOFSET" . ((semantic-list "(MCLBYTES - 1)" 4945 . 4959)))
+          ("btodb" (spp-arg-list ("bytes" "devBlockSize") 5539 . 5560) . ((semantic-list "((unsigned)(bytes) / devBlockSize)" 5579 . 5613)))
+          ("MCLBYTES" . ((semantic-list "(1 << MCLSHIFT)" 4671 . 4686)))
+          ("MBIGCLBYTES" . ((semantic-list "(1 << MBIGCLSHIFT)" 4774 . 4792)))
+          ("ctob" (spp-arg-list ("x") 5413 . 5416) . ((semantic-list "((x)<<PGSHIFT)" 5417 . 5431)))
+          ("btoc" (spp-arg-list ("x") 5467 . 5470) . ((semantic-list "(((unsigned)(x)+(NBPG-1))>>PGSHIFT)" 5471 . 5506)))
+          ("dbtob" (spp-arg-list ("db" "devBlockSize") 5628 . 5646) . ((semantic-list "((unsigned)(db) * devBlockSize)" 5668 . 5699)))
+          ("PGSHIFT" . ((number "12" 4010 . 4012)))
+          ("MAXPHYS" . ((semantic-list "(128 * 1024)" 4142 . 4154)))
+          ("dtob" (spp-arg-list ("x") 5356 . 5359) . ((semantic-list "((x)<<DEV_BSHIFT)" 5360 . 5377)))
+          ("bdbtofsb" (spp-arg-list ("bn") 6122 . 6126) . ((semantic-list "((bn) / (BLKDEV_IOSIZE/DEV_BSIZE))" 6127 . 6161)))
+          ("ctod" (spp-arg-list ("x") 5268 . 5271) . ((semantic-list "((x)<<(PGSHIFT-DEV_BSHIFT))" 5272 . 5299)))
+          ("dtoc" (spp-arg-list ("x") 5312 . 5315) . ((semantic-list "((x)>>(PGSHIFT-DEV_BSHIFT))" 5316 . 5343)))
+          ("USERMODE" (spp-arg-list ("x") 6295 . 6298) . ((semantic-list "(((x) & 3) == 3)" 6300 . 6316)))
+          ("MCLSHIFT" . ((number "11" 4638 . 4640)))
+          ("MBIGCLSHIFT" . ((number "12" 4738 . 4740)))
+          ("ctos" (spp-arg-list ("x") 5181 . 5184) . ((semantic-list "(x)" 5185 . 5188)))
+          ("stoc" (spp-arg-list ("x") 5201 . 5204) . ((semantic-list "(x)" 5205 . 5208)))
+          ("ALIGNBYTES" . ((symbol "__DARWIN_ALIGNBYTES" 3846 . 3865)))
+          ("NMBCLUSTERS" . ((semantic-list "((1024 * 1024) / MCLBYTES)" 5000 . 5026)))
+          ("STATUS_WORD" (spp-arg-list ("rpl" "ipl") 6245 . 6255) . ((semantic-list "(((ipl) << 8) | (rpl))" 6256 . 6278)))
+          ("BASEPRI" (spp-arg-list ("x") 6332 . 6335) . ((semantic-list "(((x) & (255 << 8)) == 0)" 6337 . 6362)))
+          ("DELAY" (spp-arg-list ("n") 6499 . 6502) . ((semantic-list "{ int N = (n); while (--N > 0); }" 6503 . 6536)))
+          ("_I386_PARAM_H_")
+          ("CLSIZELOG2" . ((number "0" 4225 . 4226)))
+          ("M16KCLBYTES" . ((semantic-list "(1 << M16KCLSHIFT)" 4878 . 4896)))
+          ("NBPG" . ((number "4096" 3916 . 3920)))
+          ("DEV_BSIZE" . ((number "512" 4050 . 4053)))
+          ("DEV_BSHIFT" . ((number "9" 4073 . 4074)))
+          ("ALIGN" (spp-arg-list ("p") 3879 . 3882) . ((symbol "__DARWIN_ALIGN" 3883 . 3897) (semantic-list "(p)" 3897 . 3900)))
+          ("PGOFSET" . ((semantic-list "(NBPG-1)" 3956 . 3964)))
+          ("MSIZESHIFT" . ((number "8" 4552 . 4553)))
+          ("MSIZE" . ((semantic-list "(1 << MSIZESHIFT)" 4581 . 4598)))
+          ("M16KCLSHIFT" . ((number "14" 4841 . 4843)))
+          ("BLKDEV_IOSIZE" . ((number "2048" 4120 . 4124)))
+          ("CLSIZE" . ((number "1" 4204 . 4205)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("_I386__PARAM_H_" variable (:constant-flag t) nil [1368 1383])
+            ("i386/_types.h" include (:system-flag t) nil [1385 1409])
+            ("__DARWIN_ALIGNBYTES" variable (:constant-flag t) nil [1611 1630])
+            ("__DARWIN_ALIGN" variable (:constant-flag t) nil [1669 1683])
+            ("__DARWIN_ALIGNBYTES32" variable (:constant-flag t) nil [1796 1817])
+            ("__DARWIN_ALIGN32" variable (:constant-flag t) nil [1861 1877]))          
+      :file "_param.h"
+      :pointmax 2017
+      :fsize 2016
+      :lastmodtime '(22714 3977 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("__DARWIN_ALIGNBYTES" . ((semantic-list "(sizeof(__darwin_size_t) - 1)" 1631 . 1660)))
+          ("__DARWIN_ALIGNBYTES32" . ((semantic-list "(sizeof(__uint32_t) - 1)" 1822 . 1846)))
+          ("__DARWIN_ALIGN" (spp-arg-list ("p") 1683 . 1686) . ((semantic-list "((__darwin_size_t)((char *)(__darwin_size_t)(p) + __DARWIN_ALIGNBYTES) &~ __DARWIN_ALIGNBYTES)" 1687 . 1781)))
+          ("_I386__PARAM_H_")
+          ("__DARWIN_ALIGN32" (spp-arg-list ("p") 1877 . 1880) . ((semantic-list "((__darwin_size_t)((char *)(__darwin_size_t)(p) + __DARWIN_ALIGNBYTES32) &~ __DARWIN_ALIGNBYTES32)" 1887 . 1985)))
+          )
+))
+  :file "!usr!include!i386!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

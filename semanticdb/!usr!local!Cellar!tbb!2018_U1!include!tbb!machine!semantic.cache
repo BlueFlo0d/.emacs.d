@@ -1,0 +1,108 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("directly" variable (:type ("file" type (:type "class") nil nil)) nil [727 741])
+            ("__TBB_machine_macos_common_H" variable (:constant-flag t) nil [790 818])
+            ("sched.h" include (:system-flag t) nil [820 838])
+            ("__TBB_Yield" variable (:constant-flag t) nil [847 858])
+            ("sys/types.h" include (:system-flag t) nil [907 929])
+            ("sys/sysctl.h" include (:system-flag t) nil [930 953])
+            ("__TBB_macos_available_cpu" function
+               (:typemodifiers ("static" "inline")
+                :type "int")
+                nil [955 1154])
+            ("__TBB_HardwareConcurrency" variable (:constant-flag t) nil [1164 1189])
+            ("__TBB_UnknownArchitecture" variable (:constant-flag t) nil [1380 1405])
+            ("libkern/OSAtomic.h" include (:system-flag t) nil [1517 1546])
+            ("__TBB_machine_cmpswp8_OsX" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("ptr" variable
+                       (:pointer 1
+                        :typemodifiers ("volatile")
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1596 1615])
+                    ("value" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1616 1630])
+                    ("comparand" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1631 1649]))                  
+                :type ("int64_t" type (:type "class") nil nil))
+                nil [1548 2076])
+            ("__TBB_machine_cmpswp8" variable (:constant-flag t) nil [2086 2107])
+            ("__TBB_WORDSIZE" variable (:constant-flag t) nil [2237 2251])
+            ("__TBB_ENDIANNESS" variable (:constant-flag t) nil [2464 2480])
+            ("__TBB_control_consistency_helper" variable (:constant-flag t) nil [2976 3008])
+            ("__TBB_acquire_consistency_helper" variable (:constant-flag t) nil [3037 3069])
+            ("__TBB_release_consistency_helper" variable (:constant-flag t) nil [3098 3130])
+            ("__TBB_full_memory_fence" variable (:constant-flag t) nil [3159 3182])
+            ("__TBB_machine_cmpswp4" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("ptr" variable
+                       (:pointer 1
+                        :typemodifiers ("volatile")
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3257 3276])
+                    ("value" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3277 3291])
+                    ("comparand" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3292 3310]))                  
+                :type ("int32_t" type (:type "class") nil nil))
+                nil [3213 3645])
+            ("__TBB_machine_fetchadd4" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("ptr" variable
+                       (:pointer 1
+                        :typemodifiers ("volatile")
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3693 3712])
+                    ("addend" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3713 3728]))                  
+                :type ("int32_t" type (:type "class") nil nil))
+                nil [3647 3900])
+            ("__TBB_machine_fetchadd8" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("ptr" variable
+                       (:pointer 1
+                        :typemodifiers ("volatile")
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3948 3967])
+                    ("addend" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3968 3983]))                  
+                :type ("int64_t" type (:type "class") nil nil))
+                nil [3902 4155])
+            ("__TBB_USE_GENERIC_PART_WORD_CAS" variable (:constant-flag t) nil [4165 4196])
+            ("__TBB_USE_GENERIC_PART_WORD_FETCH_ADD" variable (:constant-flag t) nil [4227 4264])
+            ("__TBB_USE_GENERIC_FETCH_STORE" variable (:constant-flag t) nil [4289 4318])
+            ("__TBB_USE_GENERIC_HALF_FENCED_LOAD_STORE" variable (:constant-flag t) nil [4351 4391])
+            ("__TBB_USE_GENERIC_RELAXED_LOAD_STORE" variable (:constant-flag t) nil [4413 4449])
+            ("__TBB_USE_GENERIC_SEQUENTIAL_CONSISTENCY_LOAD_STORE" variable (:constant-flag t) nil [4568 4619]))          
+      :file "macos_common.h"
+      :pointmax 4662
+      :fsize 4661
+      :lastmodtime '(22981 28839 0 0)
+      :unmatched-syntax '((punctuation 772 . 773) (symbol 765 . 772) (symbol 757 . 764) (symbol 753 . 756) (PUBLIC 746 . 752) (symbol 742 . 745) (symbol 718 . 726) (symbol 713 . 717) (symbol 705 . 712) (punctuation 704 . 705) (symbol 700 . 703) (symbol 697 . 699) (symbol 691 . 696) (punctuation 690 . 691))
+      :lexical-table 
+        '(("__TBB_USE_GENERIC_HALF_FENCED_LOAD_STORE" . ((number "1" 4403 . 4404)))
+          ("__TBB_WORDSIZE" . ((symbol "__SIZEOF_POINTER__" 2252 . 2270)))
+          ("__TBB_ENDIANNESS" . ((symbol "__TBB_ENDIAN_LITTLE" 2481 . 2500)))
+          ("__TBB_control_consistency_helper" (spp-arg-list nil 3008 . 3010) . ((symbol "OSMemoryBarrier" 3011 . 3026) (semantic-list "()" 3026 . 3028)))
+          ("__TBB_machine_cmpswp8" . ((symbol "__TBB_machine_cmpswp8_OsX" 2108 . 2133)))
+          ("__TBB_acquire_consistency_helper" (spp-arg-list nil 3069 . 3071) . ((symbol "OSMemoryBarrier" 3072 . 3087) (semantic-list "()" 3087 . 3089)))
+          ("__TBB_release_consistency_helper" (spp-arg-list nil 3130 . 3132) . ((symbol "OSMemoryBarrier" 3133 . 3148) (semantic-list "()" 3148 . 3150)))
+          ("__TBB_full_memory_fence" (spp-arg-list nil 3182 . 3184) . ((symbol "OSMemoryBarrier" 3194 . 3209) (semantic-list "()" 3209 . 3211)))
+          ("__TBB_USE_GENERIC_SEQUENTIAL_CONSISTENCY_LOAD_STORE" . ((number "1" 4620 . 4621)))
+          ("__TBB_USE_GENERIC_PART_WORD_CAS" . ((number "1" 4217 . 4218)))
+          ("__TBB_USE_GENERIC_PART_WORD_FETCH_ADD" . ((number "1" 4279 . 4280)))
+          ("__TBB_USE_GENERIC_RELAXED_LOAD_STORE" . ((number "1" 4465 . 4466)))
+          ("__TBB_Yield" (spp-arg-list nil 858 . 860) . ((symbol "sched_yield" 862 . 873) (semantic-list "()" 873 . 875)))
+          ("__TBB_USE_GENERIC_FETCH_STORE" . ((number "1" 4341 . 4342)))
+          ("__TBB_machine_macos_common_H")
+          ("__TBB_UnknownArchitecture" . ((number "1" 1406 . 1407)))
+          ("__TBB_HardwareConcurrency" (spp-arg-list nil 1189 . 1191) . ((symbol "__TBB_macos_available_cpu" 1192 . 1217) (semantic-list "()" 1217 . 1219)))
+          )
+))
+  :file "!usr!local!Cellar!tbb!2018_U1!include!tbb!machine!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

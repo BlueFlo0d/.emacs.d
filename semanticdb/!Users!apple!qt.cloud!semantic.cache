@@ -1,0 +1,89 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("flask" include nil nil [1 60])
+            ("flask" include nil nil [61 86])
+            ("pyqtvm" include nil nil [87 107])
+            ("flask_security" include nil nil [109 192])
+            ("userauth.database" include nil nil [193 242])
+            ("userauth.models" include nil nil [243 281])
+            ("logging" include nil nil [282 296])
+            ("flask_mail" include nil nil [297 333])
+            ("app" variable nil nil [405 426])
+            ("app" variable nil nil [491 542])
+            ("app" variable nil nil [543 572])
+            ("app" variable nil nil [573 606])
+            ("app" variable nil nil [607 655])
+            ("app" variable nil nil [656 703])
+            ("app" variable nil nil [704 768])
+            ("mail" variable nil nil [769 785])
+            ("app" variable nil nil [798 841])
+            ("app" variable nil nil [842 883])
+            ("vuecm_js" variable nil nil [884 932])
+            ("qtvmedit_js" variable nil nil [933 978])
+            ("app" variable nil nil [992 1016])
+            ("app" variable nil nil [1017 1048])
+            ("app" variable nil nil [1117 1210])
+            ("app" variable nil nil [1237 1288])
+            ("app" variable nil nil [1335 1377])
+            ("app" variable nil nil [1430 1471])
+            ("app" variable nil nil [1472 1513])
+            ("user_datastore" variable nil nil [1539 1658])
+            ("security" variable nil nil [1659 1699])
+            ("create_user" function (:decorators 
+              ( ("app.before_first_request" function (:type "decorator") nil nil))              ) nil [1701 1784])
+            ("" code nil nil [1798 1819])
+            ("br_doc_qtvmrt" function (:decorators 
+              ( ("login_required" function (:type "decorator") nil nil))              ) nil [1820 1899])
+            ("" code nil nil [1911 1927])
+            ("br_qtvmedit" function nil nil [1928 1997])
+            ("" code nil nil [2009 2014])
+            ("br_root" function (:decorators 
+              ( ("login_required" function (:type "decorator") nil nil))              ) nil [2015 2083])
+            ("" code nil nil [2095 2111])
+            ("br_qtvmcss" function nil nil [2112 2209])
+            ("" code nil nil [2221 2232])
+            ("br_mdcss" function nil nil [2233 2323])
+            ("" code nil nil [2335 2349])
+            ("br_qtvmhtml" function nil nil [2366 2437])
+            ("" code nil nil [2497 2519])
+            ("br_vuecm" function nil nil [2520 2556])
+            ("" code nil nil [2568 2596])
+            ("api_vm" function nil nil [2613 3320])
+            ("" code nil nil [3369 3383])
+            ("emailtest" function nil nil [3384 3527])
+            ("if" code nil nil [3528 3641]))          
+      :file "server.py"
+      :pointmax 3647
+      :fsize 3771
+      :lastmodtime '(23141 26803 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("os" include nil nil [1 10])
+            ("uuid" include nil nil [11 22])
+            ("struct" include nil nil [23 36])
+            ("base64" include nil nil [37 50])
+            ("flask" include nil nil [51 76])
+            ("qtvm_exec" variable nil nil [77 112])
+            ("calc_on_vm" function (:arguments 
+              ( ("_str" variable nil (reparse-symbol function_parameters) [128 132])
+                ("shots" variable nil (reparse-symbol function_parameters) [133 138])
+                ("qubits" variable nil (reparse-symbol function_parameters) [139 145])
+                ("eyegod" variable nil (reparse-symbol function_parameters) [146 152])
+                ("eyeqt" variable nil (reparse-symbol function_parameters) [159 164])
+                ("remi" variable nil (reparse-symbol function_parameters) [171 175]))              ) nil [113 1564]))          
+      :file "pyqtvm.py"
+      :pointmax 1564
+      :fsize 1563
+      :lastmodtime '(23141 24463 0 0)
+      :unmatched-syntax '((NAME 1125 . 1128) (IF 1135 . 1137) (ELSE 1143 . 1147))))
+  :file "!Users!apple!qt.cloud!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

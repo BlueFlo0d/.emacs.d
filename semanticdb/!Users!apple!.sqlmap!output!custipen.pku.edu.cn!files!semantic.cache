@@ -1,0 +1,58 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode mhtml-mode
+      :tags nil
+      :file "_usr_local_apache2_cgi-bin_index.html"
+      :pointmax 2
+      :fsize 1
+      :lastmodtime '(23023 30815 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode mhtml-mode
+      :tags nil
+      :file "_usr_local_apache2_docs_index.html"
+      :pointmax 2
+      :fsize 1
+      :lastmodtime '(23024 19763 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode mhtml-mode
+      :tags nil
+      :file "_usr_local_apache2_docs_dummy-host.example.com_index.html"
+      :pointmax 2
+      :fsize 1
+      :lastmodtime '(23024 19818 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode mhtml-mode
+      :tags nil
+      :file "_usr_local_apache2_docs_dummy-host2.example.com_index.html"
+      :pointmax 2
+      :fsize 1
+      :lastmodtime '(23024 19848 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode mhtml-mode
+      :tags nil
+      :file "_etc_wwwroot_index.html"
+      :pointmax 2
+      :fsize 1
+      :lastmodtime '(23024 22387 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode mhtml-mode
+      :tags 
+        '( ("It works!" section (:members 
+              ( ("It works!" section nil nil [13 45]))              ) nil [7 45]))          
+      :file "_usr_local_apache2_htdocs_index.html"
+      :pointmax 45
+      :fsize 44
+      :lastmodtime '(23024 21836 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!apple!.sqlmap!output!custipen.pku.edu.cn!files!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,20 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-automake-mode
+      :tags 
+        '( ("$(top_srcdir)/gtest.mk" include nil nil [793 824])
+            ("EXTRA_DIST" variable (:default-value ("msgs-count.scm" "msgs-per-year.scm" "msgs-per-hour.scm" "msgs-per-month.scm" "msgs-per-day.scm" "msgs-per-year-month.scm" "find-dups.scm")) nil [825 986])
+            ("muguiledistscriptdir" variable (:default-value ("$(pkgdatadir)/scripts/")) nil [987 1038])
+            ("muguiledistscript_SCRIPTS" variable (:default-value ("$(EXTRA_DIST)")) nil [1038 1080]))          
+      :file "Makefile.am"
+      :pointmax 1080
+      :fsize 1079
+      :lastmodtime '(21879 11627 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!apple!Downloads!mu-0.9.13!guile!scripts!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

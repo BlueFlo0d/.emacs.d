@@ -1,0 +1,27 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-automake-mode
+      :tags 
+        '( ("$(top_srcdir)/gtest.mk" include nil nil [793 824])
+            ("SUBDIRS" variable (:default-value (".")) nil [889 900])
+            ("AM_CPPFLAGS" variable (:default-value ("-I${top_srcdir}/lib" "$(GTK_CFLAGS)" "$(WEBKIT_CFLAGS)" "-DICONDIR='\"$(icondir)\"'")) nil [902 990])
+            ("AM_CFLAGS" variable (:default-value ("-Wall" "-Wextra" "-Wno-unused-parameter" "-Wdeclaration-after-statement")) nil [1148 1224])
+            ("AM_CXXFLAGS" variable (:default-value ("-Wall" "-Wextra" "-Wno-unused-parameter")) nil [1224 1272])
+            ("noinst_PROGRAMS" variable (:default-value ("msg2pdf")) nil [1273 1305])
+            ("msg2pdf_SOURCES" variable (:default-value ("msg2pdf.c" "dummy.cc")) nil [1392 1442])
+            ("BUILT_SOURCES" variable (:default-value ("dummy.cc")) nil [1495 1527])
+            ("dummy.cc" function nil nil [1528 1554])
+            ("DISTCLEANFILES" variable (:default-value ("$(BUILT_SOURCES)")) nil [1555 1596])
+            ("msg2pdf_LDADD" variable (:default-value ("${top_builddir}/lib/libmu.la" "$(GTK_LIBS)" "${WEBKIT_LIBS}")) nil [1598 1689]))          
+      :file "Makefile.am"
+      :pointmax 1689
+      :fsize 1688
+      :lastmodtime '(21469 63860 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!apple!Downloads!mu-0.9.13!toys!msg2pdf!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

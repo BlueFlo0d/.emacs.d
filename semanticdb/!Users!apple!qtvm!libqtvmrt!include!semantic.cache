@@ -1,0 +1,175 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("qtvm/sector.h" include (:system-flag t) nil [1 25])
+            ("QTVMRT_DH" variable (:constant-flag t) nil [34 43])
+            ("qtvmrt" type
+               (:members 
+                  ( ("init" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("bits" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [94 104])
+                            ("handle" variable
+                               (:default-value "QTVMRT_DH"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [104 113]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [85 115])
+                    ("h" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("addr" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [131 141])
+                            ("handle" variable
+                               (:default-value "QTVMRT_DH"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [141 150]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [124 152])
+                    ("x" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("addr" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [168 178])
+                            ("handle" variable
+                               (:default-value "QTVMRT_DH"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [178 187]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [161 189])
+                    ("y" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("addr" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [205 215])
+                            ("handle" variable
+                               (:default-value "QTVMRT_DH"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [215 224]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [198 226])
+                    ("z" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("addr" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [242 252])
+                            ("handle" variable
+                               (:default-value "QTVMRT_DH"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [252 261]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [235 263])
+                    ("s" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("addr" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [279 289])
+                            ("handle" variable
+                               (:default-value "QTVMRT_DH"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [289 298]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [272 300])
+                    ("sd" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("addr" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [317 327])
+                            ("handle" variable
+                               (:default-value "QTVMRT_DH"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [327 336]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [309 338])
+                    ("rx" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("addr" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [355 365])
+                            ("handle" variable
+                               (:default-value "QTVMRT_DH"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [365 374]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [347 376])
+                    ("ry" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("addr" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [393 403])
+                            ("handle" variable
+                               (:default-value "QTVMRT_DH"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [403 412]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [385 414])
+                    ("rz" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("addr" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [431 441])
+                            ("handle" variable
+                               (:default-value "QTVMRT_DH"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [441 450]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [423 452])
+                    ("cx" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("target" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [469 481])
+                            ("control" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [481 494])
+                            ("handle" variable
+                               (:default-value "QTVMRT_DH"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [494 503]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [461 505])
+                    ("su2" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("addr" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [523 533])
+                            ("" variable (:type ("qtvm_float" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [533 546])
+                            ("" variable (:type ("mat" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [547 551])
+                            ("handle" variable
+                               (:default-value "QTVMRT_DH"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [551 560]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [514 562])
+                    ("csu2" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("target" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [581 593])
+                            ("" variable (:type ("qtvm_float" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [593 606])
+                            ("" variable (:type ("mat" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [607 611])
+                            ("" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [611 618])
+                            ("" variable (:type ("controls" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [619 628])
+                            ("num_of_controls" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [628 649])
+                            ("handle" variable
+                               (:default-value "QTVMRT_DH"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [649 658]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [571 660])
+                    ("measure" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("addr" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [681 691])
+                            ("handle" variable
+                               (:default-value "QTVMRT_DH"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [691 700]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [669 702]))                  
+                :type "namespace")
+                nil [59 704]))          
+      :file "qtvmrt.hpp"
+      :pointmax 705
+      :fsize 694
+      :lastmodtime '(23128 15362 0 0)
+      :unmatched-syntax '((semantic-list 616 . 618) (semantic-list 604 . 606) (semantic-list 544 . 546) (semantic-list 606 . 608) (semantic-list 594 . 596) (semantic-list 534 . 536) (punctuation 10 . 11) (symbol 2 . 9) (punctuation 1 . 2))
+      :lexical-table 
+        '(("QTVMRT_DH" . 
+              ((INT "int" 44 . 47) (symbol "handle" 48 . 54) (punctuation "=" 55 . 56) (number "1" 57 . 58)))
+          )
+))
+  :file "!Users!apple!qtvm!libqtvmrt!include!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
