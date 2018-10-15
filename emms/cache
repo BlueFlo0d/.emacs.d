@@ -1,3 +1,0 @@
-;;; .emms-cache -*- mode: emacs-lisp; coding: utf-8; -*-
-(puthash "/Users/apple/Music/网易云音乐/Aero Chord - 4U.mp3" '(*track* (type . file) (name . "/Users/apple/Music/网易云音乐/Aero Chord - 4U.mp3") (metadata) (info-mtime 22911 14004 0 0) (last-played 23018 49650 685482 0) (play-count . 3)) emms-cache-db)
-(puthash "/Users/apple/Downloads/[I.G&CASO][Lucky_Star][01][BDRIP][1920x1080][x264_FLAC_2][8ECF808D].mkv" '(*track* (type . file) (name . "/Users/apple/Downloads/[I.G&CASO][Lucky_Star][01][BDRIP][1920x1080][x264_FLAC_2][8ECF808D].mkv") (metadata) (last-played 23018 49415 938234 0) (play-count . 2) (info-mtime 23016 53314 0 0)) emms-cache-db)

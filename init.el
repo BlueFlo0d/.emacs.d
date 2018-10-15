@@ -16,7 +16,7 @@
 
 (add-to-list 'load-path "~/.emacs.d/custom")
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
-(load-theme 'sourcerer t)
+;;(load-theme 'sourcerer t)
 
 (require 'setup-general)
 (if (version< emacs-version "24.4")
@@ -41,7 +41,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (sourcerer-theme color-theme neotree magit dired-du cmake-ide company-rtags auto-complete-clang-async auto-complete-clang markdown-toc markdown-mode+ markdown-mode cdlatex emms 2048-game xwidgete zygospore helm-gtags helm yasnippet ws-butler volatile-highlights use-package undo-tree iedit dtrt-indent counsel-projectile company clean-aindent-mode anzu)))
+    (haskell-mode exec-path-from-shell pdf-tools cmake-ide elpy chess steam mines slime-volleyball sourcerer-theme color-theme neotree magit dired-du company-rtags auto-complete-clang-async auto-complete-clang markdown-toc markdown-mode+ markdown-mode cdlatex emms 2048-game xwidgete zygospore helm-gtags helm yasnippet ws-butler volatile-highlights use-package undo-tree iedit dtrt-indent counsel-projectile company clean-aindent-mode anzu)))
  '(tramp-syntax (quote default) nil (tramp)))
 
 (custom-set-faces
@@ -66,16 +66,31 @@
   ;;              ".mov" ".avi" ".divx" ".ogm" ".asf" ".mkv" "http://" "mms://"
   ;;              ".rm" ".rmvb" ".mp4" ".flac" ".vob" ".m4a" ".flv" ".ogv" ".pls"))
   ;;"mplayer" "-slave" "-quiet" "-really-quiet" "-fullscreen")
-(set-background-color "black")
-(set-foreground-color "white")
+(set-background-color "#500")
+(set-foreground-color "#FF5")
 (add-to-list 'load-path "~/.emacs.d/mu4e")
 (require 'mu4e)
 ;; default
 
 (setq mu4e-maildir "~/Maildir")
-(setq mu4e-drafts-folder "/[ART].Drafts")
-(setq mu4e-sent-folder   "/[ART].Sent Mail")
-(setq mu4e-trash-folder  "/[ART].Trash")
+(setq mu4e-drafts-folder "/[PKU].Drafts")
+(setq mu4e-sent-folder   "/[PKU].Sent Mail")
+(setq mu4e-trash-folder  "/[PKU].Trash")
+
+(setq
+ user-mail-address "hongqiantan@pku.edu.cn"
+ user-full-name  "洪千坦 (Q. T. Hong)"
+ message-signature
+ (concat
+  "洪千坦 (Q. T. Hong)\n"
+  "Email: hongqiantan@pku.edu.cn\n"
+  "\n"))
+(require 'smtpmail)
+(setq message-send-mail-function 'smtpmail-send-it
+      smtpmail-stream-type 'starttls
+      smtpmail-default-smtp-server "mail.pku.edu.cn"
+      smtpmail-smtp-server "mail.pku.edu.cn"
+      smtpmail-smtp-service 465)
 
 (setenv "PATH" (concat (getenv "PATH") ":/Library/TeX/texbin/"))
 (setq exec-path (append exec-path '("/Library/TeX/texbin/")))
@@ -97,5 +112,15 @@
                                        ))
                                (setq cdlatex-command-alist
                                      '(("spl" "Insert split env" "" cdlatex-environment ("split") t nil)
-))))
-(cmake-ide-setup)
+                                       ))))
+(setq cmake-ide-build-dir "/Volumes/Externel/cmake-build/")
+(setenv "CC" "")
+ (cmake-ide-setup)
+;; (desktop-save-mode 1)
+(autoload 'scheme-mode "cmuscheme" "Major mode for Scheme." t)
+(autoload 'run-scheme "cmuscheme" "Switch to interactive Scheme buffer." t)
+(setq auto-mode-alist (cons '("\\.ss" . scheme-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.sls" . scheme-mode) auto-mode-alist))
+(require 'exec-path-from-shell)
+(exec-path-from-shell-initialize)
+(exec-path-from-shell-copy-envs '("PATH" "CC" "CXX"))

@@ -1,0 +1,109 @@
+2018-01-26  tino calancha  <tino.calancha@gmail.com>
+
+	Reimplement mines-end-p
+
+	`mines-end-p' sometimes fails to detect a completed game. The current
+	implemention checks for a sufficient but not necessary condition for the
+	game to be completed.
+
+	Assuming a board with N cells, with M of those cells
+	(N > M) containing a mine; if the user already have uncovered N - M
+	mine-free cells, then the game is completed.  That means is necessary
+	and sufficient to check that M = 'number of uncovered cells' .
+
+	Bump version to v1.6
+	* mines.el (mines-end-p): End game if the number of uncovered cells
+	equals `mines-number-mines'.
+
+	Problem reported by Rolf Ade here 
+	https://github.com/calancha/Minesweeper/issues/2
+
+2018-01-14  Tino Calancha  <tino.calancha@gmail.com>
+
+	Do not uncover flagged cells if the user dont want that
+
+	If the user ask to uncover a flagged cell, we ask for confirmation;
+	then, the user might change his mind or go ahead and uncover the cell.
+
+	There is a bug in the logic and the cell is uncovered even after the
+	user cancel this action.  This commit fix that. Bump version to 1.5
+	* mines.el (mines-dig): Do not uncover one flagged cell if the user
+	cancel this action.
+
+2018-01-14  Tino Calancha  <tino.calancha@gmail.com>
+
+	Dont prompt user when updating the score file
+
+	Bump version to 1.4
+	* packages/mines/mines.el (mines--sort-score-file): Revert the buffer 
+	visiting the score file and set it read only.
+
+2018-01-13  Tino Calancha  <tino.calancha@gmail.com>
+
+	Sort the score file from better to worst results
+
+	`gamegrid-add-score' assumes that a higher score in the game means a
+	better result.	That is not true in this game, where the score is the
+	number of seconds to complete the puzzle.
+
+	We sort the score file from shorter to larger scores.  This ensures that
+	if we have already `gamegrid-score-file-length' records, then we discard
+	the worst result before saving a new score. Bump version to 1.3.
+	* packages/mines/mines.el/mines.el (mines--score-file): New defun
+	extracted from
+	`gamegrid-add-score-with-update-game-score'.
+
+	(mines--sort-score-file): Sort results from shorter to larger scores. 
+	Limit the number of records in the file to
+	`gamegrid-score-file-length'.
+
+	(mines-game-completed): Sort score file before and after update it with
+	the new score.
+
+2018-01-13  Tino Calancha  <tino.calancha@gmail.com>
+
+	Add fallback function for read-multiple-choice
+
+	read-multiple-choice appeared in Emacs 26.  Add fallback function for
+	Emacs < 26.
+	* packages/mines/mines.el/mines.el (mines--read-multiple-choice): New
+	function.
+	(mines): Use it.
+	* packages/mines/mines.el/mines-test.el
+	(mines-test-read-multiple-choice): Add test.
+
+2017-11-12  Tino Calancha  <tino.calancha@gmail.com>
+
+	* packages/mines/mines.el: Bump version to 1.2
+
+2017-11-11  Stefan Monnier  <monnier@iro.umontreal.ca>
+
+	* mines/mines.el (mines-mode): Move the docstring to where it belongs.
+
+2017-11-11  Tino Calancha  <tino.calancha@gmail.com>
+
+	* packages/mines/mines.el: Bump version to 1.1
+
+2017-11-11  Tino Calancha  <tino.calancha@gmail.com>
+
+	Move game documentation into `mines-mode' docstring
+
+	* packages/mines/mines.el (mines)
+	(mines-mode): Update docstring.
+
+2017-11-10  Stefan Monnier  <monnier@iro.umontreal.ca>
+
+	* mines: Fix compilation warnings
+
+2017-11-07  Tino Calancha  <tino.calancha@gmail.com>
+
+	New package mines.el
+
+	An elisp implementation of the minesweeper game.
+	* packages/mines/mines-tests.el
+	* packages/mines/Makefile
+	* packages/mines/LICENSE
+	* packages/mines/.travis.yml
+	* packages/mines/README.md
+	* packages/mines/mines.el: New file.
+

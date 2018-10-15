@@ -1,9 +1,0 @@
-;; Object semanticdb-project-database-file
-;; SEMANTICDB Tags save file
-(semanticdb-project-database-file "semanticdb-project-database-file"
-  :tables
-  (list
-)
-  :file "!usr!local!semantic.cache"
-  :semantic-tag-version "2.0"
-  :semanticdb-version "2.2")

@@ -3,6 +3,7 @@
   :init
   (add-to-list 'company-backends 'company-c-headers))
 (add-hook 'c-mode-common-hook 'hs-minor-mode)
+(add-hook 'c-mode-common-hook 'subword-mode)
 (add-hook 'c-mode-common-hook (lambda () (electric-pair-mode t)))
 ;; Available C style:
 ;; “gnu”: The default style for GNU projects

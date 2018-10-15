@@ -1,0 +1,6 @@
+semanticdb
+cache
+.*
+!.gitignore
+*~
+

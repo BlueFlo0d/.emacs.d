@@ -7,6 +7,10 @@
   [url-cookie "BIDUPSID" "B105435BBA04DB26804EA9EFE14B9F58" "31 Dec 37 23:55:55 [GMT]" "/" ".baidu.com" nil]
   [url-cookie "max-age" "2147483647" "31 Dec 37 23:55:55 [GMT]" "/" ".baidu.com" nil]
   [url-cookie "BAIDUID" "B105435BBA04DB26804EA9EFE14B9F58:FG=1" "31 Dec 37 23:55:55 [GMT]" "/" ".baidu.com" nil])
+ (".arxiv.org"
+  [url-cookie "browser" "106.38.68.162.1521775248587504" "Sun Mar 15 03:20:51 2048 GMT" "/" ".arxiv.org" nil])
+ (".stackoverflow.com"
+  [url-cookie "prov" "e969863e-afe5-c601-0b27-4fe55e3c469d" "Fri, 01-Jan-2055 00:00:00 GMT" "/" ".stackoverflow.com" nil])
  ("cn.bing.com"
   [url-cookie "httponly" nil "16-Nov-2018 09:59:29.00 GMT" "/" "cn.bing.com" nil]
   [url-cookie "MUIDB" "171E55824E7F6DDB1FA95EA14FDE6C6A" "16-Nov-2018 09:59:29.00 GMT" "/" "cn.bing.com" nil])
@@ -18,11 +22,20 @@
   [url-cookie "SRCHUSR" "DOB=20171022" "22-Oct-2019 09:59:29.00 GMT" "/" ".bing.com" nil]
   [url-cookie "SRCHUID" "V=2&GUID=B9CCEAE2F6AB4EF083845D395E1BF91F&dmnchg=1" "22-Oct-2019 09:59:29.00 GMT" "/" ".bing.com" nil]
   [url-cookie "SRCHD" "AF=NOFORM" "22-Oct-2019 09:59:29.00 GMT" "/" ".bing.com" nil])
+ (".serverfault.com"
+  [url-cookie "prov" "1737f13b-42c5-1335-9e45-79e525ac69e7" "Fri, 01-Jan-2055 00:00:00 GMT" "/" ".serverfault.com" nil])
+ (".csdn.net"
+  [url-cookie "uuid_tt_dd" "10_19311998540-1522632801271-115307" "Thu, 01 Jan 2025 00:00:00 GMT" "/" ".csdn.net" nil]
+  [url-cookie "dc_session_id" "10_1522632801271.673943" "Thu, 01 Jan 2025 00:00:00 GMT" "/" ".csdn.net" nil])
+ ("www.bing.com"
+  [url-cookie "MUIDB" "171E55824E7F6DDB1FA95EA14FDE6C6A" "Sun, 06-Oct-2019 17:23:05 GMT" "/" "www.bing.com" nil])
  ("www.baidu.com"
   [url-cookie "NOJS" "1" "12-Oct-2047 07:58:04.00 GMT" "/" "www.baidu.com" nil]))
 )
 (setq url-cookie-secure-storage
- '(("reddit.com"
+ '((".github.com"
+  [url-cookie "logged_in" "no" "Sat, 03 Apr 2038 03:24:17 -0000" "/" ".github.com" t])
+ ("reddit.com"
   [url-cookie "loid" "00000000000hvgrf3f.2.1508400777956.Z0FBQUFBQlo2RjZLUnExWWZLOHdaYlI4aWh4ckhYQ29yWi1NR09EcDZCZFVBeTh0ekd0VTRYSWVJd0JQQk5ia1dkWGVHZDc4alktUXdFQnROOEx0aXNGOUxGNWZhYnN4NGh1ME9iM2J2NTNsRk9MclN5VDdYLVVjTG4wMG90Y3NsLXRObndvTXVTaUs" "19-Oct-2019 08:12:58.00 GMT" "/" "reddit.com" t]))
 )
 
