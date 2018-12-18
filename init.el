@@ -41,7 +41,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (haskell-mode exec-path-from-shell pdf-tools cmake-ide elpy chess steam mines slime-volleyball sourcerer-theme color-theme neotree magit dired-du company-rtags auto-complete-clang-async auto-complete-clang markdown-toc markdown-mode+ markdown-mode cdlatex emms 2048-game xwidgete zygospore helm-gtags helm yasnippet ws-butler volatile-highlights use-package undo-tree iedit dtrt-indent counsel-projectile company clean-aindent-mode anzu)))
+    (ghci-completion haskell-emacs proof-general haskell-mode exec-path-from-shell pdf-tools cmake-ide elpy chess steam mines slime-volleyball sourcerer-theme color-theme neotree magit dired-du company-rtags auto-complete-clang-async auto-complete-clang markdown-toc markdown-mode+ markdown-mode cdlatex emms 2048-game xwidgete zygospore helm-gtags helm yasnippet ws-butler volatile-highlights use-package undo-tree iedit dtrt-indent counsel-projectile company clean-aindent-mode anzu)))
  '(tramp-syntax (quote default) nil (tramp)))
 
 (custom-set-faces
