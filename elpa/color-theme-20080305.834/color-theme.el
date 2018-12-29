@@ -5,7 +5,6 @@
 ;; Copyright (C) 2003, 2004, 2005, 2006  Xavier Maillard <zedek@gnu.org>
 
 ;; Version: 6.6.0
-;; Package-Version: 20070910.1007
 ;; Keywords: faces
 ;; Author: Jonadab the Unsightly One <jonadab@bright.net>
 ;; Maintainer: Xavier Maillard <zedek@gnu.org>

@@ -32,65 +32,6 @@
 ;; function-args
 ;; (require 'function-args)
 ;; (fa-config-default)
- (define-key c-mode-map  [(tab)] 'company-complete)
- (define-key c++-mode-map  [(tab)] 'company-complete)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   (quote
-    (ghci-completion haskell-emacs proof-general haskell-mode exec-path-from-shell pdf-tools cmake-ide elpy chess steam mines slime-volleyball sourcerer-theme color-theme neotree magit dired-du company-rtags auto-complete-clang-async auto-complete-clang markdown-toc markdown-mode+ markdown-mode cdlatex emms 2048-game xwidgete zygospore helm-gtags helm yasnippet ws-butler volatile-highlights use-package undo-tree iedit dtrt-indent counsel-projectile company clean-aindent-mode anzu)))
- '(tramp-syntax (quote default) nil (tramp)))
-
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
-(add-to-list 'default-frame-alist
-             '(font . "Courier-20"))
-;;(require 'emms-setup)
-;;(emms-all)
-;;(emms-default-players 'mplayer)
-(setq exec-path (append exec-path '("/usr/local/bin")))
-(add-to-list 'load-path "~/emms/lisp")
-(require 'emms-setup)
-(require 'emms-player-mplayer)
-(emms-standard)
-(emms-default-players)
-;;(define-emms-simple-player mplayer '(file url)
-  ;;(regexp-opt '(".ogg" ".mp3" ".wav" ".mpg" ".mpeg" ".wmv" ".wma"
-  ;;              ".mov" ".avi" ".divx" ".ogm" ".asf" ".mkv" "http://" "mms://"
-  ;;              ".rm" ".rmvb" ".mp4" ".flac" ".vob" ".m4a" ".flv" ".ogv" ".pls"))
-  ;;"mplayer" "-slave" "-quiet" "-really-quiet" "-fullscreen")
-(set-background-color "#500")
-(set-foreground-color "#FF5")
-(add-to-list 'load-path "~/.emacs.d/mu4e")
-(require 'mu4e)
-;; default
-
-(setq mu4e-maildir "~/Maildir")
-(setq mu4e-drafts-folder "/[PKU].Drafts")
-(setq mu4e-sent-folder   "/[PKU].Sent Mail")
-(setq mu4e-trash-folder  "/[PKU].Trash")
-
-(setq
- user-mail-address "hongqiantan@pku.edu.cn"
- user-full-name  "洪千坦 (Q. T. Hong)"
- message-signature
- (concat
-  "洪千坦 (Q. T. Hong)\n"
-  "Email: hongqiantan@pku.edu.cn\n"
-  "\n"))
-(require 'smtpmail)
-(setq message-send-mail-function 'smtpmail-send-it
-      smtpmail-stream-type 'starttls
-      smtpmail-default-smtp-server "mail.pku.edu.cn"
-      smtpmail-smtp-server "mail.pku.edu.cn"
-      smtpmail-smtp-service 465)
 
 (setenv "PATH" (concat (getenv "PATH") ":/Library/TeX/texbin/"))
 (setq exec-path (append exec-path '("/Library/TeX/texbin/")))
@@ -113,7 +54,7 @@
                                (setq cdlatex-command-alist
                                      '(("spl" "Insert split env" "" cdlatex-environment ("split") t nil)
                                        ))))
-(setq cmake-ide-build-dir "/Volumes/Externel/cmake-build/")
+(setq cmake-ide-build-dir "~/cmake-build/")
 (setenv "CC" "")
  (cmake-ide-setup)
 ;; (desktop-save-mode 1)
@@ -124,3 +65,53 @@
 (require 'exec-path-from-shell)
 (exec-path-from-shell-initialize)
 (exec-path-from-shell-copy-envs '("PATH" "CC" "CXX"))
+(require 'cl)
+(require 'color)
+(setq yascroll:delay-to-hide nil)
+(scroll-bar-mode -1)
+(global-yascroll-bar-mode 1)
+
+ (define-key c-mode-map  [(tab)] 'company-complete)
+ (define-key c++-mode-map  [(tab)] 'company-complete)
+(add-to-list 'default-frame-alist '(font . "Courier-20") )
+;;(require 'emms-setup)
+;;(emms-all)
+;;(emms-default-players 'mplayer)
+(setq exec-path (append exec-path '("/usr/local/bin")))
+(add-to-list 'load-path "~/emms/lisp")
+(require 'emms-setup)
+(require 'emms-player-mplayer)
+(emms-standard)
+(emms-default-players)
+;;(define-emms-simple-player mplayer '(file url)
+  ;;(regexp-opt '(".ogg" ".mp3" ".wav" ".mpg" ".mpeg" ".wmv" ".wma"
+  ;;              ".mov" ".avi" ".divx" ".ogm" ".asf" ".mkv" "http://" "mms://"
+  ;;              ".rm" ".rmvb" ".mp4" ".flac" ".vob" ".m4a" ".flv" ".ogv" ".pls"))
+  ;;"mplayer" "-slave" "-quiet" "-really-quiet" "-fullscreen")
+(defvar blink-cursor-colors (list  "#92c48f" "#6785c5" "#be369c" "#d9ca65")
+  "On each blink the cursor will cycle to the next color in this list.")
+
+(setq blink-cursor-count 0)
+(defun blink-cursor-timer-function ()
+  "Zarza wrote this cyberpunk variant of timer `blink-cursor-timer'.
+Warning: overwrites original version in `frame.el'.
+
+This one changes the cursor color on each blink. Define colors in `blink-cursor-colors'."
+  (when (not (internal-show-cursor-p))
+    (when (>= blink-cursor-count (length blink-cursor-colors))
+      (setq blink-cursor-count 0))
+    (set-cursor-color (nth blink-cursor-count blink-cursor-colors))
+    (setq blink-cursor-count (+ 1 blink-cursor-count))
+    )
+  (internal-show-cursor nil (not (internal-show-cursor-p)))
+  )
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   (quote
+    ("4bdc036ccf4ec5fc246cba3fcb5d18852d88026a77074209ebecdf9d8dbf1c75" default))))
+(load-theme 'k)

@@ -143,6 +143,10 @@ Initialize the color theme package by loading color-theme-libraries.
 
 ;;;***
 
+;;;### (autoloads nil nil ("color-theme-pkg.el") (0 0 0 0))
+
+;;;***
+
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
