@@ -42,10 +42,13 @@
                              (setq TeX-save-query  nil )
                              (setq TeX-show-compilation t)
                              ))
+(add-hook 'python-mode-hook (lambda ()
+                              (electric-pair-mode 1)
+                              ))
 
 ;; Key bindings
 (global-set-key (kbd "M-n") (kbd "C-x 5 o"))
-
+(global-set-key (kbd "C-z") (kbd "C-x u"))
 (add-hook 'cdlatex-mode-hook (lambda()
                                (global-set-key [C-tab] (quote cdlatex-tab))
                                (setq cdlatex-env-alist
@@ -113,5 +116,14 @@ This one changes the cursor color on each blink. Define colors in `blink-cursor-
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-    ("4bdc036ccf4ec5fc246cba3fcb5d18852d88026a77074209ebecdf9d8dbf1c75" default))))
+    ("4bdc036ccf4ec5fc246cba3fcb5d18852d88026a77074209ebecdf9d8dbf1c75" default)))
+ '(package-selected-packages
+   (quote
+    (helm racket-mode zygospore yascroll xwidgete ws-butler volatile-highlights use-package undo-tree steam slime-volleyball proof-general pdf-tools org neotree mines magit-popup iedit helm-swoop helm-projectile helm-gtags haskell-mode haskell-emacs git-commit ghub ghci-completion f exec-path-from-shell emms elpy dtrt-indent dired-du company-rtags company-c-headers color-theme cmake-ide clean-aindent-mode chess cdlatex anzu 2048-game))))
 (load-theme 'k)
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

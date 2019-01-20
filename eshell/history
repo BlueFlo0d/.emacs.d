@@ -1,0 +1,128 @@
+make
+./ksid
+make
+./ksid
+make
+./ksid
+./ksid
+make clean
+make
+cd ..
+make clean
+make
+;s
+lldb ksid
+cd src
+lldb ksid
+./ksid
+make
+./ksid
+lldb ksid
+make
+lldb ksid
+lldb ksid
+make
+lldb ksid
+cd ../../build/src/
+lldb ksid
+./ksid
+./ksid
+lldb ksid
+make
+lldb ksuid
+lldb ksid
+make
+./ksid
+./ksid
+./ksid
+./ksid
+./ksid
+lldb ksid
+make
+lldb ksid
+lldb ksid
+make
+./ksid
+./ksid
+./ksid
+./ksid
+lldb ksid
+./ksid
+echo *
+./ksid
+./ksid
+./ksid
+./ksid
+make
+make
+make
+make
+./ksid
+./ksid
+lldb ksid
+make
+lldb ksid
+make
+./ksid
+lldb ksid
+./ksid
+lldb ksid
+make
+./ksid
+ls
+python3 Iee.py
+python3 Iee.py 2
+plot.py
+python3 plot.py 
+python3 Iee.py 2
+python3 plot
+python3 plot.py
+python3 Iee.py 10
+python3 Iee.py
+python3 Iee.py 2
+python3 Iee.py 2
+python3 Iee.py 2
+ls
+Iee.sh
+./Iee.sh
+source Iee.sh
+./ksid
+./ksid
+make
+make
+make
+make
+make
+make
+make
+./ksid
+./ksid
+make
+./ksid
+python3 test.py|./ksid
+python3 test.py|./ksid
+c
+python3 test.py>t2.kl
+cat t2.kl
+./ksid
+ls
+python3 test.py>t2.kl
+ls
+./ksid
+cd ../../src
+rm spsc_queue.h
+cd ../build
+ls
+cd src
+ls
+make
+cd ../build/src
+lldb ksid
+make
+cd ../build/src
+make
+./ksid
+lldb ksid
+cd ~!
+cd ~
+open 1803.05316.pdf 
