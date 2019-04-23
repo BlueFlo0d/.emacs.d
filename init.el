@@ -34,7 +34,10 @@
 ;; (fa-config-default)
 
 (setenv "PATH" (concat (getenv "PATH") ":/Library/TeX/texbin/"))
-(setq exec-path (append exec-path '("/Library/TeX/texbin/")))
+(setq exec-path (append exec-path '("/Library/TeX/texbin/" "/usr/local/bin/")))
+(setq scheme-program-name "chez")
+(setq geiser-chez-binary "chez")
+(setq geiser-active-implementations '(chez))
 (add-hook 'LaTeX-mode-hook (lambda()
                              (turn-on-cdlatex)
                              (add-to-list 'TeX-command-list '("XeLaTeX" "%`xelatex%(mode)%' %t" TeX-run-TeX nil t))
@@ -59,7 +62,6 @@
                                        ))))
 (setq cmake-ide-build-dir "~/cmake-build/")
 (setenv "CC" "")
- (cmake-ide-setup)
 ;; (desktop-save-mode 1)
 (autoload 'scheme-mode "cmuscheme" "Major mode for Scheme." t)
 (autoload 'run-scheme "cmuscheme" "Switch to interactive Scheme buffer." t)
@@ -119,7 +121,7 @@ This one changes the cursor color on each blink. Define colors in `blink-cursor-
     ("4bdc036ccf4ec5fc246cba3fcb5d18852d88026a77074209ebecdf9d8dbf1c75" default)))
  '(package-selected-packages
    (quote
-    (helm racket-mode zygospore yascroll xwidgete ws-butler volatile-highlights use-package undo-tree steam slime-volleyball proof-general pdf-tools org neotree mines magit-popup iedit helm-swoop helm-projectile helm-gtags haskell-mode haskell-emacs git-commit ghub ghci-completion f exec-path-from-shell emms elpy dtrt-indent dired-du company-rtags company-c-headers color-theme cmake-ide clean-aindent-mode chess cdlatex anzu 2048-game))))
+    (flycheck ggtags paredit geiser cdlatex auctex ace-jump-mode helm racket-mode zygospore yascroll xwidgete ws-butler volatile-highlights use-package undo-tree steam slime-volleyball proof-general org neotree mines magit-popup iedit helm-swoop helm-projectile helm-gtags haskell-mode haskell-emacs git-commit ghub ghci-completion f exec-path-from-shell emms elpy dtrt-indent dired-du company-rtags company-c-headers color-theme cmake-ide clean-aindent-mode chess anzu 2048-game))))
 (load-theme 'k)
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -127,3 +129,19 @@ This one changes the cursor color on each blink. Define colors in `blink-cursor-
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+(setq doc-view-resolution 200)
+(eval-after-load "term"
+  '(progn (term-set-escape-char ?\C-x)
+          (define-key term-raw-map (kbd "C-c") nil)))
+(add-hook 'scheme-mode-hook (lambda ()
+                              (geiser-mode)
+                              (paredit-mode)
+                              (local-set-key (kbd "M-l") 'geiser-load-current-buffer)))
+(setq geiser-mode-start-repl-p t)
+(global-hl-line-mode 1)
+(set-face-background 'hl-line "#1D294A")
+(global-flycheck-mode 1)
+(cmake-ide-setup)
+
+(provide 'init)
+;;; init.el ends here
