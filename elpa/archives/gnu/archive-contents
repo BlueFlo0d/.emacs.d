@@ -131,7 +131,7 @@
 	 ((:keywords "brief" "emulations" "crisp")
 	  (:url . "http://elpa.gnu.org/packages/brief.html"))])
  (buffer-expose .
-		[(0 4 1)
+		[(0 4 2)
 		 ((emacs
 		   (25))
 		  (cl-lib
@@ -534,7 +534,7 @@
 	      ((:url . "http://elpa.gnu.org/packages/frame-tabs.html")
 	       (:keywords "frames" "tabs"))])
  (frog-menu .
-	    [(0 2 2)
+	    [(0 2 3)
 	     ((emacs
 	       (26))
 	      (avy

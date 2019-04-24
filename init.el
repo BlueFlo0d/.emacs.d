@@ -17,7 +17,6 @@
 (add-to-list 'load-path "~/.emacs.d/custom")
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 ;;(load-theme 'sourcerer t)
-
 (require 'setup-general)
 (if (version< emacs-version "24.4")
     (require 'setup-ivy-counsel)
@@ -60,7 +59,7 @@
                                (setq cdlatex-command-alist
                                      '(("spl" "Insert split env" "" cdlatex-environment ("split") t nil)
                                        ))))
-(setq cmake-ide-build-dir "~/cmake-build/")
+;;(setq cmake-ide-build-dir "~/cmake-build/")
 (setenv "CC" "")
 ;; (desktop-save-mode 1)
 (autoload 'scheme-mode "cmuscheme" "Major mode for Scheme." t)
@@ -121,7 +120,25 @@ This one changes the cursor color on each blink. Define colors in `blink-cursor-
     ("4bdc036ccf4ec5fc246cba3fcb5d18852d88026a77074209ebecdf9d8dbf1c75" default)))
  '(package-selected-packages
    (quote
-    (flycheck ggtags paredit geiser cdlatex auctex ace-jump-mode helm racket-mode zygospore yascroll xwidgete ws-butler volatile-highlights use-package undo-tree steam slime-volleyball proof-general org neotree mines magit-popup iedit helm-swoop helm-projectile helm-gtags haskell-mode haskell-emacs git-commit ghub ghci-completion f exec-path-from-shell emms elpy dtrt-indent dired-du company-rtags company-c-headers color-theme cmake-ide clean-aindent-mode chess anzu 2048-game))))
+    (magit flycheck-irony irony flycheck ggtags paredit geiser cdlatex auctex ace-jump-mode helm racket-mode zygospore yascroll xwidgete ws-butler volatile-highlights use-package undo-tree steam slime-volleyball proof-general org neotree mines magit-popup iedit helm-swoop helm-projectile helm-gtags haskell-mode haskell-emacs git-commit ghub ghci-completion f exec-path-from-shell emms elpy dtrt-indent dired-du company-rtags company-c-headers color-theme cmake-ide clean-aindent-mode chess anzu 2048-game)))
+ '(safe-local-variable-values
+   (quote
+    ((cmake-ide-project-dir . ~/ksi)
+     (cmake-ide-build-dir . ~/ksi/build)
+     (eval setq cmake-ide-build-dir
+           (concat my-project-path "build"))
+     (cmake-ide-project-dir . my-project-path)
+     (eval set
+           (make-local-variable
+            (quote my-project-path))
+           (file-name-directory
+            (let
+                ((d
+                  (dir-locals-find-file ".")))
+              (if
+                  (stringp d)
+                  d
+                (car d)))))))))
 (load-theme 'k)
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -129,6 +146,12 @@ This one changes the cursor color on each blink. Define colors in `blink-cursor-
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+(add-hook 'c-mode-hook 'irony-mode)
+(add-hook 'irony-mode-hook 'company-irony-setup-begin-commands)
+(setq company-backends (delete 'company-semantic company-backends))
+(eval-after-load 'company
+  '(add-to-list
+    'company-backends 'company-irony))
 (setq doc-view-resolution 200)
 (eval-after-load "term"
   '(progn (term-set-escape-char ?\C-x)
@@ -141,7 +164,22 @@ This one changes the cursor color on each blink. Define colors in `blink-cursor-
 (global-hl-line-mode 1)
 (set-face-background 'hl-line "#1D294A")
 (global-flycheck-mode 1)
+(setq cmake-ide-flags-c '("-I/usr/local/include"
+                           "-I/Library/Developer/CommandLineTools/usr/include"
+                           "-I/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"
+                           "-I/Library/Developer/CommandLineTools/usr/include"
+                           "-I/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks"))
 (cmake-ide-setup)
 
+;; GNUS setup
+(setq user-full-name "Qiantan Hong")
+(setq user-email-address "qhong@mit.edu")
+
+(setq gnus-select-method
+      '(nnimap "imap.exchange.mit.edu"))
+(setq gnus-secondary-select-methods '((nnml "")))
+(setq smtpmail-smtp-server "outgoing.mit.edu"
+      smtpmail-smtp-service 587
+      gnus-ignored-newsgroups "^to\\.\\|^[0-9. ]+\\( \\|$\\)\\|^[\"]\"[#'()]")
 (provide 'init)
 ;;; init.el ends here
