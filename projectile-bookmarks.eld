@@ -1,1 +1,1 @@
-("~/.emacs.d/" "~/ksi/" "~/courses/8.13/" "~/courses/6.042/" "~/fast-wait-free-queue/" "~/research/Graphene/" "~/courses/mcm/" "~/portaudio/" "~/WMMIT/" "~/vst3sdk/" "~/vst3sdk/public.sdk/" "~/nikki/" "~/qtvm/" "/Volumes/Externel/cmake-build/" "~/ksi/build/" "~/qtvm/qtvm/")
+("/usr/home/qhong/.emacs.d/" "/usr/home/qhong/Projects/fffsh/" "/usr/home/qhong/SymmetryBook/" "/usr/ports/" "/usr/home/qhong/playground/slimlock/" "/usr/src/" "/usr/home/qhong/playground/CSP/" "~/.emacs.d/" "/usr/home/qhong/pam_script/" "/usr/home/qhong/pam-gnupg/")

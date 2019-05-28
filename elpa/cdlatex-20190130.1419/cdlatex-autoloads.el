@@ -59,7 +59,7 @@ Entering cdlatex-mode calls the hook cdlatex-mode-hook.
 
 \(fn &optional ARG)" t nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "cdlatex" '("cdlatex-")))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "cdlatex" '(#("cdlatex-" 0 8 (fontified nil)))))
 
 ;;;***
 

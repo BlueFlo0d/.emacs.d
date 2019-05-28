@@ -1,0 +1,75 @@
+;; Emacs-W3 HTTP cookies file
+;; Automatically generated file!!! DO NOT EDIT!!!
+
+(setq url-cookie-storage
+ '(("www.baidu.com"
+  [url-cookie "NOJS" "1" "12-Oct-2047 07:58:04.00 GMT" "/" "www.baidu.com" nil])
+ (".askubuntu.com"
+  [url-cookie "prov" "4446d858-b032-dc7b-aa8a-c56871903531" "Fri, 01-Jan-2055 00:00:00 GMT" "/" ".askubuntu.com" nil])
+ (".antergos.com"
+  [url-cookie "__cfduid" "dee8ea7660359b98739796b33f16ad1b61557266114" "Wed, 06-May-20 21:55:14 GMT" "/" ".antergos.com" nil])
+ ("tieba.baidu.com"
+  [url-cookie "TIEBAUID" "cb23caae14130a0d384a57f1" "Thu, 31-Dec-2020 15:59:59 GMT" "/" "tieba.baidu.com" nil]
+  [url-cookie "TIEBA_USERTYPE" "7b0110063b111255690ff668" "Thu, 31-Dec-2020 15:59:59 GMT" "/" "tieba.baidu.com" nil])
+ (".ncatlab.org"
+  [url-cookie "__cfduid" "d3257a1b3afb4f49186bd50cfbad5a2fa1544469035" "Tue, 10-Dec-19 19:10:35 GMT" "/" ".ncatlab.org" nil])
+ ("www.bing.com"
+  [url-cookie "MUIDB" "171E55824E7F6DDB1FA95EA14FDE6C6A" "Sun, 06-Oct-2019 17:23:05 GMT" "/" "www.bing.com" nil])
+ (".csdn.net"
+  [url-cookie "dc_session_id" "10_1522632801271.673943" "Thu, 01 Jan 2025 00:00:00 GMT" "/" ".csdn.net" nil]
+  [url-cookie "uuid_tt_dd" "10_19311998540-1522632801271-115307" "Thu, 01 Jan 2025 00:00:00 GMT" "/" ".csdn.net" nil])
+ (".serverfault.com"
+  [url-cookie "prov" "1737f13b-42c5-1335-9e45-79e525ac69e7" "Fri, 01-Jan-2055 00:00:00 GMT" "/" ".serverfault.com" nil])
+ (".bing.com"
+  [url-cookie "SRCHD" "AF=NOFORM" "22-Oct-2019 09:59:29.00 GMT" "/" ".bing.com" nil]
+  [url-cookie "SRCHUID" "V=2&GUID=B9CCEAE2F6AB4EF083845D395E1BF91F&dmnchg=1" "22-Oct-2019 09:59:29.00 GMT" "/" ".bing.com" nil]
+  [url-cookie "SRCHUSR" "DOB=20171022" "22-Oct-2019 09:59:29.00 GMT" "/" ".bing.com" nil])
+ (".stackoverflow.com"
+  [url-cookie "prov" "e969863e-afe5-c601-0b27-4fe55e3c469d" "Fri, 01-Jan-2055 00:00:00 GMT" "/" ".stackoverflow.com" nil])
+ (".arxiv.org"
+  [url-cookie "browser" "106.38.68.162.1521775248587504" "Sun Mar 15 03:20:51 2048 GMT" "/" ".arxiv.org" nil])
+ (".investors.com"
+  [url-cookie "__cfduid" "dc4ce2a72239219e26f57771d76153d011539797170" "Thu, 17-Oct-19 17:26:10 GMT" "/" ".investors.com" nil])
+ (".github.com"
+  [url-cookie "_octo" "GH1.1.1105960507.1557210332" "Fri, 07 May 2021 06:25:32 -0000" "/" ".github.com" nil])
+ (".stackexchange.com"
+  [url-cookie "prov" "024800ec-025a-5896-f5e4-ddb4c7b2b077" "Fri, 01-Jan-2055 00:00:00 GMT" "/" ".stackexchange.com" nil])
+ (".reddit.com"
+  [url-cookie "rseor3" "true" "Thu, 06 Jun 2019 09:03:16 GMT" "/" ".reddit.com" nil]
+  [url-cookie "rabt" "" "Thu, 06 Jun 2019 09:03:16 GMT" "/" ".reddit.com" nil])
+ (".fandom.com"
+  [url-cookie "wikia_beacon_id" "eVOutQZwn1" "Sun, 03 Nov 2019 09:26:22 GMT" "/" ".fandom.com" nil])
+ ("forums.mozillazine.org"
+  [url-cookie "phpbb3-mzforum23_u" "1" "Wed, 06-May-2020 09:50:30 GMT" "/" "forums.mozillazine.org" nil]
+  [url-cookie "phpbb3-mzforum23_k" "" "Wed, 06-May-2020 09:50:30 GMT" "/" "forums.mozillazine.org" nil]
+  [url-cookie "phpbb3-mzforum23_sid" "a224921670f60865d116b0b8f8b2361b" "Wed, 06-May-2020 09:50:30 GMT" "/" "forums.mozillazine.org" nil])
+ ("daemonforums.org"
+  [url-cookie "bblastvisit" "1557282698" "Thu May 07 02:31:01 2020 GMT" "/" "daemonforums.org" nil]
+  [url-cookie "bblastactivity" "0" "Thu May 07 02:31:01 2020 GMT" "/" "daemonforums.org" nil])
+ (".baidu.com"
+  [url-cookie "BAIDUID" "B105435BBA04DB26804EA9EFE14B9F58:FG=1" "31 Dec 37 23:55:55 [GMT]" "/" ".baidu.com" nil]
+  [url-cookie "max-age" "2147483647" "31 Dec 37 23:55:55 [GMT]" "/" ".baidu.com" nil]
+  [url-cookie "BIDUPSID" "B105435BBA04DB26804EA9EFE14B9F58" "31 Dec 37 23:55:55 [GMT]" "/" ".baidu.com" nil]
+  [url-cookie "PSTM" "1508399874" "31 Dec 37 23:55:55 [GMT]" "/" ".baidu.com" nil]))
+)
+(setq url-cookie-secure-storage
+ '(("reddit.com"
+  [url-cookie "loid" "00000000000hvgrf3f.2.1508400777956.Z0FBQUFBQlo2RjZLUnExWWZLOHdaYlI4aWh4ckhYQ29yWi1NR09EcDZCZFVBeTh0ekd0VTRYSWVJd0JQQk5ia1dkWGVHZDc4alktUXdFQnROOEx0aXNGOUxGNWZhYnN4NGh1ME9iM2J2NTNsRk9MclN5VDdYLVVjTG4wMG90Y3NsLXRObndvTXVTaUs" "19-Oct-2019 08:12:58.00 GMT" "/" "reddit.com" t]
+  [url-cookie "edgebucket" "OAMtYr7Emys1kTmkOO" "Thu May 06 09:03:15 2021 GMT" "/" "reddit.com" t])
+ ("forum.antergos.com"
+  [url-cookie "express.sid" "s%3AqFv0fOhuOcZ5MufTFgAj2XC-l1nrLSSu.Xwscgjx8m%2BDac%2FdH7JypAy7v26PrhNCDXDfZODwGddw" "Tue, 28 May 2019 21:55:14 GMT" "/" "forum.antergos.com" t])
+ ("www.emacswiki.org"
+  [url-cookie "Wiki" "lang%251eorg%20mode" "Wed, 04-Nov-2020 18:57:32 GMT" "/" "www.emacswiki.org" t])
+ (".debian-administration.org"
+  [url-cookie "__cfduid" "d54c1f8c4e6e4cde13fdb0473922cc3731557219228" "Wed, 06-May-20 08:53:48 GMT" "/" ".debian-administration.org" t])
+ (".reddit.com"
+  [url-cookie "loid" "00000000000hvgrf3f.2.1508400777956.Z0FBQUFBQmMwVW5UWW1MUExVQlRXenl1THpPYXNBbnBxREp5LTlySWs4eVhUZnNDZDkzV3NVR3ZGcFRZWWNDZnhzd0hFSmR2a0plMmg0OGNNM3hkNmhfeThYTk9iaVZ3VXRHYUd5ZjVTelRvTXdnV0ZZNUdabC1TYVFuNDZGRVBsTGMwek5mcU1HTzM" "Fri, 07 May 2021 09:03:15 GMT" "/" ".reddit.com" t]
+  [url-cookie "token" "eyJhY2Nlc3NUb2tlbiI6Ii1qNWNPVFp6T3FDaHd0SHp1TnAteU95eHpKaWsiLCJ0b2tlblR5cGUiOiJiZWFyZXIiLCJleHBpcmVzIjoiMjAxOS0wNS0wOFQwMjo1MjozNS45OTBaIiwic2NvcGUiOiIqIiwidW5zYWZlTG9nZ2VkT3V0Ijp0cnVlfQ==.2" "Sat, 08 May 2021 01:52:35 GMT" "/" ".reddit.com" t])
+ (".github.com"
+  [url-cookie "logged_in" "no" "Sat, 03 Apr 2038 03:24:17 -0000" "/" ".github.com" t]))
+)
+
+;; Local Variables:
+;; version-control: never
+;; no-byte-compile: t
+;; End:

@@ -33,10 +33,17 @@
 ;; (fa-config-default)
 
 (setenv "PATH" (concat (getenv "PATH") ":/Library/TeX/texbin/"))
+(setenv "CC" "clang")
+(setenv "CXX" "clang++")
+(setenv "QT_SCALE_FACTOR" "2.0")
+(setenv "GDK_DPI_SCALE" "2.0")
 (setq exec-path (append exec-path '("/Library/TeX/texbin/" "/usr/local/bin/")))
-(setq scheme-program-name "chez")
-(setq geiser-chez-binary "chez")
+(setq scheme-program-name "chez-scheme")
+(setq geiser-chez-binary "chez-scheme")
 (setq geiser-active-implementations '(chez))
+(with-eval-after-load "tex"
+  (add-to-list 'TeX-view-program-list '("zathura" "/usr/local/bin/zathura %o"))
+  (setcdr (assq 'output-pdf TeX-view-program-selection) '("zathura")))
 (add-hook 'LaTeX-mode-hook (lambda()
                              (turn-on-cdlatex)
                              (add-to-list 'TeX-command-list '("XeLaTeX" "%`xelatex%(mode)%' %t" TeX-run-TeX nil t))
@@ -52,7 +59,7 @@
 (global-set-key (kbd "M-n") (kbd "C-x 5 o"))
 (global-set-key (kbd "C-z") (kbd "C-x u"))
 (add-hook 'cdlatex-mode-hook (lambda()
-                               (global-set-key [C-tab] (quote cdlatex-tab))
+                               (local-set-key [C-tab] (quote cdlatex-tab))
                                (setq cdlatex-env-alist
                                      '(("split" "\\begin{split}\nAUTOLABEL\n?\n\\end{split}\n" nil)
                                        ))
@@ -60,18 +67,15 @@
                                      '(("spl" "Insert split env" "" cdlatex-environment ("split") t nil)
                                        ))))
 ;;(setq cmake-ide-build-dir "~/cmake-build/")
-(setenv "CC" "")
 ;; (desktop-save-mode 1)
 (autoload 'scheme-mode "cmuscheme" "Major mode for Scheme." t)
 (autoload 'run-scheme "cmuscheme" "Switch to interactive Scheme buffer." t)
 (setq auto-mode-alist (cons '("\\.ss" . scheme-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.sls" . scheme-mode) auto-mode-alist))
-(require 'exec-path-from-shell)
-(exec-path-from-shell-initialize)
-(exec-path-from-shell-copy-envs '("PATH" "CC" "CXX"))
 (require 'cl)
 (require 'color)
 (setq yascroll:delay-to-hide nil)
+(menu-bar-mode -1)
 (scroll-bar-mode -1)
 (global-yascroll-bar-mode 1)
 
@@ -120,7 +124,7 @@ This one changes the cursor color on each blink. Define colors in `blink-cursor-
     ("4bdc036ccf4ec5fc246cba3fcb5d18852d88026a77074209ebecdf9d8dbf1c75" default)))
  '(package-selected-packages
    (quote
-    (magit flycheck-irony irony flycheck ggtags paredit geiser cdlatex auctex ace-jump-mode helm racket-mode zygospore yascroll xwidgete ws-butler volatile-highlights use-package undo-tree steam slime-volleyball proof-general org neotree mines magit-popup iedit helm-swoop helm-projectile helm-gtags haskell-mode haskell-emacs git-commit ghub ghci-completion f exec-path-from-shell emms elpy dtrt-indent dired-du company-rtags company-c-headers color-theme cmake-ide clean-aindent-mode chess anzu 2048-game)))
+    (openwith notmuch sudo-edit multi-term exwm magit flycheck-irony irony flycheck ggtags paredit geiser cdlatex auctex ace-jump-mode helm racket-mode zygospore yascroll xwidgete ws-butler volatile-highlights use-package undo-tree steam slime-volleyball proof-general org neotree mines magit-popup iedit helm-swoop helm-projectile helm-gtags haskell-mode haskell-emacs git-commit ghub ghci-completion f exec-path-from-shell emms elpy dtrt-indent dired-du company-rtags company-c-headers color-theme cmake-ide clean-aindent-mode chess anzu 2048-game)))
  '(safe-local-variable-values
    (quote
     ((cmake-ide-project-dir . ~/ksi)
@@ -171,15 +175,132 @@ This one changes the cursor color on each blink. Define colors in `blink-cursor-
                            "-I/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks"))
 (cmake-ide-setup)
 
-;; GNUS setup
-(setq user-full-name "Qiantan Hong")
-(setq user-email-address "qhong@mit.edu")
+;; Email setup
+(setq notmuch-search-oldest-first nil)
 
-(setq gnus-select-method
-      '(nnimap "imap.exchange.mit.edu"))
-(setq gnus-secondary-select-methods '((nnml "")))
-(setq smtpmail-smtp-server "outgoing.mit.edu"
-      smtpmail-smtp-service 587
-      gnus-ignored-newsgroups "^to\\.\\|^[0-9. ]+\\( \\|$\\)\\|^[\"]\"[#'()]")
+(setq x-super-keysym 'meta)
+(setq x-meta-keysym 'super)
+
+(require 'exwm)(require 'exwm-randr)
+
+(setq exwm-randr-workspace-output-plist '(0 "eDP1" 9 "HDMI1" 8 "HDMI2"))
+(exwm-enable)
+(add-hook 'exwm-randr-screen-change-hook
+          (lambda ()
+            (start-process-shell-command
+             "xrandr" nil "xrandr --output eDP1 --auto -fbmm 310x122 --output HDMI1 --above eDP1 --auto --output HDMI2 --right-of HDMI1 --auto")))
+
+(exwm-randr-enable)
+
+(setq exwm-input-global-keys
+      `(([?\s-r] . exwm-reset)
+        ([?\s-w] . exwm-workspace-switch)
+        ,@(mapcar (lambda (i)
+                    `(,(kbd (format "s-%d" i)) .
+                      (lambda ()
+                        (interactive)
+                        (exwm-workspace-switch-create ,i))))
+                  (number-sequence 0 9))))
+(setq exwm-input-simulation-keys
+      '(([?\C-b] . [left])
+        ([?\C-f] . [right])
+        ([?\C-p] . [up])
+        ([?\C-n] . [down])
+        ([?\C-a] . [home])
+        ([?\C-e] . [end])
+        ([?\M-v] . [prior])
+        ([?\C-v] . [next])
+        ([?\C-d] . [delete])
+        ([?\C-k] . [S-end delete])))
+
+(require 'multi-term)
+(setenv "ENV" "/home/qhong/.shrc")
+(setq multi-term-program "/usr/local/bin/bash")
+(setq gc-cons-threshold 8000000)
+(setq gc-cons-percentage 0.25)
+
+;; (setq k--brightness 40000)
+;; (defun k--refresh-brightness ()
+;;   (start-process-shell-command
+;;    "xbrightness" nil (format "xbrightness %d" k--brightness)))
+;; (defun k--increase-brightness ()
+;;   (interactive)
+;;     (setq k--brightness (+ 2000 k--brightness))
+;;   (if (> k--brightness 65535)
+;;       (setq k--brightness 65535))
+;;   (k--refresh-brightness))
+;; (defun k--decrease-brightness ()
+;;   (interactive)
+;;   (setq k--brightness (- k--brightness 2000))
+;;     (if (< k--brightness 10000)
+;;         (setq k--brightness 10000))
+;;     (k--refresh-brightness))
+;; (global-set-key (kbd "<f5>") 'k--decrease-brightness)
+;; (global-set-key (kbd "<f6>") 'k--increase-brightness)
+ ;; Now with native support, no need
+
+;; Switching workflow
+(global-set-key (kbd "s-f") 'next-buffer)
+(global-set-key (kbd "s-b") 'previous-buffer)
+(global-set-key (kbd "s-x") 'multi-term-next)
+(advice-add 'multi-term :after  (lambda ()
+                            (local-set-key (kbd "s-x") 'multi-term)
+                            (local-set-key (kbd "s-f") 'multi-term-next)
+                            (local-set-key (kbd "s-b") 'multi-term-prev)
+                            (local-set-key (kbd "M-DEL") (lambda ()
+                                                           (interactive)
+                                                           (term-send-raw-string "\e\C-?")))
+                            (local-set-key (kbd "s-g") (lambda ()
+                                                         (interactive)
+                                                         (let ((current-frame (selected-frame)))
+                                                           (set-frame-parameter current-frame
+                                                                                'buffer-predicate
+                                                                                (lambda (buffer)
+                                                                                  (not (string= (buffer-local-value 'major-mode buffer) "term-mode"))))
+                                                           (switch-to-buffer (other-buffer))
+                                                           (set-frame-parameter current-frame 'buffer-predicate (lambda (buffer) t)))))))
+(advice-add 'term-char-mode :after (lambda ()
+                                     (local-set-key (kbd "C-c C-j") 'term-line-mode)))
+
+;; Quick launch apps
+(global-set-key (kbd "s-G") 'eww)
+(add-hook 'emacs-lisp-mode-hook 'electric-pair-mode)
+
+;; Emacs server
+(server-start)
+(add-hook 'server-switch-hook
+          (lambda ()
+            (when (current-local-map)
+              (use-local-map (copy-keymap (current-local-map))))
+	        (when server-buffer-clients
+		      (local-set-key (kbd "C-x k") 'server-edit))))
+;; Sudo edit better default dir
+(add-hook 'find-file-hook
+          (lambda ()
+              (setq default-directory
+                    (replace-regexp-in-string "^/sudo:root@localhost:" "" default-directory))))
+
+;; Using external programs for opening some files
+(require 'openwith)
+(setq openwith-associations
+      (list
+       (list (openwith-make-extension-regexp
+              '("pdf"))
+             "zathura"
+             '(file))
+       ))
+
+;; Print screen
+(global-set-key (kbd "<print>")
+  (lambda ()
+    (interactive)
+    (let ((path (concat "~/Documents/Screenshot-" (format-time-string "%Y-%m-%d,%H:%M:%S") ".png")))
+      (start-process-shell-command
+       "import" nil (concat "import -window root " path))
+    (message (concat "Screenshot saved to " path)))
+))
+
+
+(openwith-mode t)
 (provide 'init)
 ;;; init.el ends here
