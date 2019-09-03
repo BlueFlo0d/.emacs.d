@@ -56,7 +56,15 @@
                               ))
 
 ;; Key bindings
-(global-set-key (kbd "M-n") (kbd "C-x 5 o"))
+(global-set-key (kbd "s-o") 'ace-window)
+(global-set-key (kbd "s-j") 'ace-jump-mode)
+(global-set-key (kbd "s-s") 'helm-swoop)
+(require 'framemove)
+(setq framemove-hook-into-windmove t)
+(global-set-key (kbd "s-p") 'windmove-up)
+(global-set-key (kbd "s-n") 'windmove-down)
+(global-set-key (kbd "s-f") 'windmove-right)
+(global-set-key (kbd "s-b") 'windmove-left)
 (global-set-key (kbd "C-z") (kbd "C-x u"))
 (add-hook 'cdlatex-mode-hook (lambda()
                                (local-set-key [C-tab] (quote cdlatex-tab))
@@ -72,6 +80,7 @@
 (autoload 'run-scheme "cmuscheme" "Switch to interactive Scheme buffer." t)
 (setq auto-mode-alist (cons '("\\.ss" . scheme-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.sls" . scheme-mode) auto-mode-alist))
+(setq auto-mode-alist (delq (assoc "\\.rkt\\'" auto-mode-alist) auto-mode-alist))
 (require 'cl)
 (require 'color)
 (setq yascroll:delay-to-hide nil)
@@ -124,7 +133,7 @@ This one changes the cursor color on each blink. Define colors in `blink-cursor-
     ("4bdc036ccf4ec5fc246cba3fcb5d18852d88026a77074209ebecdf9d8dbf1c75" default)))
  '(package-selected-packages
    (quote
-    (openwith notmuch sudo-edit multi-term exwm magit flycheck-irony irony flycheck ggtags paredit geiser cdlatex auctex ace-jump-mode helm racket-mode zygospore yascroll xwidgete ws-butler volatile-highlights use-package undo-tree steam slime-volleyball proof-general org neotree mines magit-popup iedit helm-swoop helm-projectile helm-gtags haskell-mode haskell-emacs git-commit ghub ghci-completion f exec-path-from-shell emms elpy dtrt-indent dired-du company-rtags company-c-headers color-theme cmake-ide clean-aindent-mode chess anzu 2048-game)))
+    (ace-window openwith notmuch sudo-edit multi-term exwm magit flycheck-irony irony flycheck ggtags paredit geiser cdlatex auctex ace-jump-mode helm racket-mode zygospore yascroll xwidgete ws-butler volatile-highlights use-package undo-tree steam slime-volleyball proof-general org neotree mines magit-popup iedit helm-swoop helm-projectile helm-gtags haskell-mode haskell-emacs git-commit ghub ghci-completion f exec-path-from-shell emms elpy dtrt-indent dired-du company-rtags company-c-headers color-theme cmake-ide clean-aindent-mode chess anzu 2048-game)))
  '(safe-local-variable-values
    (quote
     ((cmake-ide-project-dir . ~/ksi)
@@ -176,20 +185,27 @@ This one changes the cursor color on each blink. Define colors in `blink-cursor-
 (cmake-ide-setup)
 
 ;; Email setup
+(setq smtpmail-default-stmp-server "smtp.exchange.mit.edu"
+      smtpmail-local-domain "mit.edu")
+(load-library "smtpmail")
+(setq send-mail-function 'smtpmail-send-it)
+
 (setq notmuch-search-oldest-first nil)
 
 (setq x-super-keysym 'meta)
 (setq x-meta-keysym 'super)
 
 (require 'exwm)(require 'exwm-randr)
-
-(setq exwm-randr-workspace-output-plist '(0 "eDP1" 9 "HDMI1" 8 "HDMI2"))
+(setq exwm-workspace-number 4)
 (exwm-enable)
+
+(require 'exwm-randr)
+(setq exwm-randr-workspace-output-plist
+      '(0 "DP-2-1" 1 "HDMI-1" 2 "eDP-1"))
 (add-hook 'exwm-randr-screen-change-hook
           (lambda ()
             (start-process-shell-command
-             "xrandr" nil "xrandr --output eDP1 --auto -fbmm 310x122 --output HDMI1 --above eDP1 --auto --output HDMI2 --right-of HDMI1 --auto")))
-
+             "xrandr" nil "xrandr --output DP-2-1 --output HDMI-1 --output eDP-1 --auto")))
 (exwm-randr-enable)
 
 (setq exwm-input-global-keys
@@ -240,9 +256,20 @@ This one changes the cursor color on each blink. Define colors in `blink-cursor-
  ;; Now with native support, no need
 
 ;; Switching workflow
-(global-set-key (kbd "s-f") 'next-buffer)
-(global-set-key (kbd "s-b") 'previous-buffer)
+(defun execute-without-multiterm (k)
+  (eval `(lambda ()
+    (interactive)
+    (let ((current-frame (selected-frame)))
+      (set-frame-parameter current-frame
+                           'buffer-predicate
+                           (lambda (buffer)
+                             (not (string= (buffer-local-value 'major-mode buffer) "term-mode"))))
+      (,@k)
+      (set-frame-parameter current-frame 'buffer-predicate (lambda (buffer) t))))))
+(global-set-key (kbd "s-f") (execute-without-multiterm `(next-buffer)))
+(global-set-key (kbd "s-b") (execute-without-multiterm `(previous-buffer)))
 (global-set-key (kbd "s-x") 'multi-term-next)
+(global-set-key (kbd "s-X") 'multi-term)
 (advice-add 'multi-term :after  (lambda ()
                             (local-set-key (kbd "s-x") 'multi-term)
                             (local-set-key (kbd "s-f") 'multi-term-next)
@@ -250,20 +277,19 @@ This one changes the cursor color on each blink. Define colors in `blink-cursor-
                             (local-set-key (kbd "M-DEL") (lambda ()
                                                            (interactive)
                                                            (term-send-raw-string "\e\C-?")))
-                            (local-set-key (kbd "s-g") (lambda ()
-                                                         (interactive)
-                                                         (let ((current-frame (selected-frame)))
-                                                           (set-frame-parameter current-frame
-                                                                                'buffer-predicate
-                                                                                (lambda (buffer)
-                                                                                  (not (string= (buffer-local-value 'major-mode buffer) "term-mode"))))
-                                                           (switch-to-buffer (other-buffer))
-                                                           (set-frame-parameter current-frame 'buffer-predicate (lambda (buffer) t)))))))
+                            (local-set-key (kbd "s-g") (execute-without-multiterm `(switch-to-buffer (other-buffer))))
+                            ))
 (advice-add 'term-char-mode :after (lambda ()
                                      (local-set-key (kbd "C-c C-j") 'term-line-mode)))
 
 ;; Quick launch apps
-(global-set-key (kbd "s-G") 'eww)
+(global-set-key (kbd "s-G")
+                (lambda (url)
+                  (interactive "sEnter URL or keywords: ")
+                  (with-current-buffer
+                      (generate-new-buffer "*eww*")
+                    (eww-mode)
+                    (eww url))))
 (add-hook 'emacs-lisp-mode-hook 'electric-pair-mode)
 
 ;; Emacs server
@@ -285,8 +311,12 @@ This one changes the cursor color on each blink. Define colors in `blink-cursor-
 (setq openwith-associations
       (list
        (list (openwith-make-extension-regexp
-              '("pdf"))
+              '("pdf" "dvi"))
              "zathura"
+             '(file))
+       (list (openwith-make-extension-regexp
+              '("mp4" "avi" "webm" "mkv"))
+             "mplayer"
              '(file))
        ))
 
@@ -299,7 +329,7 @@ This one changes the cursor color on each blink. Define colors in `blink-cursor-
        "import" nil (concat "import -window root " path))
     (message (concat "Screenshot saved to " path)))
 ))
-
+(setq company-dabbrev-downcase nil)
 
 (openwith-mode t)
 (provide 'init)

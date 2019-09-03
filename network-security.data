@@ -1,4 +1,5 @@
 (
+ (:id "sha1:138f17f42301536504fa10ef3b8f6b9d0f4a7323" :fingerprint "sha1:32:f6:3b:a5:69:4d:7b:7d:eb:50:48:e3:f5:5f:e1:ea:89:87:7d:ca" :host "www.digitaldoughnut.com:443" :conditions (:unknown-ca :invalid))
  (:id "sha1:bcedb49af8f379dcca571a4563360806760e34b4" :fingerprint "sha1:31:25:a5:32:47:0b:97:b4:b3:59:6b:60:e8:bb:91:ec:17:bf:a8:ef" :host "nnc3.com:443" :conditions (:unknown-ca :invalid))
  (:id "sha1:6d4eb958390599243ba9f5035cb671fa8dd6a93a" :fingerprint "sha1:a0:55:22:66:18:cb:09:86:19:db:15:3e:7d:84:7d:0f:26:37:b8:36" :host "elpa.gnu.org:443" :conditions (:insecure :unknown-ca :invalid))
  (:id "sha1:85b31c268009209a8d3c5387033b219264f7e62b" :fingerprint "sha1:ef:8c:59:65:55:04:7d:30:0d:44:f0:f5:b1:d1:ce:54:18:72:7a:84" :host "melpa.org:443" :conditions (:insecure :unknown-ca :invalid))
