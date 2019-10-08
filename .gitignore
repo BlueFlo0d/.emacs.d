@@ -2,5 +2,6 @@ semanticdb
 cache
 .*
 !.gitignore
+*.elc
 *~
 

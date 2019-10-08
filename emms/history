@@ -1,9 +1,9 @@
 ;;; emms history -*- mode: emacs-lisp; coding: utf-8; -*-
 (
 ;; active playlist
-" *temp*"
+" *EMMS Playlist*"
 ;; playlists: ((BUFFER_NAME SELECT_POSITION TRACKS) ...)
-nil
+((" *EMMS Playlist*" 1 ((*track* (type . url) (name . "https://api.soundcloud.com/tracks/13639598/stream?client_id=988875d70be466a2dd1bfab120c0a306") (metadata) (info-title . "Infected Mushroom - Becoming Insane (SynSUN Remix)") (info-playing-time . 499) (soundcloud-id . 13639598)))))
 ;; play method
 ((emms-repeat-track) (emms-repeat-playlist))
 )

@@ -41,12 +41,23 @@
 (setq scheme-program-name "chez-scheme")
 (setq geiser-chez-binary "chez-scheme")
 (setq geiser-active-implementations '(chez))
-(with-eval-after-load "tex"
-  (add-to-list 'TeX-view-program-list '("zathura" "/usr/local/bin/zathura %o"))
-  (setcdr (assq 'output-pdf TeX-view-program-selection) '("zathura")))
+;; (with-eval-after-load "tex"
+;;   (add-to-list 'TeX-view-program-list '("open" "open %o"))
+;;   (setcdr (assq 'output-pdf TeX-view-program-selection) '("open")))
+
+;; to use pdfview with auctex
+(setq TeX-view-program-selection '((output-pdf "PDF Tools"))
+      TeX-view-program-list '(("PDF Tools" TeX-pdf-tools-sync-view))
+      TeX-source-correlate-start-server t) ;; not sure if last line is neccessary
+
+;; to have the buffer refresh after compilation
+(add-hook 'TeX-after-compilation-finished-functions
+          #'TeX-revert-document-buffer)
+
 (add-hook 'LaTeX-mode-hook (lambda()
                              (turn-on-cdlatex)
                              (add-to-list 'TeX-command-list '("XeLaTeX" "%`xelatex%(mode)%' %t" TeX-run-TeX nil t))
+                             (add-to-list 'TeX-command-list '("PDFLaTeX" "%`pdflatex -shell-escape%(mode)%' %t" TeX-run-TeX nil t))
                              (setq TeX-command-default "XeLaTeX")
                              (setq TeX-save-query  nil )
                              (setq TeX-show-compilation t)
@@ -54,7 +65,6 @@
 (add-hook 'python-mode-hook (lambda ()
                               (electric-pair-mode 1)
                               ))
-
 ;; Key bindings
 (global-set-key (kbd "s-o") 'ace-window)
 (global-set-key (kbd "s-j") 'ace-jump-mode)
@@ -63,8 +73,8 @@
 (setq framemove-hook-into-windmove t)
 (global-set-key (kbd "s-p") 'windmove-up)
 (global-set-key (kbd "s-n") 'windmove-down)
-(global-set-key (kbd "s-f") 'windmove-right)
-(global-set-key (kbd "s-b") 'windmove-left)
+(global-set-key (kbd "s-r") 'windmove-right)
+(global-set-key (kbd "s-l") 'windmove-left)
 (global-set-key (kbd "C-z") (kbd "C-x u"))
 (add-hook 'cdlatex-mode-hook (lambda()
                                (local-set-key [C-tab] (quote cdlatex-tab))
@@ -91,20 +101,17 @@
  (define-key c-mode-map  [(tab)] 'company-complete)
  (define-key c++-mode-map  [(tab)] 'company-complete)
 (add-to-list 'default-frame-alist '(font . "Courier-20") )
-;;(require 'emms-setup)
-;;(emms-all)
-;;(emms-default-players 'mplayer)
-(setq exec-path (append exec-path '("/usr/local/bin")))
-(add-to-list 'load-path "~/emms/lisp")
-(require 'emms-setup)
-(require 'emms-player-mplayer)
-(emms-standard)
-(emms-default-players)
-;;(define-emms-simple-player mplayer '(file url)
-  ;;(regexp-opt '(".ogg" ".mp3" ".wav" ".mpg" ".mpeg" ".wmv" ".wma"
-  ;;              ".mov" ".avi" ".divx" ".ogm" ".asf" ".mkv" "http://" "mms://"
-  ;;              ".rm" ".rmvb" ".mp4" ".flac" ".vob" ".m4a" ".flv" ".ogv" ".pls"))
-  ;;"mplayer" "-slave" "-quiet" "-really-quiet" "-fullscreen")
+;; (setq exec-path (append exec-path '("/usr/local/bin")))
+;; (add-to-list 'load-path "~/emms/lisp")
+;; (require 'emms-setup)
+;; (require 'emms-player-mplayer)
+;; (emms-standard)
+;; (emms-default-players)
+;; (define-emms-simple-player mplayer '(file url)
+;;   (regexp-opt '(".ogg" ".mp3" ".wav" ".mpg" ".mpeg" ".wmv" ".wma"
+;;                ".mov" ".avi" ".divx" ".ogm" ".asf" ".mkv" "http://" "mms://"
+;;                ".rm" ".rmvb" ".mp4" ".flac" ".vob" ".m4a" ".flv" ".ogv" ".pls"))
+;;   "mplayer" "-slave" "-quiet" "-really-quiet" "-fullscreen")
 (defvar blink-cursor-colors (list  "#92c48f" "#6785c5" "#be369c" "#d9ca65")
   "On each blink the cursor will cycle to the next color in this list.")
 
@@ -133,7 +140,8 @@ This one changes the cursor color on each blink. Define colors in `blink-cursor-
     ("4bdc036ccf4ec5fc246cba3fcb5d18852d88026a77074209ebecdf9d8dbf1c75" default)))
  '(package-selected-packages
    (quote
-    (ace-window openwith notmuch sudo-edit multi-term exwm magit flycheck-irony irony flycheck ggtags paredit geiser cdlatex auctex ace-jump-mode helm racket-mode zygospore yascroll xwidgete ws-butler volatile-highlights use-package undo-tree steam slime-volleyball proof-general org neotree mines magit-popup iedit helm-swoop helm-projectile helm-gtags haskell-mode haskell-emacs git-commit ghub ghci-completion f exec-path-from-shell emms elpy dtrt-indent dired-du company-rtags company-c-headers color-theme cmake-ide clean-aindent-mode chess anzu 2048-game)))
+    (company-ghci dash-functional rainbow-identifiers tracking anaphora pdf-tools ace-window openwith notmuch sudo-edit multi-term exwm magit flycheck-irony irony flycheck ggtags paredit geiser cdlatex auctex ace-jump-mode helm racket-mode zygospore yascroll xwidgete ws-butler volatile-highlights use-package undo-tree steam slime-volleyball proof-general org neotree mines magit-popup iedit helm-swoop helm-projectile helm-gtags haskell-mode haskell-emacs git-commit ghub ghci-completion f exec-path-from-shell emms elpy dtrt-indent dired-du company-rtags company-c-headers color-theme cmake-ide clean-aindent-mode chess anzu 2048-game)))
+ '(pdf-tools-handle-upgrades nil)
  '(safe-local-variable-values
    (quote
     ((cmake-ide-project-dir . ~/ksi)
@@ -165,7 +173,7 @@ This one changes the cursor color on each blink. Define colors in `blink-cursor-
 (eval-after-load 'company
   '(add-to-list
     'company-backends 'company-irony))
-(setq doc-view-resolution 200)
+;;(setq doc-view-resolution 200)
 (eval-after-load "term"
   '(progn (term-set-escape-char ?\C-x)
           (define-key term-raw-map (kbd "C-c") nil)))
@@ -194,6 +202,12 @@ This one changes the cursor color on each blink. Define colors in `blink-cursor-
 
 (setq x-super-keysym 'meta)
 (setq x-meta-keysym 'super)
+(setq mac-command-modifier 'meta)
+(setq mac-option-modifier 'super)
+(keyboard-translate ?\( ?\[)
+(keyboard-translate ?\[ ?\()
+(keyboard-translate ?\) ?\])
+(keyboard-translate ?\] ?\))
 
 (require 'exwm)(require 'exwm-randr)
 (setq exwm-workspace-number 4)
@@ -230,8 +244,8 @@ This one changes the cursor color on each blink. Define colors in `blink-cursor-
         ([?\C-k] . [S-end delete])))
 
 (require 'multi-term)
-(setenv "ENV" "/home/qhong/.shrc")
-(setq multi-term-program "/usr/local/bin/bash")
+(setenv "ENV" "/Users/hongqiantan/.bashrc")
+(setq multi-term-program "/bin/bash")
 (setq gc-cons-threshold 8000000)
 (setq gc-cons-percentage 0.25)
 
@@ -307,18 +321,26 @@ This one changes the cursor color on each blink. Define colors in `blink-cursor-
                     (replace-regexp-in-string "^/sudo:root@localhost:" "" default-directory))))
 
 ;; Using external programs for opening some files
-(require 'openwith)
-(setq openwith-associations
-      (list
-       (list (openwith-make-extension-regexp
-              '("pdf" "dvi"))
-             "zathura"
-             '(file))
-       (list (openwith-make-extension-regexp
-              '("mp4" "avi" "webm" "mkv"))
-             "mplayer"
-             '(file))
-       ))
+;; (require 'openwith)
+;; (setq openwith-associations
+;;       (list
+;;        (list (openwith-make-extension-regexp
+;;               '("pdf" "dvi"))
+;;              "zathura"
+;;              '(file))
+;;        (list (openwith-make-extension-regexp
+;;               '("mp4" "avi" "webm" "mkv"))
+;;              "mplayer"
+;;              '(file))
+;;        ))
+(use-package pdf-tools
+  :ensure t
+  :config
+  (custom-set-variables
+   '(pdf-tools-handle-upgrades nil)) ; Use brew upgrade pdf-tools instead.
+  (setq pdf-info-epdfinfo-program "/usr/local/bin/epdfinfo"))
+(pdf-tools-install)
+(add-to-list 'auto-mode-alist '("\\.pdf\\'" . pdf-view-mode))
 
 ;; Print screen
 (global-set-key (kbd "<print>")
@@ -328,9 +350,13 @@ This one changes the cursor color on each blink. Define colors in `blink-cursor-
       (start-process-shell-command
        "import" nil (concat "import -window root " path))
     (message (concat "Screenshot saved to " path)))
-))
-(setq company-dabbrev-downcase nil)
+    ))
 
-(openwith-mode t)
+(setq undo-limit 1000000)
+(setq undo-strong-limit 10000000)
+(setq undo-outer-limit 100000000)
+(setq company-dabbrev-downcase nil)
+;;(openwith-mode t)
+
 (provide 'init)
 ;;; init.el ends here

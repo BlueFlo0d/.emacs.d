@@ -18,11 +18,11 @@
 	 ("Leo Liu" . "sdl.web@gmail.com"))
 	(:keywords "tools" "processes" "convenience"))])
  (ada-mode .
-	   [(6 1 0)
-	    ((wisi
-	      (2 1 0))
-	     (cl-lib
-	      (1 0))
+	   [(6 2 1)
+	    ((uniquify-files
+	      (1 0 1))
+	     (wisi
+	      (2 2 1))
 	     (emacs
 	      (25 0)))
 	    "major-mode for editing Ada sources" tar
@@ -48,7 +48,7 @@
 		   ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
 		  (:maintainer "Stephen Berman" . "stephen.berman@gmx.net"))])
  (adjust-parens .
-		[(3 0)
+		[(3 1)
 		 nil "Indent and dedent Lisp code, automatically adjust close parens" tar
 		 ((:maintainer "Barry O'Reilly" . "gundaetiapo@gmail.com")
 		  (:authors
@@ -102,7 +102,7 @@
 	  ("Christopher Schmidt" . "christopher@ch.ristopher.com"))
 	 (:maintainer nil . "emacs-devel@gnu.org"))])
  (arbitools .
-	    [(0 976)
+	    [(0 977)
 	     ((cl-lib
 	       (0 5)))
 	     "Package for chess tournaments administration" single
@@ -120,7 +120,11 @@
 			 (:url . "http://www.gnuvola.org/software/aa2u/"))])
  (async .
 	[(1 9 2)
-	 nil "Asynchronous processing in Emacs" tar
+	 ((cl-lib
+	   (0 5))
+	  (nadvice
+	   (0 3)))
+	 "Asynchronous processing in Emacs" tar
 	 ((:url . "https://github.com/jwiegley/emacs-async")
 	  (:maintainer "John Wiegley" . "jwiegley@gmail.com")
 	  (:authors
@@ -381,13 +385,17 @@
 	   ("Gary D. Foster" . "Gary.Foster@Corp.Sun.COM"))
 	  (:maintainer "Luke Lee" . "luke.yx.lee@gmail.com"))])
  (csv-mode .
-	   [(1 7)
-	    nil "Major mode for editing comma/char separated values" single
+	   [(1 9)
+	    ((emacs
+	      (24 1))
+	     (cl-lib
+	      (0 5)))
+	    "Major mode for editing comma/char separated values" single
 	    ((:url . "http://elpa.gnu.org/packages/csv-mode.html")
 	     (:keywords "convenience")
 	     (:authors
 	      ("\"Francis J. Wright\"" . "F.J.Wright@qmul.ac.uk"))
-	     (:maintainer "\"Francis J. Wright\"" . "F.J.Wright@qmul.ac.uk"))])
+	     (:maintainer nil . "emacs-devel@gnu.org"))])
  (cycle-quotes .
 	       [(0 1)
 		nil "Cycle between quote styles" tar
@@ -425,7 +433,7 @@
 		  ("Daiki Ueno" . "ueno@gnu.org"))
 		 (:maintainer nil . "emacs-devel@gnu.org"))])
  (debbugs .
-	  [(0 19)
+	  [(0 20)
 	   ((emacs
 	     (25 1))
 	    (soap-client
@@ -440,7 +448,11 @@
 	    (:url . "http://elpa.gnu.org/packages/debbugs.html"))])
  (delight .
 	  [(1 5)
-	   nil "A dimmer switch for your lighter text." single
+	   ((cl-lib
+	     (0 5))
+	    (nadvice
+	     (0 3)))
+	   "A dimmer switch for your lighter text" single
 	   ((:keywords "convenience")
 	    (:authors
 	     ("Phil Sainty" . "psainty@orcon.net.nz"))
@@ -461,7 +473,7 @@
 	      (:maintainer "Toby Cubitt" . "toby-predictive@dr-qubit.org")
 	      (:url . "http://www.dr-qubit.org/emacs.php"))])
  (diff-hl .
-	  [(1 8 6)
+	  [(1 8 7)
 	   ((cl-lib
 	     (0 2))
 	    (emacs
@@ -559,7 +571,7 @@
 	       ("Leo Liu" . "sdl.web@gmail.com"))
 	      (:keywords "killing" "convenience"))])
  (ebdb .
-       [(0 6 9)
+       [(0 6 11)
 	((emacs
 	  (25 1))
 	 (cl-lib
@@ -584,7 +596,7 @@
 		("Eric Abrahamsen" . "eric@ericabrahamsen.net"))
 	       (:maintainer "Eric Abrahamsen" . "eric@ericabrahamsen.net"))])
  (ebdb-i18n-chn .
-		[(1 2)
+		[(1 3)
 		 ((pyim
 		   (1 6 0))
 		  (ebdb
@@ -603,7 +615,7 @@
 	      (:maintainer "Markus Triska" . "triska@metalevel.at")
 	      (:url . "https://www.metalevel.at/ediprolog/"))])
  (eev .
-      [(20190517)
+      [(20190902)
        ((emacs
 	 (24 1)))
        "Support for e-scripts (eepitch blocks, elisp hyperlinks, etc)" tar
@@ -627,7 +639,7 @@
 	   ("João Távora" . "joaotavora@gmail.com"))
 	  (:keywords "convenience" "languages"))])
  (el-search .
-	    [(1 12 5)
+	    [(1 12 6 1)
 	     ((emacs
 	       (25))
 	      (stream
@@ -707,9 +719,9 @@
 		 ("Thomas Fitzsimmons" . "fitzsim@fitzsim.org"))
 		(:keywords "calendar"))])
  (exwm .
-       [(0 22 1)
+       [(0 23)
 	((xelb
-	  (0 16)))
+	  (0 18)))
 	"Emacs X Window Manager" tar
 	((:url . "https://github.com/ch11ng/exwm")
 	 (:maintainer "Chris Feng" . "chris.w.feng@gmail.com")
@@ -744,7 +756,7 @@
 	     ("Barry O'Reilly" . "gundaetiapo@gmail.com"))
 	    (:maintainer "Barry O'Reilly" . "gundaetiapo@gmail.com"))])
  (flymake .
-	  [(1 0 6)
+	  [(1 0 8)
 	   ((emacs
 	     (26 1)))
 	   "A universal on-the-fly syntax checker" single
@@ -754,15 +766,15 @@
 	     ("Pavel Kobyakov" . "pk_at_work@yahoo.com"))
 	    (:maintainer "João Távora" . "joaotavora@gmail.com"))])
  (fountain-mode .
-		[(2 7 1)
+		[(2 7 3)
 		 ((emacs
 		   (24 5)))
 		 "Major mode for screenwriting in Fountain markup" single
-		 ((:url . "http://elpa.gnu.org/packages/fountain-mode.html")
-		  (:keywords "wp" "text")
+		 ((:keywords "wp" "text")
 		  (:authors
-		   ("Paul W. Rankin" . "hello@paulwrankin.com"))
-		  (:maintainer "Paul W. Rankin" . "hello@paulwrankin.com"))])
+		   ("Paul W. Rankin" . "pwr@sdf.org"))
+		  (:maintainer "Paul W. Rankin" . "pwr@sdf.org")
+		  (:url . "https://fountain-mode.org"))])
  (frame-tabs .
 	     [(1 1)
 	      nil "show buffer tabs in side window" single
@@ -772,7 +784,7 @@
 		("Martin Rudalics" . "rudalics@gmx.at"))
 	       (:maintainer "Martin Rudalics" . "rudalics@gmx.at"))])
  (frog-menu .
-	    [(0 2 8)
+	    [(0 2 10)
 	     ((emacs
 	       (26))
 	      (avy
@@ -810,7 +822,7 @@
 	   (:maintainer "Leo Liu" . "sdl.web@gmail.com")
 	   (:url . "https://github.com/leoliu/ggtags"))])
  (gited .
-	[(0 5 3)
+	[(0 6 0)
 	 ((emacs
 	   (24 4))
 	  (cl-lib
@@ -839,7 +851,7 @@
 		  (:keywords "gnome" "c" "coding style")
 		  (:url . "http://elpa.gnu.org/packages/gnome-c-style.html"))])
  (gnorb .
-	[(1 6 1)
+	[(1 6 3)
 	 ((cl-lib
 	   (0 5)))
 	 "Glue code between Gnus, Org, and BBDB" tar
@@ -956,12 +968,12 @@
 	   ("Oleh Krehel" . "ohwoeowho@gmail.com"))
 	  (:keywords "bindings"))])
  (hyperbole .
-	    [(7 0 3)
+	    [(7 0 6)
 	     ((emacs
 	       (24 4)))
 	     "GNU Hyperbole: The Everyday Hypertextual Information Manager" tar
 	     ((:url . "http://www.gnu.org/software/hyperbole")
-	      (:maintainer "Bob Weiner <rsw@gnu.org> and Mats Lidell" . "matsl@gnu.org")
+	      (:maintainer "Bob Weiner <rsw@gnu.org>, Mats Lidell" . "matsl@gnu.org")
 	      (:authors
 	       ("Bob Weiner"))
 	      (:keywords "comm" "convenience" "files" "frames" "hypermedia" "languages" "mail" "matching" "mouse" "multimedia" "outlines" "tools" "wp"))])
@@ -983,7 +995,7 @@
 	       ("Michael Heerdegen" . "michael_heerdegen@web.de"))
 	      (:maintainer "Michael Heerdegen" . "michael_heerdegen@web.de"))])
  (ivy .
-      [(0 11 0)
+      [(0 12 0)
        ((emacs
 	 (24 1)))
        "Incremental Vertical completYon" tar
@@ -1082,7 +1094,7 @@
 	      ("Terrence Brannon" . "metaperl@gmail.com"))
 	     (:maintainer nil . "emacs-devel@gnu.org"))])
  (let-alist .
-   [(1 0 5)
+   [(1 0 6)
     ((emacs
       (24 1)))
     "Easily let-bind values of an assoc-list by their names" single
@@ -1361,8 +1373,8 @@
 	    ((:url . "http://elpa.gnu.org/packages/olivetti.html")
 	     (:keywords "wp" "text")
 	     (:authors
-	      ("Paul Rankin" . "hello@paulwrankin.com"))
-	     (:maintainer "Paul Rankin" . "hello@paulwrankin.com"))])
+	      ("Paul W. Rankin" . "pwr@sdf.org"))
+	     (:maintainer "Paul W. Rankin" . "pwr@sdf.org"))])
  (omn-mode .
 	   [(1 2)
 	    nil "Support for OWL Manchester Notation" single
@@ -1381,7 +1393,7 @@
 	      (:maintainer "Michael Heerdegen" . "michael_heerdegen@web.de")
 	      (:url . "https://github.com/michael-heerdegen/on-screen.el"))])
  (org .
-      [(9 2 3)
+      [(9 2 6)
        nil "Outline-based notes management and organizer" tar
        ((:url . "https://orgmode.org")
 	(:maintainer "Carsten Dominik <carsten at orgmode dot org>")
@@ -1461,6 +1473,15 @@
 	   (:authors
 	    ("Junpeng Qiu" . "qjpchmail@gmail.com"))
 	   (:keywords "extensions"))])
+ (path-iterator .
+		[(1 0)
+		 ((emacs
+		   (25 0)))
+		 "An iterator for traversing a directory path." tar
+		 ((:maintainer "Stephen Leake" . "stephen_leake@stephe-leake.org")
+		  (:authors
+		   ("Stephen Leake" . "stephen_leake@stephe-leake.org"))
+		  (:url . "http://elpa.gnu.org/packages/path-iterator.html"))])
  (peg .
       [(1 0)
        ((emacs
@@ -1470,6 +1491,23 @@
 	(:authors
 	 ("Helmut Eller" . "eller.helmut@gmail.com"))
 	(:url . "http://elpa.gnu.org/packages/peg.html"))])
+ (persist .
+	  [(0 4)
+	   nil "Persist Variables between Emacs Sessions" tar
+	   ((:maintainer "Phillip Lord" . "phillip.lord@russet.org.uk")
+	    (:authors
+	     ("Phillip Lord" . "phillip.lord@russet.org.uk"))
+	    (:url . "http://elpa.gnu.org/packages/persist.html"))])
+ (phps-mode .
+	    [(0 3 4)
+	     ((emacs
+	       (26)))
+	     "Major mode for PHP with Semantic integration" tar
+	     ((:url . "https://github.com/cjohansson/emacs-phps-mode")
+	      (:maintainer "Christian Johansson" . "christian@cvj.se")
+	      (:authors
+	       ("Christian Johansson" . "christian@cvj.se"))
+	      (:keywords "tools" "convenience"))])
  (pinentry .
 	   [(0 1)
 	    nil "GnuPG Pinentry server implementation" single
@@ -1569,7 +1607,7 @@
 		("Alex Schroeder" . "alex@gnu.org"))
 	       (:maintainer "Alex Schroeder" . "alex@gnu.org"))])
  (realgud .
-	  [(1 5 0)
+	  [(1 5 1)
 	   ((load-relative
 	     (1 3 1))
 	    (loc-changes
@@ -1679,15 +1717,15 @@
 		   ("Bastien Guerry" . "bzg@gnu.org"))
 		  (:maintainer "Bastien Guerry" . "bzg@gnu.org"))])
  (relint .
-	 [(1 8)
+	 [(1 11)
 	  ((xr
-	    (1 12)))
-	  "Elisp regexp mistake finder" single
-	  ((:keywords "lisp" "maint" "regexps")
+	    (1 13)))
+	  "Elisp regexp mistake finder" tar
+	  ((:url . "https://github.com/mattiase/relint")
+	   (:maintainer "Mattias Engdegård" . "mattiase@acm.org")
 	   (:authors
 	    ("Mattias Engdegård" . "mattiase@acm.org"))
-	   (:maintainer "Mattias Engdegård" . "mattiase@acm.org")
-	   (:url . "https://github.com/mattiase/relint"))])
+	   (:keywords "lisp" "maint" "regexps"))])
  (rich-minority .
 		[(1 0 1)
 		 ((cl-lib
@@ -1855,7 +1893,7 @@
 		("Alex Harsanyi" . "AlexHarsanyi@gmail.com"))
 	       (:keywords "languages" "sql"))])
  (ssh-deploy .
-	     [(3 1)
+	     [(3 1 10)
 	      ((emacs
 		(25)))
 	      "Deployment via Tramp, global or per directory." tar
@@ -1882,7 +1920,8 @@
        ((:url . "http://elpa.gnu.org/packages/svg.html")
 	(:keywords "image")
 	(:authors
-	 ("Lars Magne Ingebrigtsen" . "larsi@gnus.org"))
+	 ("Lars Magne Ingebrigtsen" . "larsi@gnus.org")
+	 ("Felix E. Klee" . "felix.klee@inka.de"))
 	(:maintainer "Lars Magne Ingebrigtsen" . "larsi@gnus.org"))])
  (svg-clock .
 	    [(1 0)
@@ -1952,6 +1991,17 @@
 	 (:authors
 	  ("Oleh Krehel" . "ohwoeowho@gmail.com"))
 	 (:keywords "convenience"))])
+ (tramp .
+	[(2 4 2 3)
+	 ((emacs
+	   (24 4)))
+	 "Transparent Remote Access, Multiple Protocol" tar
+	 ((:url . "https://savannah.gnu.org/projects/tramp")
+	  (:maintainer "Michael Albinus" . "michael.albinus@gmx.de")
+	  (:authors
+	   ("Kai Großjohann" . "kai.grossjohann@gmx.net")
+	   ("Michael Albinus" . "michael.albinus@gmx.de"))
+	  (:keywords "comm" "processes"))])
  (tramp-theme .
 	      [(0 2)
 	       ((emacs
@@ -1994,6 +2044,16 @@
 		   nil "Unicode confusables table" tar
 		   ((:maintainer "Teodor Zlatanov" . "tzz@lifelogs.com")
 		    (:url . "http://elpa.gnu.org/packages/uni-confusables.html"))])
+ (uniquify-files .
+		 [(1 0 1)
+		  ((emacs
+		    (25 0)))
+		  "Completion style for files, minimizing directories" tar
+		  ((:maintainer "Stephen Leake" . "stephen_leake@stephe-leake.org")
+		   (:authors
+		    ("Stephen Leake" . "stephen_leake@stephe-leake.org"))
+		   (:keywords "completion" "table" "uniquify")
+		   (:url . "http://elpa.gnu.org/packages/uniquify-files.html"))])
  (url-http-ntlm .
 		[(2 0 4)
 		 ((cl-lib
@@ -2040,6 +2100,15 @@
 	   ("Justin Burkett" . "justin@burkett.cc"))
 	  (:maintainer "Justin Burkett" . "justin@burkett.cc")
 	  (:url . "https://github.com/justbur/emacs-vdiff"))])
+ (verilog-mode .
+	       [(2019 9 23 4801067)
+		nil "major mode for editing verilog source in Emacs" single
+		((:keywords "languages")
+		 (:authors
+		  ("Michael McNamara" . "mac@verilog.com")
+		  ("Wilson Snyder" . "wsnyder@wsnyder.org"))
+		 (:maintainer "Michael McNamara" . "mac@verilog.com")
+		 (:url . "https://www.veripool.org"))])
  (vigenere .
 	   [(1 0)
 	    ((emacs
@@ -2120,7 +2189,7 @@
 	       ("Pierre Neidhardt" . "mail@ambrevar.xyz"))
 	      (:keywords "news" "hypermedia" "blog" "feed" "rss" "atom"))])
  (websocket .
-	    [(1 9)
+	    [(1 11 1)
 	     ((cl-lib
 	       (0 5)))
 	     "Emacs WebSocket client and server" tar
@@ -2147,10 +2216,8 @@
 		("Bastien" . "bzg@gnu.org"))
 	       (:maintainer "Bastien" . "bzg@gnu.org"))])
  (wisi .
-       [(2 1 0)
-	((cl-lib
-	  (1 0))
-	 (emacs
+       [(2 2 1)
+	((emacs
 	  (25 0))
 	 (seq
 	  (2 20)))
@@ -2160,6 +2227,20 @@
 	 (:authors
 	  ("Stephen Leake" . "stephen_leake@stephe-leake.org"))
 	 (:keywords "parser" "indentation" "navigation"))])
+ (wisitoken-grammar-mode .
+			 [(1 0 3)
+			  ((wisi
+			    (2 2 1))
+			   (emacs
+			    (25 0))
+			   (mmm-mode
+			    (0 5 7)))
+			  "Major mode for editing WisiToken grammar files" tar
+			  ((:maintainer "Stephen Leake" . "stephen_leake@stephe-leake.org")
+			   (:authors
+			    ("Stephen Leake" . "stephen_leake@stephe-leake.org"))
+			   (:keywords "languages")
+			   (:url . "http://elpa.gnu.org/packages/wisitoken-grammar-mode.html"))])
  (wpuzzle .
 	  [(1 1)
 	   nil "find as many word in a given time" single
@@ -2168,7 +2249,7 @@
 	     ("Ivan Kanis" . "ivan@kanis.fr"))
 	    (:maintainer "Ivan Kanis" . "ivan@kanis.fr"))])
  (xclip .
-	[(1 8)
+	[(1 9)
 	 nil "Copy&paste GUI clipboard from text terminal" single
 	 ((:url . "http://elpa.gnu.org/packages/xclip.html")
 	  (:keywords "convenience" "tools")
@@ -2176,7 +2257,7 @@
 	   ("Leo Liu" . "sdl.web@gmail.com"))
 	  (:maintainer "Leo Liu" . "sdl.web@gmail.com"))])
  (xelb .
-       [(0 17)
+       [(0 18)
 	((emacs
 	  (24 4))
 	 (cl-generic
@@ -2196,7 +2277,7 @@
 	 ("Thien-Thi Nguyen" . "ttn@gnu.org"))
 	(:keywords "multimedia" "xpm"))])
  (xr .
-     [(1 12)
+     [(1 13)
       nil "Convert string regexp to rx notation" tar
       ((:url . "https://github.com/mattiase/xr")
        (:maintainer "Mattias Engdegård" . "mattiase@acm.org")
@@ -2207,7 +2288,7 @@
 	    [(0 13 0)
 	     ((cl-lib
 	       (0 5)))
-	     "Yet another snippet extension for Emacs." tar
+	     "Yet another snippet extension for Emacs" tar
 	     ((:url . "http://github.com/joaotavora/yasnippet")
 	      (:maintainer "Noam Postavsky" . "npostavs@gmail.com")
 	      (:keywords "convenience" "emulation"))])
@@ -2220,7 +2301,7 @@
 			       (:keywords "snippets")
 			       (:url . "http://elpa.gnu.org/packages/yasnippet-classic-snippets.html"))])
  (zones .
-	[(2019 4 30)
+	[(2019 7 13)
 	 nil "Zones of text - like multiple regions" single
 	 ((:keywords "narrow" "restriction" "widen" "region" "zone")
 	  (:authors

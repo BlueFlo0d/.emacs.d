@@ -1,4 +1,4 @@
-;; -*- emacs-lisp -*- <19/08/19 06:47:59 /home/qhong/.emacs.d/tramp>
+;; -*- emacs-lisp -*- <19/09/15 23:16:33 /Users/hongqiantan/.emacs.d/tramp>
 ;; Tramp connection history.  Don't change this file.
 ;; You can delete it, forcing Tramp to reapply the checks.
 
@@ -45,4 +45,6 @@
   ("case-insensitive" nil)
   ("git" "\\git")
   ("touch-t" t)
-  ("touch" "\\touch")))
+  ("touch" "\\touch"))
+ ((tramp-file-name "ssh" "qhong" nil "athena.dialup.mit.edu" nil nil nil)
+  nil))
