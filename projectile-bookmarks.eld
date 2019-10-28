@@ -1,1 +1,1 @@
-("~/.emacs.d/" "~/research/Graphene/" "~/courses/6.035/fa18/" "~/Downloads/plf/" "~/courses/6.035/phase1-qhong/" "~/inspircd/" "~/courses/6.035/fa19/" "~/courses/6.035/haskell-skeleton/" "~/courses/8.13/" "~/knet/")
+("~/.emacs.d/" "~/courses/6.035/fa18/" "~/Projects/musikmacs/" "~/Downloads/lilypond-2.18.2/" "~/site-server/" "~/Projects/org-static-blog/" "~/research/Graphene/" "~/playground/r7rs-benchmarks/" "~/Downloads/plf/" "~/courses/6.035/phase1-qhong/" "~/inspircd/" "~/courses/6.035/fa19/" "~/courses/6.035/haskell-skeleton/" "~/courses/8.13/" "~/knet/")

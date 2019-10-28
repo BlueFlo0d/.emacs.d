@@ -15,6 +15,7 @@
 (setq use-package-always-ensure t)
 
 (add-to-list 'load-path "~/.emacs.d/custom")
+(add-to-list 'load-path "~/.emacs.d/lilypond")
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 ;;(load-theme 'sourcerer t)
 (require 'setup-general)
@@ -32,12 +33,19 @@
 ;; (require 'function-args)
 ;; (fa-config-default)
 
-(setenv "PATH" (concat (getenv "PATH") ":/Library/TeX/texbin/"))
+(cond
+ ((string-equal system-type "darwin")
+  (setenv "PATH" (concat (getenv "PATH") ":/Library/TeX/texbin"))))
 (setenv "CC" "clang")
 (setenv "CXX" "clang++")
 (setenv "QT_SCALE_FACTOR" "2.0")
 (setenv "GDK_DPI_SCALE" "2.0")
-(setq exec-path (append exec-path '("/Library/TeX/texbin/" "/usr/local/bin/")))
+(setq exec-path (append exec-path
+                        (cond
+                         ((string-equal system-type "darwin")
+                          '("/Library/TeX/texbin" "/usr/local/bin"))
+                         (t '("/usr/local/bin")))
+))
 (setq scheme-program-name "chez-scheme")
 (setq geiser-chez-binary "chez-scheme")
 (setq geiser-active-implementations '(chez))
@@ -140,7 +148,7 @@ This one changes the cursor color on each blink. Define colors in `blink-cursor-
     ("4bdc036ccf4ec5fc246cba3fcb5d18852d88026a77074209ebecdf9d8dbf1c75" default)))
  '(package-selected-packages
    (quote
-    (company-ghci dash-functional rainbow-identifiers tracking anaphora pdf-tools ace-window openwith notmuch sudo-edit multi-term exwm magit flycheck-irony irony flycheck ggtags paredit geiser cdlatex auctex ace-jump-mode helm racket-mode zygospore yascroll xwidgete ws-butler volatile-highlights use-package undo-tree steam slime-volleyball proof-general org neotree mines magit-popup iedit helm-swoop helm-projectile helm-gtags haskell-mode haskell-emacs git-commit ghub ghci-completion f exec-path-from-shell emms elpy dtrt-indent dired-du company-rtags company-c-headers color-theme cmake-ide clean-aindent-mode chess anzu 2048-game)))
+    (ox-latex-subfigure htmlize slime-company slime org-static-blog telega company-ghci dash-functional rainbow-identifiers tracking anaphora pdf-tools ace-window openwith notmuch sudo-edit multi-term exwm magit flycheck-irony irony flycheck ggtags paredit geiser cdlatex auctex ace-jump-mode helm racket-mode zygospore yascroll xwidgete ws-butler volatile-highlights use-package undo-tree steam slime-volleyball proof-general org neotree mines magit-popup iedit helm-swoop helm-projectile helm-gtags haskell-mode haskell-emacs git-commit ghub ghci-completion f exec-path-from-shell emms elpy dtrt-indent dired-du company-rtags company-c-headers color-theme cmake-ide clean-aindent-mode chess anzu 2048-game)))
  '(pdf-tools-handle-upgrades nil)
  '(safe-local-variable-values
    (quote
@@ -177,10 +185,14 @@ This one changes the cursor color on each blink. Define colors in `blink-cursor-
 (eval-after-load "term"
   '(progn (term-set-escape-char ?\C-x)
           (define-key term-raw-map (kbd "C-c") nil)))
+(add-hook 'lisp-mode-hook 'paredit-mode)
+(add-hook 'emacs-lisp-mode-hook 'paredit-mode)
+(add-hook 'racket-mode-hook 'paredit-mode)
 (add-hook 'scheme-mode-hook (lambda ()
                               (geiser-mode)
                               (paredit-mode)
                               (local-set-key (kbd "M-l") 'geiser-load-current-buffer)))
+
 (setq geiser-mode-start-repl-p t)
 (global-hl-line-mode 1)
 (set-face-background 'hl-line "#1D294A")
@@ -244,7 +256,9 @@ This one changes the cursor color on each blink. Define colors in `blink-cursor-
         ([?\C-k] . [S-end delete])))
 
 (require 'multi-term)
-(setenv "ENV" "/Users/hongqiantan/.bashrc")
+(setenv "ENV" (cond
+               ((string-equal system-type "darwin") "/Users/hongqiantan/.bashrc")
+               (t "/usr/home/qhong/.bashrc")))
 (setq multi-term-program "/bin/bash")
 (setq gc-cons-threshold 8000000)
 (setq gc-cons-percentage 0.25)
@@ -356,7 +370,19 @@ This one changes the cursor color on each blink. Define colors in `blink-cursor-
 (setq undo-strong-limit 10000000)
 (setq undo-outer-limit 100000000)
 (setq company-dabbrev-downcase nil)
-;;(openwith-mode t)
+(when (string-equal system-type "berkeley-unix") (openwith-mode t))
 
+(when (string-equal system-type "darwin") (require 'blog))
+(setq inferior-lisp-program "/usr/local/bin/sbcl")
+(slime-setup '(slime-fancy slime-company))
+(require 'org)
+(require 'ox-latex)
+(setq org-latex-create-formula-image-program 'dvisvgm)
+(setq-default org-html-with-latex 'dvisvgm)
+(org-babel-do-load-languages 'org-babel-load-languages '((latex . t)))
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((latex . t)))
+(require 'lilypond-mode)
 (provide 'init)
 ;;; init.el ends here
