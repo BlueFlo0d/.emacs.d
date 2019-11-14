@@ -2,73 +2,71 @@
 ;; Automatically generated file!!! DO NOT EDIT!!!
 
 (setq url-cookie-storage
- '((".superuser.com"
-  [url-cookie "prov" "daca08a4-4b0f-e0ee-6659-904b3f8facb4" "Fri, 01-Jan-2055 00:00:00 GMT" "/" ".superuser.com" nil])
- (".latex.org"
-  [url-cookie "phpbb3_ltx_sid" "da0ee44730eee344256af221fa5515e5" "Sun, 04-Oct-2020 17:32:32 GMT" "/" ".latex.org" nil]
-  [url-cookie "phpbb3_ltx_k" "" "Sun, 04-Oct-2020 17:32:32 GMT" "/" ".latex.org" nil]
-  [url-cookie "phpbb3_ltx_u" "1" "Sun, 04-Oct-2020 17:32:32 GMT" "/" ".latex.org" nil])
- (".serverfault.com"
-  [url-cookie "prov" "94c3dd11-99a1-a417-9915-51a141a40226" "Fri, 01-Jan-2055 00:00:00 GMT" "/" ".serverfault.com" nil])
- (".csdn.net"
-  [url-cookie "dc_session_id" "10_1566605895662.467709" "Thu, 01 Jan 2025 00:00:00 GMT" "/" ".csdn.net" nil]
-  [url-cookie "uuid_tt_dd" "10_7363326990-1566605895662-450507" "Thu, 01 Jan 2025 00:00:00 GMT" "/" ".csdn.net" nil])
- (".experts-exchange.com"
-  [url-cookie "__cfduid" "dab92e52f98521bd7ba8571fab0d2ec111562709598" "Wed, 08-Jul-20 21:59:58 GMT" "/" ".experts-exchange.com" nil])
- (".stackoverflow.com"
-  [url-cookie "prov" "3697e419-7708-1f8a-2b94-653508aee64b" "Fri, 01-Jan-2055 00:00:00 GMT" "/" ".stackoverflow.com" nil])
- (".stackexchange.com"
-  [url-cookie "prov" "e8c72aaa-2d88-a08a-4701-3a4c172fa3b7" "Fri, 01-Jan-2055 00:00:00 GMT" "/" ".stackexchange.com" nil])
- (".racket-lang.org"
-  [url-cookie "__cfduid" "d7a2a762ede1371773f77904edb9166161565042769" "Tue, 04-Aug-20 22:06:09 GMT" "/" ".racket-lang.org" nil])
- (".bing.com"
-  [url-cookie "SRCHD" "AF=NOFORM" "Mon, 23-Aug-2021 01:23:36 GMT" "/" ".bing.com" nil]
-  [url-cookie "SRCHUID" "V=2&GUID=06157FBBD7D640FD801FF9A5C1247C48&dmnchg=1" "Mon, 23-Aug-2021 01:23:36 GMT" "/" ".bing.com" nil]
-  [url-cookie "SRCHUSR" "DOB=20190823" "Mon, 23-Aug-2021 01:23:36 GMT" "/" ".bing.com" nil])
- ("bing.com"
-  [url-cookie "_EDGE_V" "1" "Wed, 16-Sep-2020 01:23:36 GMT" "/" "bing.com" nil]
-  [url-cookie "MUID" "301BACC19B406C8E1D46A1009A6E6D9B" "Wed, 16-Sep-2020 01:23:36 GMT" "/" "bing.com" nil])
- ("cn.bing.com"
-  [url-cookie "MUIDB" "301BACC19B406C8E1D46A1009A6E6D9B" "Wed, 16-Sep-2020 01:23:36 GMT" "/" "cn.bing.com" nil])
+ '((".github.com"
+  [url-cookie "_octo" "GH1.1.2007051132.1561229441" "Tue, 22 Jun 2021 18:50:41 -0000" "/" ".github.com" nil])
+ ("github.com"
+  [url-cookie "has_recent_activity" "1" "Sat, 02 Nov 2019 19:04:38 -0000" "/" "github.com" nil])
  (".docs.haskellstack.org"
   [url-cookie "__cfduid" "d1fb38a0e48e44f92c7a628a39e4fc80b1567958512" "Mon, 07-Sep-20 16:01:52 GMT" "/" ".docs.haskellstack.org" nil])
- ("github.com"
-  [url-cookie "has_recent_activity" "1" "Sat, 12 Oct 2019 07:14:32 -0000" "/" "github.com" nil])
- (".github.com"
-  [url-cookie "_octo" "GH1.1.2007051132.1561229441" "Tue, 22 Jun 2021 18:50:41 -0000" "/" ".github.com" nil]))
+ ("cn.bing.com"
+  [url-cookie "MUIDB" "301BACC19B406C8E1D46A1009A6E6D9B" "Wed, 16-Sep-2020 01:23:36 GMT" "/" "cn.bing.com" nil])
+ ("bing.com"
+  [url-cookie "MUID" "301BACC19B406C8E1D46A1009A6E6D9B" "Wed, 16-Sep-2020 01:23:36 GMT" "/" "bing.com" nil]
+  [url-cookie "_EDGE_V" "1" "Wed, 16-Sep-2020 01:23:36 GMT" "/" "bing.com" nil])
+ (".bing.com"
+  [url-cookie "SRCHUSR" "DOB=20190823" "Mon, 23-Aug-2021 01:23:36 GMT" "/" ".bing.com" nil]
+  [url-cookie "SRCHUID" "V=2&GUID=06157FBBD7D640FD801FF9A5C1247C48&dmnchg=1" "Mon, 23-Aug-2021 01:23:36 GMT" "/" ".bing.com" nil]
+  [url-cookie "SRCHD" "AF=NOFORM" "Mon, 23-Aug-2021 01:23:36 GMT" "/" ".bing.com" nil])
+ (".racket-lang.org"
+  [url-cookie "__cfduid" "d7a2a762ede1371773f77904edb9166161565042769" "Tue, 04-Aug-20 22:06:09 GMT" "/" ".racket-lang.org" nil])
+ (".stackexchange.com"
+  [url-cookie "prov" "e8c72aaa-2d88-a08a-4701-3a4c172fa3b7" "Fri, 01-Jan-2055 00:00:00 GMT" "/" ".stackexchange.com" nil])
+ (".stackoverflow.com"
+  [url-cookie "prov" "3697e419-7708-1f8a-2b94-653508aee64b" "Fri, 01-Jan-2055 00:00:00 GMT" "/" ".stackoverflow.com" nil])
+ (".experts-exchange.com"
+  [url-cookie "__cfduid" "dab92e52f98521bd7ba8571fab0d2ec111562709598" "Wed, 08-Jul-20 21:59:58 GMT" "/" ".experts-exchange.com" nil])
+ (".csdn.net"
+  [url-cookie "uuid_tt_dd" "10_7363326990-1566605895662-450507" "Thu, 01 Jan 2025 00:00:00 GMT" "/" ".csdn.net" nil]
+  [url-cookie "dc_session_id" "10_1566605895662.467709" "Thu, 01 Jan 2025 00:00:00 GMT" "/" ".csdn.net" nil])
+ (".serverfault.com"
+  [url-cookie "prov" "94c3dd11-99a1-a417-9915-51a141a40226" "Fri, 01-Jan-2055 00:00:00 GMT" "/" ".serverfault.com" nil])
+ (".latex.org"
+  [url-cookie "phpbb3_ltx_u" "1" "Sun, 04-Oct-2020 17:32:32 GMT" "/" ".latex.org" nil]
+  [url-cookie "phpbb3_ltx_k" "" "Sun, 04-Oct-2020 17:32:32 GMT" "/" ".latex.org" nil]
+  [url-cookie "phpbb3_ltx_sid" "da0ee44730eee344256af221fa5515e5" "Sun, 04-Oct-2020 17:32:32 GMT" "/" ".latex.org" nil])
+ ("gist.github.com"
+  [url-cookie "has_recent_activity" "1" "Sat, 02 Nov 2019 19:10:32 -0000" "/" "gist.github.com" nil])
+ (".superuser.com"
+  [url-cookie "prov" "daca08a4-4b0f-e0ee-6659-904b3f8facb4" "Fri, 01-Jan-2055 00:00:00 GMT" "/" ".superuser.com" nil]))
 )
 (setq url-cookie-secure-storage
- '((".cyberciti.biz"
-  [url-cookie "__cfduid" "dbb428af1a935989ad1afef0e7bdf84dc1561327840" "Mon, 22-Jun-20 22:10:40 GMT" "/" ".cyberciti.biz" t])
- (".wikipedia.org"
-  [url-cookie "WMF-Last-Access-Global" "18-Sep-2019" "Sun, 20 Oct 2019 00:00:00 GMT" "/" ".wikipedia.org" t])
- ("en.wikipedia.org"
-  [url-cookie "WMF-Last-Access" "18-Sep-2019" "Sun, 20 Oct 2019 00:00:00 GMT" "/" "en.wikipedia.org" t])
- (".vincepergolizzi.com"
-  [url-cookie "__cfduid" "dcccebc312150b9e126a9908e7f219c791564183190" "Sat, 25-Jul-20 23:19:50 GMT" "/" ".vincepergolizzi.com" t])
- ("www.experts-exchange.com"
-  [url-cookie "CC_0" "exp_rs_1421=LO_CLEAN_SLATE&VTCT=1&exp_r_184=exp_rs_1421&EEUID=2e65ed4e-726f-4fae-a208-bbdee3ec14cb" "Mon Jul 28 01:14:06 2087 GMT" "/" "www.experts-exchange.com" t]
-  [url-cookie "LOIO" "2e65ed4e-726f-4fae-a208-bbdee3ec14cb-20=1" "Mon Jul 28 01:14:06 2087 GMT" "/" "www.experts-exchange.com" t]
-  [url-cookie "LOIT" "2e65ed4e-726f-4fae-a208-bbdee3ec14cb-20-10-0=102" "Mon Jul 28 01:14:06 2087 GMT" "/" "www.experts-exchange.com" t])
- (".bytes.com"
-  [url-cookie "bblastactivity" "0" "Wed, 01-Jul-2020 09:24:01 GMT" "/" ".bytes.com" t]
-  [url-cookie "bblastvisit" "1562059441" "Wed, 01-Jul-2020 09:24:01 GMT" "/" ".bytes.com" t])
- (".reddit.com"
-  [url-cookie "loid" "00000000004b5vj66k.2.1565042816949.Z0FBQUFBQmRTS2lBNzUtZGVYZmhpWU1UR2lhRzIxSVVVdVR1UUZtWHBUOU9mTXlfd1Z0Y1hvZWxPazdQQXVHeDZvWnVkcUU2MkwtREdLaGREN2pIS0ItLXRDNDBhOUpkRG1XR29PMVpaS3hLT1dKMjFWZHV2dDFSNzktbHRmTUVxSGtTdk0wRHZDb1Y" "Thu, 05 Aug 2021 22:06:56 GMT" "/" ".reddit.com" t]
-  [url-cookie "token" "eyJhY2Nlc3NUb2tlbiI6Ii1KaXlQZldFT1ducVp4M0g2T3ZZWlNoVzJrbXMiLCJ0b2tlblR5cGUiOiJiZWFyZXIiLCJleHBpcmVzIjoiMjAxOS0wOC0wNVQyMzowNjo1Ni45OTZaIiwic2NvcGUiOiIqIiwidW5zYWZlTG9nZ2VkT3V0Ijp0cnVlfQ==.2" "Thu, 05 Aug 2021 22:06:56 GMT" "/" ".reddit.com" t])
- ("reddit.com"
-  [url-cookie "edgebucket" "eX1VjbYS5gMaYJNLUq" "Wed Aug 04 06:25:13 2021 GMT" "/" "reddit.com" t])
- (".researchgate.net"
-  [url-cookie "__cfduid" "df309a6ce42eab90fe3eb1abb7d25fe8b1566606438" "Sun, 23-Aug-20 00:27:18 GMT" "/" ".researchgate.net" t])
- (".jdoodle.com"
-  [url-cookie "__cfduid" "d2d7d2ff623b982ae6e15d7578ba794441567958499" "Mon, 07-Sep-20 16:01:39 GMT" "/" ".jdoodle.com" t])
+ '((".github.com"
+  [url-cookie "logged_in" "no" "Wed, 22 Jun 2039 18:50:41 -0000" "/" ".github.com" t])
+ (".pinterest.com"
+  [url-cookie "_auth" "0" "Sat, 12 Sep 2020 18:15:36 GMT" "/" ".pinterest.com" t]
+  [url-cookie "_pinterest_sess" "TWc9PSZFNlhMY3YyRW1GcWE3MXdKV0hWVE9kYjRZaFVVRng4cGNBUk50Yjg1aTNlVWQydzAvWHFGWjlKM0MremRGZURXVWRlQmhFa09TOHJSVnlEUFlmbG1ha1NnUFBaVUo3a2VHZndDdHA1Umg4RnJTLzBicWVuOG1PN1FuUkQ3TmNDOCZwb0JIYjB3ckpVVm54Tjh1bTdNVXQyUEFpSHM9" "Sat, 12 Sep 2020 18:15:36 GMT" "/" ".pinterest.com" t])
  ("www.pinterest.com"
   [url-cookie "csrftoken" "0b1cfcc6625c6d2717b0466add63a8e5" "Thu, 17 Sep 2020 18:15:36 GMT" "/" "www.pinterest.com" t])
- (".pinterest.com"
-  [url-cookie "_pinterest_sess" "TWc9PSZFNlhMY3YyRW1GcWE3MXdKV0hWVE9kYjRZaFVVRng4cGNBUk50Yjg1aTNlVWQydzAvWHFGWjlKM0MremRGZURXVWRlQmhFa09TOHJSVnlEUFlmbG1ha1NnUFBaVUo3a2VHZndDdHA1Umg4RnJTLzBicWVuOG1PN1FuUkQ3TmNDOCZwb0JIYjB3ckpVVm54Tjh1bTdNVXQyUEFpSHM9" "Sat, 12 Sep 2020 18:15:36 GMT" "/" ".pinterest.com" t]
-  [url-cookie "_auth" "0" "Sat, 12 Sep 2020 18:15:36 GMT" "/" ".pinterest.com" t])
- (".github.com"
-  [url-cookie "logged_in" "no" "Wed, 22 Jun 2039 18:50:41 -0000" "/" ".github.com" t]))
+ (".jdoodle.com"
+  [url-cookie "__cfduid" "d2d7d2ff623b982ae6e15d7578ba794441567958499" "Mon, 07-Sep-20 16:01:39 GMT" "/" ".jdoodle.com" t])
+ (".researchgate.net"
+  [url-cookie "__cfduid" "df309a6ce42eab90fe3eb1abb7d25fe8b1566606438" "Sun, 23-Aug-20 00:27:18 GMT" "/" ".researchgate.net" t])
+ ("reddit.com"
+  [url-cookie "edgebucket" "eX1VjbYS5gMaYJNLUq" "Wed Aug 04 06:25:13 2021 GMT" "/" "reddit.com" t])
+ (".reddit.com"
+  [url-cookie "token" "eyJhY2Nlc3NUb2tlbiI6Ii1KaXlQZldFT1ducVp4M0g2T3ZZWlNoVzJrbXMiLCJ0b2tlblR5cGUiOiJiZWFyZXIiLCJleHBpcmVzIjoiMjAxOS0wOC0wNVQyMzowNjo1Ni45OTZaIiwic2NvcGUiOiIqIiwidW5zYWZlTG9nZ2VkT3V0Ijp0cnVlfQ==.2" "Thu, 05 Aug 2021 22:06:56 GMT" "/" ".reddit.com" t]
+  [url-cookie "loid" "00000000004b5vj66k.2.1565042816949.Z0FBQUFBQmRTS2lBNzUtZGVYZmhpWU1UR2lhRzIxSVVVdVR1UUZtWHBUOU9mTXlfd1Z0Y1hvZWxPazdQQXVHeDZvWnVkcUU2MkwtREdLaGREN2pIS0ItLXRDNDBhOUpkRG1XR29PMVpaS3hLT1dKMjFWZHV2dDFSNzktbHRmTUVxSGtTdk0wRHZDb1Y" "Thu, 05 Aug 2021 22:06:56 GMT" "/" ".reddit.com" t])
+ (".bytes.com"
+  [url-cookie "bblastvisit" "1562059441" "Wed, 01-Jul-2020 09:24:01 GMT" "/" ".bytes.com" t]
+  [url-cookie "bblastactivity" "0" "Wed, 01-Jul-2020 09:24:01 GMT" "/" ".bytes.com" t])
+ ("www.experts-exchange.com"
+  [url-cookie "LOIT" "2e65ed4e-726f-4fae-a208-bbdee3ec14cb-20-10-0=102" "Mon Jul 28 01:14:06 2087 GMT" "/" "www.experts-exchange.com" t]
+  [url-cookie "LOIO" "2e65ed4e-726f-4fae-a208-bbdee3ec14cb-20=1" "Mon Jul 28 01:14:06 2087 GMT" "/" "www.experts-exchange.com" t]
+  [url-cookie "CC_0" "exp_rs_1421=LO_CLEAN_SLATE&VTCT=1&exp_r_184=exp_rs_1421&EEUID=2e65ed4e-726f-4fae-a208-bbdee3ec14cb" "Mon Jul 28 01:14:06 2087 GMT" "/" "www.experts-exchange.com" t])
+ (".vincepergolizzi.com"
+  [url-cookie "__cfduid" "dcccebc312150b9e126a9908e7f219c791564183190" "Sat, 25-Jul-20 23:19:50 GMT" "/" ".vincepergolizzi.com" t])
+ (".cyberciti.biz"
+  [url-cookie "__cfduid" "dbb428af1a935989ad1afef0e7bdf84dc1561327840" "Mon, 22-Jun-20 22:10:40 GMT" "/" ".cyberciti.biz" t]))
 )
 
 ;; Local Variables:
