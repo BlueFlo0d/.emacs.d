@@ -185,10 +185,10 @@ This one changes the cursor color on each blink. Define colors in `blink-cursor-
 (setq x-meta-keysym 'super)
 (setq mac-command-modifier 'meta)
 (setq mac-option-modifier 'super)
-(keyboard-translate ?\( ?\[)
-(keyboard-translate ?\[ ?\()
-(keyboard-translate ?\) ?\])
-(keyboard-translate ?\] ?\))
+(define-key key-translation-map (kbd "(") (kbd "["))
+(define-key key-translation-map (kbd "[") (kbd "("))
+(define-key key-translation-map (kbd ")") (kbd "]"))
+(define-key key-translation-map (kbd "]") (kbd ")"))
 
 (require 'exwm)(require 'exwm-randr)
 (setq exwm-workspace-number 4)
@@ -357,7 +357,7 @@ This one changes the cursor color on each blink. Define colors in `blink-cursor-
 (define-key indent-rigidly-map (kbd "C-f") 'indent-rigidly-right)
 (define-key indent-rigidly-map (kbd "M-b") 'indent-rigidly-left-to-tab-stop)
 (define-key indent-rigidly-map (kbd "M-f") 'indent-rigidly-right-to-tab-stop)
-
+(setq browse-url-browser-function 'eww-browse-url)
 (require 'lilypond-mode)
 (provide 'init)
 ;;; init.el ends here
