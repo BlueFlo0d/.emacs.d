@@ -1,0 +1,3 @@
+module Main where
+       data List a = Cons a (List a)
+       	    	   | Ni

@@ -1,30 +1,8 @@
-;; -*- emacs-lisp -*- <19/10/24 02:29:17 /Users/hongqiantan/.emacs.d/tramp>
+;; -*- emacs-lisp -*- <19/12/15 02:53:59 /Users/hongqiantan/.emacs.d/tramp>
 ;; Tramp connection history.  Don't change this file.
 ;; You can delete it, forcing Tramp to reapply the checks.
 
-(((tramp-file-name "sudo" "root" nil "localhost" nil nil nil)
-  ("uname" "Darwin 18.7.0")
-  ("test" "test")
-  ("remote-path"
-   ("/usr/bin" "/bin" "/usr/sbin" "/sbin" "/usr/local/bin" "/usr/local/sbin"))
-  ("remote-shell" "/bin/sh")
-  ("locale" "LC_ALL=en_US.UTF-8")
-  ("readlink" nil)
-  ("perl-file-spec" t)
-  ("perl-cwd-realpath" t)
-  ("perl" "\\perl")
-  ("stat" nil)
-  ("id" "/usr/bin/id")
-  ("gid-integer" 0)
-  ("file-exists" "test -e")
-  ("case-insensitive" t)
-  ("gid-string" "wheel")
-  ("uid-integer" 0)
-  ("git" "\\git")
-  ("tmpdir" "/sudo:root@localhost:/tmp")
-  ("touch-t" t)
-  ("touch" "\\touch"))
- ((tramp-file-name "sudo" "root" nil "qhong-x1c.mit.edu" nil nil nil)
+(((tramp-file-name "sudo" "root" nil "qhong-x1c.mit.edu" nil nil nil)
   ("uname" "FreeBSD 12.0-RELEASE")
   ("locale" "LC_ALL=en_US.UTF-8")
   ("test" "test")
@@ -45,4 +23,6 @@
   ("case-insensitive" nil)
   ("git" "\\git")
   ("touch-t" t)
-  ("touch" "\\touch")))
+  ("touch" "\\touch"))
+ ((tramp-file-name "sudo" "root" nil "localhost" nil nil nil)
+  nil))

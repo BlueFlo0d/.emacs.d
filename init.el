@@ -32,7 +32,7 @@
 ;; function-args
 ;; (require 'function-args)
 ;; (fa-config-default)
-
+(setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
 (cond
  ((string-equal system-type "darwin")
   (setenv "PATH" (concat (getenv "PATH") ":/Library/TeX/texbin"))))
@@ -185,10 +185,10 @@ This one changes the cursor color on each blink. Define colors in `blink-cursor-
 (setq x-meta-keysym 'super)
 (setq mac-command-modifier 'meta)
 (setq mac-option-modifier 'super)
-(define-key key-translation-map (kbd "(") (kbd "["))
-(define-key key-translation-map (kbd "[") (kbd "("))
-(define-key key-translation-map (kbd ")") (kbd "]"))
-(define-key key-translation-map (kbd "]") (kbd ")"))
+(define-key input-decode-map (kbd "(") (kbd "["))
+(define-key input-decode-map (kbd "[") (kbd "("))
+(define-key input-decode-map (kbd ")") (kbd "]"))
+(define-key input-decode-map (kbd "]") (kbd ")"))
 
 (require 'exwm)(require 'exwm-randr)
 (setq exwm-workspace-number 4)
@@ -224,11 +224,12 @@ This one changes the cursor color on each blink. Define colors in `blink-cursor-
         ([?\C-d] . [delete])
         ([?\C-k] . [S-end delete])))
 
-(require 'multi-term)
+(use-package multi-libvterm
+  :load-path "~/.emacs.d/multi-libvterm")
 (setenv "ENV" (cond
                ((string-equal system-type "darwin") "/Users/hongqiantan/.bashrc")
                (t "/usr/home/qhong/.bashrc")))
-(setq multi-term-program "/bin/bash")
+(setq multi-libvterm-program "/bin/bash")
 (setq gc-cons-threshold 8000000)
 (setq gc-cons-percentage 0.25)
 
@@ -265,17 +266,27 @@ This one changes the cursor color on each blink. Define colors in `blink-cursor-
       (set-frame-parameter current-frame 'buffer-predicate (lambda (buffer) t))))))
 (global-set-key (kbd "s-f") (execute-without-multiterm `(next-buffer)))
 (global-set-key (kbd "s-b") (execute-without-multiterm `(previous-buffer)))
-(global-set-key (kbd "s-x") 'multi-term-next)
-(global-set-key (kbd "s-X") 'multi-term)
-(advice-add 'multi-term :after  (lambda ()
-                            (local-set-key (kbd "s-x") 'multi-term)
-                            (local-set-key (kbd "s-f") 'multi-term-next)
-                            (local-set-key (kbd "s-b") 'multi-term-prev)
-                            (local-set-key (kbd "M-DEL") (lambda ()
-                                                           (interactive)
-                                                           (term-send-raw-string "\e\C-?")))
-                            (local-set-key (kbd "s-g") (execute-without-multiterm `(switch-to-buffer (other-buffer))))
-                            ))
+(global-set-key (kbd "s-x") 'multi-libvterm-next)
+(global-set-key (kbd "s-X") 'multi-libvterm)
+(define-key vterm-mode-map (kbd "C-c C-t") nil)
+(define-key vterm-mode-map (kbd "C-c C-j") 'vterm-copy-mode)
+(define-key vterm-mode-map (kbd "C-d") (lambda () (interactive) (vterm-send-key "d" nil nil t)))
+(define-key vterm-copy-mode-map (kbd "C-c C-k") (lambda () (interactive) (vterm-copy-mode -1)))
+(defun multi-libvterm-set-custom-keys ()
+  ""
+  (local-set-key (kbd "s-x") 'multi-libvterm)
+  (local-set-key (kbd "s-f") 'multi-libvterm-next)
+  (local-set-key (kbd "s-b") 'multi-libvterm-prev)
+  (local-set-key (kbd "s-g") (execute-without-multiterm `(switch-to-buffer (other-buffer)))))
+(setq vterm-max-scrollback 1000000)
+(advice-add 'multi-libvterm :after  (lambda ()
+                                      (interactive)
+                                      (multi-libvterm-set-custom-keys)))
+(advice-add 'vterm-copy-mode :after  (lambda (&optional on)
+                                       (interactive)
+                                       (when
+                                           (or (not on) (> on 0))
+                                         (multi-libvterm-set-custom-keys))))
 (advice-add 'term-char-mode :after (lambda ()
                                      (local-set-key (kbd "C-c C-j") 'term-line-mode)))
 
@@ -361,3 +372,89 @@ This one changes the cursor color on each blink. Define colors in `blink-cursor-
 (require 'lilypond-mode)
 (provide 'init)
 ;;; init.el ends here
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   (quote
+    ("4bdc036ccf4ec5fc246cba3fcb5d18852d88026a77074209ebecdf9d8dbf1c75" default)))
+ '(jka-compr-compression-info-list
+   (quote
+    (["\\.Z\\'" "compressing" "compress"
+      ("-c")
+      "uncompressing" "gzip"
+      ("-c" "-q" "-d")
+      nil t "\235"]
+     ["\\.bz2\\'" "bzip2ing" "bzip2" nil "bunzip2ing" "bzip2"
+      ("-d")
+      nil t "BZh"]
+     ["\\.tbz2?\\'" "bzip2ing" "bzip2" nil "bunzip2ing" "bzip2"
+      ("-d")
+      nil nil "BZh"]
+     ["\\.\\(?:tgz\\|svgz\\|sifz\\)\\'" "compressing" "gzip"
+      ("-c" "-q")
+      "uncompressing" "gzip"
+      ("-c" "-q" "-d")
+      t nil "\213"]
+     ["\\.gz\\'" "compressing" "gzip"
+      ("-c" "-q")
+      "uncompressing" "gzip"
+      ("-c" "-q" "-d")
+      t t "\213"]
+     ["\\.lz\\'" "Lzip compressing" "lzip"
+      ("-c" "-q")
+      "Lzip uncompressing" "lzip"
+      ("-c" "-q" "-d")
+      t t "LZIP"]
+     ["\\.lzma\\'" "LZMA compressing" "lzma"
+      ("-c" "-q" "-z")
+      "LZMA uncompressing" "lzma"
+      ("-c" "-q" "-d")
+      t t ""]
+     ["\\.xz\\'" "XZ compressing" "xz"
+      ("-c" "-q")
+      "XZ uncompressing" "xz"
+      ("-c" "-q" "-d")
+      t t "\3757zXZ "]
+     ["\\.txz\\'" "XZ compressing" "xz"
+      ("-c" "-q")
+      "XZ uncompressing" "xz"
+      ("-c" "-q" "-d")
+      t nil "\3757zXZ "]
+     ["\\.dz\\'" nil nil nil "uncompressing" "gzip"
+      ("-c" "-q" "-d")
+      nil t "\213"]
+     ["\\.zst\\'" "zstd compressing" "zstd"
+      ("-c" "-q")
+      "zstd uncompressing" "zstd"
+      ("-c" "-q" "-d")
+      t t "(\265/\375"]
+     ["\\.tzst\\'" "zstd compressing" "zstd"
+      ("-c" "-q")
+      "zstd uncompressing" "zstd"
+      ("-c" "-q" "-d")
+      t nil "(\265/\375"])))
+ '(package-selected-packages
+   (quote
+    (vterm tuareg z3-mode ox-latex-subfigure htmlize slime-company slime org-static-blog telega company-ghci dash-functional rainbow-identifiers tracking anaphora pdf-tools ace-window openwith notmuch sudo-edit exwm magit flycheck-irony irony flycheck ggtags paredit geiser cdlatex auctex ace-jump-mode helm racket-mode zygospore yascroll xwidgete ws-butler volatile-highlights use-package undo-tree steam slime-volleyball proof-general org neotree mines magit-popup iedit helm-swoop helm-projectile helm-gtags haskell-mode haskell-emacs git-commit ghub ghci-completion f exec-path-from-shell emms elpy dtrt-indent dired-du company-rtags company-c-headers color-theme cmake-ide clean-aindent-mode chess anzu 2048-game)))
+ '(pdf-tools-handle-upgrades nil)
+ '(safe-local-variable-values
+   (quote
+    ((cmake-ide-project-dir . ~/ksi)
+     (cmake-ide-build-dir . ~/ksi/build)
+     (eval setq cmake-ide-build-dir
+           (concat my-project-path "build"))
+     (cmake-ide-project-dir . my-project-path)
+     (eval set
+           (make-local-variable
+            (quote my-project-path))
+           (file-name-directory
+            (let
+                ((d
+                  (dir-locals-find-file ".")))
+              (if
+                  (stringp d)
+                  d
+                (car d)))))))))

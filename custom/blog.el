@@ -23,7 +23,6 @@
 (setq org-static-blog-page-preamble
 "<div class=\"header row\">
   <div class=\"lcol\"><a href=\"/\">Q. Hong's Personal Blog</a></div>
-  <div class=\"rcol\"><a href=\"/2019-10-15-no-crypto.html\">* Why no HTTPS at this site</a></div>
 </div><hr/>")
 
 (defun org-static-blog-post-postamble (post-filename)
@@ -55,7 +54,10 @@ Modify this function if you want to change a posts footline."
 <tr><td class=\"ltd\"><label for=\"contact\">Email: </label></td><td><input type=\"text\" name=\"contact\" id=\"contact\"/></td></tr>
 <tr><td class=\"ltd\"><label for=\"rep\">Reply to #:</label></td><td><input type=\"text\" name=\"rep\" id=\"rep\"/></td></tr>
 <tr><td class=\"ltd\"><label for=\"text\">Text (*):</label></td><td><textarea name=\"text\" id=\"text\" rows=\"10\"></textarea></td></tr>
-<tr><td class=\"ltd\"><label for=\"url\">or URL (*):</label></td><td><input type=\"text\" id=\"url\" name=\"url\"/>input></td></tr>
+<tr><td class=\"ltd\"><label for=\"url\">or URL (*):</label></td><td><input type=\"text\" id=\"url\" name=\"url\"/></td></tr>
+<tr><td class=\"ltd\"><label for=\"cap\">CAPTCHA:
+<!--%captcha%-->
+</label></td><td><input type=\"text\" id=\"cap\" name=\"cap\"/></td></tr>
 </table>
 <table style=\"table-layout: fixed;\"><tr><td><input type=\"submit\"/></td><td><input type=\"reset\"/></td></tr>
 </table></form>
