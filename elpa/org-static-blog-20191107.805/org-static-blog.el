@@ -474,7 +474,7 @@ The index, archive, tags, and RSS feed are not updated."
   (org-static-blog-with-find-file
    (org-static-blog-matching-publish-filename post-filename)
    (concat
-    "<!DOCTYPE html>\n"
+    "<!DOCTYPE HTML>\n"
     "<html lang=\"" org-static-blog-langcode "\">\n"
     "<head>\n"
     "<meta charset=\"UTF-8\">\n"
@@ -542,7 +542,7 @@ Posts are sorted in descending time."
   (org-static-blog-with-find-file
    pub-filename
    (concat
-    "<!DOCTYPE html>\n"
+    "<!DOCTYPE HTML>\n"
     "<html lang=\"" org-static-blog-langcode "\">\n"
     "<head>\n"
     "<meta charset=\"UTF-8\">\n"
@@ -659,7 +659,7 @@ blog post, but no post body."
     (org-static-blog-with-find-file
      archive-filename
      (concat
-      "<!DOCTYPE html>\n"
+      "<!DOCTYPE HTML>\n"
       "<html lang=\"" org-static-blog-langcode "\">\n"
       "<head>\n"
       "<meta charset=\"UTF-8\">\n"
@@ -721,7 +721,7 @@ blog post, sorted by tags, but no post body."
     (org-static-blog-with-find-file
      tags-archive-filename
      (concat
-      "<!DOCTYPE html>\n"
+      "<!DOCTYPE HTML>\n"
       "<html lang=\"" org-static-blog-langcode "\">\n"
       "<head>\n"
       "<meta charset=\"UTF-8\">\n"

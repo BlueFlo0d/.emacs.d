@@ -2,6 +2,7 @@
 
 (let ((class '((class color) (min-colors 89)))
       (background   "#273763")
+      (brighter-bg  "#435ca3")
       (current-line "#ff0000")
       (highlight    "#141c33")
       (selection    "#0000ff")
@@ -198,7 +199,7 @@
     `(whitespace-trailing ((,class (:background ,contrast-bg))))
 
     ;; Parenthesis matching (built-in)))
-    `(show-paren-match ((,class (:background ,purple :foreground ,background))))
+    `(show-paren-match ((,class (:background ,brighter-bg))))
     `(show-paren-mismatch ((,class (:background ,red :foreground ,background))))
 
     ;; Smartparens paren matching
