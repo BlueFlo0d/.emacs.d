@@ -669,7 +669,7 @@ It only occurs when `highlight-tail-posterior-type' is 'const."
 Such as compute new faces, purge old overlays etc.
 
 This is called every `highlight-tail-timer' amount of time."
-  (sit-for 0)
+  ;;(sit-for 0)
   ;; if mode had been just disabled - delete all overlays
   ;; and cancel timers
   (if (not highlight-tail-mode)

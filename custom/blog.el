@@ -47,7 +47,7 @@ Modify this function if you want to change a posts footline."
 ;;   and a licensing stub.
 (setq org-static-blog-use-preview t)
 (setq org-static-blog-page-postamble
-"<h2>Comments</h2>
+      "<h2>Comments</h2>
 <!--%comments%-->
 <form action=\"?\" method=\"POST\"><table>
 <tr><td class=\"ltd\"><label for=\"nickname\">Nickname (*): </label></td><td><input type=\"text\" name=\"nickname\" id=\"nickname\"/></td></tr>
@@ -65,5 +65,6 @@ Modify this function if you want to change a posts footline."
   <a href=\"/archive.html\">Other posts</a>
 </div>
 <center><a rel=\"license\" href=\"https://creativecommons.org/licenses/by-sa/3.0/\"><img alt=\"Creative Commons License\" style=\"border-width:0\" src=\"https://i.creativecommons.org/l/by-sa/3.0/88x31.png\" /></a><br /><span xmlns:dct=\"https://purl.org/dc/terms/\" href=\"https://purl.org/dc/dcmitype/Text\" property=\"dct:title\" rel=\"dct:type\">cat-v.mit.edu</span> by Q. Hong is licensed under a <a rel=\"license\" href=\"https://creativecommons.org/licenses/by-sa/3.0/\">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.</center>")
-
+(setq org-latex-packages-alist '(("" "tikz" t)))
+(setq org-image-actual-width nil)
 (provide 'blog)

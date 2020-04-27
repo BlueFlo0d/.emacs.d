@@ -1,6 +1,6 @@
-;; -*- emacs-lisp -*- <19/12/15 02:53:59 /Users/hongqiantan/.emacs.d/tramp>
+;; -*- emacs-lisp -*- <20/04/07 17:43:44 /Users/hongqiantan/.emacs.d/tramp>
 ;; Tramp connection history.  Don't change this file.
-;; You can delete it, forcing Tramp to reapply the checks.
+;; Run `M-x tramp-cleanup-all-connections' instead.
 
 (((tramp-file-name "sudo" "root" nil "qhong-x1c.mit.edu" nil nil nil)
   ("uname" "FreeBSD 12.0-RELEASE")

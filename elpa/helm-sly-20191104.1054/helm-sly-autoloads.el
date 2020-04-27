@@ -10,21 +10,24 @@
 ;;; Generated autoloads from helm-sly.el
 
 (autoload 'helm-sly-list-connections "helm-sly" "\
-List Lisp connections with Helm.
-
-\(fn)" t nil)
+List Lisp connections with Helm." t nil)
 
 (autoload 'helm-sly-apropos "helm-sly" "\
-Yet another Apropos with `helm'.
-
-\(fn)" t nil)
+Yet another Apropos with `helm'." t nil)
 
 (autoload 'helm-sly-mode "helm-sly" "\
 Use Helm for Lisp xref selections.
 Note that the local minor mode has a global effect, thus making
 `global-helm-sly-mode' and `helm-sly-mode' equivalent.
 
+If called interactively, enable Helm-Sly mode if ARG is positive,
+and disable it if ARG is zero or negative.  If called from Lisp,
+also enable the mode if ARG is omitted or nil, and toggle it if
+ARG is `toggle'; disable the mode otherwise.
+
 \(fn &optional ARG)" t nil)
+
+(put 'global-helm-sly-mode 'globalized-minor-mode t)
 
 (defvar global-helm-sly-mode nil "\
 Non-nil if Global Helm-Sly mode is enabled.
