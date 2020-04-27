@@ -1,0 +1,2 @@
+;;; Generated package description from /Users/hongqiantan/.emacs.d/elpa/comment-or-uncomment-sexp-20190225.1122/comment-or-uncomment-sexp.el  -*- no-byte-compile: t -*-
+(define-package "comment-or-uncomment-sexp" "20190225.1122" "Command for commenting the sexp under point." '((emacs "24")) :commit "bec730d3fc1e6c17ff1339eb134af16c034a4d95" :keywords '("convenience") :authors '(("Artur Malabarba" . "artur@endlessparentheses.com")) :maintainer '("Artur Malabarba" . "artur@endlessparentheses.com") :url "https://github.com/Malabarba/comment-or-uncomment-sexp")
