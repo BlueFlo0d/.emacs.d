@@ -19,10 +19,12 @@
 (add-to-list 'load-path "~/.emacs.d/lilypond")
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (require 'setup-general)
+(setq async-bytecomp-allowed-packages '(all))
 (if (version< emacs-version "24.4")
     (require 'setup-ivy-counsel)
   (require 'setup-helm)
   (require 'setup-helm-gtags))
+(setq history-delete-duplicates t)
 ;; (require 'setup-ggtags)
 (require 'setup-cedet)
 (require 'setup-editing)
@@ -48,7 +50,8 @@
                          ((string-equal system-type "darwin")
                           '("/Library/TeX/texbin" "/usr/local/bin"))
                          (t '("/usr/local/bin")))
-))
+                        ))
+(require 'geiser)
 (setq geiser-chez-binary "chez")
 (setq geiser-mit-binary "/Applications/MIT:GNU Scheme 10.1.10.app/Contents/Resources/mit-scheme")
 (setq geiser-active-implementations '(chez mit))
@@ -431,15 +434,44 @@
                                      (local-set-key (kbd "C-c C-j") 'term-line-mode)))
 
 ;; Quick launch apps
-(global-set-key (kbd "s-G")
-                (lambda (url)
-                  (interactive "sEnter URL or keywords: ")
-                  (with-current-buffer
-                      (generate-new-buffer "*eww*")
-                    (eww-mode)
-                    (eww url))))
-(eval-after-load "eww"
-  '(setq eww-search-prefix "https://duckduckgo.com/lite?q="))
+
+;; xwidget-webkit
+(require 'xwidgete)
+(require 'eww)
+(setq eww-search-prefix "https://duckduckgo.com/lite?q=")
+(setq xww-search-prefix "https://google.com/search?q=")
+(defun xww (url &arg)
+  "Fetch URL and render the page.
+If the input doesn't look like an URL or a domain name, the
+word(s) will be searched for via `xww-search-prefix'.
+
+If called with a prefix ARG, use a new buffer instead of reusing
+the default EWW buffer."
+  (interactive
+   (let* ((prompt (concat "Enter URL or keywords: ")))
+     (list (read-string prompt nil)
+           (prefix-numeric-value current-prefix-arg))))
+  (let ((eww-search-prefix xww-search-prefix))
+    (setq url (eww--dwim-expand-url url)))
+  ;; Check whether the domain only uses "Highly Restricted" Unicode
+  ;; IDNA characters.  If not, transform to punycode to indicate that
+  ;; there may be funny business going on.
+  (let ((parsed (url-generic-parse-url url)))
+    (when (url-host parsed)
+      (unless (puny-highly-restrictive-domain-p (url-host parsed))
+        (setf (url-host parsed) (puny-encode-domain (url-host parsed)))))
+    ;; When the URL is on the form "http://a/../../../g", chop off all
+    ;; the leading "/.."s.
+    (when (url-filename parsed)
+      (while (string-match "\\`/[.][.]/" (url-filename parsed))
+        (setf (url-filename parsed) (substring (url-filename parsed) 3))))
+    (setq url (url-recreate-url parsed)))
+  (xwidget-browse-url-no-reuse url))
+(global-set-key (kbd "s-G") 'xww)
+(define-key xwidget-webkit-mode-map (kbd "s-g") 'xww)
+(define-key xwidget-webkit-mode-map (kbd "M-f") 'xwidget-webkit-forward)
+(define-key xwidget-webkit-mode-map (kbd "M-p") 'xwidget-webkit-zoom-out)
+(define-key xwidget-webkit-mode-map (kbd "M-n") 'xwidget-webkit-zoom-in)
 (require 'adjust-parens)
 (mapc (lambda (h)
         (add-hook h #'paredit-mode)
@@ -550,6 +582,12 @@
 ;;         (sbcl ("/usr/local/bin/sbcl"))))
 (require 'org)
 (require 'ox-latex)
+(add-to-list 'org-latex-classes
+             '("beamer"
+               "\\documentclass\[presentation\]\{beamer\}"
+               ("\\section\{%s\}" . "\\section*\{%s\}")
+               ("\\subsection\{%s\}" . "\\subsection*\{%s\}")
+               ("\\subsubsection\{%s\}" . "\\subsubsection*\{%s\}")))
 (setq org-latex-create-formula-image-program 'dvisvgm)
 (setq-default org-html-with-latex 'dvisvgm)
 (org-babel-do-load-languages 'org-babel-load-languages '((latex . t)))
@@ -576,14 +614,12 @@
 (add-hook 'lisp-mode-hook #'aggressive-indent-mode)
 (add-hook 'emacs-lisp-mode-hook #'aggressive-indent-mode)
 (add-hook 'scheme-mode-hook #'aggressive-indent-mode)
-(setq browse-url-browser-function 'eww-browse-url)
+(setq browse-url-browser-function 'xwidget-webkit-browse-url)
 (require 'telega)
 (setq telega-squash-message-mode-hook nil)
 (add-hook 'telega-root-mode-hook
           (lambda ()
             (interactive)
-            (print default-directory)
-            (print (buffer-name))
             (setq default-directory "~/.telega/")))
 
 
@@ -655,7 +691,7 @@
       ("-c" "-q" "-d")
       t nil "(\265/\375"]))
  '(package-selected-packages
-   '(helm-swoop helm-bibtex helm-gtags helm-ag helm-projectile helm-ls-git helm-sly helm adjust-parens buffer-move comment-or-uncomment-sexp gnu-elpa-keyring-update svg-clock company-fuzzy ansi package-build shut-up epl git commander dash s visible-mark highlight-parentheses nswbuff flames-of-freedom autotetris-mode highlight-indent-guides aggressive-indent ace-link vlf rainbow-mode magithub telega avy sly-macrostep sly-quicklisp sly-asdf sly vterm tuareg z3-mode ox-latex-subfigure htmlize org-static-blog company-ghci dash-functional rainbow-identifiers tracking anaphora pdf-tools ace-window openwith notmuch sudo-edit exwm magit flycheck-irony irony flycheck ggtags paredit geiser cdlatex auctex racket-mode zygospore yascroll xwidgete ws-butler volatile-highlights use-package undo-tree steam slime-volleyball proof-general org neotree mines magit-popup iedit haskell-mode haskell-emacs git-commit ghub ghci-completion f exec-path-from-shell emms elpy dtrt-indent dired-du company-rtags company-c-headers color-theme cmake-ide clean-aindent-mode chess anzu 2048-game))
+   '(pdf-tools xwwp-follow-link-helm helm-swoop helm-bibtex helm-gtags helm-ag helm-projectile helm-ls-git helm-sly helm adjust-parens buffer-move comment-or-uncomment-sexp gnu-elpa-keyring-update svg-clock company-fuzzy ansi package-build shut-up epl git commander dash s visible-mark highlight-parentheses nswbuff flames-of-freedom autotetris-mode highlight-indent-guides aggressive-indent ace-link vlf rainbow-mode magithub avy sly-macrostep sly-quicklisp sly-asdf sly vterm tuareg z3-mode ox-latex-subfigure htmlize org-static-blog company-ghci dash-functional rainbow-identifiers tracking anaphora ace-window openwith notmuch sudo-edit exwm magit flycheck-irony irony flycheck ggtags paredit geiser cdlatex auctex racket-mode zygospore yascroll xwidgete ws-butler volatile-highlights use-package undo-tree steam slime-volleyball proof-general org neotree mines magit-popup iedit haskell-mode haskell-emacs git-commit ghub ghci-completion f exec-path-from-shell emms elpy dtrt-indent dired-du company-rtags company-c-headers color-theme cmake-ide clean-aindent-mode chess anzu 2048-game))
  '(pdf-tools-handle-upgrades nil)
  '(safe-local-variable-values
    '((cmake-ide-project-dir . ~/ksi)
@@ -673,3 +709,9 @@
                   (stringp d)
                   d
                 (car d))))))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

@@ -4,4 +4,4 @@ cache
 !.gitignore
 *.elc
 *~
-
+elpa/

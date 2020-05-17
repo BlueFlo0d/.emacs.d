@@ -1,2 +1,0 @@
-;;; -*- no-byte-compile: t -*-
-(define-package "ox-latex-subfigure" "20190816.1905" "Subfigure for latex export" '((emacs "24")) :commit "5436eaf0cb036fed0a2042533ec1466a33cf9493" :keywords '("convenience" "ox" "latex" "subfigure" "org" "org-mode") :authors '(("Quang Linh LE" . "linktohack@gmail.com")) :maintainer '("Quang Linh LE" . "linktohack@gmail.com") :url "http://github.com/linktohack/ox-latex-subfigure")
