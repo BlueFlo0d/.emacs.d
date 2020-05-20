@@ -1,1 +1,1 @@
-("~/.emacs.d/" "~/.telega/" "~/apple-courier/" "~/playground/emacs-26.3/" "~/.emacs.d/multi-libvterm/")
+("~/.emacs.d/" "~/.telega/" "~/.emacs.d/multi-libvterm/")
