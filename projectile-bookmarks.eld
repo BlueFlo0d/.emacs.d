@@ -1,1 +1,0 @@
-("~/.emacs.d/" "~/.telega/" "~/.emacs.d/multi-libvterm/")

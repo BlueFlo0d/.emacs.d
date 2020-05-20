@@ -641,12 +641,13 @@
 
 (when k--x1c6-p
   (require 'bgex)
-  (bgex-set-image-default "~/Resources/wallpaper-blurred.jpg"))
-(setq default-frame-alist
-      (append '((alpha . 70)
-                (left-fringe . 1)
-                (right-fringe . 5))
-              default-frame-alist))
+  (bgex-set-image-default "~/Resources/wallpaper-blurred.jpg")
+  (setq default-frame-alist
+        (append '((alpha . 70)
+                  (left-fringe . 1)
+                  (right-fringe . 5))
+                default-frame-alist)))
+
 (provide 'init)
 ;;; init.el ends here
 (custom-set-variables

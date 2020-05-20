@@ -1,14 +1,0 @@
-;; Emacs-W3 HTTP cookies file
-;; Automatically generated file!!! DO NOT EDIT!!!
-
-(setq url-cookie-storage
- 'nil)
-(setq url-cookie-secure-storage
- '((".icesquare.com"
-  [url-cookie "__cfduid" "ddec6f41f4aa976741f0e8bc66890b17b1561180954" "Sun, 21-Jun-20 05:22:34 GMT" "/" ".icesquare.com" t]))
-)
-
-;; Local Variables:
-;; version-control: never
-;; no-byte-compile: t
-;; End:
