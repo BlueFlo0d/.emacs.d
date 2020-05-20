@@ -1,6 +1,6 @@
-;; -*- emacs-lisp -*- <20/04/07 17:43:44 /Users/hongqiantan/.emacs.d/tramp>
+;; -*- emacs-lisp -*- <20/05/19 12:26:25 /home/qh/.emacs.d/tramp>
 ;; Tramp connection history.  Don't change this file.
-;; Run `M-x tramp-cleanup-all-connections' instead.
+;; You can delete it, forcing Tramp to reapply the checks.
 
 (((tramp-file-name "sudo" "root" nil "qhong-x1c.mit.edu" nil nil nil)
   ("uname" "FreeBSD 12.0-RELEASE")
@@ -25,4 +25,25 @@
   ("touch-t" t)
   ("touch" "\\touch"))
  ((tramp-file-name "sudo" "root" nil "localhost" nil nil nil)
-  nil))
+  ("uname" "Linux 5.4.41")
+  ("locale" "LC_ALL=C")
+  ("~root" "/root")
+  ("test" "test")
+  ("remote-path"
+   ("~/.guix-profile/bin" "/run/current-system/profile/bin" "/run/current-system/profile/sbin" "/bin" "/usr/bin"))
+  ("remote-shell" "/bin/sh")
+  ("readlink" "\\readlink")
+  ("stat" nil)
+  ("perl" nil)
+  ("file-exists" "test -e")
+  ("ls" "/run/current-system/profile/bin/ls --color=never")
+  ("ls-quoting-style" t)
+  ("id" "/run/current-system/profile/bin/id")
+  ("gid-integer" 0)
+  ("case-insensitive" nil)
+  ("gid-string" "root")
+  ("uid-integer" 0)
+  ("git" "\\git")
+  ("tmpdir" "/sudo:root@localhost:/tmp")
+  ("touch-t" t)
+  ("touch" "\\touch")))

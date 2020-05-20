@@ -4,6 +4,8 @@
 (setq url-cookie-storage
  '((".superuser.com"
   [url-cookie "prov" "daca08a4-4b0f-e0ee-6659-904b3f8facb4" "Fri, 01-Jan-2055 00:00:00 GMT" "/" ".superuser.com" nil])
+ (".konachan.net"
+  [url-cookie "__cfduid" "d627ec3e395fd3539cc31946c92ae8a291589764093" "Wed, 17-Jun-20 01:08:13 GMT" "/" ".konachan.net" nil])
  (".twitter.com"
   [url-cookie "guest_id" "v1%3A157456978652508370" "Tue Nov 23 04:29:46 2021 GMT" "/" ".twitter.com" nil]
   [url-cookie "personalization_id" "v1_xJl1X5C+rpTkej5SnPxLYA==" "Tue Nov 23 04:29:46 2021 GMT" "/" ".twitter.com" nil])
@@ -37,8 +39,6 @@
   [url-cookie "__cfduid" "d1fb38a0e48e44f92c7a628a39e4fc80b1567958512" "Mon, 07-Sep-20 16:01:52 GMT" "/" ".docs.haskellstack.org" nil])
  ("j.mp"
   [url-cookie "_bit" "jao4ML-f89e9bfbc2caae3851-00U" "Fri, 22 May 2020 04:48:47 GMT" "/" "j.mp" nil])
- (".4chan.org"
-  [url-cookie "__cfduid" "da4048cac6c58b87f772635f617ebb9131585018989" "Thu, 23-Apr-20 03:03:09 GMT" "/" ".4chan.org" nil])
  (".github.com"
   [url-cookie "_octo" "GH1.1.2007051132.1561229441" "Tue, 22 Jun 2021 18:50:41 -0000" "/" ".github.com" nil]))
 )

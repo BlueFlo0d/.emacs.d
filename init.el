@@ -18,6 +18,45 @@
 (add-to-list 'load-path "~/.emacs.d/custom")
 (add-to-list 'load-path "~/.emacs.d/lilypond")
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+(setq k--imac-pro-p (string-equal system-type "darwin"))
+(setq k--x1c6-p (not k--imac-pro-p))
+
+(when k--x1c6-p
+  (require 'exwm)
+  (require 'exwm-randr)
+  (setq exwm-workspace-number 4)
+  (exwm-enable)
+  ;(exwm-workspace-detach-minibuffer)
+  ;(setq exwm-workspace-minibuffer-position 'bottom)
+
+  (setq exwm-randr-workspace-output-plist
+        '(0 "DP-2-1" 1 "HDMI-1" 2 "eDP-1"))
+  (add-hook 'exwm-randr-screen-change-hook
+            (lambda ()
+              (start-process-shell-command
+               "xrandr" nil "xrandr --output DP-2-1 --output HDMI-1 --output eDP-1 --auto")))
+  (exwm-randr-enable)
+  (setq exwm-input-global-keys
+        `(([?\s-e] . exwm-reset)
+          ([?\s-w] . exwm-workspace-switch)
+          ,@(mapcar (lambda (i)
+                      `(,(kbd (format "s-%d" i)) .
+                        (lambda ()
+                          (interactive)
+                          (exwm-workspace-switch-create ,i))))
+                    (number-sequence 0 9))))
+  (setq exwm-input-simulation-keys
+        '(([?\C-b] . [left])
+          ([?\C-f] . [right])
+          ([?\C-p] . [up])
+          ([?\C-n] . [down])
+          ([?\C-a] . [home])
+          ([?\C-e] . [end])
+          ([?\M-v] . [prior])
+          ([?\C-v] . [next])
+          ([?\C-d] . [delete])
+          ([?\C-k] . [S-end delete])))
+  )
 (require 'setup-general)
 (setq async-bytecomp-allowed-packages '(all))
 (if (version< emacs-version "24.4")
@@ -39,7 +78,7 @@
 ;; (fa-config-default)
 (setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
 (cond
- ((string-equal system-type "darwin")
+ (k--imac-pro-p
   (setenv "PATH" (concat (getenv "PATH") ":/Library/TeX/texbin"))))
 (setenv "CC" "clang")
 (setenv "CXX" "clang++")
@@ -47,14 +86,19 @@
 (setenv "GDK_DPI_SCALE" "2.0")
 (setq exec-path (append exec-path
                         (cond
-                         ((string-equal system-type "darwin")
+                         (k--imac-pro-p
                           '("/Library/TeX/texbin" "/usr/local/bin"))
                          (t '("/usr/local/bin")))
                         ))
 (require 'geiser)
-(setq geiser-chez-binary "chez")
-(setq geiser-mit-binary "/Applications/MIT:GNU Scheme 10.1.10.app/Contents/Resources/mit-scheme")
-(setq geiser-active-implementations '(chez mit))
+(if k--imac-pro-p
+    (progn
+      (setq geiser-chez-binary "chez")
+      (setq geiser-mit-binary "/Applications/MIT:GNU Scheme 10.1.10.app/Contents/Resources/mit-scheme")
+      (setq geiser-active-implementations '(chez mit)))
+  (progn
+    (require 'geiser-guile)
+    (add-to-list 'geiser-guile-load-path "~/src/guix")))
 ;; (with-eval-after-load "tex"
 ;;   (add-to-list 'TeX-view-program-list '("open" "open %o"))
 ;;   (setcdr (assq 'output-pdf TeX-view-program-selection) '("open")))
@@ -74,18 +118,19 @@
                              (add-to-list 'TeX-command-list '("PDFLaTeX" "%`pdflatex -shell-escape%(mode)%' %t" TeX-run-TeX nil t))
                              (setq TeX-command-default "XeLaTeX")
                              (setq TeX-save-query  nil )
-                             (setq TeX-show-compilation t)
-                             ))
+                             (setq TeX-show-compilation t)))
 (add-hook 'python-mode-hook (lambda ()
-                              (electric-pair-mode 1)
-                              ))
+                              (electric-pair-mode 1)))
 ;; Key bindings
 (global-set-key (kbd "s-o") 'ace-window)
 (global-set-key (kbd "s-s") 'helm-do-ag-project-root)
 (global-set-key (kbd "s-S") 'helm-swoop)
 (global-set-key (kbd "s-m") 'magit-status)
 (require 'helm)
-(setq completion-styles '(flex))
+(setq completion-styles
+      (when (version< emacs-version "27.0")
+        '(flex)
+        '(helm-flex)))
 (setq helm-follow-mode-persistent t)
 (define-key helm-find-files-map (kbd "s-d") 'helm-ff-run-delete-file)
 (define-key helm-find-files-map (kbd "s-w") 'helm-ff-run-copy-file)
@@ -121,7 +166,18 @@
   (message (shell-command-to-string
             (concat "cloc " (magit-toplevel)))))
 (add-hook 'magit-post-commit-hook 'cloc-magit-root)
-(require 'framemove)
+(defun next-workspace (direction)
+  (case direction
+    (left (exwm-workspace-switch (1- exwm-workspace-current-index)))
+    (right (exwm-workspace-switch (1+ exwm-workspace-current-index)))))
+(if k--imac-pro-p
+    (require 'framemove)
+  (defadvice windmove-do-window-select (around do-window-select-wrapper activate)
+    "Let windmove do its own thing, if there is an error, try framemove in that direction."
+    (condition-case err
+        ad-do-it
+      (error
+       (next-workspace (ad-get-arg 0))))))
 (setq framemove-hook-into-windmove t)
 (global-set-key (kbd "s-p") 'windmove-up)
 (global-set-key (kbd "s-n") 'windmove-down)
@@ -141,7 +197,9 @@
           (let ((buf-this-window (windmove-find-other-window direction)))
             (if (null buf-this-window)
                 (progn
-                  (fm-next-frame direction)
+                  (if k--imac-pro-p
+                      (fm-next-frame direction)
+                    (next-workspace direction))
                   (selected-window))
               buf-this-window))))
     (if (null other-win)
@@ -196,8 +254,16 @@
 (global-yascroll-bar-mode 1)
 
 (define-key c-mode-map  [(tab)] 'company-complete)
- (define-key c++-mode-map  [(tab)] 'company-complete)
-(add-to-list 'default-frame-alist '(font . "Courier-20"))
+(define-key c++-mode-map  [(tab)] 'company-complete)
+(if k--imac-pro-p
+    (add-to-list 'default-frame-alist '(font . "Courier-20"))
+  (add-to-list 'default-frame-alist '(font . "Courier-20"))
+  (set-fontset-font t 'symbol "Unifont" nil 'append)
+  (set-fontset-font t 'symbol "Noto Emoji" nil 'append)
+  (set-fontset-font t 'symbol "Noto Color Emoji" nil 'append)
+  (set-fontset-font t 'symbol "Noto Sans Symbols" nil 'append)
+  (set-fontset-font t nil "Noto Sans CJK" nil 'append))
+(print (font-family-list))
 ;; (setq exec-path (append exec-path '("/usr/local/bin")))
 ;; (add-to-list 'load-path "~/emms/lisp")
 ;; (require 'emms-setup)
@@ -268,18 +334,17 @@
 (setq highlight-indent-guides-delay 0)
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
-(load-theme 'k t)
+(load-theme 'k-bgex t)
 
 (require 'company)
 
 (add-hook 'c-mode-hook 'irony-mode)
 (add-hook 'irony-mode-hook 'company-irony-setup-begin-commands)
+(company-flx-mode 1)
 (setq company-backends (delete 'company-semantic company-backends))
 (add-to-list
- 'company-backends 'company-irony)
+ 'company-backends 'company-files)
 
-(require 'company-fuzzy)
-(globalize company-fuzzy-mode)
 (setq company-eclim-auto-save nil)
 
 ;;(setq doc-view-resolution 200)
@@ -315,8 +380,8 @@
 
 (setq notmuch-search-oldest-first nil)
 
-(setq x-super-keysym 'meta)
-(setq x-meta-keysym 'super)
+                                        ;(setq x-super-keysym 'meta)
+                                        ;(setq x-meta-keysym 'super)
 (setq mac-command-modifier 'meta)
 (setq mac-option-modifier 'super)
 (setq mac-right-option-modifier 'hyper)
@@ -329,46 +394,13 @@
 (define-key input-decode-map (kbd "C-)") (kbd "C-]"))
 (define-key input-decode-map (kbd "C-]") (kbd "C-)"))
 
-(require 'exwm)(require 'exwm-randr)
-(setq exwm-workspace-number 4)
-(exwm-enable)
-
-(require 'exwm-randr)
-(setq exwm-randr-workspace-output-plist
-      '(0 "DP-2-1" 1 "HDMI-1" 2 "eDP-1"))
-(add-hook 'exwm-randr-screen-change-hook
-          (lambda ()
-            (start-process-shell-command
-             "xrandr" nil "xrandr --output DP-2-1 --output HDMI-1 --output eDP-1 --auto")))
-(exwm-randr-enable)
-
-(setq exwm-input-global-keys
-      `(([?\s-e] . exwm-reset)
-        ([?\s-w] . exwm-workspace-switch)
-        ,@(mapcar (lambda (i)
-                    `(,(kbd (format "s-%d" i)) .
-                      (lambda ()
-                        (interactive)
-                        (exwm-workspace-switch-create ,i))))
-                  (number-sequence 0 9))))
-(setq exwm-input-simulation-keys
-      '(([?\C-b] . [left])
-        ([?\C-f] . [right])
-        ([?\C-p] . [up])
-        ([?\C-n] . [down])
-        ([?\C-a] . [home])
-        ([?\C-e] . [end])
-        ([?\M-v] . [prior])
-        ([?\C-v] . [next])
-        ([?\C-d] . [delete])
-        ([?\C-k] . [S-end delete])))
-
-(use-package multi-libvterm
+(use-package multi-vterm
   :load-path "~/.emacs.d/multi-libvterm")
 (setenv "ENV" (cond
-               ((string-equal system-type "darwin") "/Users/hongqiantan/.bashrc")
+               (k--imac-pro-p "/Users/hongqiantan/.bashrc")
                (t "/usr/home/qhong/.bashrc")))
-(setq multi-libvterm-program "/bin/bash")
+(when k--imac-pro-p
+  (setq multi-vterm-program "/bin/bash"))
 (setq gc-cons-threshold 8000000)
 (setq gc-cons-percentage 0.25)
 
@@ -404,8 +436,8 @@
 (global-set-key (kbd "s-f") #'nswbuff-switch-to-next-buffer)
 (global-set-key (kbd "s-b") #'nswbuff-switch-to-previous-buffer)
 
-(global-set-key (kbd "s-x") 'multi-libvterm-next)
-(global-set-key (kbd "s-X") 'multi-libvterm)
+(global-set-key (kbd "s-x") 'multi-vterm-next)
+(global-set-key (kbd "s-X") 'multi-vterm)
 (define-key vterm-mode-map (kbd "C-c C-t") nil)
 (define-key vterm-mode-map (kbd "C-c C-j") 'vterm-copy-mode)
 (define-key vterm-mode-map (kbd "C-d") (lambda () (interactive) (vterm-send-key "d" nil nil t)))
@@ -415,63 +447,49 @@
            (interactive)
            (let ((current-frame (selected-frame)))
              (set-frame-parameter current-frame 'buffer-predicate (lambda (buffer) t))))))
-(defun multi-libvterm-set-custom-keys ()
+
+(defun multi-vterm-set-custom-keys ()
   ""
-  (local-set-key (kbd "s-x") 'multi-libvterm)
-  (local-set-key (kbd "s-f") 'multi-libvterm-next)
-  (local-set-key (kbd "s-b") 'multi-libvterm-prev)
+  (local-set-key (kbd "s-x") 'multi-vterm)
+  (local-set-key (kbd "s-f") 'multi-vterm-next)
+  (local-set-key (kbd "s-b") 'multi-vterm-prev)
   (local-set-key (kbd "s-g") (execute-without-multivterm `(switch-to-buffer (other-buffer)))))
 (setq vterm-max-scrollback 1000000)
-(advice-add 'multi-libvterm :after  (lambda ()
-                                      (interactive)
-                                      (multi-libvterm-set-custom-keys)))
+(advice-add 'multi-vterm :after  (lambda ()
+                                   (interactive)
+                                   (multi-vterm-set-custom-keys)))
 (advice-add 'vterm-copy-mode :after  (lambda (&optional on)
                                        (interactive)
                                        (when
                                            (or (not on) (> on 0))
-                                         (multi-libvterm-set-custom-keys))))
+                                         (multi-vterm-set-custom-keys))))
 (advice-add 'term-char-mode :after (lambda ()
                                      (local-set-key (kbd "C-c C-j") 'term-line-mode)))
 
-;; Quick launch apps
-
-;; xwidget-webkit
-(require 'xwidgete)
 (require 'eww)
-(setq eww-search-prefix "https://duckduckgo.com/lite?q=")
-(setq xww-search-prefix "https://google.com/search?q=")
-(defun xww (url &arg)
-  "Fetch URL and render the page.
-If the input doesn't look like an URL or a domain name, the
-word(s) will be searched for via `xww-search-prefix'.
-
-If called with a prefix ARG, use a new buffer instead of reusing
-the default EWW buffer."
+(setq browse-url-browser-function 'eww-browse-url)
+(defadvice eww-tag-title (after eww-rename-buffer-ad (cont))
+  "Update EWW buffer title with new page load."
+  (let ((eww-current-title (plist-get eww-data :title)))
+    (rename-buffer (format "*eww: %s*" eww-current-title) t)))
+(ad-activate 'eww-tag-title)
+(defun eww-new-buffer (url)
   (interactive
-   (let* ((prompt (concat "Enter URL or keywords: ")))
-     (list (read-string prompt nil)
-           (prefix-numeric-value current-prefix-arg))))
-  (let ((eww-search-prefix xww-search-prefix))
-    (setq url (eww--dwim-expand-url url)))
-  ;; Check whether the domain only uses "Highly Restricted" Unicode
-  ;; IDNA characters.  If not, transform to punycode to indicate that
-  ;; there may be funny business going on.
-  (let ((parsed (url-generic-parse-url url)))
-    (when (url-host parsed)
-      (unless (puny-highly-restrictive-domain-p (url-host parsed))
-        (setf (url-host parsed) (puny-encode-domain (url-host parsed)))))
-    ;; When the URL is on the form "http://a/../../../g", chop off all
-    ;; the leading "/.."s.
-    (when (url-filename parsed)
-      (while (string-match "\\`/[.][.]/" (url-filename parsed))
-        (setf (url-filename parsed) (substring (url-filename parsed) 3))))
-    (setq url (url-recreate-url parsed)))
-  (xwidget-browse-url-no-reuse url))
-(global-set-key (kbd "s-G") 'xww)
-(define-key xwidget-webkit-mode-map (kbd "s-g") 'xww)
-(define-key xwidget-webkit-mode-map (kbd "M-f") 'xwidget-webkit-forward)
-(define-key xwidget-webkit-mode-map (kbd "M-p") 'xwidget-webkit-zoom-out)
-(define-key xwidget-webkit-mode-map (kbd "M-n") 'xwidget-webkit-zoom-in)
+   (let* ((uris (eww-suggested-uris))
+          (prompt (concat "Enter URL or keywords"
+                          (if uris (format " (default %s)" (car uris)) "")
+                          ": ")))
+     (list (read-string prompt nil nil uris))))
+  (with-temp-buffer
+    (eww url)))
+;; Quick launch apps
+(global-set-key (kbd "s-g") #'eww-new-buffer)
+(global-set-key (kbd "s-L")
+                (lambda ()
+                  (interactive)
+                  (call-process-shell-command
+                   "/home/qh/Resources/i3.sh" nil nil)))
+
 (require 'adjust-parens)
 (mapc (lambda (h)
         (add-hook h #'paredit-mode)
@@ -481,19 +499,16 @@ the default EWW buffer."
         lisp-mode-hook
         scheme-mode-hook
         sly-mrepl-mode-hook))
-(add-hook 'emacs-lisp-mode-hook #'adjust-parens-mode)
 (setq backward-delete-char-untabify-method 'hungry)
-(add-hook 'emacs-lisp-mode-hook #'paredit-mode)
+(add-hook 'emacs-lisp-mode-hook (lambda ()
+                                  (require 'company-elisp)
+                                  (push 'company-elisp company-backends)
+                                  (push 'company-capf company-backends)))
 (add-hook 'emacs-lisp-mode-hook #'rainbow-mode)
-(add-hook 'lisp-mode-hook #'adjust-parens-mode)
-(add-hook 'lisp-mode-hook #'paredit-mode)
-(add-hook 'lisp-mode-hook (lambda () (interactive)
-                            (company-fuzzy-mode 0)))
+
 (add-hook 'scheme-mode-hook #'paredit-mode)
-(add-hook 'scheme-mode-hook #'geiser)
 (add-hook 'sly-mrepl-mode-hook #'paredit-mode)
-(add-hook 'sly-mrepl-hook (lambda () (interactive)
-                            (company-fuzzy-mode 0)))
+
 (defvar  sly-mrepl--sylvesters
   (with-temp-buffer
     (insert-file-contents-literally
@@ -555,7 +570,7 @@ the default EWW buffer."
   (custom-set-variables
    '(pdf-tools-handle-upgrades nil)) ; Use brew upgrade pdf-tools instead.
   (setq pdf-info-epdfinfo-program "/usr/local/bin/epdfinfo"))
-(pdf-tools-install)
+;(pdf-tools-install)
 (add-to-list 'auto-mode-alist '("\\.pdf\\'" . pdf-view-mode))
 
 ;; Print screen
@@ -574,8 +589,10 @@ the default EWW buffer."
 (setq company-dabbrev-downcase nil)
 (when (string-equal system-type "berkeley-unix") (openwith-mode t))
 
-(when (string-equal system-type "darwin") (require 'blog))
-(setq inferior-lisp-program "/usr/local/bin/sbcl")
+(when k--imac-pro-p (require 'blog))
+(if k--imac-pro-p
+    (setq inferior-lisp-program "/usr/local/bin/sbcl")
+  (setq inferior-lisp-program "~/.guix-profile/bin/sbcl"))
 ;; (setq sly-contribs '(sly-fancy sly-quicklisp sly-macrostep))
 ;; (setq sly-lisp-implementations
 ;;       '((ccl ("/usr/local/Cellar/clozure-cl/1.11.6/bin/ccl64"))
@@ -614,7 +631,7 @@ the default EWW buffer."
 (add-hook 'lisp-mode-hook #'aggressive-indent-mode)
 (add-hook 'emacs-lisp-mode-hook #'aggressive-indent-mode)
 (add-hook 'scheme-mode-hook #'aggressive-indent-mode)
-(setq browse-url-browser-function 'xwidget-webkit-browse-url)
+
 (require 'telega)
 (setq telega-squash-message-mode-hook nil)
 (add-hook 'telega-root-mode-hook
@@ -622,7 +639,13 @@ the default EWW buffer."
             (interactive)
             (setq default-directory "~/.telega/")))
 
-
+(require 'bgex)
+(bgex-set-image-default "~/Resources/wallpaper-blurred.jpg")
+(setq default-frame-alist
+      (append '((alpha . 70)
+                (left-fringe . 1)
+                (right-fringe . 5))
+              default-frame-alist))
 (provide 'init)
 ;;; init.el ends here
 (custom-set-variables
@@ -631,12 +654,15 @@ the default EWW buffer."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
-   '("4bdc036ccf4ec5fc246cba3fcb5d18852d88026a77074209ebecdf9d8dbf1c75" default))
+   (quote
+    ("4bdc036ccf4ec5fc246cba3fcb5d18852d88026a77074209ebecdf9d8dbf1c75" default)))
  '(debug-on-error t)
  '(helm-ls-git-default-sources
-   '(helm-source-ls-git-buffers helm-source-ls-git-status helm-source-ls-git))
+   (quote
+    (helm-source-ls-git-buffers helm-source-ls-git-status helm-source-ls-git)))
  '(jka-compr-compression-info-list
-   '(["\\.Z\\'" "compressing" "compress"
+   (quote
+    (["\\.Z\\'" "compressing" "compress"
       ("-c")
       "uncompressing" "gzip"
       ("-c" "-q" "-d")
@@ -689,18 +715,21 @@ the default EWW buffer."
       ("-c" "-q")
       "zstd uncompressing" "zstd"
       ("-c" "-q" "-d")
-      t nil "(\265/\375"]))
+      t nil "(\265/\375"])))
  '(package-selected-packages
-   '(pdf-tools xwwp-follow-link-helm helm-swoop helm-bibtex helm-gtags helm-ag helm-projectile helm-ls-git helm-sly helm adjust-parens buffer-move comment-or-uncomment-sexp gnu-elpa-keyring-update svg-clock company-fuzzy ansi package-build shut-up epl git commander dash s visible-mark highlight-parentheses nswbuff flames-of-freedom autotetris-mode highlight-indent-guides aggressive-indent ace-link vlf rainbow-mode magithub avy sly-macrostep sly-quicklisp sly-asdf sly vterm tuareg z3-mode ox-latex-subfigure htmlize org-static-blog company-ghci dash-functional rainbow-identifiers tracking anaphora ace-window openwith notmuch sudo-edit exwm magit flycheck-irony irony flycheck ggtags paredit geiser cdlatex auctex racket-mode zygospore yascroll xwidgete ws-butler volatile-highlights use-package undo-tree steam slime-volleyball proof-general org neotree mines magit-popup iedit haskell-mode haskell-emacs git-commit ghub ghci-completion f exec-path-from-shell emms elpy dtrt-indent dired-du company-rtags company-c-headers color-theme cmake-ide clean-aindent-mode chess anzu 2048-game))
+   (quote
+    (guix company-flx comment-dwim-2 pdf-tools xwwp-follow-link-helm helm-swoop helm-bibtex helm-gtags helm-ag helm-projectile helm-ls-git helm-sly helm adjust-parens buffer-move comment-or-uncomment-sexp gnu-elpa-keyring-update svg-clock ansi package-build shut-up epl git commander dash s visible-mark highlight-parentheses nswbuff flames-of-freedom autotetris-mode highlight-indent-guides aggressive-indent ace-link vlf rainbow-mode magithub avy sly-macrostep sly-quicklisp sly-asdf sly vterm tuareg z3-mode ox-latex-subfigure htmlize org-static-blog company-ghci dash-functional rainbow-identifiers tracking anaphora ace-window openwith notmuch sudo-edit exwm magit flycheck-irony irony flycheck ggtags paredit geiser cdlatex auctex racket-mode zygospore yascroll xwidgete ws-butler volatile-highlights use-package undo-tree steam slime-volleyball proof-general org neotree mines magit-popup iedit haskell-mode haskell-emacs git-commit ghub ghci-completion f exec-path-from-shell emms elpy dtrt-indent dired-du company-rtags company-c-headers color-theme cmake-ide clean-aindent-mode chess anzu 2048-game)))
  '(pdf-tools-handle-upgrades nil)
  '(safe-local-variable-values
-   '((cmake-ide-project-dir . ~/ksi)
+   (quote
+    ((cmake-ide-project-dir . ~/ksi)
      (cmake-ide-build-dir . ~/ksi/build)
      (eval setq cmake-ide-build-dir
            (concat my-project-path "build"))
      (cmake-ide-project-dir . my-project-path)
      (eval set
-           (make-local-variable 'my-project-path)
+           (make-local-variable
+            (quote my-project-path))
            (file-name-directory
             (let
                 ((d
@@ -708,7 +737,7 @@ the default EWW buffer."
               (if
                   (stringp d)
                   d
-                (car d))))))))
+                (car d)))))))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
