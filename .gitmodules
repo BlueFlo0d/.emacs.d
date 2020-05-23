@@ -1,0 +1,3 @@
+[submodule "eosd"]
+	path = eosd
+	url = https://github.com/clarete/eosd

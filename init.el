@@ -20,14 +20,30 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (setq k--imac-pro-p (string-equal system-type "darwin"))
 (setq k--x1c6-p (not k--imac-pro-p))
+(when k--imac-pro-p
+  (use-package anzu
+    :init
+    (global-anzu-mode)
+    (global-set-key (kbd "M-%") 'anzu-query-replace)
+    (global-set-key (kbd "C-M-%") 'anzu-query-replace-regexp))
+  )
+(setq isearch-lazy-count t)
 
 (when k--x1c6-p
   (require 'exwm)
   (require 'exwm-randr)
   (setq exwm-workspace-number 4)
   (exwm-enable)
-  ;(exwm-workspace-detach-minibuffer)
-  ;(setq exwm-workspace-minibuffer-position 'bottom)
+
+  (exwm-workspace-detach-minibuffer)
+  (setq exwm-workspace-minibuffer-position 'top)
+
+  ;; patch exwm
+  (advice-add #'message :after
+              (lambda (s &rest args)
+                (let ((cursor-in-echo-area t))
+                  (when s
+                    (exwm-workspace--on-echo-area-dirty)))))
 
   (setq exwm-randr-workspace-output-plist
         '(0 "DP-2-1" 1 "HDMI-1" 2 "eDP-1"))
@@ -128,9 +144,9 @@
 (global-set-key (kbd "s-m") 'magit-status)
 (require 'helm)
 (setq completion-styles
-      (when (version< emacs-version "27.0")
-        '(flex)
-        '(helm-flex)))
+      (if (version< emacs-version "27.0")
+          '(helm-flex)
+        '(flex)))
 (setq helm-follow-mode-persistent t)
 (define-key helm-find-files-map (kbd "s-d") 'helm-ff-run-delete-file)
 (define-key helm-find-files-map (kbd "s-w") 'helm-ff-run-copy-file)
@@ -334,7 +350,9 @@
 (setq highlight-indent-guides-delay 0)
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
-(load-theme 'k-bgex t)
+(if k--imac-pro-p
+    (load-theme 'k t)
+  (load-theme 'k-bgex t))
 
 (require 'company)
 
@@ -430,7 +448,8 @@
 (setq nswbuff-recent-buffers-first nil)
 (setq nswbuff-start-with-current-centered t)
 (setq nswbuff-exclude-mode-regexp "helm\\|vterm\\|compilation")
-(setq nswbuff-exclude-buffer-regexps '("*Flycheck" "*Backtrace" "*Message"))
+(setq nswbuff-exclude-buffer-regexps '("*Flycheck" "*Backtrace" "*Message"
+                                       "*Echo Area" "*Minibuf"))
 (setq nswbuff-status-window-layout 'adjust)
 (setq nswbuff-display-intermediate-buffers t)
 (global-set-key (kbd "s-f") #'nswbuff-switch-to-next-buffer)
@@ -442,18 +461,13 @@
 (define-key vterm-mode-map (kbd "C-c C-j") 'vterm-copy-mode)
 (define-key vterm-mode-map (kbd "C-d") (lambda () (interactive) (vterm-send-key "d" nil nil t)))
 (define-key vterm-copy-mode-map (kbd "C-c C-k") (lambda () (interactive) (vterm-copy-mode -1)))
-(defun execute-without-multivterm (k)
-  (eval `(lambda ()
-           (interactive)
-           (let ((current-frame (selected-frame)))
-             (set-frame-parameter current-frame 'buffer-predicate (lambda (buffer) t))))))
+
 
 (defun multi-vterm-set-custom-keys ()
   ""
   (local-set-key (kbd "s-x") 'multi-vterm)
   (local-set-key (kbd "s-f") 'multi-vterm-next)
-  (local-set-key (kbd "s-b") 'multi-vterm-prev)
-  (local-set-key (kbd "s-g") (execute-without-multivterm `(switch-to-buffer (other-buffer)))))
+  (local-set-key (kbd "s-b") 'multi-vterm-prev))
 (setq vterm-max-scrollback 1000000)
 (advice-add 'multi-vterm :after  (lambda ()
                                    (interactive)
@@ -498,7 +512,8 @@
       '(emacs-lisp-mode-hook
         lisp-mode-hook
         scheme-mode-hook
-        sly-mrepl-mode-hook))
+        sly-mrepl-mode-hook
+        geiser-repl-mode-hook))
 (setq backward-delete-char-untabify-method 'hungry)
 (add-hook 'emacs-lisp-mode-hook (lambda ()
                                   (require 'company-elisp)
@@ -564,12 +579,14 @@
 ;;              "mplayer"
 ;;              '(file))
 ;;        ))
-(use-package pdf-tools
-  :ensure t
-  :config
-  (custom-set-variables
-   '(pdf-tools-handle-upgrades nil)) ; Use brew upgrade pdf-tools instead.
-  (setq pdf-info-epdfinfo-program "/usr/local/bin/epdfinfo"))
+(if k--imac-pro-p
+    (use-package pdf-tools
+      :ensure t
+      :config
+      (custom-set-variables
+       '(pdf-tools-handle-upgrades nil)) ; Use brew upgrade pdf-tools instead.
+      (setq pdf-info-epdfinfo-program "/usr/local/bin/epdfinfo"))
+  (require 'pdf-tools))
 ;(pdf-tools-install)
 (add-to-list 'auto-mode-alist '("\\.pdf\\'" . pdf-view-mode))
 
@@ -638,16 +655,56 @@
           (lambda ()
             (interactive)
             (setq default-directory "~/.telega/")))
-
+(require 'magit)
 (when k--x1c6-p
   (require 'bgex)
   (bgex-set-image-default "~/Resources/wallpaper-blurred.jpg")
+  (mapc (lambda (buf-name)
+          (bgex-set-color buf-name 'bgex-identifier-type-buffer-name "#2e1e57"))
+        '(" *Minibuf-0*" " *Minibuf-1*" " *Echo Area 0*" " *Echo Area 1*"))
   (setq default-frame-alist
         (append '((alpha . 70)
                   (left-fringe . 1)
                   (right-fringe . 5))
-                default-frame-alist)))
+                default-frame-alist))
+  ;; exwm detached minibuffer play with helm
+  (defun helm-resolve-display-function (com)
+    #'helm-default-display-buffer)
+  (defvar k--suppress-exwm-minibuffer nil)
+  (make-variable-buffer-local 'k--suppress-exwm-minibuffer)
+  (advice-add 'exwm-workspace--on-minibuffer-setup :around
+              (lambda (cont)
+                (unless k--suppress-exwm-minibuffer
+                  (funcall cont))))
+  (add-hook 'helm-minibuffer-set-up-hook
+            (lambda ()
+              (setq k--suppress-exwm-minibuffer t)))
+  (add-hook 'helm-exit-minibuffer-hook
+            (lambda ()
+              (setq k--suppress-exwm-minibuffer nil))))
+;; notifications
+(telega-notifications-mode t)
+(require 'sauron)
+(setq sauron-separate-frame nil)
 
+(setq sauron-min-priority 3)
+(setq sauron-log-buffer-max-lines most-positive-fixnum)
+(defadvice notifications-notify
+    (after sr-notifications-hook (&rest params) disable)
+  "\"Hook\" `sauron-add-event' to `notifications-notify'"
+  (let ((title (plist-get params :title))
+        (body (plist-get params :body))
+        (prio (sr-notifications-urgency-to-priority
+               (plist-get params :urgency)))
+        (callback (plist-get params :on-action)))
+    (sauron-add-event
+     'notify
+     prio
+     (concat title
+	         (if (and title body) " - ") body)
+     callback)))
+(ad-enable-advice 'notifications-notify 'after 'sr-notifications-hook)
+(ad-activate 'notifications-notify)
 (provide 'init)
 ;;; init.el ends here
 (custom-set-variables
@@ -656,15 +713,12 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
-   (quote
-    ("4bdc036ccf4ec5fc246cba3fcb5d18852d88026a77074209ebecdf9d8dbf1c75" default)))
+   '("4bdc036ccf4ec5fc246cba3fcb5d18852d88026a77074209ebecdf9d8dbf1c75" default))
  '(debug-on-error t)
  '(helm-ls-git-default-sources
-   (quote
-    (helm-source-ls-git-buffers helm-source-ls-git-status helm-source-ls-git)))
+   '(helm-source-ls-git-buffers helm-source-ls-git-status helm-source-ls-git))
  '(jka-compr-compression-info-list
-   (quote
-    (["\\.Z\\'" "compressing" "compress"
+   '(["\\.Z\\'" "compressing" "compress"
       ("-c")
       "uncompressing" "gzip"
       ("-c" "-q" "-d")
@@ -717,21 +771,24 @@
       ("-c" "-q")
       "zstd uncompressing" "zstd"
       ("-c" "-q" "-d")
-      t nil "(\265/\375"])))
+      t nil "(\265/\375"]))
  '(package-selected-packages
-   (quote
-    (guix company-flx comment-dwim-2 pdf-tools xwwp-follow-link-helm helm-swoop helm-bibtex helm-gtags helm-ag helm-projectile helm-ls-git helm-sly helm adjust-parens buffer-move comment-or-uncomment-sexp gnu-elpa-keyring-update svg-clock ansi package-build shut-up epl git commander dash s visible-mark highlight-parentheses nswbuff flames-of-freedom autotetris-mode highlight-indent-guides aggressive-indent ace-link vlf rainbow-mode magithub avy sly-macrostep sly-quicklisp sly-asdf sly vterm tuareg z3-mode ox-latex-subfigure htmlize org-static-blog company-ghci dash-functional rainbow-identifiers tracking anaphora ace-window openwith notmuch sudo-edit exwm magit flycheck-irony irony flycheck ggtags paredit geiser cdlatex auctex racket-mode zygospore yascroll xwidgete ws-butler volatile-highlights use-package undo-tree steam slime-volleyball proof-general org neotree mines magit-popup iedit haskell-mode haskell-emacs git-commit ghub ghci-completion f exec-path-from-shell emms elpy dtrt-indent dired-du company-rtags company-c-headers color-theme cmake-ide clean-aindent-mode chess anzu 2048-game)))
+   '(alert sauron sly guix company-flx comment-dwim-2 pdf-tools xwwp-follow-link-helm helm-swoop helm-bibtex helm-gtags helm-ag helm-projectile helm-ls-git helm-sly helm adjust-parens buffer-move comment-or-uncomment-sexp gnu-elpa-keyring-update ansi package-build shut-up epl git commander dash s visible-mark highlight-parentheses nswbuff flames-of-freedom autotetris-mode highlight-indent-guides aggressive-indent ace-link vlf rainbow-mode magithub avy sly-macrostep sly-quicklisp sly-asdf vterm tuareg z3-mode ox-latex-subfigure htmlize org-static-blog company-ghci dash-functional rainbow-identifiers tracking anaphora ace-window openwith notmuch sudo-edit exwm magit flycheck-irony irony flycheck ggtags paredit geiser cdlatex auctex racket-mode zygospore yascroll xwidgete ws-butler volatile-highlights use-package undo-tree steam proof-general org neotree mines magit-popup iedit haskell-mode haskell-emacs git-commit ghub ghci-completion f exec-path-from-shell emms elpy dtrt-indent dired-du company-rtags company-c-headers color-theme cmake-ide clean-aindent-mode chess anzu 2048-game))
  '(pdf-tools-handle-upgrades nil)
  '(safe-local-variable-values
-   (quote
-    ((cmake-ide-project-dir . ~/ksi)
+   '((eval when
+           (fboundp 'rainbow-mode)
+           (rainbow-mode 1))
+     (eval modify-syntax-entry 43 "'")
+     (eval modify-syntax-entry 36 "'")
+     (eval modify-syntax-entry 126 "'")
+     (cmake-ide-project-dir . ~/ksi)
      (cmake-ide-build-dir . ~/ksi/build)
      (eval setq cmake-ide-build-dir
            (concat my-project-path "build"))
      (cmake-ide-project-dir . my-project-path)
      (eval set
-           (make-local-variable
-            (quote my-project-path))
+           (make-local-variable 'my-project-path)
            (file-name-directory
             (let
                 ((d
@@ -739,7 +796,7 @@
               (if
                   (stringp d)
                   d
-                (car d)))))))))
+                (car d))))))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
