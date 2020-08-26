@@ -6,7 +6,7 @@
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/"))
 (package-initialize)
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+;; (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (when (not package-archive-contents)
   (package-refresh-contents))
 (unless (package-installed-p 'use-package)
@@ -25,8 +25,7 @@
     :init
     (global-anzu-mode)
     (global-set-key (kbd "M-%") 'anzu-query-replace)
-    (global-set-key (kbd "C-M-%") 'anzu-query-replace-regexp))
-  )
+    (global-set-key (kbd "C-M-%") 'anzu-query-replace-regexp)))
 (setq isearch-lazy-count t)
 
 (when k--x1c6-p
@@ -81,7 +80,8 @@
   (require 'setup-helm-gtags))
 (setq history-delete-duplicates t)
 ;; (require 'setup-ggtags)
-(require 'setup-cedet)
+;; (require 'setup-cedet)
+(require 'cc-mode)
 (require 'setup-editing)
 (require 'setup-c)
 
@@ -111,7 +111,20 @@
     (progn
       (setq geiser-chez-binary "chez")
       (setq geiser-mit-binary "/Applications/MIT:GNU Scheme 10.1.10.app/Contents/Resources/mit-scheme")
-      (setq geiser-active-implementations '(chez mit)))
+      (setq geiser-guile-binary "guile")
+      (setq geiser-active-implementations '(chez mit guile racket))
+      (setq geiser-implementations-alist
+            '(((regexp "\\.ss$")
+               chez)
+              ((regexp "\\.def$")
+               chez)
+              ((regexp "\\.pkg$")
+               mit)
+              ((regexp "\\.scm$")
+               guile)
+              ((regexp "\\.scm$")
+               racket)))
+      (setq geiser-default-implementation 'mit))
   (progn
     (require 'geiser-guile)
     (add-to-list 'geiser-guile-load-path "~/src/guix")))
@@ -142,6 +155,28 @@
 (global-set-key (kbd "s-s") 'helm-do-ag-project-root)
 (global-set-key (kbd "s-S") 'helm-swoop)
 (global-set-key (kbd "s-m") 'magit-status)
+(global-set-key (kbd "s-i") 'helm-find-files)
+(global-set-key (kbd "s-q") 'helm-buffers-list)
+(global-set-key (kbd "s-w") 'save-buffer)
+(global-set-key (kbd "s-;") 'goto-line)
+(global-set-key (kbd "s-c") 'undo-tree-visualize)
+(global-set-key (kbd "C-s-e") (kbd "C-x C-e"))
+(global-set-key (kbd "s-0") 'delete-window)
+(global-set-key (kbd "s-1") 'zygospore-toggle-delete-other-windows)
+(global-set-key (kbd "s-2") 'split-window-below)
+(global-set-key (kbd "s-3") 'split-window-right)
+(defun trainer ()
+  (interactive)
+  (error "Use single key stroke equivalent!"))
+(global-set-key (kbd "C-x b") 'trainer)
+(global-set-key (kbd "C-x C-f") 'trainer)
+(global-set-key (kbd "C-x C-s") 'trainer)
+(global-set-key (kbd "M-g g") 'trainer)
+(global-set-key (kbd "C-x u") 'trainer)
+(global-set-key (kbd "C-x 0") 'trainer)
+(global-set-key (kbd "C-x 1") 'trainer)
+(global-set-key (kbd "C-x 2") 'trainer)
+(global-set-key (kbd "C-x 3") 'trainer)
 (require 'helm)
 (setq completion-styles
       (if (version< emacs-version "27.0")
@@ -152,12 +187,12 @@
 (define-key helm-find-files-map (kbd "s-w") 'helm-ff-run-copy-file)
 (define-key helm-find-files-map (kbd "s-l") 'helm-ff-run-symlink-file)
 (define-key helm-find-files-map (kbd "s-r") 'helm-ff-run-rename-file)
-(global-set-key (kbd "s-v")
-                (lambda ()
-                  (interactive)
-                  (if (projectile-project-p)
-                      (helm-projectile-find-file)
-                    (helm-projectile-switch-project))))
+(defun k--projectile-find-file ()
+  (interactive)
+  (if (projectile-project-p)
+      (helm-projectile-find-file)
+    (helm-projectile-switch-project)))
+(global-set-key (kbd "s-v") #'k--projectile-find-file)
 (global-set-key (kbd "s-V") #'helm-projectile-switch-project)
 (require 'paredit)
 (define-key paredit-mode-map (kbd "M-;") #'comment-or-uncomment-sexp)
@@ -169,6 +204,24 @@
                                                  (beginning-of-defun)
                                                  (comment-or-uncomment-sexp)))))
 (define-key paredit-mode-map (kbd "M-c") #'paredit-convolute-sexp)
+(require 'paxedit)
+(define-key paxedit-mode-map (kbd "C-w")
+  #'paxedit-kill)
+(define-key paxedit-mode-map (kbd "C-s-f") #'paxedit-transpose-forward)
+(define-key paxedit-mode-map (kbd "C-s-b") #'paxedit-transpose-backward)
+(defun k--paxedit-kill-advice (orig-fun &rest args)
+  "Call KILL-REGION instead if mark is active.
+Otherwise call ORIG-FUN with ARGS."
+  (if mark-active
+      (kill-region 0 0 'region)
+    (apply orig-fun args)))
+(advice-add 'paxedit-kill :around #'k--paxedit-kill-advice)
+(add-hook 'paredit-mode-hook #'paxedit-mode)
+(define-key paxedit-mode-map (kbd "M-q") #'paxedit-dissolve)
+(define-key paxedit-mode-map (kbd "(") #'paxedit-open-round)
+(define-key paxedit-mode-map (kbd "M-j") #'paxedit-compress)
+(define-key paxedit-mode-map (kbd "M-k") #'paxedit-format-1)
+
 (pop minibuffer-setup-hook)
 (add-hook 'minibuffer-setup-hook
           (lambda ()
@@ -245,6 +298,10 @@
                         (interactive)
                         (avy-goto-word-1 ,x))))))
 (setq avy-keys (number-sequence ?a ?z))
+
+(require 'goto-last-change)
+(global-set-key (kbd "s-e") #'goto-last-change)
+
 (add-hook 'cdlatex-mode-hook (lambda()
                                (local-set-key [C-tab] (quote cdlatex-tab))
                                (setq cdlatex-env-alist
@@ -260,10 +317,11 @@
 (autoload 'run-scheme "cmuscheme" "Switch to interactive Scheme buffer." t)
 (setq auto-mode-alist (cons '("\\.ss" . scheme-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.sls" . scheme-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.scm" . scheme-mode) auto-mode-alist))
+(setq auto-mode-alist (delq (assoc "\\.rkt\\'" auto-mode-alist) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.lisp" . lisp-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.z" . z3-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.ly" . lilypond-mode) auto-mode-alist))
-(setq auto-mode-alist (delq (assoc "\\.rkt\\'" auto-mode-alist) auto-mode-alist))
 (setq yascroll:delay-to-hide nil)
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
@@ -279,7 +337,7 @@
   (set-fontset-font t 'symbol "Noto Color Emoji" nil 'append)
   (set-fontset-font t 'symbol "Noto Sans Symbols" nil 'append)
   (set-fontset-font t nil "Noto Sans CJK" nil 'append))
-(print (font-family-list))
+
 ;; (setq exec-path (append exec-path '("/usr/local/bin")))
 ;; (add-to-list 'load-path "~/emms/lisp")
 ;; (require 'emms-setup)
@@ -369,9 +427,17 @@
 (eval-after-load "term"
   '(progn (term-set-escape-char ?\C-x)
           (define-key term-raw-map (kbd "C-c") nil)))
-(add-hook 'scheme-mode-hook (lambda ()
-                              (geiser-mode)
-                              (local-set-key (kbd "M-l") 'geiser-load-current-buffer)))
+(require 'scheme)
+(add-hook 'scheme-mode-hook 'geiser-mode)
+(define-key scheme-mode-map (kbd "M-l") 'geiser-load-current-buffer)
+(require 'racket-mode)
+(add-hook 'racket-mode-hook 'geiser-mode)
+(define-key racket-mode-map (kbd "M-l")
+  (lambda ()
+    (interactive)
+    (geiser-load-file (buffer-file-name (current-buffer)))
+    (switch-to-geiser-module (geiser-eval--get-module) (current-buffer))))
+(define-key scheme-mode-map (kbd "s-h") 'geiser-doc-look-up-manual)
 
 (setq geiser-mode-start-repl-p t)
 (global-hl-line-mode 1)
@@ -480,8 +546,20 @@
 (advice-add 'term-char-mode :after (lambda ()
                                      (local-set-key (kbd "C-c C-j") 'term-line-mode)))
 
+(add-to-list 'load-path "~/Projects/xwwp")
+(require 'xwwp-full)
 (require 'eww)
-(setq browse-url-browser-function 'eww-browse-url)
+(setq xwwp-follow-link-completion-system 'helm)
+
+
+(define-key xwidget-webkit-mode-map (kbd "l") #'xwidget-webkit-back)
+(define-key xwidget-webkit-mode-map (kbd "r") #'xwidget-webkit-forward)
+(define-key xwidget-webkit-mode-map (kbd "q") #'quit-window)
+(define-key xwidget-webkit-mode-map (kbd "t") 'xwwp-ace-toggle)
+(define-key xwidget-webkit-mode-map (kbd "C-v") (kbd "C-u 10 C-n"))
+(define-key xwidget-webkit-mode-map (kbd "M-v") (kbd "C-u 10 C-p"))
+
+(setq browse-url-browser-function 'xwwp-browse-url-other-window)
 (defadvice eww-tag-title (after eww-rename-buffer-ad (cont))
   "Update EWW buffer title with new page load."
   (let ((eww-current-title (plist-get eww-data :title)))
@@ -496,8 +574,10 @@
      (list (read-string prompt nil nil uris))))
   (with-temp-buffer
     (eww url)))
+
 ;; Quick launch apps
-(global-set-key (kbd "s-g") #'eww-new-buffer)
+(global-set-key (kbd "s-g") #'xwwp)
+(global-set-key (kbd "s-G") (kbd "C-u s-G"))
 (global-set-key (kbd "s-L")
                 (lambda ()
                   (interactive)
@@ -517,8 +597,8 @@
 (setq backward-delete-char-untabify-method 'hungry)
 (add-hook 'emacs-lisp-mode-hook (lambda ()
                                   (require 'company-elisp)
-                                  (push 'company-elisp company-backends)
-                                  (push 'company-capf company-backends)))
+                                  (pushnew 'company-elisp company-backends)
+                                  (pushnew 'company-capf company-backends)))
 (add-hook 'emacs-lisp-mode-hook #'rainbow-mode)
 
 (add-hook 'scheme-mode-hook #'paredit-mode)
@@ -541,9 +621,6 @@
                               (sly-editing-mode))))
 (define-key sly-mode-map (kbd "s-h") 'sly-hyperspec-lookup)
 (define-key sly-mode-map (kbd "s-x") 'sly-mrepl)
-(global-set-key (kbd "s-w") nil)
-(define-key sly-mode-map (kbd "s-w") 'helm-sly-apropos)
-(define-key sly-mode-map (kbd "s-W") 'sly-apropos-package)
 (add-hook 'sly-mode-hook
           (lambda ()
             (unless (sly-connected-p)
@@ -622,6 +699,21 @@
                ("\\section\{%s\}" . "\\section*\{%s\}")
                ("\\subsection\{%s\}" . "\\subsection*\{%s\}")
                ("\\subsubsection\{%s\}" . "\\subsubsection*\{%s\}")))
+(add-to-list 'org-latex-classes
+             '("popl" "\\documentclass[acmsmall]{acmart}"
+               ("\\section{%s}" . "\\section*{%s}")
+               ("\\subsection{%s}" . "\\subsection*{%s}")
+               ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+               ("\\paragraph{%s}" . "\\paragraph*{%s}")
+               ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+(add-to-list 'org-latex-classes
+             '("pldi" "\\documentclass[sigplan,10pt,review,anonymous]{acmart}\\settopmatter{printfolios=true,printccs=false,printacmref=false}"
+               ("\\section{%s}" . "\\section*{%s}")
+               ("\\subsection{%s}" . "\\subsection*{%s}")
+               ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+               ("\\paragraph{%s}" . "\\paragraph*{%s}")
+               ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+(setenv "TEXINPUTS" (concat "~/research/scheme-listings:" (getenv "TEXINPUTS")))
 (setq org-latex-create-formula-image-program 'dvisvgm)
 (setq-default org-html-with-latex 'dvisvgm)
 (org-babel-do-load-languages 'org-babel-load-languages '((latex . t)))
@@ -635,10 +727,6 @@
 (show-paren-mode 1)
 (globalize highlight-parentheses-mode)
 (require 'paredit)
-(define-key paredit-mode-map (kbd "M-q")
-  (lambda () (interactive)
-    (paredit-backward-up)
-    (kill-sexp)))
 (save-place-mode 1)
 
 (define-key indent-rigidly-map (kbd "C-b") 'indent-rigidly-left)
@@ -705,6 +793,13 @@
      callback)))
 (ad-enable-advice 'notifications-notify 'after 'sr-notifications-hook)
 (ad-activate 'notifications-notify)
+
+(when k--imac-pro-p
+  (require 'togetherly)
+  (defun togetherly--read-host-address ()
+    "Read host address with the minibuffer."
+    (setq togetherly--last-host-address "18.18.245.17")))
+
 (provide 'init)
 ;;; init.el ends here
 (custom-set-variables
@@ -773,10 +868,12 @@
       ("-c" "-q" "-d")
       t nil "(\265/\375"]))
  '(package-selected-packages
-   '(alert sauron sly guix company-flx comment-dwim-2 pdf-tools xwwp-follow-link-helm helm-swoop helm-bibtex helm-gtags helm-ag helm-projectile helm-ls-git helm-sly helm adjust-parens buffer-move comment-or-uncomment-sexp gnu-elpa-keyring-update ansi package-build shut-up epl git commander dash s visible-mark highlight-parentheses nswbuff flames-of-freedom autotetris-mode highlight-indent-guides aggressive-indent ace-link vlf rainbow-mode magithub avy sly-macrostep sly-quicklisp sly-asdf vterm tuareg z3-mode ox-latex-subfigure htmlize org-static-blog company-ghci dash-functional rainbow-identifiers tracking anaphora ace-window openwith notmuch sudo-edit exwm magit flycheck-irony irony flycheck ggtags paredit geiser cdlatex auctex racket-mode zygospore yascroll xwidgete ws-butler volatile-highlights use-package undo-tree steam proof-general org neotree mines magit-popup iedit haskell-mode haskell-emacs git-commit ghub ghci-completion f exec-path-from-shell emms elpy dtrt-indent dired-du company-rtags company-c-headers color-theme cmake-ide clean-aindent-mode chess anzu 2048-game))
+   '(elnode helm-eww paxedit forge gnu-apl-mode togetherly goto-last-change magit-filenotify alert sauron sly guix company-flx comment-dwim-2 pdf-tools helm-swoop helm-bibtex helm-gtags helm-ag helm-projectile helm-ls-git helm-sly helm adjust-parens buffer-move comment-or-uncomment-sexp gnu-elpa-keyring-update ansi package-build shut-up epl git commander dash s visible-mark highlight-parentheses nswbuff flames-of-freedom autotetris-mode highlight-indent-guides aggressive-indent ace-link vlf rainbow-mode avy sly-macrostep sly-quicklisp sly-asdf vterm tuareg z3-mode ox-latex-subfigure htmlize org-static-blog company-ghci dash-functional rainbow-identifiers tracking anaphora ace-window openwith notmuch sudo-edit exwm magit flycheck-irony irony flycheck ggtags paredit geiser cdlatex auctex zygospore yascroll ws-butler volatile-highlights use-package undo-tree steam proof-general org neotree mines magit-popup iedit haskell-mode haskell-emacs git-commit ghub ghci-completion f exec-path-from-shell emms elpy dtrt-indent dired-du company-rtags company-c-headers color-theme cmake-ide clean-aindent-mode chess anzu 2048-game))
  '(pdf-tools-handle-upgrades nil)
  '(safe-local-variable-values
-   '((eval when
+   '((Base . 10)
+     (Syntax . ANSI-Common-Lisp)
+     (eval when
            (fboundp 'rainbow-mode)
            (rainbow-mode 1))
      (eval modify-syntax-entry 43 "'")
